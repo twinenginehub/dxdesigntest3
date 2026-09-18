@@ -1,0 +1,393 @@
+<title>Outsourced accountant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+:root{
+  --doxa-navy:#052538; --doxa-cyan:#00AEEF; --doxa-green:#05AF72; --doxa-white:#FFFFFF;
+  --doxa-navy-10:#0d3a52; --doxa-cyan-dark:#0090c8; --doxa-cyan-700:#007099; --doxa-green-dark:#048f5d;
+  --doxa-fog-50:#f4f7f9; --doxa-fog-100:#e7edf1; --doxa-fog-200:#cdd9e0; --doxa-slate-400:#6b8494; --doxa-slate-600:#3d5566;
+  --surface-page:var(--doxa-white); --surface-muted:var(--doxa-fog-50); --surface-card:var(--doxa-white); --surface-dark:var(--doxa-navy);
+  --text-primary:var(--doxa-navy); --text-secondary:var(--doxa-slate-600); --text-muted:var(--doxa-slate-400); --text-inverse:var(--doxa-white);
+  --text-link:var(--doxa-cyan-700); --text-link-visited:var(--doxa-green);
+  --border-subtle:var(--doxa-fog-200); --brand-gradient:linear-gradient(90deg,var(--doxa-cyan) 0%,var(--doxa-green) 100%);
+  --radius-sm:2px; --radius-md:5px; --radius-lg:8px; --radius-circle:50%;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:20px; --space-6:24px; --space-8:32px; --space-10:40px; --space-12:48px; --space-16:64px; --space-20:80px; --space-24:96px;
+  --container-max:1200px; --container-pad:clamp(24px,2rem + 5vw,125px);
+  --shadow-sm:0 1px 2px rgba(5,37,56,.06); --shadow-md:0 4px 12px rgba(5,37,56,.10); --shadow-lg:0 12px 32px rgba(5,37,56,.14);
+  --focus-ring:var(--doxa-cyan-700);
+  --font-display:'Work Sans',Arial,Helvetica,sans-serif; --font-body:'Work Sans',Arial,Helvetica,sans-serif;
+  --text-hero:clamp(2.5rem, calc(1.5rem + 4.2vw), 4.25rem); --text-h1:clamp(2rem, calc(1.4rem + 2vw), 2.75rem); --text-h2:clamp(1.5rem, calc(1.2rem + 1.1vw), 2rem);
+  --text-h3:1.25rem; --text-h4:1.0625rem; --text-body-lg:1.125rem; --text-body:1rem; --text-body-sm:.875rem; --text-caption:.75rem; --text-eyebrow:.7rem;
+  --leading-relaxed:1.65; --tracking-eyebrow:.12em;
+  --duration-fast:120ms; --duration-base:180ms; --ease-standard:cubic-bezier(.4,0,.2,1);
+  --z-dropdown:20; --z-sticky:30;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body);font-size:var(--text-body);line-height:var(--leading-relaxed);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--text-primary);margin:0;text-wrap:balance;line-height:1.15}
+p{margin:0}
+a{color:var(--text-link);text-decoration:underline;text-underline-offset:2px}
+a:hover{background:var(--brand-gradient);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:transparent;text-decoration:underline;text-decoration-color:var(--doxa-green)}
+a:visited{color:var(--text-link-visited)}
+a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-webkit-text-fill-color:currentColor;text-decoration:none}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
+.container{max-width:var(--container-max);margin-inline:auto;padding-inline:var(--container-pad)}
+
+/* Buttons — mirrors tokens/base.css ds-btn system */
+.ds-btn{font-family:var(--font-display);font-weight:600;border:none;border-radius:var(--radius-md);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;position:relative;text-decoration:none;transition:background var(--duration-base) var(--ease-standard),transform var(--duration-fast) var(--ease-standard)}
+.ds-btn:active{transform:scale(.96)}
+.ds-btn>span{position:relative}
+.btn-sm{padding:8px 18px;font-size:var(--text-body-sm)}
+.btn-md{padding:12px 24px;font-size:var(--text-body)}
+.btn-lg{padding:16px 32px;font-size:var(--text-body-lg)}
+.ds-btn-primary{background:var(--doxa-navy);color:var(--doxa-white)}
+.ds-btn-primary:hover{background:var(--doxa-cyan)}
+.ds-btn-primary.on-dark{background:var(--doxa-cyan);color:var(--doxa-navy)}
+.ds-btn-primary.on-dark:hover{background:var(--doxa-white);color:var(--doxa-navy)}
+.ds-btn-accent{background:linear-gradient(145deg,var(--doxa-cyan),var(--doxa-green));color:var(--doxa-white)}
+.ds-btn-accent::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--doxa-white);opacity:0;transition:opacity var(--duration-base) var(--ease-standard)}
+.ds-btn-accent:hover::before{opacity:1}
+.ds-btn-accent:hover{color:var(--doxa-navy)}
+.ds-btn-secondary{background:transparent;color:var(--doxa-navy);box-shadow:inset 0 0 0 1.5px var(--doxa-navy)}
+.ds-btn-secondary:hover{background:var(--doxa-fog-100)}
+.ds-btn-secondary.on-dark{color:var(--doxa-white);box-shadow:inset 0 0 0 1.5px var(--doxa-white)}
+.ds-btn-secondary.on-dark:hover{background:rgba(255,255,255,.12)}
+
+.ds-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px 4px 14px;border-radius:var(--radius-md);font-family:var(--font-body);font-size:var(--text-caption);font-weight:700;letter-spacing:.03em;text-transform:uppercase}
+.ds-chip-accent{background:linear-gradient(145deg,var(--doxa-cyan),var(--doxa-green));color:var(--doxa-white)}
+
+/* Nav — full-bleed */
+.site-nav{position:sticky;top:0;z-index:var(--z-sticky);display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);padding:var(--space-4) var(--container-pad);background:var(--surface-card);border-bottom:4px solid transparent;border-image:var(--brand-gradient) 1}
+.site-nav__logo img{height:26px;width:auto;margin-right:var(--space-8)}
+.site-nav__links{display:flex;align-items:center;gap:var(--space-6);flex:1;justify-content:center}
+.nav-item{position:relative}
+.nav-item>a{display:inline-flex;align-items:center;gap:4px;padding:10px 2px;font-weight:600;font-size:var(--text-body-sm);color:var(--text-primary);text-decoration:none}
+.nav-item>a:hover{background:none;-webkit-text-fill-color:unset;color:var(--doxa-cyan-700)}
+.nav-item svg{width:12px;height:12px;transition:transform var(--duration-base) var(--ease-standard)}
+.nav-item:hover svg{transform:rotate(180deg)}
+.nav-drop{position:absolute;top:calc(100% + 8px);left:50%;transform:translate(-50%,-6px);min-width:640px;background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);padding:var(--space-6);opacity:0;pointer-events:none;transition:opacity var(--duration-base) var(--ease-standard),transform var(--duration-base) var(--ease-standard);z-index:var(--z-dropdown)}
+.nav-item:hover .nav-drop{opacity:1;pointer-events:auto;transform:translate(-50%,0)}
+.nav-drop__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-2) var(--space-6)}
+.nav-drop a{font-size:var(--text-body-sm);font-weight:500;color:var(--text-primary);text-decoration:none;padding:6px 0}
+.nav-drop a:hover{background:none;-webkit-text-fill-color:unset;color:var(--doxa-cyan-700)}
+.site-nav__right{display:flex;align-items:center;gap:var(--space-4)}
+.site-nav__icon{width:18px;height:18px;color:var(--text-secondary)}
+
+/* Breadcrumb — surfaces/Breadcrumb.jsx, adapted for a dark hero */
+.breadcrumb{display:flex;align-items:center;gap:8px;list-style:none;margin:0 0 var(--space-4);padding:0;font-size:var(--text-body-sm);flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,.7);text-decoration:none;font-weight:500}
+.breadcrumb a:hover{background:none;-webkit-text-fill-color:unset;color:var(--doxa-white)}
+.breadcrumb .current{color:var(--doxa-white);font-weight:600}
+.breadcrumb .sep{color:rgba(255,255,255,.4);font-weight:700}
+
+/* Hero — navy variant */
+.hero{background:var(--doxa-navy)}
+.hero__inner{padding-block:var(--space-20) var(--space-16);max-width:700px}
+.hero h1{color:var(--doxa-white);font-size:var(--text-h1);font-weight:700}
+.hero p{color:rgba(255,255,255,.85);font-size:var(--text-body-lg);margin-top:var(--space-4)}
+.hero__actions{display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-6)}
+
+/* Sections */
+.section{padding-block:var(--space-24)}
+.section--muted{background:var(--surface-muted)}
+.section__head{max-width:760px}
+.section__head h2{font-size:var(--text-h2);font-weight:700}
+.section__head p{color:var(--text-secondary);font-size:var(--text-body-lg);margin-top:var(--space-4)}
+
+.subsection{margin-top:var(--space-16)}
+.subsection h3{font-size:var(--text-h3);font-weight:700}
+.subsection>p{color:var(--text-secondary);font-size:var(--text-body-lg);margin-top:var(--space-3);max-width:760px}
+
+/* Data tables */
+.table-wrap{margin-top:var(--space-8);overflow-x:auto;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
+table.data{width:100%;border-collapse:collapse;background:var(--surface-card);font-family:var(--font-body);min-width:520px}
+table.data th{text-align:left;padding:14px 20px;font-size:var(--text-caption);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-secondary);background:var(--surface-muted);border-bottom:1px solid var(--border-subtle)}
+table.data td{padding:16px 20px;font-size:var(--text-body-sm);color:var(--text-primary);border-bottom:1px solid var(--border-subtle);vertical-align:top}
+table.data td:first-child{font-weight:600;white-space:nowrap}
+table.data tr:last-child td{border-bottom:none}
+
+/* Skills grid */
+.skills-grid{margin-top:var(--space-8);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3) var(--space-8)}
+.skill{display:flex;gap:var(--space-3);align-items:flex-start;font-size:var(--text-body-sm);color:var(--text-secondary)}
+.skill svg{width:16px;height:16px;color:var(--doxa-green);flex-shrink:0;margin-top:3px}
+
+/* Cost comparison — Card's gradient top-edge convention */
+.cost-grid{margin-top:var(--space-8);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);align-items:start}
+.cost-card{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);border-top:4px solid transparent;border-image:var(--brand-gradient) 1}
+.cost-card--default{background:var(--surface-card);border:1px solid var(--border-subtle);border-top:4px solid transparent;border-image:var(--brand-gradient) 1}
+.cost-card--accent{background:var(--doxa-navy)}
+.cost-card__head{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);padding:var(--space-6) var(--space-6) 0}
+.cost-card__head h4{font-size:var(--text-h4);font-weight:600}
+.cost-card--accent .cost-card__head h4{color:var(--text-inverse)}
+.cost-card table.data{min-width:0;box-shadow:none;border:none;background:transparent}
+.cost-card--default table.data td{border-bottom:none;padding:8px 24px}
+.cost-card--default table.data tr:first-child td{padding-top:var(--space-5)}
+.cost-card--accent table.data td{border-bottom:none;padding:8px 24px;color:rgba(255,255,255,.85)}
+.cost-card--accent table.data td:first-child{color:rgba(255,255,255,.85)}
+.cost-card--accent table.data tr:first-child td{padding-top:var(--space-5)}
+.cost-card__total{display:flex;justify-content:space-between;align-items:baseline;padding:var(--space-5) var(--space-6);border-top:1px solid var(--border-subtle);margin-top:var(--space-2)}
+.cost-card--accent .cost-card__total{border-top-color:rgba(255,255,255,.15)}
+.cost-card__total span:first-child{font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary)}
+.cost-card--accent .cost-card__total span:first-child{color:var(--text-inverse)}
+.cost-card__total span:last-child{font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;color:var(--doxa-navy)}
+.cost-card--accent .cost-card__total span:last-child{color:var(--doxa-cyan)}
+
+/* Related card */
+.related{display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;border:1px solid var(--border-subtle);border-top:4px solid transparent;border-image:var(--brand-gradient) 1;border-radius:var(--radius-lg);padding:var(--space-6);background:var(--surface-card)}
+.related__label{font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
+.related h3{font-size:var(--text-h4);font-weight:700}
+
+/* FAQ accordion */
+.faq{margin-top:var(--space-8);border-top:1px solid var(--border-subtle)}
+.faq details{border-bottom:1px solid var(--border-subtle)}
+.faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:var(--space-5) 0;cursor:pointer;font-family:var(--font-display);font-weight:600;font-size:var(--text-body);color:var(--text-primary)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .glyph{position:relative;flex-shrink:0;width:16px;height:16px}
+.faq summary .glyph::before,.faq summary .glyph::after{content:'';position:absolute;top:50%;left:50%;background:var(--doxa-navy);transition:transform var(--duration-base) var(--ease-standard)}
+.faq summary .glyph::before{width:16px;height:2px;transform:translate(-50%,-50%)}
+.faq summary .glyph::after{width:2px;height:16px;transform:translate(-50%,-50%)}
+.faq details[open] summary .glyph::after{transform:translate(-50%,-50%) scaleY(0)}
+.faq__answer{padding:0 24px var(--space-5) 0;font-size:var(--text-body-sm);color:var(--text-secondary);max-width:760px}
+
+/* CTA band */
+.cta-band{margin-top:var(--space-24);display:flex;align-items:center;justify-content:space-between;gap:var(--space-8);flex-wrap:wrap;background:var(--doxa-navy);border-radius:var(--radius-lg);padding:var(--space-10)}
+.cta-band h3{color:var(--text-inverse);font-size:var(--text-h3);font-weight:700;max-width:520px}
+.cta-band p{color:rgba(255,255,255,.8);margin-top:var(--space-2);max-width:480px}
+
+/* Proof strip */
+.proof-strip{display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-6);padding-block:var(--space-4);font-size:var(--text-caption);color:var(--text-muted);font-weight:500}
+
+/* Footer — full-bleed */
+.site-footer{background:var(--doxa-navy);color:rgba(255,255,255,.72);padding:var(--space-10) var(--container-pad) var(--space-6)}
+.site-footer__row{display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap}
+.site-footer img{height:32px}
+.site-footer .legal-row{display:flex;flex-wrap:wrap;gap:var(--space-1) var(--space-4);font-size:var(--text-caption);color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.15);margin-top:var(--space-6);padding-top:var(--space-5)}
+.site-footer .legal-row a{color:rgba(255,255,255,.6);text-decoration:underline}
+.site-footer .proof-strip{color:rgba(255,255,255,.55);border-top:1px solid rgba(255,255,255,.12);margin-top:var(--space-6);padding-top:var(--space-5)}
+
+@media (max-width:900px){ .nav-drop{min-width:420px} }
+@media (max-width:760px){
+  .skills-grid{grid-template-columns:1fr}
+  .cost-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .site-nav__links{display:none}
+  .hero__inner{padding-block:var(--space-12) var(--space-10)}
+  .related{flex-direction:column;align-items:flex-start}
+  .site-footer__row{flex-direction:column;align-items:flex-start}
+}
+</style>
+
+<nav class="site-nav">
+  <a class="site-nav__logo" href="https://claude.ai/artifact/5ggJVLBysPqpcybEH6Gryp" aria-label="DOXA Talent home"><img src="doxa-logo-navy.png" alt="DOXA"></a>
+  <div class="site-nav__links">
+    <div class="nav-item">
+      <a href="https://claude.ai/artifact/5ggJVLBysPqpcybEH6Gryp">Industries<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.707 8.293a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1 -1.414 0l-6 -6a1 1 0 0 1 1.414 -1.414l5.293 5.293l5.293 -5.293a1 1 0 0 1 1.414 0"/></svg></a>
+      <div class="nav-drop">
+        <div class="nav-drop__grid">
+          <a href="https://claude.ai/artifact/14LAWv4RKBEMuA6fUMAwFX" id="link-accounting-firms">Accounting firms</a>
+          <a href="#">Law firms</a>
+          <a href="#">Healthcare &amp; medical practices</a>
+          <a href="#">MSPs &amp; IT services</a>
+          <a href="#">Real estate &amp; property management</a>
+          <a href="#">E-commerce &amp; retail</a>
+          <a href="#">Construction &amp; trades</a>
+          <a href="#">Financial services</a>
+          <a href="#">Insurance</a>
+          <a href="#">Logistics &amp; transportation</a>
+          <a href="#">SaaS &amp; technology</a>
+          <a href="#">Professional services</a>
+          <a href="#">Hospitality &amp; travel</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item"><a href="#" style="color:var(--doxa-green);font-weight:700">Roles</a></div>
+    <div class="nav-item"><a href="#">Why DOXA</a></div>
+  </div>
+  <div class="site-nav__right">
+    <svg class="site-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path d="M21 21l-6 -6"></path></svg>
+    <a class="ds-btn ds-btn-primary on-dark btn-sm" href="#"><span>Build your team</span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero__inner">
+    <ol class="breadcrumb">
+      <li><a href="https://claude.ai/artifact/5ggJVLBysPqpcybEH6Gryp">Talent</a></li>
+      <li class="sep">&rsaquo;</li>
+      <li><a href="https://claude.ai/artifact/14LAWv4RKBEMuA6fUMAwFX">Roles</a></li>
+      <li class="sep">&rsaquo;</li>
+      <li class="current" aria-current="page">Accountant (CPA)</li>
+    </ol>
+    <h1>Strengthen your finance team with an outsourced accountant or CPA.</h1>
+    <p>Reconciliations, ledger entries, tax compliance, and financial reporting, handled by a fully employed team member, not a contractor, from staff accountant through CPA-level expertise. Save up to 70% vs. a U.S.-based hire.</p>
+    <div class="hero__actions">
+      <a class="ds-btn ds-btn-primary on-dark btn-lg" href="#"><span>Build your team</span></a>
+      <a class="ds-btn ds-btn-secondary on-dark btn-lg" href="#"><span>Calculate your team cost</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>What does an outsourced accountant or CPA do?</h2>
+      <p>An outsourced accountant from DOXA handles daily reconciliations, ledger entries, month-end close, tax compliance, financial reporting, and audit support, working in your accounting system on your time zone. DOXA employs the person directly, so equipment, benefits, payroll taxes and compliance are included in one monthly rate.</p>
+    </div>
+
+    <div class="subsection">
+      <h3>Your outsourced accountant handles everything from day-to-day reconciliations to compliance, reporting, and strategic planning</h3>
+      <p>Whether you need a staff accountant to manage daily reconciliations, ledger entries, and month-end close, or a CPA-level offshore accountant for tax compliance, audit support, and strategic financial planning, a DOXA accountant integrates fully into your accounting staff, working your hours inside your ledger and close process.</p>
+    </div>
+
+    <div class="subsection">
+      <h3>Is this outsourced accounting or an accounting hire?</h3>
+      <p>It is a hire. DOXA recruits and directly employs an accountant who works only for you, inside your accounting system, on your hours, reporting to your manager. An outsourced accounting firm takes the work away and returns a deliverable. DOXA places a person on your team and carries the employment.</p>
+    </div>
+
+    <div class="subsection">
+      <h3>Key responsibilities</h3>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Area</th><th>What they own</th></tr></thead>
+          <tbody>
+            <tr><td>Reconciliations &amp; ledger entries</td><td>Bank, credit card, and GL reconciliations, journal entries</td></tr>
+            <tr><td>Tax compliance</td><td>Filings, deductions, deadlines</td></tr>
+            <tr><td>Financial reporting</td><td>P&amp;L, balance sheets, cash flow</td></tr>
+            <tr><td>Budgeting &amp; forecast</td><td>Scenario planning, modeling</td></tr>
+            <tr><td>Audit support</td><td>Documentation &amp; review</td></tr>
+            <tr><td>Strategic planning</td><td>Financial health insights</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Strong attention to detail and accuracy in financial data entry and reporting</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Strong problem-solving skills for resolving financial discrepancies and billing issues</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Proficiency in accounting software such as QuickBooks, SAP, Xero, and Oracle</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Ability to generate and analyze financial statements and reports</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Knowledge of financial regulations, tax compliance, and GAAP accounting principles</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Month-end and year-end closing support for accurate financial reporting</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Accounts payable and receivable management, including invoice processing and reconciliation</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Customer and vendor communication for payment processing and collections</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Journal entry preparation and general ledger account maintenance</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Handling tax documentation, government reporting, and regulatory filings</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Budgeting, forecasting, and financial planning expertise</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Strong organizational and time management skills for meeting financial deadlines</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Bank and credit card reconciliations to ensure accurate financial records</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Experience supporting CFOs and executive leadership with strategic financial insights</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Auditing support, financial risk assessment, and compliance monitoring</span></div>
+        <div class="skill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Payroll processing, benefits administration, and tax filing support</span></div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>What it costs</h3>
+      <div class="cost-grid">
+        <div class="cost-card cost-card--default">
+          <div class="cost-card__head"><h4>US-based CPA</h4></div>
+          <table class="data">
+            <tbody>
+              <tr><td>Base salary</td><td>$55,000&ndash;$120,000</td></tr>
+              <tr><td>Benefits &amp; insurance</td><td>$14,000&ndash;$30,000</td></tr>
+              <tr><td>Payroll taxes</td><td>$4,500&ndash;$12,000</td></tr>
+              <tr><td>Recruiting &amp; onboarding</td><td>$8,000&ndash;$10,000</td></tr>
+            </tbody>
+          </table>
+          <div class="cost-card__total"><span>Est. total / year</span><span>~$82k&ndash;$172k</span></div>
+        </div>
+        <div class="cost-card cost-card--accent">
+          <div class="cost-card__head"><h4>DOXA accountant (staff&ndash;CPA)</h4><span class="ds-chip ds-chip-accent">Recommended</span></div>
+          <table class="data">
+            <tbody>
+              <tr><td>DOXA monthly rate</td><td>From $3,160/mo</td></tr>
+              <tr><td>Equipment &amp; security</td><td>Included</td></tr>
+              <tr><td>HR, payroll &amp; legal</td><td>Included</td></tr>
+              <tr><td>Onboarding &amp; support</td><td>Included</td></tr>
+            </tbody>
+          </table>
+          <div class="cost-card__total"><span>Est. total / year</span><span>~$38k&ndash;$56k</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--muted">
+  <div class="container">
+    <div class="related">
+      <div>
+        <div class="related__label">Industry</div>
+        <h3>Built for accounting firms</h3>
+      </div>
+      <a class="ds-btn ds-btn-primary btn-md" href="https://claude.ai/artifact/14LAWv4RKBEMuA6fUMAwFX" id="link-accounting-firms-2"><span>See how accounting firms use DOXA</span></a>
+    </div>
+
+    <div class="subsection">
+      <h2>Straight answers</h2>
+      <div class="faq">
+        <details name="faq-group" open>
+          <summary>How does DOXA handle data security and confidentiality?<span class="glyph"></span></summary>
+          <div class="faq__answer">We take security seriously by providing all employees with company-issued, encrypted devices, multi-layered access controls, and remote monitoring. DOXA is SOC 2 Type II certified, and complies with the data protection requirements of every market DOXA employs in&mdash;the Philippines, Colombia, Vietnam and Kenya&mdash;so your sensitive financial information remains secure at all times.</div>
+        </details>
+        <details name="faq-group">
+          <summary>What types of accounting professionals does DOXA provide?<span class="glyph"></span></summary>
+          <div class="faq__answer">DOXA offers skilled accountants and CPAs covering everything from daily bookkeeping and financial statement preparation to tax compliance, audit support, budgeting, and strategic financial planning. We match each professional to your specific tools, industry, and complexity level, whether you need a staff accountant or a senior CPA.</div>
+        </details>
+        <details name="faq-group">
+          <summary>Can a remote accountant or bookkeeper save my business money on payroll?<span class="glyph"></span></summary>
+          <div class="faq__answer">Yes. Clients can save up to 70% in fully burdened labor costs compared to a U.S.-based equivalent hire. DOXA accountants are fully employed by DOXA, meaning equipment, benefits, HR, payroll taxes, and compliance are all included in one transparent monthly rate. There are no hidden costs.</div>
+        </details>
+        <details name="faq-group">
+          <summary>What accounting software do DOXA professionals use?<span class="glyph"></span></summary>
+          <div class="faq__answer">Candidate experience can include QuickBooks Online, Xero, NetSuite, Sage Intacct, SAP, Oracle, and other leading ERP and accounting platforms. During discovery, we match candidates to your exact tech stack so your hire is contributing accurately from day one.</div>
+        </details>
+        <details name="faq-group">
+          <summary>How does DOXA ensure accuracy and compliance in accounting?<span class="glyph"></span></summary>
+          <div class="faq__answer">Our accounting professionals are rigorously vetted for financial accuracy, platform proficiency, and regulatory knowledge. DOXA provides structured onboarding, performance oversight, and ongoing training, including continued professional development as DOXA builds independent AI certification into its talent development model, so your accountant continues to improve over time.</div>
+        </details>
+        <details name="faq-group">
+          <summary>Are finance professionals experienced with U.S. tax and compliance requirements?<span class="glyph"></span></summary>
+          <div class="faq__answer">Yes. DOXA accountants are specifically recruited and trained to support U.S.-based businesses, including familiarity with federal and state tax documentation, GAAP-aligned reporting, 1099 preparation, payroll tax compliance, and audit-ready financial statements. Complex tax advisory and CPA sign-off capabilities are available for senior-level placements.</div>
+        </details>
+        <details name="faq-group">
+          <summary>What hours does an Accountant (CPA) work?<span class="glyph"></span></summary>
+          <div class="faq__answer">An Accountant (CPA) from DOXA works your business hours in your time zone, inside your systems, so there are no staggered shifts or handoff delays by default. DOXA employs in the Philippines, Colombia, Vietnam and Kenya, and Colombian professionals align to U.S. Eastern and Central hours when you need live overlap.</div>
+        </details>
+        <details name="faq-group">
+          <summary>How long does it take to hire an Accountant (CPA) through DOXA?<span class="glyph"></span></summary>
+          <div class="faq__answer">DOXA recruits every search from scratch rather than placing from a bench, so expect roughly 60 days from kickoff to start date when both teams move quickly. Most of that window is the candidate working out a notice period. After the start date, DOXA supports onboarding through the first 90 days.</div>
+        </details>
+      </div>
+    </div>
+
+    <div class="cta-band">
+      <div>
+        <h3>Build your offshore staffing team without expanding your overhead.</h3>
+        <p>Expand your services, improve service delivery, and increase margins. Let&rsquo;s discuss what DOXA&reg; Talent can do for you.</p>
+      </div>
+      <a class="ds-btn ds-btn-primary on-dark btn-lg" href="#"><span>Build your team</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer__row">
+    <img src="doxa-logo-white.png" alt="DOXA">
+    <a class="ds-btn ds-btn-accent btn-md" href="#"><span>Build your team</span></a>
+  </div>
+  <div class="proof-strip">
+    <span>81 NPS</span><span>50% better retention</span><span>SOC 2 Type I</span><span>NIST 2.0 aligned</span><span>Great Place to Work&reg;</span><span>Fortune 100 Best Workplaces (SE Asia)</span>
+  </div>
+  <div class="legal-row">
+    <span>Copyright &copy; 2026 DOXA. All rights reserved.</span>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+  </div>
+</footer>
