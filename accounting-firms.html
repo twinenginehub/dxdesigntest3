@@ -65,6 +65,8 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .nav-item{position:relative}
 .nav-item>a{display:inline-flex;align-items:center;gap:4px;padding:8px 12px;font-weight:700;font-size:15px;color:var(--doxa-white);text-decoration:none}
 .nav-item>a:hover{background:none;-webkit-text-fill-color:unset;color:rgba(255,255,255,.85)}
+.nav-current{background:var(--brand-gradient);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.nav-item>a.nav-current:hover{background:var(--brand-gradient);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 .site-nav .ds-btn-accent{text-transform:uppercase;font-size:12px;letter-spacing:.03em}
 .nav-item svg{width:12px;height:12px;transition:transform var(--duration-base) var(--ease-standard)}
 .nav-item:hover svg{transform:rotate(180deg)}
@@ -166,7 +168,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   <a class="site-nav__logo" href="industries.html" aria-label="DOXA Talent home"><img src="doxa-logo-white.png" alt="DOXA"></a>
   <div class="site-nav__links">
     <div class="nav-item"><a href="industries.html">Industries</a></div>
-    <div class="nav-item"><a href="accounting-firms.html" style="color:var(--doxa-green);font-weight:700">Accounting firms</a></div>
+    <div class="nav-item"><a href="accounting-firms.html" class="nav-current" style="font-weight:700">Accounting firms</a></div>
     <div class="nav-item"><a href="accountant-cpa.html" id="link-roles">Roles</a></div>
   </div>
   <div class="site-nav__right">
