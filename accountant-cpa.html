@@ -117,8 +117,9 @@ table.data tr:last-child td{border-bottom:none}
 
 /* Cost comparison — Card's gradient top-edge convention */
 .cost-grid{margin-top:var(--space-8);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);align-items:start}
-.cost-card{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);border-top:4px solid transparent;border-image:var(--brand-gradient) 1}
-.cost-card--default{background:var(--surface-card);border:1px solid var(--border-subtle);border-top:4px solid transparent;border-image:var(--brand-gradient) 1}
+.cost-card{position:relative;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
+.cost-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--brand-gradient);border-top-left-radius:inherit;border-top-right-radius:inherit}
+.cost-card--default{background:var(--surface-card);border:1px solid var(--border-subtle)}
 .cost-card--accent{background:var(--doxa-navy)}
 .cost-card__head{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);padding:var(--space-6) var(--space-6) 0}
 .cost-card__head h4{font-size:var(--text-h4);font-weight:600}
@@ -137,7 +138,8 @@ table.data tr:last-child td{border-bottom:none}
 .cost-card--accent .cost-card__total span:last-child{color:var(--doxa-cyan)}
 
 /* Related card */
-.related{display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;border:1px solid var(--border-subtle);border-top:4px solid transparent;border-image:var(--brand-gradient) 1;border-radius:var(--radius-lg);padding:var(--space-6);background:var(--surface-card)}
+.related{position:relative;display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-6);background:var(--surface-card)}
+.related::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--brand-gradient);border-top-left-radius:inherit;border-top-right-radius:inherit}
 .related__label{font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
 .related h3{font-size:var(--text-h4);font-weight:700}
 
