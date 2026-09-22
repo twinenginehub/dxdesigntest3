@@ -109,6 +109,10 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .subsection h3{font-size:var(--text-h3);font-weight:700}
 .subsection>p{color:var(--text-secondary);font-size:var(--text-body-lg);margin-top:var(--space-3);max-width:760px}
 
+.responsibilities-skills{margin-top:var(--space-16);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:start}
+.responsibilities-skills .subsection{margin-top:0}
+.responsibilities-skills .skills-grid{grid-template-columns:1fr}
+
 /* Data tables */
 .table-wrap{margin-top:var(--space-8);overflow-x:auto;overflow-y:hidden;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
 table.data{width:100%;border-collapse:collapse;background:var(--surface-card);font-family:var(--font-body);min-width:520px}
@@ -189,6 +193,7 @@ table.data tr:last-child td{border-bottom:none}
 @media (max-width:760px){
   .skills-grid{grid-template-columns:1fr}
   .cost-grid{grid-template-columns:1fr}
+  .responsibilities-skills{grid-template-columns:1fr;gap:var(--space-16)}
 }
 @media (max-width:640px){
   .site-nav__links{display:none}
@@ -250,6 +255,7 @@ table.data tr:last-child td{border-bottom:none}
       <p>It is a hire. DOXA recruits and directly employs an accountant who works only for you, inside your accounting system, on your hours, reporting to your manager. An outsourced accounting firm takes the work away and returns a deliverable. DOXA places a person on your team and carries the employment.</p>
     </div>
 
+    <div class="responsibilities-skills">
     <div class="subsection">
       <h3>Key responsibilities</h3>
       <div class="table-wrap">
@@ -286,6 +292,7 @@ table.data tr:last-child td{border-bottom:none}
         <div class="skill"><span class="skill__badge"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Experience supporting CFOs and executive leadership with strategic financial insights</span></div>
         <div class="skill"><span class="skill__badge"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Payroll processing, benefits administration, and tax filing support</span></div>
       </div>
+    </div>
     </div>
 
     <div class="subsection">
