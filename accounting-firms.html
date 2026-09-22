@@ -98,7 +98,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .section__head h2{font-size:var(--text-h2);font-weight:700}
 
 /* Reason cards — Card's gradient top-edge convention */
-.reason-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-6)}
+.reason-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-6)}
 .reason-card{background:var(--surface-card);border:1px solid var(--border-subtle);border-top:4px solid transparent;border-image:var(--brand-gradient) 1;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:var(--space-6)}
 .reason-card h3{font-size:var(--text-h4);font-weight:700;margin-bottom:var(--space-2)}
 .reason-card p{color:var(--text-secondary);font-size:var(--text-body-sm)}
@@ -163,8 +163,10 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .site-footer .legal-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-1) var(--space-4);font-size:var(--text-caption);color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.15);margin-top:var(--space-8);padding-top:var(--space-5)}
 .site-footer .legal-links{display:flex;gap:var(--space-4)}
 
+@media (max-width:1100px){
+  .reason-grid{grid-template-columns:1fr 1fr}
+}
 @media (max-width:900px){
-  .reason-grid{grid-template-columns:1fr}
   .nav-drop{min-width:420px}
   .footer-grid{grid-template-columns:1fr 1fr 1fr}
   .footer-brand{grid-column:1 / -1}
@@ -173,6 +175,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   .site-nav__links{display:none}
   .hero__inner{padding-block:var(--space-16) var(--space-12)}
   .related{flex-direction:column;align-items:flex-start}
+  .reason-grid{grid-template-columns:1fr}
   .check-list{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr 1fr}
   .site-footer .legal-row{flex-direction:column}
