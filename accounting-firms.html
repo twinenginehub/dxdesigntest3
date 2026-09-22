@@ -59,12 +59,13 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .ds-btn-secondary.on-dark:hover{background:rgba(255,255,255,.12)}
 
 /* Nav — full-bleed */
-.site-nav{position:sticky;top:0;z-index:var(--z-sticky);display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);padding:var(--space-4) var(--container-pad);background:var(--surface-card);border-bottom:4px solid transparent;border-image:var(--brand-gradient) 1}
+.site-nav{position:sticky;top:0;z-index:var(--z-sticky);display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);padding:var(--space-4) var(--container-pad);background:var(--doxa-navy)}
 .site-nav__logo img{height:26px;width:auto;margin-right:var(--space-8)}
 .site-nav__links{display:flex;align-items:center;gap:var(--space-6);flex:1;justify-content:center}
 .nav-item{position:relative}
-.nav-item>a{display:inline-flex;align-items:center;gap:4px;padding:10px 2px;font-weight:600;font-size:var(--text-body-sm);color:var(--text-primary);text-decoration:none}
-.nav-item>a:hover{background:none;-webkit-text-fill-color:unset;color:var(--doxa-cyan-700)}
+.nav-item>a{display:inline-flex;align-items:center;gap:4px;padding:8px 12px;font-weight:700;font-size:15px;color:var(--doxa-white);text-decoration:none}
+.nav-item>a:hover{background:none;-webkit-text-fill-color:unset;color:rgba(255,255,255,.85)}
+.site-nav .ds-btn-accent{text-transform:uppercase;font-size:12px;letter-spacing:.03em}
 .nav-item svg{width:12px;height:12px;transition:transform var(--duration-base) var(--ease-standard)}
 .nav-item:hover svg{transform:rotate(180deg)}
 .nav-drop{position:absolute;top:calc(100% + 8px);left:50%;transform:translate(-50%,-6px);min-width:640px;background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);padding:var(--space-6);opacity:0;pointer-events:none;transition:opacity var(--duration-base) var(--ease-standard),transform var(--duration-base) var(--ease-standard);z-index:var(--z-dropdown)}
@@ -74,7 +75,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .nav-drop a:hover{background:none;-webkit-text-fill-color:unset;color:var(--doxa-cyan-700)}
 .nav-drop a.current{color:var(--doxa-green);font-weight:700}
 .site-nav__right{display:flex;align-items:center;gap:var(--space-4)}
-.site-nav__icon{width:18px;height:18px;color:var(--text-secondary)}
+.site-nav__icon{width:18px;height:18px;color:rgba(255,255,255,.7)}
 
 /* Hero — navy variant */
 .hero{background:var(--doxa-navy)}
@@ -162,7 +163,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 </style>
 
 <nav class="site-nav">
-  <a class="site-nav__logo" href="industries.html" aria-label="DOXA Talent home"><img src="doxa-logo-navy.png" alt="DOXA"></a>
+  <a class="site-nav__logo" href="industries.html" aria-label="DOXA Talent home"><img src="doxa-logo-white.png" alt="DOXA"></a>
   <div class="site-nav__links">
     <div class="nav-item"><a href="industries.html">Industries</a></div>
     <div class="nav-item"><a href="accounting-firms.html" style="color:var(--doxa-green);font-weight:700">Accounting firms</a></div>
@@ -170,7 +171,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   </div>
   <div class="site-nav__right">
     <svg class="site-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path d="M21 21l-6 -6"></path></svg>
-    <a class="ds-btn ds-btn-primary on-dark btn-sm" href="#"><span>Build your team</span></a>
+    <a class="ds-btn ds-btn-accent btn-sm" href="#"><span>Build your team</span></a>
   </div>
 </nav>
 
