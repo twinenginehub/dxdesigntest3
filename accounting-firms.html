@@ -34,7 +34,7 @@ a:hover{background:var(--brand-gradient);background-clip:text;-webkit-background
 a:visited{color:var(--text-link-visited)}
 a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-webkit-text-fill-color:currentColor;text-decoration:none}
 :focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
-.container{max-width:var(--container-max);margin-inline:auto;padding-inline:var(--container-pad)}
+.container{padding-inline:var(--container-pad)}
 .eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--doxa-navy)}
 .eyebrow svg{width:7px;height:10px;fill:currentColor;flex-shrink:0}
 .eyebrow--on-dark{color:var(--doxa-cyan-700)}
@@ -79,7 +79,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 
 /* Hero — navy variant */
 .hero{background:var(--doxa-navy)}
-.hero__inner{padding-block:var(--space-24) var(--space-20);max-width:680px}
+.hero__inner{padding-block:var(--space-24) var(--space-20);width:80%}
 .hero h1{color:var(--doxa-white);font-size:var(--text-h1);font-weight:700;margin-top:var(--space-3)}
 .hero p{color:rgba(255,255,255,.85);font-size:var(--text-body-lg);margin-top:var(--space-4)}
 .hero__actions{display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-6)}
@@ -115,6 +115,9 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 
 /* Related / case-study card */
 .related{display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;border:1px solid var(--border-subtle);border-top:4px solid transparent;border-image:var(--brand-gradient) 1;border-radius:var(--radius-lg);padding:var(--space-6);background:var(--surface-card)}
+.related__media{width:96px;height:96px;flex-shrink:0;border-radius:var(--radius-md);background:var(--surface-muted);border:1px dashed var(--border-subtle);display:flex;align-items:center;justify-content:center;color:var(--text-muted)}
+.related__media svg{width:28px;height:28px}
+.related__content{flex:1;min-width:200px}
 .related__label{font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
 .related h3{font-size:var(--text-h4);font-weight:700}
 
@@ -187,7 +190,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 <section class="section">
   <div class="container">
     <div class="section__head">
-      <h2>Why companies in this industry are rethinking how they build teams</h2>
+      <h2>Why accounting firms are rethinking how they build teams</h2>
     </div>
     <div class="reason-grid">
       <div class="reason-card">
@@ -221,7 +224,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 
     <div class="subsection">
       <h2>Where global talent can add capacity</h2>
-      <p>These are examples of the work that can move to a dedicated global team. The right structure depends on your business, systems, and where capacity is constrained.</p>
+      <p>In accounting firms, the constraint is often senior review capacity and recurring production work, especially during peak periods.</p>
       <div class="role-list">
         <a href="accountant-cpa.html" id="link-accountant-cpa">Accountant (CPA)<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></a>
         <a href="#">Outsourced bookkeeper<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></a>
@@ -233,7 +236,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 
     <div class="subsection">
       <h2>Why DOXA</h2>
-      <p>DOXA directly employs its professionals, provides managed equipment and security, and continues supporting and developing them after the hire. That gives accounting firms a model designed for retention, control, and long-term capability, not just filling a seat.</p>
+      <p>DOXA directly employs its professionals, provides managed equipment and security, and continues supporting and developing them after the hire. That gives accounting firms a model designed for retention, control, and long-term capability, not just filling a seat. This is part of DOXA&rsquo;s Conscious Outsourcing&trade; approach to building global teams.</p>
     </div>
   </div>
 </section>
@@ -241,7 +244,8 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 <section class="section section--muted">
   <div class="container">
     <div class="related">
-      <div>
+      <div class="related__media" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+      <div class="related__content">
         <div class="related__label">Case study</div>
         <h3>Guidant Financial doubled its accounting team</h3>
       </div>
