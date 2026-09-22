@@ -111,7 +111,8 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 /* Check list */
 .check-list{margin-top:var(--space-6);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4) var(--space-8)}
 .check-item{display:flex;gap:var(--space-3);align-items:flex-start;font-size:var(--text-body);color:var(--text-secondary)}
-.check-item svg{width:18px;height:18px;color:var(--doxa-green);flex-shrink:0;margin-top:3px}
+.check-badge{width:20px;height:20px;border-radius:50%;background:var(--brand-gradient);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.check-badge svg{width:10px;height:8px}
 
 /* Role links list */
 .role-list{margin-top:var(--space-6);border:1px solid var(--border-subtle);border-top:4px solid transparent;border-image:var(--brand-gradient) 1;border-radius:var(--radius-lg);overflow:hidden;background:var(--surface-card);box-shadow:var(--shadow-sm)}
@@ -233,10 +234,10 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
       <h2>How DOXA helps</h2>
       <p>DOXA combines global recruiting with the employment, equipment, security, and ongoing support around the professionals you hire. The goal is not simply lower-cost labor. It is a more scalable way to add accounting capacity.</p>
       <div class="check-list">
-        <div class="check-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Move recurring accounting work off senior teams so they can focus on review, advisory, client relationships, and growth.</span></div>
-        <div class="check-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Add dedicated capacity for bookkeeping, reconciliations, AR/AP, payroll support, workpapers, and client document collection.</span></div>
-        <div class="check-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Build a team that works inside your systems and under your direction, while DOXA manages the infrastructure around the talent.</span></div>
-        <div class="check-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0"/></svg><span>Use up to 70% fully burdened labor savings to create capacity without lowering the standard for how people are employed and supported.</span></div>
+        <div class="check-item"><span class="check-badge"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Move recurring accounting work off senior teams so they can focus on review, advisory, client relationships, and growth.</span></div>
+        <div class="check-item"><span class="check-badge"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Add dedicated capacity for bookkeeping, reconciliations, AR/AP, payroll support, workpapers, and client document collection.</span></div>
+        <div class="check-item"><span class="check-badge"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Build a team that works inside your systems and under your direction, while DOXA manages the infrastructure around the talent.</span></div>
+        <div class="check-item"><span class="check-badge"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Use up to 70% fully burdened labor savings to create capacity without lowering the standard for how people are employed and supported.</span></div>
       </div>
     </div>
 
