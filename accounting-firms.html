@@ -99,7 +99,8 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 
 /* Reason cards — Card's gradient top-edge convention */
 .reason-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-6)}
-.reason-card{background:var(--surface-card);border:1px solid var(--border-subtle);border-top:4px solid transparent;border-image:var(--brand-gradient) 1;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:var(--space-6)}
+.reason-card{position:relative;background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:var(--space-6)}
+.reason-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--brand-gradient);border-top-left-radius:inherit;border-top-right-radius:inherit}
 .reason-card h3{font-size:var(--text-h4);font-weight:700;margin-bottom:var(--space-2)}
 .reason-card p{color:var(--text-secondary);font-size:var(--text-body-sm)}
 
