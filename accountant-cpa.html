@@ -122,6 +122,13 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 
 /* Data tables */
 .table-wrap{margin-top:var(--space-8);overflow-x:auto;overflow-y:hidden;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
+
+/* Responsibilities — card format */
+.resp-grid{margin-top:var(--space-8);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+.resp-card{position:relative;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:var(--space-5)}
+.resp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--brand-gradient);border-top-left-radius:inherit;border-top-right-radius:inherit}
+.resp-card h4{font-size:var(--text-body);font-weight:700;margin-bottom:6px}
+.resp-card p{font-size:var(--text-body-sm);line-height:1.45;color:var(--text-secondary)}
 table.data{width:100%;border-collapse:collapse;background:var(--surface-card);font-family:var(--font-body);min-width:520px}
 table.data th{text-align:left;padding:14px 20px;font-size:var(--text-caption);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--doxa-white);background:var(--doxa-navy);border-bottom:1px solid var(--border-subtle)}
 table.data td{padding:16px 20px;font-size:var(--text-body-sm);color:var(--text-primary);border-bottom:1px solid var(--border-subtle);vertical-align:top}
@@ -203,6 +210,7 @@ table.data tr:last-child td{border-bottom:none}
   .cost-grid{grid-template-columns:1fr}
   .responsibilities-skills{grid-template-columns:1fr;gap:var(--space-16)}
   .hire-grid{grid-template-columns:1fr;gap:var(--space-8)}
+  .resp-grid{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   .site-nav__links{display:none}
@@ -271,18 +279,31 @@ table.data tr:last-child td{border-bottom:none}
     <div class="responsibilities-skills">
     <div class="subsection">
       <h3 style="font-size:var(--text-h2)">Key responsibilities</h3>
-      <div class="table-wrap">
-        <table class="data">
-          <thead><tr><th>Area</th><th>What they own</th></tr></thead>
-          <tbody>
-            <tr><td>Reconciliations &amp; ledger entries</td><td>Bank, credit card, and GL reconciliations, journal entries</td></tr>
-            <tr><td>Tax compliance</td><td>Filings, deductions, deadlines</td></tr>
-            <tr><td>Financial reporting</td><td>P&amp;L, balance sheets, cash flow</td></tr>
-            <tr><td>Budgeting &amp; forecast</td><td>Scenario planning, modeling</td></tr>
-            <tr><td>Audit support</td><td>Documentation &amp; review</td></tr>
-            <tr><td>Strategic planning</td><td>Financial health insights</td></tr>
-          </tbody>
-        </table>
+      <div class="resp-grid">
+        <div class="resp-card">
+          <h4>Reconciliations &amp; ledger entries</h4>
+          <p>Bank, credit card, and GL reconciliations, journal entries</p>
+        </div>
+        <div class="resp-card">
+          <h4>Tax compliance</h4>
+          <p>Filings, deductions, deadlines</p>
+        </div>
+        <div class="resp-card">
+          <h4>Financial reporting</h4>
+          <p>P&amp;L, balance sheets, cash flow</p>
+        </div>
+        <div class="resp-card">
+          <h4>Budgeting &amp; forecast</h4>
+          <p>Scenario planning, modeling</p>
+        </div>
+        <div class="resp-card">
+          <h4>Audit support</h4>
+          <p>Documentation &amp; review</p>
+        </div>
+        <div class="resp-card">
+          <h4>Strategic planning</h4>
+          <p>Financial health insights</p>
+        </div>
       </div>
     </div>
 
