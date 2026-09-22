@@ -113,6 +113,11 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .responsibilities-skills .subsection{margin-top:0}
 .responsibilities-skills .skills-grid{grid-template-columns:1fr}
 
+.hire-grid{margin-top:var(--space-16);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:start}
+.hire-grid .subsection{margin-top:0}
+.hire-card{position:relative;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-6);box-shadow:var(--shadow-sm);background:var(--surface-card)}
+.hire-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--brand-gradient);border-top-left-radius:inherit;border-top-right-radius:inherit}
+
 /* Data tables */
 .table-wrap{margin-top:var(--space-8);overflow-x:auto;overflow-y:hidden;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
 table.data{width:100%;border-collapse:collapse;background:var(--surface-card);font-family:var(--font-body);min-width:520px}
@@ -194,6 +199,7 @@ table.data tr:last-child td{border-bottom:none}
   .skills-grid{grid-template-columns:1fr}
   .cost-grid{grid-template-columns:1fr}
   .responsibilities-skills{grid-template-columns:1fr;gap:var(--space-16)}
+  .hire-grid{grid-template-columns:1fr;gap:var(--space-8)}
 }
 @media (max-width:640px){
   .site-nav__links{display:none}
@@ -245,14 +251,16 @@ table.data tr:last-child td{border-bottom:none}
       <p>An outsourced accountant from DOXA handles daily reconciliations, ledger entries, month-end close, tax compliance, financial reporting, and audit support, working in your accounting system on your time zone. DOXA employs the person directly, so equipment, benefits, payroll taxes and compliance are included in one monthly rate.</p>
     </div>
 
-    <div class="subsection" style="width:80%">
-      <h3>Your outsourced accountant handles everything from day-to-day reconciliations to compliance, reporting, and strategic planning</h3>
-      <p>Whether you need a staff accountant to manage daily reconciliations, ledger entries, and month-end close, or a CPA-level offshore accountant for tax compliance, audit support, and strategic financial planning, a DOXA accountant integrates fully into your accounting staff, working your hours inside your ledger and close process.</p>
-    </div>
+    <div class="hire-grid">
+      <div class="subsection">
+        <h3>Your outsourced accountant handles everything from day-to-day reconciliations to compliance, reporting, and strategic planning</h3>
+        <p>Whether you need a staff accountant to manage daily reconciliations, ledger entries, and month-end close, or a CPA-level offshore accountant for tax compliance, audit support, and strategic financial planning, a DOXA accountant integrates fully into your accounting staff, working your hours inside your ledger and close process.</p>
+      </div>
 
-    <div class="subsection" style="width:80%">
-      <h3>Is this outsourced accounting or an accounting hire?</h3>
-      <p>It is a hire. DOXA recruits and directly employs an accountant who works only for you, inside your accounting system, on your hours, reporting to your manager. An outsourced accounting firm takes the work away and returns a deliverable. DOXA places a person on your team and carries the employment.</p>
+      <div class="subsection hire-card">
+        <h3>Is this outsourced accounting or an accounting hire?</h3>
+        <p>It is a hire. DOXA recruits and directly employs an accountant who works only for you, inside your accounting system, on your hours, reporting to your manager. An outsourced accounting firm takes the work away and returns a deliverable. DOXA places a person on your team and carries the employment.</p>
+      </div>
     </div>
 
     <div class="responsibilities-skills">
