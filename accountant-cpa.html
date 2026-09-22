@@ -157,8 +157,7 @@ table.data tr:last-child td{border-bottom:none}
 .cost-card--accent .cost-card__total span:last-child{color:var(--doxa-cyan)}
 
 /* Related card */
-.related{position:relative;display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-6);background:var(--surface-card)}
-.related::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--brand-gradient);border-top-left-radius:inherit;border-top-right-radius:inherit}
+.related{display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);padding:var(--space-6) 0}
 .related__label{font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
 .related h3{font-size:var(--text-h4);font-weight:700}
 
@@ -335,20 +334,20 @@ table.data tr:last-child td{border-bottom:none}
           <div class="cost-card__total"><span>Est. total / year</span><span>~$38k&ndash;$56k</span></div>
         </div>
       </div>
+
+      <div class="related" style="margin-top:var(--space-8)">
+        <div>
+          <div class="related__label">Industry</div>
+          <h3>Built for accounting firms</h3>
+        </div>
+        <a class="ds-btn ds-btn-primary btn-md" href="accounting-firms.html" id="link-accounting-firms-2"><span>See how accounting firms use DOXA</span></a>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section section--muted">
   <div class="container">
-    <div class="related">
-      <div>
-        <div class="related__label">Industry</div>
-        <h3>Built for accounting firms</h3>
-      </div>
-      <a class="ds-btn ds-btn-primary btn-md" href="accounting-firms.html" id="link-accounting-firms-2"><span>See how accounting firms use DOXA</span></a>
-    </div>
-
     <div class="subsection">
       <h2>Straight answers</h2>
       <div class="faq">
