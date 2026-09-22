@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Outsourced accountant</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -168,13 +173,20 @@ table.data tr:last-child td{border-bottom:none}
 
 /* Footer — full-bleed */
 .site-footer{background:var(--doxa-navy);color:rgba(255,255,255,.72);padding:var(--space-10) var(--container-pad) var(--space-6)}
-.site-footer__row{display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap}
+.site-footer__row{display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;padding-bottom:var(--space-8);border-bottom:1px solid rgba(255,255,255,.15)}
 .site-footer img{height:32px}
-.site-footer .legal-row{display:flex;flex-wrap:wrap;gap:var(--space-1) var(--space-4);font-size:var(--text-caption);color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.15);margin-top:var(--space-6);padding-top:var(--space-5)}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:var(--space-8);margin-top:var(--space-8)}
+.footer-brand p{color:rgba(255,255,255,.7);font-size:var(--text-body-sm);margin-top:var(--space-4);max-width:280px}
+.footer-chips{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-4)}
+.footer-chip{font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:rgba(255,255,255,.85);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);border-radius:var(--radius-md);padding:6px 10px}
+.footer-col h4{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--doxa-white);margin:0 0 var(--space-3)}
+.footer-col a{display:block;font-size:14px;color:rgba(255,255,255,.7);text-decoration:none;margin-bottom:10px}
+.footer-col a:hover{color:var(--doxa-white);background:none;-webkit-text-fill-color:unset}
+.site-footer .legal-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-1) var(--space-4);font-size:var(--text-caption);color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.15);margin-top:var(--space-8);padding-top:var(--space-5)}
 .site-footer .legal-row a{color:rgba(255,255,255,.6);text-decoration:underline}
-.site-footer .proof-strip{color:rgba(255,255,255,.55);border-top:1px solid rgba(255,255,255,.12);margin-top:var(--space-6);padding-top:var(--space-5)}
+.site-footer .legal-links{display:flex;gap:var(--space-4)}
 
-@media (max-width:900px){ .nav-drop{min-width:420px} }
+@media (max-width:900px){ .nav-drop{min-width:420px} .footer-grid{grid-template-columns:1fr 1fr 1fr} .footer-brand{grid-column:1 / -1} }
 @media (max-width:760px){
   .skills-grid{grid-template-columns:1fr}
   .cost-grid{grid-template-columns:1fr}
@@ -184,9 +196,13 @@ table.data tr:last-child td{border-bottom:none}
   .hero__inner{padding-block:var(--space-12) var(--space-10)}
   .related{flex-direction:column;align-items:flex-start}
   .site-footer__row{flex-direction:column;align-items:flex-start}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .site-footer .legal-row{flex-direction:column}
   .faq{column-count:1}
 }
 </style>
+</head>
+<body>
 
 <nav class="site-nav">
   <a class="site-nav__logo" href="industries.html" aria-label="DOXA Talent home"><img src="doxa-logo-white.png" alt="DOXA"></a>
@@ -369,12 +385,54 @@ table.data tr:last-child td{border-bottom:none}
     <img src="doxa-logo-white.png" alt="DOXA">
     <a class="ds-btn ds-btn-accent btn-md" href="#"><span>Build your team</span></a>
   </div>
-  <div class="proof-strip">
-    <span>81 NPS</span><span>50% better retention</span><span>SOC 2 Type I</span><span>NIST 2.0 aligned</span><span>Great Place to Work&reg;</span><span>Fortune 100 Best Workplaces (SE Asia)</span>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="doxa-logo-white.png" alt="DOXA">
+      <p>Conscious Outsourcing&reg;. Ethically employed, directly hired global teams across the Philippines, Colombia, Vietnam, and Kenya. 81 NPS &middot; 50% better retention.</p>
+      <div class="footer-chips">
+        <span class="footer-chip">SOC 2 Type I</span>
+        <span class="footer-chip">NIST 2.0 aligned</span>
+        <span class="footer-chip">Great Place to Work&reg;</span>
+        <span class="footer-chip">Fortune 100 Best Workplaces (SE Asia)</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Roles</h4>
+      <a href="accountant-cpa.html">Accountant (CPA)</a>
+      <a href="#">Outsourced Bookkeeper</a>
+      <a href="#">Outsourced AR/AP Clerk</a>
+      <a href="#">Outsourced Finance Specialist</a>
+      <a href="#">Outsourced Payroll Specialist</a>
+    </div>
+    <div class="footer-col">
+      <h4>Industries</h4>
+      <a href="accounting-firms.html">Accounting Firms</a>
+      <a href="#">Law Firms</a>
+      <a href="#">Healthcare &amp; Medical Practices</a>
+      <a href="#">MSPs &amp; IT Services</a>
+      <a href="industries.html">View all industries &rarr;</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#">About DOXA</a>
+      <a href="#">Ethical Outsourcing</a>
+      <a href="#">Security &amp; Compliance</a>
+      <a href="#">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Get Started</h4>
+      <a href="#">Build your team</a>
+      <a href="#">Calculate your team cost</a>
+      <a href="#">Explore talent</a>
+    </div>
   </div>
   <div class="legal-row">
-    <span>Copyright &copy; 2026 DOXA. All rights reserved.</span>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms of Service</a>
+    <span>Copyright &copy; 2026 DOXA. All rights reserved. Conscious Outsourcing&reg; is a registered trademark of DOXA Talent.</span>
+    <div class="legal-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
   </div>
 </footer>
+</body>
+</html>
