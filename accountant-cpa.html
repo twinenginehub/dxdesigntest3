@@ -42,12 +42,12 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .container{padding-inline:var(--container-pad)}
 
 /* Buttons — mirrors tokens/base.css ds-btn system */
-.ds-btn{font-family:var(--font-display);font-weight:600;border:none;border-radius:var(--radius-md);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;position:relative;text-decoration:none;transition:background var(--duration-base) var(--ease-standard),transform var(--duration-fast) var(--ease-standard)}
+.ds-btn{font-family:var(--font-display);font-weight:600;border:none;border-radius:var(--radius-md);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;position:relative;text-decoration:none;text-transform:uppercase;letter-spacing:.03em;transition:background var(--duration-base) var(--ease-standard),transform var(--duration-fast) var(--ease-standard)}
 .ds-btn:active{transform:scale(.96)}
 .ds-btn>span{position:relative}
-.btn-sm{padding:8px 18px;font-size:var(--text-body-sm)}
-.btn-md{padding:12px 24px;font-size:var(--text-body)}
-.btn-lg{padding:16px 32px;font-size:var(--text-body-lg)}
+.btn-sm{padding:6px 18px;font-size:var(--text-body-sm)}
+.btn-md{padding:10px 24px;font-size:var(--text-body)}
+.btn-lg{padding:13px 32px;font-size:var(--text-body-lg)}
 .ds-btn-primary{background:var(--doxa-navy);color:var(--doxa-white)}
 .ds-btn-primary:hover{background:var(--doxa-cyan)}
 .ds-btn-primary.on-dark{background:var(--doxa-cyan);color:var(--doxa-navy)}
@@ -101,7 +101,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 /* Sections */
 .section{padding-block:var(--space-24)}
 .section--muted{background:var(--surface-muted)}
-.section__head{max-width:760px}
+.section__head{max-width:760px;width:80%}
 .section__head h2{font-size:var(--text-h2);font-weight:700}
 .section__head p{color:var(--text-secondary);font-size:var(--text-body-lg);margin-top:var(--space-4)}
 
@@ -110,9 +110,9 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .subsection>p{color:var(--text-secondary);font-size:var(--text-body-lg);margin-top:var(--space-3);max-width:760px}
 
 /* Data tables */
-.table-wrap{margin-top:var(--space-8);overflow-x:auto;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
+.table-wrap{margin-top:var(--space-8);overflow-x:auto;overflow-y:hidden;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
 table.data{width:100%;border-collapse:collapse;background:var(--surface-card);font-family:var(--font-body);min-width:520px}
-table.data th{text-align:left;padding:14px 20px;font-size:var(--text-caption);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-secondary);background:var(--surface-muted);border-bottom:1px solid var(--border-subtle)}
+table.data th{text-align:left;padding:14px 20px;font-size:var(--text-caption);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--doxa-white);background:var(--doxa-navy);border-bottom:1px solid var(--border-subtle)}
 table.data td{padding:16px 20px;font-size:var(--text-body-sm);color:var(--text-primary);border-bottom:1px solid var(--border-subtle);vertical-align:top}
 table.data td:first-child{font-weight:600;white-space:nowrap}
 table.data tr:last-child td{border-bottom:none}
@@ -130,7 +130,7 @@ table.data tr:last-child td{border-bottom:none}
 .cost-card--default{background:var(--surface-card);border:1px solid var(--border-subtle)}
 .cost-card--accent{background:var(--doxa-navy)}
 .cost-card__head{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);padding:var(--space-6) var(--space-6) 0}
-.cost-card__head h4{font-size:var(--text-h4);font-weight:600}
+.cost-card__head h4{font-size:var(--text-h3);font-weight:600}
 .cost-card--accent .cost-card__head h4{color:var(--text-inverse)}
 .cost-card table.data{min-width:0;box-shadow:none;border:none;background:transparent}
 .cost-card--default table.data td{border-bottom:none;padding:8px 24px}
@@ -173,7 +173,6 @@ table.data tr:last-child td{border-bottom:none}
 
 /* Footer — full-bleed */
 .site-footer{background:var(--doxa-navy);color:rgba(255,255,255,.72);padding:var(--space-10) var(--container-pad) var(--space-6)}
-.site-footer__row{display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;padding-bottom:var(--space-8);border-bottom:1px solid rgba(255,255,255,.15)}
 .site-footer img{height:32px}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:var(--space-8);margin-top:var(--space-8)}
 .footer-brand p{color:rgba(255,255,255,.7);font-size:var(--text-body-sm);margin-top:var(--space-4);max-width:280px}
@@ -195,7 +194,6 @@ table.data tr:last-child td{border-bottom:none}
   .site-nav__links{display:none}
   .hero__inner{padding-block:var(--space-12) var(--space-10)}
   .related{flex-direction:column;align-items:flex-start}
-  .site-footer__row{flex-direction:column;align-items:flex-start}
   .footer-grid{grid-template-columns:1fr 1fr}
   .site-footer .legal-row{flex-direction:column}
   .faq{column-count:1}
@@ -242,12 +240,12 @@ table.data tr:last-child td{border-bottom:none}
       <p>An outsourced accountant from DOXA handles daily reconciliations, ledger entries, month-end close, tax compliance, financial reporting, and audit support, working in your accounting system on your time zone. DOXA employs the person directly, so equipment, benefits, payroll taxes and compliance are included in one monthly rate.</p>
     </div>
 
-    <div class="subsection">
+    <div class="subsection" style="width:80%">
       <h3>Your outsourced accountant handles everything from day-to-day reconciliations to compliance, reporting, and strategic planning</h3>
       <p>Whether you need a staff accountant to manage daily reconciliations, ledger entries, and month-end close, or a CPA-level offshore accountant for tax compliance, audit support, and strategic financial planning, a DOXA accountant integrates fully into your accounting staff, working your hours inside your ledger and close process.</p>
     </div>
 
-    <div class="subsection">
+    <div class="subsection" style="width:80%">
       <h3>Is this outsourced accounting or an accounting hire?</h3>
       <p>It is a hire. DOXA recruits and directly employs an accountant who works only for you, inside your accounting system, on your hours, reporting to your manager. An outsourced accounting firm takes the work away and returns a deliverable. DOXA places a person on your team and carries the employment.</p>
     </div>
@@ -381,10 +379,6 @@ table.data tr:last-child td{border-bottom:none}
 </section>
 
 <footer class="site-footer">
-  <div class="site-footer__row">
-    <img src="doxa-logo-white.png" alt="DOXA">
-    <a class="ds-btn ds-btn-accent btn-md" href="#"><span>Build your team</span></a>
-  </div>
   <div class="footer-grid">
     <div class="footer-brand">
       <img src="doxa-logo-white.png" alt="DOXA">
