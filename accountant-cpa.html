@@ -101,6 +101,8 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 /* Sections */
 .section{padding-block:var(--space-24)}
 .section--muted{background:var(--surface-muted)}
+.section--tinted{background:linear-gradient(90deg,rgba(0,174,239,.2) 0%,rgba(5,175,114,.2) 100%)}
+.cost-subsection{background:var(--surface-page);margin-inline:calc(var(--container-pad) * -1);margin-bottom:calc(var(--space-24) * -1);padding:var(--space-8) var(--container-pad) var(--space-24)}
 .section__head{width:100%}
 .section__head h2{font-size:var(--text-h2);font-weight:700}
 .section__head p{color:var(--text-secondary);font-size:var(--text-body-lg);margin-top:var(--space-4)}
@@ -244,7 +246,7 @@ table.data tr:last-child td{border-bottom:none}
   </div>
 </header>
 
-<section class="section">
+<section class="section section--tinted">
   <div class="container">
     <div class="section__head">
       <h2>What does an outsourced accountant or CPA do?</h2>
@@ -303,7 +305,7 @@ table.data tr:last-child td{border-bottom:none}
     </div>
     </div>
 
-    <div class="subsection">
+    <div class="subsection cost-subsection">
       <h3>What it costs</h3>
       <div class="cost-grid">
         <div class="cost-card cost-card--default">
