@@ -99,10 +99,10 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 
 /* Industry tile grid — Card/RoleCard's gradient top-edge convention */
 .tile-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-5)}
-.tile{display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-6) var(--space-5);background:var(--surface-card);border:1px solid var(--border-subtle);border-top:4px solid var(--doxa-navy);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);text-decoration:none;color:inherit;transition:box-shadow var(--duration-base) var(--ease-standard),border-top-color var(--duration-base) var(--ease-standard)}
+.tile{display:flex;flex-direction:column;background:var(--surface-card);border:1px solid var(--border-subtle);border-top:4px solid var(--doxa-navy);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);text-decoration:none;color:inherit;transition:box-shadow var(--duration-base) var(--ease-standard),border-top-color var(--duration-base) var(--ease-standard)}
+.tile__media{width:100%;height:200px;background:var(--surface-muted);display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:var(--text-caption);font-weight:600;flex-shrink:0}
+.tile__body{display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-6) var(--space-5);flex:1}
 .tile:hover{background:var(--surface-card);color:inherit;-webkit-text-fill-color:unset;text-decoration:none;box-shadow:var(--shadow-md);border-top:4px solid transparent;border-image:var(--brand-gradient) 1}
-.tile__icon{width:44px;height:44px;border-radius:var(--radius-md);background:var(--doxa-fog-50);color:var(--doxa-cyan-700);display:flex;align-items:center;justify-content:center}
-.tile__icon svg{width:22px;height:22px}
 .tile h4{font-size:var(--text-h4);font-weight:700}
 .tile__cta{display:inline-flex;align-items:center;gap:6px;font-size:var(--text-body-sm);font-weight:600;color:var(--doxa-navy);text-decoration:underline;text-underline-offset:2px;text-decoration-color:var(--doxa-navy);margin-top:auto}
 .tile__cta svg{width:14px;height:14px}
@@ -179,69 +179,95 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
     </div>
     <div class="tile-grid">
       <a class="tile" href="accounting-firms.html" id="tile-accounting-firms">
-        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2a3 3 0 0 1 3 3v14a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-14a3 3 0 0 1 3 -3zm-10 15a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm4 0a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm4 0a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm-8 -4a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm4 0a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm4 0a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm-1 -7h-6a2 2 0 0 0 -2 2v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-1a2 2 0 0 0 -2 -2z"/></svg></span>
+        <div class="tile__media">Image placeholder</div>
+        <div class="tile__body">
         <h4>Accounting firms</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
+      </div>
       </a>
       <a class="tile" href="#">
-        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a1 1 0 0 1 1 1v1.152l5.159 .86a.98 .98 0 0 1 .636 .38l.041 .059l.058 .102l3.024 6.05l.035 .094l.025 .096l.016 .1l.005 .12l-.003 .061a3.996 3.996 0 0 1 -3.996 3.926a4 4 0 0 1 -4 -4a1 1 0 0 1 .106 -.447l2.393 -4.79l-3.499 -.583v12.82h4a1 1 0 0 1 0 2h-10a1 1 0 0 1 0 -2h4v-12.82l-3.5 .583l2.418 4.84l.035 .094l.025 .096l.016 .1l.005 .12l-.003 .061a3.996 3.996 0 0 1 -3.996 3.926a4 4 0 0 1 -4 -4a1 1 0 0 1 .106 -.447l3.034 -6.065l.039 -.061l.025 -.034a.98 .98 0 0 1 .636 -.38l5.16 -.862v-1.151a1 1 0 0 1 1 -1"/></svg></span>
+        <div class="tile__media">Image placeholder</div>
+        <div class="tile__body">
         <h4>Law firms</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
+      </div>
       </a>
       <a class="tile" href="#">
-        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 2l-.15 .005a2 2 0 0 0 -1.85 1.995v2.803l-2.428 -1.401a2 2 0 0 0 -2.732 .732l-1 1.732l-.073 .138a2 2 0 0 0 .805 2.594l2.427 1.402l-2.427 1.402a2 2 0 0 0 -.732 2.732l1 1.732l.083 .132a2 2 0 0 0 2.649 .6l2.428 -1.402v2.804a2 2 0 0 0 2 2h2l.15 -.005a2 2 0 0 0 1.85 -1.995v-2.804l2.428 1.403a2 2 0 0 0 2.732 -.732l1 -1.732l.073 -.138a2 2 0 0 0 -.805 -2.594l-2.428 -1.403l2.428 -1.402a2 2 0 0 0 .732 -2.732l-1 -1.732l-.083 -.132a2 2 0 0 0 -2.649 -.6l-2.428 1.4v-2.802a2 2 0 0 0 -2 -2h-2z"/></svg></span>
+        <div class="tile__media">Image placeholder</div>
+        <div class="tile__body">
         <h4>Healthcare &amp; medical practices</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
+      </div>
       </a>
       <a class="tile" href="#">
-        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 21a1 1 0 0 1 0 -2h1v-2h-4a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h16a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-4v2h1a1 1 0 0 1 0 2zm7 -4h-4v2h4z"/></svg></span>
+        <div class="tile__media">Image placeholder</div>
+        <div class="tile__body">
         <h4>MSPs &amp; IT services</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
+      </div>
       </a>
       <a class="tile" href="#">
-        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.707 2.293l9 9c.63 .63 .184 1.707 -.707 1.707h-1v6a3 3 0 0 1 -3 3h-10a3 3 0 0 1 -3 -3v-6h-1c-.89 0 -1.337 -1.077 -.707 -1.707l9 -9a1 1 0 0 1 1.414 0m.793 8.707h-3a1.5 1.5 0 0 0 -1.5 1.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5 -1.5v-3a1.5 1.5 0 0 0 -1.5 -1.5"/></svg></span>
+        <div class="tile__media">Image placeholder</div>
+        <div class="tile__body">
         <h4>Real estate &amp; property management</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
+      </div>
       </a>
       <a class="tile" href="#">
-        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2m11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2"/></svg></span>
+        <div class="tile__media">Image placeholder</div>
+        <div class="tile__body">
         <h4>E-commerce &amp; retail</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
+      </div>
       </a>
       <a class="tile" href="#">
-        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 6a3 3 0 0 1 3 3v9a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2v-2a3 3 0 0 0 -6 0v2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2v-9a3 3 0 0 1 3 -3z"/></svg></span>
+        <div class="tile__media">Image placeholder</div>
+        <div class="tile__body">
         <h4>Construction &amp; trades</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
+      </div>
       </a>
       <a class="tile" href="#">
-        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 5a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3zm-7 4a3 3 0 0 0 -2.996 2.85l-.004 .15a3 3 0 1 0 3 -3m6.01 2h-.01a1 1 0 0 0 0 2h.01a1 1 0 0 0 0 -2m-12 0h-.01a1 1 0 1 0 .01 2a1 1 0 0 0 0 -2"/></svg></span>
+        <div class="tile__media">Image placeholder</div>
+        <div class="tile__body">
         <h4>Financial services</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
+      </div>
       </a>
       <a class="tile" href="#">
-        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"/></svg></span>
+        <div class="tile__media">Image placeholder</div>
+        <div class="tile__body">
         <h4>Insurance</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
+      </div>
       </a>
       <a class="tile" href="#">
-        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 4a1 1 0 0 1 1 1h4a1 1 0 0 1 .783 .378l.074 .108l3 5l.055 .103l.04 .107l.029 .109l.016 .11l.003 .085v6a1 1 0 0 1 -1 1h-1.171a3.001 3.001 0 0 1 -5.658 0h-4.342a3.001 3.001 0 0 1 -5.658 0h-1.171a1 1 0 0 1 -1 -1v-11a2 2 0 0 1 2 -2zm-6 12a1 1 0 1 0 0 2a1 1 0 0 0 0 -2m10 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2m.434 -9h-3.434v3h5.234z"/></svg></span>
+        <div class="tile__media">Image placeholder</div>
+        <div class="tile__body">
         <h4>Logistics &amp; transportation</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
+      </div>
       </a>
       <a class="tile" href="#">
-        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 20a2 2 0 0 1 -2 2h-4a1 1 0 0 1 0 -2h4v-2.997l-.343 .001a1 1 0 0 1 -.117 -.007l-.105 -.001c-2.94 -.11 -5.317 -2.399 -5.43 -5.263l-.005 -.216c0 -2.747 2.08 -5.01 4.784 -5.417l.114 -.016l.07 -.181c.663 -1.62 2.056 -2.906 3.829 -3.518l.244 -.08c2.194 -.667 4.614 -.224 6.36 1.176c1.385 1.108 2.187 2.686 2.25 4.34l.004 .212l.091 .003c2.3 .107 4.143 1.961 4.25 4.27l.004 .211c0 2.478 -1.997 4.487 -4.465 4.487h-1.535v2.996h4a1 1 0 0 1 0 2h-4a2 2 0 0 1 -2 -2v-2.997h-2v3.997a1 1 0 0 1 -2 0v-3.997h-2z"/></svg></span>
+        <div class="tile__media">Image placeholder</div>
+        <div class="tile__body">
         <h4>SaaS &amp; technology</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
+      </div>
       </a>
       <a class="tile" href="#">
-        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z"/></svg></span>
+        <div class="tile__media">Image placeholder</div>
+        <div class="tile__body">
         <h4>Professional services</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
+      </div>
       </a>
       <a class="tile" href="#">
-        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.868 2.504l3.712 6.496h3.42a3 3 0 0 1 0 6h-3.42l-3.712 6.496a1 1 0 0 1 -.868 .504h-3a1 1 0 0 1 -.962 -1.275l1.636 -5.725h-2.26l-1.707 1.707a1 1 0 0 1 -.707 .293h-3a1 1 0 0 1 -.894 -1.447l1.776 -3.553l-1.776 -3.553a1 1 0 0 1 .894 -1.447h3a1 1 0 0 1 .707 .293l1.707 1.707h2.26l-1.636 -5.725a1 1 0 0 1 .962 -1.275h3a1 1 0 0 1 .868 .504"/></svg></span>
+        <div class="tile__media">Image placeholder</div>
+        <div class="tile__body">
         <h4>Hospitality &amp; travel</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
+      </div>
       </a>
     </div>
   </div>
