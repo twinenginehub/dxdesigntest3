@@ -92,10 +92,11 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .breadcrumb .sep{color:rgba(255,255,255,.4);font-weight:700}
 
 /* Hero — navy variant */
-.hero{background:var(--doxa-navy);overflow:hidden}
-.hero__inner{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:stretch;padding-block:var(--space-20) var(--space-16)}
-.hero__media{border-radius:var(--radius-lg);overflow:hidden;min-height:320px}
-.hero__media img{width:100%;height:100%;object-fit:cover;display:block}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.hero__page--text{background:var(--doxa-navy);display:flex;align-items:center}
+.hero__page--text .container{padding-block:var(--space-16)}
+.hero__page--media{overflow:hidden}
+.hero__page--media img{width:100%;height:100%;object-fit:cover;display:block}
 .hero h1{color:var(--doxa-white);font-size:var(--text-h1);font-weight:700}
 .hero p{color:rgba(255,255,255,.85);font-size:var(--text-body-lg);margin-top:var(--space-4)}
 .hero__actions{display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-6)}
@@ -215,8 +216,9 @@ table.data tr:last-child td{border-bottom:none}
 }
 @media (max-width:640px){
   .site-nav__links{display:none}
-  .hero__inner{padding-block:var(--space-12) var(--space-10);grid-template-columns:1fr}
-  .hero__media{min-height:200px}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero__page--text .container{padding-block:var(--space-12) var(--space-10)}
+  .hero__page--media{min-height:240px}
   .related{flex-direction:column;align-items:flex-start}
   .footer-grid{grid-template-columns:1fr 1fr}
   .site-footer .legal-row{flex-direction:column}
@@ -240,8 +242,8 @@ table.data tr:last-child td{border-bottom:none}
 </nav>
 
 <header class="hero">
-  <div class="container hero__inner">
-    <div class="hero__content">
+  <div class="hero__page hero__page--text">
+    <div class="container">
       <ol class="breadcrumb">
         <li><a href="industries.html">Talent</a></li>
         <li class="sep">&rsaquo;</li>
@@ -256,9 +258,9 @@ table.data tr:last-child td{border-bottom:none}
         <a class="ds-btn ds-btn-secondary on-dark btn-md" href="#"><span>Calculate your team cost</span></a>
       </div>
     </div>
-    <div class="hero__media">
-      <img src="accountant-hero.png" alt="Accountant on a video call with a DOXA team member">
-    </div>
+  </div>
+  <div class="hero__page hero__page--media">
+    <img src="accountant-hero.png" alt="Accountant on a video call with a DOXA team member">
   </div>
 </header>
 
