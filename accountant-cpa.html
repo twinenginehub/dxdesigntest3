@@ -172,18 +172,13 @@ table.data tr:last-child td{border-bottom:none}
 .related h3{font-size:var(--text-h4);font-weight:700}
 
 /* Explore more roles carousel */
-.roles-carousel{margin-top:var(--space-6);max-width:calc(240px * 2 + var(--space-6));display:flex;gap:var(--space-6);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:var(--space-2);scrollbar-width:none}
-.roles-carousel::-webkit-scrollbar{display:none}
-.role-card{flex:0 0 240px;scroll-snap-align:start;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);background:var(--surface-card)}
+.roles-carousel{margin-top:var(--space-6);display:flex;gap:var(--space-6);flex-wrap:wrap}
+.role-card{flex:0 0 240px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);background:var(--surface-card)}
 .role-card img{width:100%;aspect-ratio:500/650;object-fit:cover;display:block}
 .role-card__body{padding:var(--space-5)}
 .role-card__body h4{font-size:var(--text-h4);font-weight:700;background:var(--brand-gradient);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 .role-card__body p{color:var(--text-secondary);font-size:var(--text-body-sm);margin-top:var(--space-2)}
 .role-card__body a{display:inline-flex;align-items:center;gap:4px;margin-top:var(--space-3);font-weight:600}
-.roles-carousel__head{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
-.roles-carousel__nav{display:flex;gap:var(--space-3)}
-.roles-carousel__btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--border-subtle);background:var(--surface-card);font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--doxa-navy)}
-.roles-carousel__btn:hover{background:var(--surface-muted)}
 
 /* FAQ accordion */
 .faq{margin-top:var(--space-8);column-count:2;column-gap:var(--space-10)}
@@ -393,13 +388,7 @@ table.data tr:last-child td{border-bottom:none}
       </div>
 
       <div class="subsection roles-carousel-section">
-        <div class="roles-carousel__head">
-          <h3 style="text-transform:uppercase">Explore more roles</h3>
-          <div class="roles-carousel__nav">
-            <button type="button" class="roles-carousel__btn" aria-label="Previous role" onclick="document.getElementById('roles-carousel').scrollBy({left:-260,behavior:'smooth'})">&lsaquo;</button>
-            <button type="button" class="roles-carousel__btn" aria-label="Next role" onclick="document.getElementById('roles-carousel').scrollBy({left:260,behavior:'smooth'})">&rsaquo;</button>
-          </div>
-        </div>
+        <h3 style="text-transform:uppercase">Explore more roles</h3>
         <p>Looking for a different accounting role?</p>
         <div class="roles-carousel" id="roles-carousel">
           <div class="role-card">
