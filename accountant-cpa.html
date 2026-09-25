@@ -182,8 +182,9 @@ table.data tr:last-child td{border-bottom:none}
 
 /* CTA band */
 .cta-band{margin-top:var(--space-24);display:flex;align-items:center;justify-content:space-between;gap:var(--space-8);flex-wrap:wrap;background:var(--doxa-navy);border-radius:var(--radius-lg);padding:var(--space-10)}
-.cta-band h3{color:var(--text-inverse);font-size:var(--text-h3);font-weight:700;max-width:520px}
-.cta-band p{color:rgba(255,255,255,.8);margin-top:var(--space-2);max-width:480px}
+.cta-band>div{flex:1;min-width:0}
+.cta-band h3{color:var(--text-inverse);font-size:var(--text-h3);font-weight:700}
+.cta-band p{color:rgba(255,255,255,.8);margin-top:var(--space-2)}
 
 /* Proof strip */
 .proof-strip{display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-6);padding-block:var(--space-4);font-size:var(--text-caption);color:var(--text-muted);font-weight:500}
