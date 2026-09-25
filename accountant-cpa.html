@@ -123,7 +123,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .table-wrap{margin-top:var(--space-8);overflow-x:auto;overflow-y:hidden;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
 
 /* Responsibilities — card format */
-.resp-grid{margin-top:var(--space-8);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+.resp-grid{margin-top:var(--space-8);display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--space-4)}
 .resp-card{position:relative;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:var(--space-5)}
 .resp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--brand-gradient);border-top-left-radius:inherit;border-top-right-radius:inherit}
 .resp-card h4{font-size:var(--text-body);font-weight:700;margin-bottom:6px}
@@ -204,7 +204,7 @@ table.data tr:last-child td{border-bottom:none}
 .site-footer .legal-row a{color:rgba(255,255,255,.6);text-decoration:underline}
 .site-footer .legal-links{display:flex;gap:var(--space-4)}
 
-@media (max-width:900px){ .nav-drop{min-width:420px} .footer-grid{grid-template-columns:1fr 1fr 1fr} .footer-brand{grid-column:1 / -1} }
+@media (max-width:900px){ .nav-drop{min-width:420px} .footer-grid{grid-template-columns:1fr 1fr 1fr} .footer-brand{grid-column:1 / -1} .resp-grid{grid-template-columns:1fr 1fr} }
 @media (max-width:760px){
   .skills-grid{grid-template-columns:1fr}
   .cost-grid{grid-template-columns:1fr}
