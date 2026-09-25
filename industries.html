@@ -100,7 +100,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 /* Industry tile grid — Card/RoleCard's gradient top-edge convention */
 .tile-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-5)}
 .tile{display:flex;flex-direction:column;background:var(--surface-card);border:1px solid var(--border-subtle);border-top:4px solid var(--doxa-navy);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);text-decoration:none;color:inherit;transition:box-shadow var(--duration-base) var(--ease-standard),border-top-color var(--duration-base) var(--ease-standard)}
-.tile__media{width:100%;height:100px;background:var(--surface-muted);display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:var(--text-caption);font-weight:600;flex-shrink:0}
+.tile__media{width:100%;height:100px;object-fit:cover;display:block;flex-shrink:0}
 .tile__body{display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-6) var(--space-5);flex:1}
 .tile:hover{background:var(--surface-card);color:inherit;-webkit-text-fill-color:unset;text-decoration:none;box-shadow:var(--shadow-md);border-top:4px solid transparent;border-image:var(--brand-gradient) 1}
 .tile h4{font-size:var(--text-h4);font-weight:700}
@@ -179,91 +179,91 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
     </div>
     <div class="tile-grid">
       <a class="tile" href="accounting-firms.html" id="tile-accounting-firms">
-        <div class="tile__media">Image placeholder</div>
+        <img class="tile__media" src="tile-accounting-firms.jpg" alt="Accountant reviewing financial charts with a client">
         <div class="tile__body">
         <h4>Accounting firms</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
       </div>
       </a>
       <a class="tile" href="#">
-        <div class="tile__media">Image placeholder</div>
+        <img class="tile__media" src="tile-law-firms.jpg" alt="Lawyers reviewing documents in a law office">
         <div class="tile__body">
         <h4>Law firms</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
       </div>
       </a>
       <a class="tile" href="#">
-        <div class="tile__media">Image placeholder</div>
+        <img class="tile__media" src="tile-healthcare.jpg" alt="Medical team consulting in a clinic">
         <div class="tile__body">
         <h4>Healthcare &amp; medical practices</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
       </div>
       </a>
       <a class="tile" href="#">
-        <div class="tile__media">Image placeholder</div>
+        <img class="tile__media" src="tile-msps-it.jpg" alt="IT technician working on network servers">
         <div class="tile__body">
         <h4>MSPs &amp; IT services</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
       </div>
       </a>
       <a class="tile" href="#">
-        <div class="tile__media">Image placeholder</div>
+        <img class="tile__media" src="tile-real-estate.jpg" alt="Real estate agent showing a property">
         <div class="tile__body">
         <h4>Real estate &amp; property management</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
       </div>
       </a>
       <a class="tile" href="#">
-        <div class="tile__media">Image placeholder</div>
+        <img class="tile__media" src="tile-ecommerce.jpg" alt="Warehouse worker packing ecommerce orders">
         <div class="tile__body">
         <h4>E-commerce &amp; retail</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
       </div>
       </a>
       <a class="tile" href="#">
-        <div class="tile__media">Image placeholder</div>
+        <img class="tile__media" src="tile-construction.jpg" alt="Construction workers on a job site">
         <div class="tile__body">
         <h4>Construction &amp; trades</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
       </div>
       </a>
       <a class="tile" href="#">
-        <div class="tile__media">Image placeholder</div>
+        <img class="tile__media" src="tile-financial-services.jpg" alt="Financial advisor reviewing reports">
         <div class="tile__body">
         <h4>Financial services</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
       </div>
       </a>
       <a class="tile" href="#">
-        <div class="tile__media">Image placeholder</div>
+        <img class="tile__media" src="tile-insurance.jpg" alt="Insurance agent meeting with a client">
         <div class="tile__body">
         <h4>Insurance</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
       </div>
       </a>
       <a class="tile" href="#">
-        <div class="tile__media">Image placeholder</div>
+        <img class="tile__media" src="tile-logistics.jpg" alt="Logistics team at a shipping warehouse">
         <div class="tile__body">
         <h4>Logistics &amp; transportation</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
       </div>
       </a>
       <a class="tile" href="#">
-        <div class="tile__media">Image placeholder</div>
+        <img class="tile__media" src="tile-saas-tech.jpg" alt="Software team collaborating at a desk">
         <div class="tile__body">
         <h4>SaaS &amp; technology</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
       </div>
       </a>
       <a class="tile" href="#">
-        <div class="tile__media">Image placeholder</div>
+        <img class="tile__media" src="tile-professional-services.jpg" alt="Consultants in a professional services meeting">
         <div class="tile__body">
         <h4>Professional services</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
       </div>
       </a>
       <a class="tile" href="#">
-        <div class="tile__media">Image placeholder</div>
+        <img class="tile__media" src="tile-hospitality.jpg" alt="Hotel staff welcoming a guest">
         <div class="tile__body">
         <h4>Hospitality &amp; travel</h4>
         <span class="tile__cta">Explore<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414"/></svg></span>
