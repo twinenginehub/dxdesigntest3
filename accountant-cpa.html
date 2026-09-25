@@ -167,11 +167,12 @@ table.data tr:last-child td{border-bottom:none}
 .cost-card--accent .cost-card__total span:last-child{color:var(--doxa-cyan)}
 
 /* Related card */
-.related{display:flex;align-items:flex-start;flex-direction:column;gap:var(--space-4);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);padding:var(--space-6) 0}
+.related{display:flex;align-items:flex-start;flex-direction:column;gap:var(--space-4);border-top:1px solid var(--border-subtle);padding:var(--space-6) 0 0}
 .related__label{font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
 .related h3{font-size:var(--text-h4);font-weight:700}
 
 /* Explore more roles carousel */
+.roles-carousel-section{border-bottom:1px solid var(--border-subtle);padding-bottom:var(--space-6)}
 .roles-carousel{margin-top:var(--space-6);display:flex;gap:var(--space-6);flex-wrap:wrap}
 .role-card{flex:0 0 240px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);background:var(--surface-card)}
 .role-card img{width:100%;aspect-ratio:500/650;object-fit:cover;display:block}
@@ -379,6 +380,14 @@ table.data tr:last-child td{border-bottom:none}
         </div>
       </div>
 
+      <div class="related" style="margin-top:var(--space-8)">
+        <div>
+          <div class="related__label">Industry</div>
+          <h3>Built for accounting firms</h3>
+        </div>
+        <a class="ds-btn ds-btn-primary btn-md" href="accounting-firms.html" id="link-accounting-firms-2"><span>See how accounting firms use DOXA</span></a>
+      </div>
+
       <div class="subsection roles-carousel-section">
         <h3 style="text-transform:uppercase">Explore more roles</h3>
         <p>Looking for a different accounting role?</p>
@@ -416,14 +425,6 @@ table.data tr:last-child td{border-bottom:none}
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="related" style="margin-top:var(--space-8)">
-        <div>
-          <div class="related__label">Industry</div>
-          <h3>Built for accounting firms</h3>
-        </div>
-        <a class="ds-btn ds-btn-primary btn-md" href="accounting-firms.html" id="link-accounting-firms-2"><span>See how accounting firms use DOXA</span></a>
       </div>
     </div>
   </div>
