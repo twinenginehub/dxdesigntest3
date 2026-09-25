@@ -167,9 +167,23 @@ table.data tr:last-child td{border-bottom:none}
 .cost-card--accent .cost-card__total span:last-child{color:var(--doxa-cyan)}
 
 /* Related card */
-.related{display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);padding:var(--space-6) 0}
+.related{display:flex;align-items:flex-start;flex-direction:column;gap:var(--space-4);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);padding:var(--space-6) 0}
 .related__label{font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
 .related h3{font-size:var(--text-h4);font-weight:700}
+
+/* Explore more roles carousel */
+.roles-carousel-section{margin-top:var(--space-16)}
+.roles-carousel{margin-top:var(--space-6);display:flex;gap:var(--space-6);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:var(--space-2);scrollbar-width:none}
+.roles-carousel::-webkit-scrollbar{display:none}
+.role-card{flex:0 0 240px;scroll-snap-align:start;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);background:var(--surface-card)}
+.role-card img{width:100%;aspect-ratio:500/650;object-fit:cover;display:block}
+.role-card__body{padding:var(--space-5)}
+.role-card__body h4{font-size:var(--text-h4);font-weight:700;background:var(--brand-gradient);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.role-card__body p{color:var(--text-secondary);font-size:var(--text-body-sm);margin-top:var(--space-2)}
+.role-card__body a{display:inline-flex;align-items:center;gap:4px;margin-top:var(--space-3);font-weight:600}
+.roles-carousel__nav{display:flex;gap:var(--space-3);margin-top:var(--space-5)}
+.roles-carousel__btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--border-subtle);background:var(--surface-card);font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--doxa-navy)}
+.roles-carousel__btn:hover{background:var(--surface-muted)}
 
 /* FAQ accordion */
 .faq{margin-top:var(--space-8);column-count:2;column-gap:var(--space-10)}
@@ -376,6 +390,49 @@ table.data tr:last-child td{border-bottom:none}
           <h3>Built for accounting firms</h3>
         </div>
         <a class="ds-btn ds-btn-primary btn-md" href="accounting-firms.html" id="link-accounting-firms-2"><span>See how accounting firms use DOXA</span></a>
+      </div>
+
+      <div class="subsection roles-carousel-section">
+        <h3 style="text-transform:uppercase">Explore more roles</h3>
+        <p>Looking for a different accounting role?</p>
+        <div class="roles-carousel" id="roles-carousel">
+          <div class="role-card">
+            <img src="role-bookkeeper.webp" alt="Bookkeeper">
+            <div class="role-card__body">
+              <h4>Bookkeeper</h4>
+              <p>Financial records, daily transactions</p>
+              <a href="https://doxatalent.com/roles/bookkeeper/">Learn more <span aria-hidden="true">&rsaquo;</span></a>
+            </div>
+          </div>
+          <div class="role-card">
+            <img src="role-finance-specialist.webp" alt="Finance Specialist">
+            <div class="role-card__body">
+              <h4>Finance Specialist</h4>
+              <p>Analysis, reporting, forecasting</p>
+              <a href="https://doxatalent.com/roles/finance-specialist/">Learn more <span aria-hidden="true">&rsaquo;</span></a>
+            </div>
+          </div>
+          <div class="role-card">
+            <img src="role-ar-ap-clerk.webp" alt="AR/AP Clerk">
+            <div class="role-card__body">
+              <h4>AR/AP Clerk</h4>
+              <p>Invoices, payments, collections</p>
+              <a href="https://doxatalent.com/roles/ar-ap-clerk/">Learn more <span aria-hidden="true">&rsaquo;</span></a>
+            </div>
+          </div>
+          <div class="role-card">
+            <img src="role-payroll-specialist.webp" alt="Payroll Specialist">
+            <div class="role-card__body">
+              <h4>Payroll Specialist</h4>
+              <p>Payroll, tax filings, compliance</p>
+              <a href="https://doxatalent.com/roles/payroll-specialist/">Learn more <span aria-hidden="true">&rsaquo;</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="roles-carousel__nav">
+          <button type="button" class="roles-carousel__btn" aria-label="Previous role" onclick="document.getElementById('roles-carousel').scrollBy({left:-260,behavior:'smooth'})">&lsaquo;</button>
+          <button type="button" class="roles-carousel__btn" aria-label="Next role" onclick="document.getElementById('roles-carousel').scrollBy({left:260,behavior:'smooth'})">&rsaquo;</button>
+        </div>
       </div>
     </div>
   </div>
