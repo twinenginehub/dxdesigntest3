@@ -94,8 +94,8 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 /* Hero — navy variant */
 .hero{background:var(--doxa-navy);overflow:hidden}
 .hero__inner{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:stretch;padding-block:var(--space-20) var(--space-16)}
-.hero__media{border-radius:var(--radius-lg);background:rgba(255,255,255,.06);border:1px dashed rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);min-height:320px}
-.hero__media svg{width:48px;height:48px}
+.hero__media{border-radius:var(--radius-lg);overflow:hidden;min-height:320px}
+.hero__media img{width:100%;height:100%;object-fit:cover;display:block}
 .hero h1{color:var(--doxa-white);font-size:var(--text-h1);font-weight:700}
 .hero p{color:rgba(255,255,255,.85);font-size:var(--text-body-lg);margin-top:var(--space-4)}
 .hero__actions{display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-6)}
@@ -256,8 +256,8 @@ table.data tr:last-child td{border-bottom:none}
         <a class="ds-btn ds-btn-secondary on-dark btn-md" href="#"><span>Calculate your team cost</span></a>
       </div>
     </div>
-    <div class="hero__media" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    <div class="hero__media">
+      <img src="accountant-hero.png" alt="Accountant on a video call with a DOXA team member">
     </div>
   </div>
 </header>
