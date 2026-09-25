@@ -139,9 +139,10 @@ table.data td:first-child{font-weight:600;white-space:nowrap}
 table.data tr:last-child td{border-bottom:none}
 
 /* Skills grid */
-.skills-grid{margin-top:var(--space-8);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3) var(--space-8)}
+.skills-grid{margin-top:var(--space-8);padding-left:var(--space-4);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3) var(--space-8)}
 .skill{display:flex;gap:var(--space-3);align-items:flex-start;font-size:var(--text-body-sm);line-height:1.45;color:var(--text-secondary)}
-.skill__badge{width:6px;height:6px;border-radius:50%;background:var(--doxa-navy);flex-shrink:0;margin-top:8px}
+.skill__badge{flex-shrink:0;color:var(--doxa-cyan);font-weight:700;font-size:var(--text-body-lg);line-height:1.45}
+.skill__badge::before{content:'\203A'}
 
 /* Cost comparison — Card's gradient top-edge convention */
 .cost-grid{margin-top:var(--space-8);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);align-items:start}
