@@ -4,17 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Outsourced accountant</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
 <style>
+@font-face{font-family:'Work Sans';src:url('fonts/WorkSans-Light.ttf') format('truetype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Work Sans';src:url('fonts/WorkSans-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Work Sans';src:url('fonts/WorkSans-Italic.ttf') format('truetype');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Work Sans';src:url('fonts/WorkSans-Medium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Work Sans';src:url('fonts/WorkSans-SemiBold.ttf') format('truetype');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Work Sans';src:url('fonts/WorkSans-Bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
 :root{
   --doxa-navy:#052538; --doxa-cyan:#00AEEF; --doxa-green:#05AF72; --doxa-white:#FFFFFF;
-  --doxa-navy-10:#0d3a52; --doxa-cyan-dark:#0090c8; --doxa-cyan-700:#007099; --doxa-green-dark:#048f5d;
+  --surface-dark-alt:#0d3a52; --doxa-cyan-dark:#0090c8; --doxa-cyan-700:#007099; --doxa-green-dark:#048f5d;
   --doxa-fog-50:#f4f7f9; --doxa-fog-100:#e7edf1; --doxa-fog-200:#cdd9e0; --doxa-slate-400:#6b8494; --doxa-slate-600:#3d5566;
   --surface-page:var(--doxa-white); --surface-muted:var(--doxa-fog-50); --surface-card:var(--doxa-white); --surface-dark:var(--doxa-navy);
   --text-primary:var(--doxa-navy); --text-secondary:var(--doxa-slate-600); --text-muted:var(--doxa-slate-400); --text-inverse:var(--doxa-white);
-  --text-link:var(--doxa-cyan-700); --text-link-visited:var(--doxa-green);
+  --text-link:var(--doxa-cyan-700); --text-link-visited:var(--doxa-navy);
   --border-subtle:var(--doxa-fog-200); --brand-gradient:linear-gradient(90deg,var(--doxa-cyan) 0%,var(--doxa-green) 100%);
   --brand-gradient-soft:linear-gradient(135deg,rgba(0,174,239,.1) 0%,rgba(6,175,114,.1) 100%);
   --radius-sm:2px; --radius-md:5px; --radius-lg:8px; --radius-circle:50%;
@@ -53,7 +56,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .ds-btn-primary:hover{background:var(--doxa-cyan);color:var(--doxa-white)}
 .ds-btn-primary.on-dark{background:var(--doxa-cyan);color:var(--doxa-navy)}
 .ds-btn-primary.on-dark:hover{background:var(--doxa-white);color:var(--doxa-navy)}
-.ds-btn-accent{background:var(--brand-gradient);color:var(--doxa-white);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 2px 6px rgba(5,37,56,.05),0 1px 2px rgba(5,37,56,.04)}
+.ds-btn-accent{background:linear-gradient(145deg,var(--doxa-cyan),var(--doxa-green));color:var(--doxa-white);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 2px 6px rgba(5,37,56,.05),0 1px 2px rgba(5,37,56,.04)}
 .ds-btn-accent::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--doxa-white);opacity:0;transition:opacity var(--duration-base) var(--ease-standard)}
 .ds-btn-accent:hover::before{opacity:1}
 .ds-btn-accent:hover{color:var(--doxa-navy)}
@@ -188,7 +191,7 @@ table.data tr:last-child td{border-bottom:none}
 
 /* FAQ accordion */
 .faq{margin-top:var(--space-8);column-count:2;column-gap:var(--space-10)}
-.faq details{break-inside:avoid;border-bottom:1px solid var(--border-subtle)}
+.faq details{break-inside:avoid;border-bottom:2px solid var(--border-subtle)}
 .faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:var(--space-3) 0;cursor:pointer;font-family:var(--font-display);font-weight:600;font-size:var(--text-body);color:var(--text-primary)}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary .glyph{position:relative;flex-shrink:0;width:16px;height:16px}
@@ -223,6 +226,9 @@ table.data tr:last-child td{border-bottom:none}
 .site-footer .legal-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-1) var(--space-4);font-size:var(--text-caption);color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.15);margin-top:var(--space-8);padding-top:var(--space-5)}
 .site-footer .legal-row a{color:rgba(255,255,255,.6);text-decoration:underline}
 .site-footer .legal-links{display:flex;gap:var(--space-4)}
+.site-footer .legal-row__right{display:flex;align-items:center;gap:var(--space-6);flex-wrap:wrap}
+.site-footer .social-icons{display:flex;align-items:center;gap:14px}
+.site-footer .social-icons a{color:#fff;display:inline-flex}
 
 @media (max-width:900px){ .nav-drop{min-width:420px} .footer-grid{grid-template-columns:1fr 1fr 1fr} .footer-brand{grid-column:1 / -1} .resp-grid{grid-template-columns:1fr 1fr} }
 @media (max-width:760px){
@@ -573,9 +579,19 @@ table.data tr:last-child td{border-bottom:none}
   </div>
   <div class="legal-row">
     <span>Copyright &copy; 2026 DOXA. All rights reserved. Conscious Outsourcing&reg; is a registered trademark of DOXA Talent.</span>
-    <div class="legal-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
+    <div class="legal-row__right">
+      <div class="legal-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">For AI</a>
+      </div>
+      <div class="social-icons">
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM8 10v7M8 7.2h.01M12 17v-4.5c0-1.4 1-2.5 2.3-2.5S16 11 16 12.5V17"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8h-2c-.6 0-1 .6-1 1.2V11h3l-.4 3H12v6h-3v-6H7v-3h2V9c0-2 1.4-4 4-4h2z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM16.5 7.5h.01"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5c0-1.4 1-2.5 2.5-2.5h11c1.5 0 2.5 1.1 2.5 2.5v7c0 1.4-1 2.5-2.5 2.5h-11C5 18 4 16.9 4 15.5zM10 9.5l5 2.5-5 2.5z"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v9.5a2.5 2.5 0 1 1-2-2.45M14 4c.3 2 1.8 3.5 4 3.7"/></svg></a>
+      </div>
     </div>
   </div>
 </footer>
