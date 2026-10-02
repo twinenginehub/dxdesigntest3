@@ -345,11 +345,29 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
     </div>
     <div class="footer-col">
       <h4>Roles</h4>
-      <a href="accountant-cpa.html">Accountant (CPA)</a>
-      <a href="#">Outsourced Bookkeeper</a>
-      <a href="#">Outsourced AR/AP Clerk</a>
-      <a href="#">Outsourced Finance Specialist</a>
-      <a href="#">Outsourced Payroll Specialist</a>
+      <label for="demo-industry-select" style="display:block;font-size:11px;font-weight:400;text-transform:none;letter-spacing:normal;color:rgba(255,255,255,.5);margin-bottom:6px">Demo: preview by industry</label>
+      <select id="demo-industry-select" style="width:100%;margin-bottom:var(--space-3);padding:6px 8px;font-size:13px;background:rgba(255,255,255,.08);color:var(--doxa-white);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-sm)">
+        <option value="accounting-firms">Accounting firms</option>
+        <option value="law-firms">Law firms</option>
+        <option value="healthcare">Healthcare &amp; medical practices</option>
+        <option value="msps-it">MSPs &amp; IT services</option>
+        <option value="real-estate">Real estate &amp; property management</option>
+        <option value="ecommerce">E-commerce &amp; retail</option>
+        <option value="construction">Construction &amp; trades</option>
+        <option value="financial-services">Financial services</option>
+        <option value="insurance">Insurance</option>
+        <option value="logistics">Logistics &amp; transportation</option>
+        <option value="saas-tech">SaaS &amp; technology</option>
+        <option value="professional-services">Professional services</option>
+        <option value="hospitality">Hospitality &amp; travel</option>
+      </select>
+      <div id="footer-roles-list">
+        <a href="accountant-cpa.html">Accountant (CPA)</a>
+        <a href="#">Outsourced Bookkeeper</a>
+        <a href="#">Outsourced AR/AP Clerk</a>
+        <a href="#">Outsourced Finance Specialist</a>
+        <a href="#">Outsourced Payroll Specialist</a>
+      </div>
     </div>
     <div class="footer-col">
       <h4>Industries</h4>
@@ -381,5 +399,36 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
     </div>
   </div>
 </footer>
+<script>
+(function(){
+  var ROLE_MAP = {
+    'accounting-firms': [['Accountant (CPA)','accountant-cpa.html'],['Outsourced Bookkeeper','#'],['Outsourced AR/AP Clerk','#'],['Outsourced Finance Specialist','#'],['Outsourced Payroll Specialist','#']],
+    'law-firms': [['Paralegal','#'],['Outsourced Legal Assistant','#'],['Outsourced Contract Reviewer','#'],['Outsourced Legal Transcriptionist','#'],['Outsourced Case Manager','#']],
+    'healthcare': [['Medical Biller','#'],['Outsourced Medical Coder','#'],['Outsourced Patient Care Coordinator','#'],['Outsourced Prior Authorization Specialist','#'],['Outsourced Medical Scribe','#']],
+    'msps-it': [['IT Support Specialist','#'],['Outsourced Network Administrator','#'],['Outsourced Help Desk Technician','#'],['Outsourced Systems Engineer','#'],['Outsourced Cybersecurity Analyst','#']],
+    'real-estate': [['Property Manager','#'],['Outsourced Transaction Coordinator','#'],['Outsourced Leasing Assistant','#'],['Outsourced Listing Coordinator','#'],['Outsourced Real Estate Assistant','#']],
+    'ecommerce': [['Customer Support Specialist','#'],['Outsourced Inventory Coordinator','#'],['Outsourced Order Fulfillment Specialist','#'],['Outsourced Catalog Manager','#'],['Outsourced Ecommerce Assistant','#']],
+    'construction': [['Project Coordinator','#'],['Outsourced Estimator','#'],['Outsourced Permit Specialist','#'],['Outsourced Scheduling Coordinator','#'],['Outsourced Construction Admin','#']],
+    'financial-services': [['Financial Analyst','#'],['Outsourced Loan Processor','#'],['Outsourced Underwriting Assistant','#'],['Outsourced Compliance Specialist','#'],['Outsourced Client Services Associate','#']],
+    'insurance': [['Claims Processor','#'],['Outsourced Policy Administrator','#'],['Outsourced Underwriting Support','#'],['Outsourced Customer Service Rep','#'],['Outsourced Insurance Assistant','#']],
+    'logistics': [['Dispatch Coordinator','#'],['Outsourced Freight Broker Assistant','#'],['Outsourced Logistics Coordinator','#'],['Outsourced Supply Chain Analyst','#'],['Outsourced Customer Service Rep','#']],
+    'saas-tech': [['Technical Support Specialist','#'],['Outsourced QA Tester','#'],['Outsourced Customer Success Associate','#'],['Outsourced Implementation Specialist','#'],['Outsourced Data Analyst','#']],
+    'professional-services': [['Executive Assistant','#'],['Outsourced Research Analyst','#'],['Outsourced Client Services Coordinator','#'],['Outsourced Project Coordinator','#'],['Outsourced Virtual Assistant','#']],
+    'hospitality': [['Reservations Specialist','#'],['Outsourced Guest Services Coordinator','#'],['Outsourced Revenue Management Analyst','#'],['Outsourced Front Desk Assistant','#'],['Outsourced Concierge Support','#']]
+  };
+  var DEFAULT_INDUSTRY = 'accounting-firms';
+  var select = document.getElementById('demo-industry-select');
+  var list = document.getElementById('footer-roles-list');
+  function escapeHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function render(key){
+    var roles = ROLE_MAP[key] || ROLE_MAP[DEFAULT_INDUSTRY];
+    list.innerHTML = roles.map(function(r){return '<a href="'+r[1]+'">'+escapeHtml(r[0])+'</a>';}).join('');
+  }
+  if (select && list) {
+    select.value = DEFAULT_INDUSTRY;
+    select.addEventListener('change', function(){ render(this.value); });
+  }
+})();
+</script>
 </body>
 </html>
