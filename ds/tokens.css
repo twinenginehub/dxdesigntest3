@@ -1,0 +1,311 @@
+/* DOXA Design System — generated from tokens.json */
+:root, [data-theme="light"] {
+  --navy: #052538; /* Dominant brand color — dark backgrounds, primary text, nav/footer surfaces. Stands in for black throughout; no black is used. */
+  --cyan: #00aeef; /* Brand accent — gradients, dark-surface text/icons, large solid fills. Fails WCAG AA as text/icon/border on light surfaces — use cyan-700 there instead. */
+  --green: #05af72; /* Brand accent, paired with cyan in the X-mark gradient and the accent button/chip treatment. Also the visited-link and success-state color. */
+  --white: #ffffff; /* Base white — page background, text on dark surfaces. */
+  --magenta: #d41a69; /* Secondary/data-viz accent from the April 2026 brand-update deck; absent from the newer May guidelines — never use for logo or primary chrome. Doubles as the error-state color. */
+  --gold: #f1af21; /* Secondary/data-viz accent from the April 2026 brand-update deck; absent from the newer May guidelines — never use for logo or primary chrome. Doubles as the warning-state color. */
+  --navy-10: #0d3a52; /* Navy hover shade (Button primary hover, on-dark active states). */
+  --navy-20: #164c6c; /* Navy hover/press shade, one step lighter than navy-10. */
+  --cyan-dark: #0090c8; /* Cyan hover/press shade. */
+  --cyan-700: #007099; /* Accessible cyan (~5:1 contrast) — the canonical stand-in wherever cyan needs to be text, an icon, or a border/stroke on a light surface. text-link, focus-ring and state-info all resolve through it. */
+  --cyan-a11y: var(--cyan-700); /* Deprecated alias of cyan-700, kept so existing usages don't break. New work should reference cyan-700 directly. */
+  --cyan-50: #e6f7fe; /* Lightest cyan tint — subtle fills/backgrounds. */
+  --cyan-100: #cceffd; /* Light cyan tint, one step darker than cyan-50. */
+  --green-dark: #048f5d; /* Green hover/press shade. */
+  --fog-50: #f4f7f9; /* Lightest neutral gray — muted section background. */
+  --fog-100: #e7edf1; /* Light neutral gray — hover fills, secondary surfaces. */
+  --fog-200: #cdd9e0; /* Neutral gray — subtle borders, active-state fills. */
+  --slate-400: #6b8494; /* Muted/placeholder text color. */
+  --slate-600: #3d5566; /* Secondary/supporting text color. */
+  --navy-50: #f0f6f9; /* Navy-tinted tonal gray ramp (from production). Intentionally distinct from fog-50/100/200 — use only where work explicitly calls for this ramp. */
+  --navy-100: #dfe9ef; /* Navy-tinted tonal gray, one step darker than navy-50. */
+  --navy-200: #c8d7df; /* Navy-tinted tonal gray. */
+  --navy-300: #8ea5b4; /* Navy-tinted tonal gray. */
+  --navy-400: #5f7684; /* Navy-tinted tonal gray. */
+  --navy-500: #435663; /* Navy-tinted tonal gray. */
+  --navy-700: #1d3543; /* Navy-tinted tonal gray, darkest step. */
+  --emerald-700: #007956; /* Secondary accent from production, applied via a utility class there. */
+  --paper-soft: #f7fafc; /* Soft off-white paper background, an alternate to fog-50. */
+  --surface-page: var(--white); /* Default page background. */
+  --surface-muted: var(--fog-50); /* Muted section background. */
+  --surface-card: var(--white); /* Default card background. */
+  --surface-dark: var(--navy); /* Dark section/card background. */
+  --surface-dark-alt: var(--navy-10); /* Alternate dark surface, one step lighter than surface-dark. */
+  --text-primary: var(--navy); /* Primary body/heading text on light surfaces. */
+  --text-secondary: var(--slate-600); /* Secondary/supporting text on light surfaces. */
+  --text-muted: var(--slate-400); /* Muted/placeholder text. */
+  --text-inverse: var(--white); /* Text on dark/navy surfaces. */
+  --text-link: var(--cyan-700); /* Default link color. */
+  --text-link-hover: var(--navy); /* Link hover text-fill color, paired with the brand-gradient underline. */
+  --text-link-visited: var(--navy); /* Visited link color. */
+  --border-subtle: var(--fog-200); /* Default hairline border on cards, inputs, dividers. */
+  --border-strong: var(--slate-400); /* Stronger border — e.g. unchecked radio/checkbox rings, secondary button outline. */
+  --focus-ring: var(--cyan-700); /* Focus-visible outline color. */
+  --state-success: var(--green); /* Success status color — Badge, Toast, ComparisonTable 'yes' cells. */
+  --state-error: var(--magenta); /* Error status color — Badge, Toast, Input error state, ValidationSummary. */
+  --state-warning: var(--gold); /* Warning status color — Badge, Toast, ComparisonTable 'partial' cells. */
+  --state-info: var(--cyan-700); /* Info status color — Badge, Toast. */
+  --shadow-sm: 0 1px 2px rgba(5,37,56,.06); /* Subtle default card elevation. */
+  --shadow-md: 0 4px 12px rgba(5,37,56,.10); /* Medium elevation — dropdowns, dark stat cards. */
+  --shadow-lg: 0 12px 32px rgba(5,37,56,.14); /* High elevation — dialogs, toasts, nav dropdown panels. */
+  --shadow-focus: 0 0 0 3px rgba(0,174,239,.35); /* Focus ring on custom checkbox/radio controls. */
+  --brand-gradient: linear-gradient(135deg, var(--cyan) 0%, var(--green) 100%); /* Full-strength brand gradient — Card/EventCard top accent bars, gradient CTAs. Was referenced by several components but never defined; added here so those bars actually render. */
+  --gradient-soft: linear-gradient(135deg, rgba(0,174,239,.1) 0%, rgba(6,175,114,.1) 100%); /* Soft brand-gradient wash (cyan/green at 10% opacity) — card header tints, subtle section backgrounds over white or photography. Matches production's --DOXA-grad-soft (doxatalentevents.com/curriculum, Executive Briefing card). */
+}
+:root {
+  --space-1: 4px; /* Smallest spacing step — icon/label gaps. */
+  --space-2: 8px; /* Tight gaps — button icon spacing, tag padding. */
+  --space-3: 12px; /* Small internal padding. */
+  --space-4: 16px; /* Base padding step — card/section internal spacing. */
+  --space-5: 20px; /* Medium spacing between stacked elements. */
+  --space-6: 24px; /* Card padding, section gaps. */
+  --space-8: 32px; /* Section-level spacing. */
+  --space-10: 40px; /* Large section spacing — empty/error state padding. */
+  --space-12: 48px; /* Large section spacing. */
+  --space-16: 64px; /* Hero vertical padding. */
+  --space-20: 80px; /* Large page-section spacing. */
+  --space-24: 96px; /* Large page-section spacing. */
+  --space-32: 128px; /* Largest spacing step. */
+  --container-max: 1200px; /* Legacy centered-column cap — not used by full-width sections (Nav/Footer); kept for any component that wants a centered reading column. */
+  --container-pad: 125px; /* Full-width outer horizontal margin, fluid from 125px at desktop down to 24px on mobile (clamp(24px, 2rem + 5vw, 125px)). Nav and Footer apply it as horizontal padding on their outer full-bleed bar. */
+  --radius-sm: 2px; /* Small radius step of the brand's 3-step scale. */
+  --radius-md: 5px; /* Default radius — buttons, inputs, tags, chips. Never use a pill/fully-rounded shape for these. */
+  --radius-lg: 8px; /* Large radius — cards, dialogs, panels. */
+  --radius-circle: 50%; /* Circular — avatars, icon buttons, radio/switch knobs only. */
+  --z-dropdown: 20; /* Nav mega-menu dropdown panels, Select options. */
+  --z-sticky: 30; /* Sticky headers/nav bars. */
+  --z-overlay: 40; /* Dialog scrim / overlay backdrop. */
+  --z-modal: 50; /* Dialog modal surface. */
+  --z-toast: 60; /* Toast notifications. */
+  --z-tooltip: 70; /* Tooltip, above everything else. */
+  --font-display: 'Work Sans', Arial, Helvetica, sans-serif;
+  --font-body: 'Work Sans', Arial, Helvetica, sans-serif;
+  --font-system: Arial, Helvetica, sans-serif;
+  --text-display-1: 700 4.5rem/1.1 var(--font-display);
+  --text-display-2: 700 3.25rem/1.1 var(--font-display);
+  --text-hero: 700 4.25rem/1.1 var(--font-display);
+  --text-h1: 700 2.75rem/1.1 var(--font-display);
+  --text-h2: 600 2rem/1.25 var(--font-display);
+  --text-h3: 600 1.25rem/1.25 var(--font-display);
+  --text-h4: 600 1.0625rem/1.25 var(--font-display);
+  --text-body-lg: 400 1.125rem/1.65 var(--font-body);
+  --text-body: 400 1rem/1.5 var(--font-body);
+  --text-body-sm: 400 0.875rem/1.5 var(--font-body);
+  --text-caption: 500 0.75rem/1.5 var(--font-body);
+  --text-eyebrow: 600 0.7rem/1.5 var(--font-body);
+  --tracking-eyebrow: 0.12em; /* Eyebrow label letter-spacing, matches the .eyebrow utility class. Was referenced by Card but never defined. */
+  --leading-relaxed: 1.65; /* Relaxed body line-height for longer card/paragraph copy, matches .body-lg. Was referenced by Card but never defined. */
+  --leading-normal: 1.5; /* Standard body line-height, matches .body. Was referenced by StepList but never defined. */
+}
+.display-1 {
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.display-2 {
+  font-family: var(--font-display);
+  font-size: 3.25rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.hero {
+  font-family: var(--font-display);
+  font-size: 4.25rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.h1 {
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.h4 {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.body-lg {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.body-sm {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.caption {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}

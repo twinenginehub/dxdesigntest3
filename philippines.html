@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hiring in Philippines: the heart of the DOXA network | DOXA Talent</title>
+<link rel="stylesheet" href="ds/tokens.css"><link rel="stylesheet" href="ds/bundle.css"><style>
+body{margin:0}
+:root{--container-pad:clamp(24px,2rem + 5vw,125px)}
+.cta{font-family:var(--font-display);font-weight:600;font-size:var(--text-body-sm);border-radius:var(--radius-md);display:inline-flex;align-items:center;justify-content:center;padding:var(--space-2) 18px;min-height:44px;box-sizing:border-box;text-decoration:none;position:relative}
+.ds-btn:not(.ds-tag){text-transform:uppercase;letter-spacing:.03em}
+.ds-btn.ds-btn-secondary{box-shadow:inset 0 0 0 1px var(--navy) !important}
+.ds-btn.ds-btn-secondary.on-dark{background:rgba(255,255,255,.10);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.15) !important}
+.ds-btn.ds-btn-secondary.on-dark:hover{background:rgba(255,255,255,.18)}
+.ds-btn-accent{isolation:isolate;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 2px 6px rgba(5,37,56,.05),0 1px 2px rgba(5,37,56,.04)}
+.ds-btn-accent::before{z-index:-1}
+a.ds-btn.cta.ds-btn-accent,a.ds-btn.cta.ds-btn-accent:visited,a.ds-btn.cta.ds-btn-accent:hover{color:var(--navy)}
+nav a.ds-btn-accent{padding:var(--space-2) 18px !important;font-size:var(--text-caption) !important;font-weight:700 !important;letter-spacing:.03em;line-height:1.65}
+a.ds-btn.ds-btn-primary,a.ds-btn.ds-btn-primary:visited{color:var(--white)}
+a.ds-btn.ds-btn-primary.on-dark,a.ds-btn.ds-btn-primary.on-dark:visited{color:var(--navy)}
+a.ds-btn.ds-btn-primary.on-dark:hover{color:var(--navy)}
+a.ds-btn.ds-btn-secondary,a.ds-btn.ds-btn-secondary:visited{color:var(--navy)}
+a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{color:var(--white)}
+.hero-wrap div[style*="background-image"]{background-image:url(office-team.png) !important;background-position:50% 30% !important}
+@media (max-width:860px){
+  footer > div:first-child{grid-template-columns:1fr 1fr !important}
+  .sec-h{font-size:1.75rem !important}
+  .purpose{font-size:2.25rem !important}
+  .sec-pad{padding-top:var(--space-16) !important;padding-bottom:var(--space-16) !important}
+}
+@media (max-width:520px){
+  footer > div:first-child{grid-template-columns:1fr !important}
+}
+</style></head><body>
+<template id="tpl">
+
+<div style="width:100%;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body);overflow-x:clip">
+
+  <!-- NAV -->
+  <x-import component-from-global-scope="DoxaDS.SkipLink" href="#main-content">Skip to content</x-import>
+  <div style="position:sticky;top:0;z-index:30"><x-import component-from-global-scope="DoxaDS.Nav" variant="inline" tone="dark" logo="doxa-logo-white.png" items="{{navItems}}" cta-label="Build Your Team" cta-href="index.html#build-your-team"></x-import></div>
+
+  <!-- HERO -->
+  <div id="main-content" class="hero-wrap">
+    <x-import component-from-global-scope="DoxaDS.Hero" variant="photo" layout="full" eyebrow="PH · Manila" headline="Philippines: the heart of the DOXA network" body="The Philippines is DOXA's largest talent market and primary VIP hub. Filipino professionals combine deep US-business familiarity, strong written and spoken English, and a service culture that made the country the world's outsourcing capital. US-hours coverage is standard practice, and DOXA's Philippine team is ranked among Fortune's 100 Best Companies to Work For in Southeast Asia."></x-import>
+  </div>
+
+  <!-- SUB-NAV -->
+  <nav aria-label="Talent sections" style="position:sticky;top:75px;z-index:20;background:rgba(255,255,255,.95);border-bottom:1px solid var(--border-subtle);padding:0 var(--container-pad);overflow-x:auto;display:flex;gap:var(--space-2)"><a href="top-roles.html" style="padding:var(--space-4) var(--space-3);font-size:var(--text-body-sm);font-weight:600;white-space:nowrap;text-decoration:none;color:var(--text-secondary);border-bottom:3px solid transparent">Top roles</a><a href="recently-placed.html" style="padding:var(--space-4) var(--space-3);font-size:var(--text-body-sm);font-weight:600;white-space:nowrap;text-decoration:none;color:var(--text-secondary);border-bottom:3px solid transparent">Recently placed</a><a href="available-now.html" style="padding:var(--space-4) var(--space-3);font-size:var(--text-body-sm);font-weight:600;white-space:nowrap;text-decoration:none;color:var(--text-secondary);border-bottom:3px solid transparent">Available now</a><a href="talent.html" style="padding:var(--space-4) var(--space-3);font-size:var(--text-body-sm);font-weight:600;white-space:nowrap;text-decoration:none;color:var(--text-secondary);border-bottom:3px solid transparent">Build your team</a><a href="countries.html" aria-current="page" style="padding:var(--space-4) var(--space-3);font-size:var(--text-body-sm);font-weight:600;white-space:nowrap;text-decoration:none;color:var(--text-primary);border-bottom:3px solid var(--cyan)">Countries</a></nav>
+
+  <!-- BREADCRUMB -->
+  <div style="padding:var(--space-5) var(--container-pad) 0;background:var(--paper-soft)">
+    <x-import component-from-global-scope="DoxaDS.Breadcrumb" items="{{crumbs}}"></x-import>
+  </div>
+
+  <!-- MARKET -->
+  <section class="sec-pad" style="background:var(--paper-soft);padding:var(--space-8) var(--container-pad) var(--space-16);display:flex;flex-wrap:wrap;gap:var(--space-10) var(--space-12);align-items:flex-start">
+    <div style="flex:2 1 420px;min-width:0;display:flex;flex-direction:column;gap:var(--space-5)">
+      <div style="display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--cyan-700)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Market strengths</div>
+      <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">What Philippines does best</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--space-3)">
+        <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-body-lg);color:var(--text-secondary)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan-700)" aria-hidden="true" style="flex-shrink:0"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Accounting and bookkeeping depth, US GAAP familiarity</li><li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-body-lg);color:var(--text-secondary)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan-700)" aria-hidden="true" style="flex-shrink:0"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Customer support and insurance servicing at scale</li><li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-body-lg);color:var(--text-secondary)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan-700)" aria-hidden="true" style="flex-shrink:0"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Healthcare back office: billing, RCM, prior auth</li><li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-body-lg);color:var(--text-secondary)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan-700)" aria-hidden="true" style="flex-shrink:0"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>MSP helpdesk and NOC coverage</li>
+      </ul>
+      <div style="display:flex;flex-wrap:wrap;gap:var(--space-2)"><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">Finance &amp; Accounting</span><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">Customer Support &amp; Sales</span><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">Healthcare</span><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">ISP / MSP</span></div>
+    </div>
+    <div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:var(--space-6)">
+      <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:var(--space-6)">
+        <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-4);font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--cyan-700)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>At a glance</div>
+        <dl style="margin:0;display:flex;flex-direction:column;gap:var(--space-3)">
+          <div style="display:flex;justify-content:space-between;gap:var(--space-4);font-size:var(--text-body-sm)"><dt style="font-weight:700;color:var(--text-primary)">DOXA hub</dt><dd style="margin:0;text-align:right;color:var(--text-secondary)">Manila</dd></div><div style="display:flex;justify-content:space-between;gap:var(--space-4);font-size:var(--text-body-sm)"><dt style="font-weight:700;color:var(--text-primary)">English</dt><dd style="margin:0;text-align:right;color:var(--text-secondary)">Business-fluent, US-trained</dd></div><div style="display:flex;justify-content:space-between;gap:var(--space-4);font-size:var(--text-body-sm)"><dt style="font-weight:700;color:var(--text-primary)">Hours</dt><dd style="margin:0;text-align:right;color:var(--text-secondary)">Full US-timezone coverage</dd></div><div style="display:flex;justify-content:space-between;gap:var(--space-4);font-size:var(--text-body-sm)"><dt style="font-weight:700;color:var(--text-primary)">Membership</dt><dd style="margin:0;text-align:right;color:var(--text-secondary)">IBPAP (IT &amp; BPM Association of the Philippines)</dd></div>
+        </dl>
+      </div>
+      <div style="background:var(--surface-dark);color:var(--text-inverse);border-radius:var(--radius-lg);padding:var(--space-6)">
+        <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-4);font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--cyan)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Proof</div>
+        <dl style="margin:0;display:flex;flex-direction:column;gap:var(--space-4)">
+          <div><dt style="font-size:var(--text-caption);font-weight:600;color:rgba(255,255,255,.7)">Fortune 100 Best Companies</dt><dd style="margin:2px 0 0;font-family:var(--font-display);font-size:var(--text-body-lg);font-weight:700">#62 · Southeast Asia 2025</dd></div><div><dt style="font-size:var(--text-caption);font-weight:600;color:rgba(255,255,255,.7)">Great Place to Work</dt><dd style="margin:2px 0 0;font-family:var(--font-display);font-size:var(--text-body-lg);font-weight:700">Certified 2025–2026</dd></div><div><dt style="font-size:var(--text-caption);font-weight:600;color:rgba(255,255,255,.7)">Recent placements</dt><dd style="margin:2px 0 0;font-family:var(--font-display);font-size:var(--text-body-lg);font-weight:700">36 of the last 50 network placements</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVAILABLE NOW -->
+  <section class="sec-pad" style="padding:var(--space-16) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-5)">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap">
+      <h2 style="margin:0;font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;color:var(--text-primary)">Available now from Philippines</h2>
+      <a href="available-now.html" style="font-size:var(--text-body-sm);font-weight:600">Full bench<svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true" style="margin-left:6px;vertical-align:baseline"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg></a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--space-6)">
+      <sc-for list="{{bench}}" as="c" hint-placeholder-count="3">
+        <article style="display:flex;flex-direction:column;gap:var(--space-4);background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:var(--space-5)">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-3)">
+              <div style="display:flex;align-items:center;gap:var(--space-3)">
+                <span aria-hidden="true" style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:var(--navy);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-size:var(--text-body-sm);font-weight:700">{{c.ini}}</span>
+                <div><div style="font-family:var(--font-display);font-size:var(--text-body);font-weight:700;line-height:1.3;color:var(--text-primary)">{{c.role}}</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">{{c.meta}}</div></div>
+              </div>
+              <span style="flex-shrink:0;padding:var(--space-1) var(--space-2);border-radius:var(--radius-sm);background:color-mix(in srgb,var(--state-success) 12%,transparent);color:var(--emerald-700);font-size:var(--text-caption);font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap">{{c.status}}</span>
+            </div>
+            <p style="margin:0;flex:1;font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">{{c.blurb}}</p>
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-2)"><sc-for list="{{c.tags}}" as="t" hint-placeholder-count="3"><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">{{t.t}}</span></sc-for></div>
+            <a class="ds-btn ds-btn-primary" href="#" style="align-self:flex-start;font-family:var(--font-display);font-weight:600;font-size:var(--text-body-sm);border-radius:var(--radius-md);display:inline-flex;align-items:center;gap:8px;padding:var(--space-2) 18px;min-height:44px;box-sizing:border-box;text-decoration:none;position:relative">Hire someone like this <svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg></a>
+          </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="sec-pad" style="border-top:1px solid var(--border-subtle);padding:var(--space-20) var(--container-pad);display:flex;flex-wrap:wrap;gap:var(--space-8) var(--space-16);align-items:center;justify-content:space-between">
+    <div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:var(--space-4);max-width:720px">
+      <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Hire in Philippines, or let the role decide.</h2>
+      <p style="margin:0;font-size:var(--text-body-lg);line-height:1.65;color:var(--text-secondary)">Tell us the role and the hours; we'll recommend the market. Shortlist in 7–10 business days, live in 3 weeks.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:var(--space-3)">
+      <a class="cta ds-btn ds-btn-accent" href="index.html#build-your-team">Book a call</a>
+      <a class="cta ds-btn ds-btn-secondary" href="index.html#pricing">See rates</a>
+    </div>
+  </section>
+
+  <!-- OTHER MARKETS -->
+  <section class="sec-pad" style="background:var(--paper-soft);border-top:1px solid var(--border-subtle);padding:var(--space-10) var(--container-pad);display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-4) var(--space-8)">
+    <div style="display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--cyan-700)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Other markets</div>
+    <div style="display:flex;flex-wrap:wrap;gap:var(--space-6)"><a href="colombia.html" style="font-size:var(--text-body);font-weight:600">Colombia</a><a href="vietnam.html" style="font-size:var(--text-body);font-weight:600">Vietnam</a><a href="kenya.html" style="font-size:var(--text-body);font-weight:600">Kenya</a></div>
+  </section>
+
+  <!-- FOOTER -->
+  <x-import component-from-global-scope="DoxaDS.Footer" variant="standard" logo="doxa-logo-white.png" brand-description="DOXA Talent recruits, directly employs, equips, develops, and supports dedicated offshore professionals for its clients." chips="{{footerChips}}" columns="{{footerColumns}}" legal-links="{{noLinks}}" copyright="© 2026 DOXA. All rights reserved."></x-import>
+
+</div>
+</template><div id="app"><div>
+
+<div style="width:100%;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body);overflow-x:clip">
+
+  <!-- NAV -->
+  <div style="display: contents;"><a href="#main-content" style="position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;"><div style="display: contents;">Skip to content</div></a></div>
+  <div style="position:sticky;top:0;z-index:30"><div style="display: contents;"><div style="position: relative; font-family: var(--font-body);"><nav style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-4) var(--container-pad); background: var(--doxa-navy); border-bottom: 4px solid transparent; border-image: var(--brand-gradient) 1;"><img src="doxa-logo-white.png" alt="DOXA" style="height: 28px; margin-right: var(--space-8);"><span style="cursor: pointer; color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></span></nav><div style="position: absolute; top: 100%; left: 0px; right: 0px; background: var(--doxa-navy); border-bottom: 1px solid rgba(255, 255, 255, 0.12); box-shadow: var(--shadow-lg); max-height: 0px; overflow-y: auto; opacity: 0; transition: opacity var(--duration-base) var(--ease-standard); pointer-events: none; z-index: var(--z-sticky); padding: 0 var(--container-pad);"><div style="border-bottom: 1px solid rgba(255, 255, 255, 0.12);"><a href="index.html" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 4px; font-family: var(--font-body); font-size: var(--text-body); font-weight: 600; color: var(--text-inverse); text-decoration: none; cursor: pointer;">Home</a></div><div style="border-bottom: 1px solid rgba(255, 255, 255, 0.12);"><a style="display: flex; align-items: center; justify-content: space-between; padding: 16px 4px; font-family: var(--font-body); font-size: var(--text-body); font-weight: 600; color: var(--text-inverse); text-decoration: none; cursor: pointer;">Talent<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transition: transform var(--duration-base) var(--ease-standard); transform: none;"><path d="M6 9l6 6 6-6"></path></svg></a><div style="max-height: 0px; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);"><div style="display: flex; flex-direction: column; gap: 18px; padding: 4px 4px 18px;"><div style="display: flex; flex-direction: column; gap: 8px;"><div style="font-size: var(--text-caption); font-weight: 600; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: rgba(255, 255, 255, 0.55);">Who You Can Hire</div><a href="role-finance-accounting.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Finance &amp; Accounting</a><a href="role-assistants.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Assistants</a><a href="role-customer-support-sales.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Customer Support &amp; Sales</a><a href="role-marketing.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Marketing</a><a href="role-it-technology.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">IT &amp; Technology</a><a href="role-hr.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Human Resources</a><a href="role-legal.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Legal</a><a href="role-healthcare.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Healthcare</a><a href="role-isp-msp.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">ISP / MSP</a></div></div></div></div><div style="border-bottom: 1px solid rgba(255, 255, 255, 0.12);"><a href="industries.html" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 4px; font-family: var(--font-body); font-size: var(--text-body); font-weight: 600; color: var(--text-inverse); text-decoration: none; cursor: pointer;">Industries</a></div><div style="border-bottom: 1px solid rgba(255, 255, 255, 0.12);"><a href="about.html" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 4px; font-family: var(--font-body); font-size: var(--text-body); font-weight: 600; color: var(--text-inverse); text-decoration: none; cursor: pointer;">About</a></div><div style="display: flex; align-items: center; gap: 16px; padding-top: 18px;"><span style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM21 21l-4.3-4.3"></path></svg></span><a href="index.html#build-your-team" class="ds-btn ds-btn-accent on-dark" style="font-family: var(--font-display); font-weight: 600; font-size: var(--text-body-sm); padding: 10px 20px; border-radius: var(--radius-md); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; position: relative; flex: 1 1 0%; text-align: center;">Build Your Team</a></div></div></div></div></div>
+
+  <!-- HERO -->
+  <div id="main-content" class="hero-wrap">
+    <div style="display: contents;"><div style="position: relative; border-radius: 0px; overflow: hidden; padding: var(--space-24) var(--container-pad) var(--space-20); display: flex; flex-direction: column; gap: var(--space-4); min-height: 0px; justify-content: center; background-image: url(&quot;/_blob/e65bbd7df1e2e26f55d49371583552f6&quot;); background-color: var(--doxa-navy-10); background-size: cover; background-position: center 25%;"><div style="position: absolute; inset: 0px; background: linear-gradient(160deg,var(--doxa-cyan) 0%,var(--doxa-green) 100%); mix-blend-mode: multiply;"></div><div style="position: relative; max-width: 620px;"><div style="display: flex; align-items: center; gap: 6px; font-size: var(--text-eyebrow); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--doxa-white); margin-bottom: var(--space-3);"><svg viewBox="0 0 25.22 37.46" style="width: 7px; height: 10px; fill: currentcolor; flex-shrink: 0;"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>PH · Manila</div><h1 style="font-family: var(--font-display); font-size: var(--text-h1); font-weight: 700; color: var(--doxa-white); margin: 0px; line-height: 1.1;">Philippines: the heart of the DOXA network</h1><p style="font-family: var(--font-body); font-size: var(--text-body-lg); color: rgba(255, 255, 255, 0.85); margin-top: var(--space-4); line-height: 1.6;">The Philippines is DOXA's largest talent market and primary VIP hub. Filipino professionals combine deep US-business familiarity, strong written and spoken English, and a service culture that made the country the world's outsourcing capital. US-hours coverage is standard practice, and DOXA's Philippine team is ranked among Fortune's 100 Best Companies to Work For in Southeast Asia.</p></div></div></div>
+  </div>
+
+  <!-- SUB-NAV -->
+  <nav aria-label="Talent sections" style="position:sticky;top:75px;z-index:20;background:rgba(255,255,255,.95);border-bottom:1px solid var(--border-subtle);padding:0 var(--container-pad);overflow-x:auto;display:flex;gap:var(--space-2)"><a href="top-roles.html" style="padding:var(--space-4) var(--space-3);font-size:var(--text-body-sm);font-weight:600;white-space:nowrap;text-decoration:none;color:var(--text-secondary);border-bottom:3px solid transparent">Top roles</a><a href="recently-placed.html" style="padding:var(--space-4) var(--space-3);font-size:var(--text-body-sm);font-weight:600;white-space:nowrap;text-decoration:none;color:var(--text-secondary);border-bottom:3px solid transparent">Recently placed</a><a href="available-now.html" style="padding:var(--space-4) var(--space-3);font-size:var(--text-body-sm);font-weight:600;white-space:nowrap;text-decoration:none;color:var(--text-secondary);border-bottom:3px solid transparent">Available now</a><a href="talent.html" style="padding:var(--space-4) var(--space-3);font-size:var(--text-body-sm);font-weight:600;white-space:nowrap;text-decoration:none;color:var(--text-secondary);border-bottom:3px solid transparent">Build your team</a><a href="countries.html" aria-current="page" style="padding:var(--space-4) var(--space-3);font-size:var(--text-body-sm);font-weight:600;white-space:nowrap;text-decoration:none;color:var(--text-primary);border-bottom:3px solid var(--cyan)">Countries</a></nav>
+
+  <!-- BREADCRUMB -->
+  <div style="padding:var(--space-5) var(--container-pad) 0;background:var(--paper-soft)">
+    <div style="display: contents;"><nav aria-label="Breadcrumb" style="font-family: var(--font-body);"><ol style="display: flex; align-items: center; gap: 8px; list-style: none; margin: 0px; padding: 0px; font-size: var(--text-body-sm); flex-wrap: wrap;"><li style="display: flex; align-items: center; gap: 8px;"><a href="talent.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Talent</a><span aria-hidden="true" style="color: var(--text-muted); font-size: 12px; font-weight: 700;">›</span></li><li style="display: flex; align-items: center; gap: 8px;"><a href="countries.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Countries</a><span aria-hidden="true" style="color: var(--text-muted); font-size: 12px; font-weight: 700;">›</span></li><li style="display: flex; align-items: center; gap: 8px;"><span aria-current="page" style="color: var(--text-primary); font-weight: 600;">Philippines</span></li></ol></nav></div>
+  </div>
+
+  <!-- MARKET -->
+  <section class="sec-pad" style="background:var(--paper-soft);padding:var(--space-8) var(--container-pad) var(--space-16);display:flex;flex-wrap:wrap;gap:var(--space-10) var(--space-12);align-items:flex-start">
+    <div style="flex:2 1 420px;min-width:0;display:flex;flex-direction:column;gap:var(--space-5)">
+      <div style="display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--cyan-700)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Market strengths</div>
+      <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">What Philippines does best</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--space-3)">
+        <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-body-lg);color:var(--text-secondary)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan-700)" aria-hidden="true" style="flex-shrink:0"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Accounting and bookkeeping depth, US GAAP familiarity</li><li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-body-lg);color:var(--text-secondary)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan-700)" aria-hidden="true" style="flex-shrink:0"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Customer support and insurance servicing at scale</li><li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-body-lg);color:var(--text-secondary)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan-700)" aria-hidden="true" style="flex-shrink:0"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Healthcare back office: billing, RCM, prior auth</li><li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-body-lg);color:var(--text-secondary)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan-700)" aria-hidden="true" style="flex-shrink:0"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>MSP helpdesk and NOC coverage</li>
+      </ul>
+      <div style="display:flex;flex-wrap:wrap;gap:var(--space-2)"><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">Finance &amp; Accounting</span><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">Customer Support &amp; Sales</span><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">Healthcare</span><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">ISP / MSP</span></div>
+    </div>
+    <div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:var(--space-6)">
+      <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:var(--space-6)">
+        <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-4);font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--cyan-700)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>At a glance</div>
+        <dl style="margin:0;display:flex;flex-direction:column;gap:var(--space-3)">
+          <div style="display:flex;justify-content:space-between;gap:var(--space-4);font-size:var(--text-body-sm)"><dt style="font-weight:700;color:var(--text-primary)">DOXA hub</dt><dd style="margin:0;text-align:right;color:var(--text-secondary)">Manila</dd></div><div style="display:flex;justify-content:space-between;gap:var(--space-4);font-size:var(--text-body-sm)"><dt style="font-weight:700;color:var(--text-primary)">English</dt><dd style="margin:0;text-align:right;color:var(--text-secondary)">Business-fluent, US-trained</dd></div><div style="display:flex;justify-content:space-between;gap:var(--space-4);font-size:var(--text-body-sm)"><dt style="font-weight:700;color:var(--text-primary)">Hours</dt><dd style="margin:0;text-align:right;color:var(--text-secondary)">Full US-timezone coverage</dd></div><div style="display:flex;justify-content:space-between;gap:var(--space-4);font-size:var(--text-body-sm)"><dt style="font-weight:700;color:var(--text-primary)">Membership</dt><dd style="margin:0;text-align:right;color:var(--text-secondary)">IBPAP (IT &amp; BPM Association of the Philippines)</dd></div>
+        </dl>
+      </div>
+      <div style="background:var(--surface-dark);color:var(--text-inverse);border-radius:var(--radius-lg);padding:var(--space-6)">
+        <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-4);font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--cyan)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Proof</div>
+        <dl style="margin:0;display:flex;flex-direction:column;gap:var(--space-4)">
+          <div><dt style="font-size:var(--text-caption);font-weight:600;color:rgba(255,255,255,.7)">Fortune 100 Best Companies</dt><dd style="margin:2px 0 0;font-family:var(--font-display);font-size:var(--text-body-lg);font-weight:700">#62 · Southeast Asia 2025</dd></div><div><dt style="font-size:var(--text-caption);font-weight:600;color:rgba(255,255,255,.7)">Great Place to Work</dt><dd style="margin:2px 0 0;font-family:var(--font-display);font-size:var(--text-body-lg);font-weight:700">Certified 2025–2026</dd></div><div><dt style="font-size:var(--text-caption);font-weight:600;color:rgba(255,255,255,.7)">Recent placements</dt><dd style="margin:2px 0 0;font-family:var(--font-display);font-size:var(--text-body-lg);font-weight:700">36 of the last 50 network placements</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVAILABLE NOW -->
+  <section class="sec-pad" style="padding:var(--space-16) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-5)">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap">
+      <h2 style="margin:0;font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;color:var(--text-primary)">Available now from Philippines</h2>
+      <a href="available-now.html" style="font-size:var(--text-body-sm);font-weight:600">Full bench<svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true" style="margin-left:6px;vertical-align:baseline"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg></a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--space-6)">
+      
+        <article style="display:flex;flex-direction:column;gap:var(--space-4);background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:var(--space-5)">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-3)">
+              <div style="display:flex;align-items:center;gap:var(--space-3)">
+                <span aria-hidden="true" style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:var(--navy);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-size:var(--text-body-sm);font-weight:700">MA</span>
+                <div><div style="font-family:var(--font-display);font-size:var(--text-body);font-weight:700;line-height:1.3;color:var(--text-primary)">Senior Bookkeeper</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Philippines · Senior · 11 yrs</div></div>
+              </div>
+              <span style="flex-shrink:0;padding:var(--space-1) var(--space-2);border-radius:var(--radius-sm);background:color-mix(in srgb,var(--state-success) 12%,transparent);color:var(--emerald-700);font-size:var(--text-caption);font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap">Available now</span>
+            </div>
+            <p style="margin:0;flex:1;font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Ran full-cycle books for three US property firms; closes in five days.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-2)"><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">QuickBooks Online</span><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">AppFolio</span><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">Month-end close</span></div>
+            <a class="ds-btn ds-btn-primary" href="#" style="align-self:flex-start;font-family:var(--font-display);font-weight:600;font-size:var(--text-body-sm);border-radius:var(--radius-md);display:inline-flex;align-items:center;gap:8px;padding:var(--space-2) 18px;min-height:44px;box-sizing:border-box;text-decoration:none;position:relative">Hire someone like this <svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg></a>
+          </article>
+      
+        <article style="display:flex;flex-direction:column;gap:var(--space-4);background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:var(--space-5)">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-3)">
+              <div style="display:flex;align-items:center;gap:var(--space-3)">
+                <span aria-hidden="true" style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:var(--navy);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-size:var(--text-body-sm);font-weight:700">JT</span>
+                <div><div style="font-family:var(--font-display);font-size:var(--text-body);font-weight:700;line-height:1.3;color:var(--text-primary)">AR Specialist</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Philippines · Mid · 6 yrs</div></div>
+              </div>
+              <span style="flex-shrink:0;padding:var(--space-1) var(--space-2);border-radius:var(--radius-sm);background:color-mix(in srgb,var(--state-success) 12%,transparent);color:var(--emerald-700);font-size:var(--text-caption);font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap">Available now</span>
+            </div>
+            <p style="margin:0;flex:1;font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Cut DSO by double digits at her last two clients; collections without friction.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-2)"><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">Collections</span><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">Aging analysis</span><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">Bill.com</span></div>
+            <a class="ds-btn ds-btn-primary" href="#" style="align-self:flex-start;font-family:var(--font-display);font-weight:600;font-size:var(--text-body-sm);border-radius:var(--radius-md);display:inline-flex;align-items:center;gap:8px;padding:var(--space-2) 18px;min-height:44px;box-sizing:border-box;text-decoration:none;position:relative">Hire someone like this <svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg></a>
+          </article>
+      
+        <article style="display:flex;flex-direction:column;gap:var(--space-4);background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:var(--space-5)">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-3)">
+              <div style="display:flex;align-items:center;gap:var(--space-3)">
+                <span aria-hidden="true" style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:var(--navy);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-size:var(--text-body-sm);font-weight:700">RC</span>
+                <div><div style="font-family:var(--font-display);font-size:var(--text-body);font-weight:700;line-height:1.3;color:var(--text-primary)">AP Specialist</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Philippines · Mid · 5 yrs</div></div>
+              </div>
+              <span style="flex-shrink:0;padding:var(--space-1) var(--space-2);border-radius:var(--radius-sm);background:color-mix(in srgb,var(--state-success) 12%,transparent);color:var(--emerald-700);font-size:var(--text-caption);font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap">Available now</span>
+            </div>
+            <p style="margin:0;flex:1;font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">High-volume AP across multi-entity builds; vendor relationships stay warm.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-2)"><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">Bill.com</span><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">3-way match</span><span class="ds-tag ds-tag-cyan" style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-md);font-size:var(--text-caption);font-weight:600">NetSuite</span></div>
+            <a class="ds-btn ds-btn-primary" href="#" style="align-self:flex-start;font-family:var(--font-display);font-weight:600;font-size:var(--text-body-sm);border-radius:var(--radius-md);display:inline-flex;align-items:center;gap:8px;padding:var(--space-2) 18px;min-height:44px;box-sizing:border-box;text-decoration:none;position:relative">Hire someone like this <svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg></a>
+          </article>
+      
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="sec-pad" style="border-top:1px solid var(--border-subtle);padding:var(--space-20) var(--container-pad);display:flex;flex-wrap:wrap;gap:var(--space-8) var(--space-16);align-items:center;justify-content:space-between">
+    <div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:var(--space-4);max-width:720px">
+      <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Hire in Philippines, or let the role decide.</h2>
+      <p style="margin:0;font-size:var(--text-body-lg);line-height:1.65;color:var(--text-secondary)">Tell us the role and the hours; we'll recommend the market. Shortlist in 7–10 business days, live in 3 weeks.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:var(--space-3)">
+      <a class="cta ds-btn ds-btn-accent" href="index.html#build-your-team">Book a call</a>
+      <a class="cta ds-btn ds-btn-secondary" href="index.html#pricing">See rates</a>
+    </div>
+  </section>
+
+  <!-- OTHER MARKETS -->
+  <section class="sec-pad" style="background:var(--paper-soft);border-top:1px solid var(--border-subtle);padding:var(--space-10) var(--container-pad);display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-4) var(--space-8)">
+    <div style="display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--cyan-700)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Other markets</div>
+    <div style="display:flex;flex-wrap:wrap;gap:var(--space-6)"><a href="colombia.html" style="font-size:var(--text-body);font-weight:600">Colombia</a><a href="vietnam.html" style="font-size:var(--text-body);font-weight:600">Vietnam</a><a href="kenya.html" style="font-size:var(--text-body);font-weight:600">Kenya</a></div>
+  </section>
+
+  <!-- FOOTER -->
+  <div style="display: contents;"><footer style="background: var(--doxa-navy); color: var(--text-inverse); font-family: var(--font-body); padding: var(--space-10) var(--container-pad) var(--space-6);"><div style="display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: var(--space-8);"><div><img src="doxa-logo-white.png" alt="DOXA" style="height: 32px;"><p style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-body-sm); margin-top: var(--space-4); max-width: 280px;">DOXA Talent recruits, directly employs, equips, develops, and supports dedicated offshore professionals for its clients.</p><div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); margin-top: var(--space-4);"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: rgba(255, 255, 255, 0.85);">SOC 2 Type II</span><span aria-hidden="true" style="color: rgba(255, 255, 255, 0.3); font-weight: 400;">|</span><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: rgba(255, 255, 255, 0.85);">Great Place to Work Certified</span><span aria-hidden="true" style="color: rgba(255, 255, 255, 0.3); font-weight: 400;">|</span><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: rgba(255, 255, 255, 0.85);">30-day cancellation</span></div></div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--doxa-white); margin-bottom: 4px;">Roles</div><a href="role-finance-accounting.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Finance &amp; Accounting</a><a href="role-assistants.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Assistants</a><a href="role-customer-support-sales.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Customer Support &amp; Sales</a><a href="role-marketing.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Marketing</a><a href="role-it-technology.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">IT &amp; Technology</a><a href="role-hr.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Human Resources</a><a href="role-legal.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Legal</a><a href="role-healthcare.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Healthcare</a><a href="role-isp-msp.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">ISP / MSP</a></div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--doxa-white); margin-bottom: 4px;">Industries</div><a href="industries.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Explore Industries</a></div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--doxa-white); margin-bottom: 4px;">Company</div><a href="about.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">About DOXA</a></div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--doxa-white); margin-bottom: 4px;">Get Started</div><a href="index.html#build-your-team" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Build Your Team</a><a href="index.html#calculate-your-team-cost" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Calculate Your Team Cost</a><a href="index.html#roles" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Explore Talent</a></div></div><div style="display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; justify-content: space-between; margin-top: var(--space-8); padding-top: var(--space-5); border-top: 1px solid rgba(255, 255, 255, 0.15); font-size: var(--text-caption); color: rgba(255, 255, 255, 0.6);"><span>© 2026 DOXA. All rights reserved.</span><div style="display: flex; align-items: center; gap: var(--space-6); flex-wrap: wrap;"><div style="display: flex; gap: var(--space-4);"></div><div style="display: flex; align-items: center; gap: 14px;"><a href="#" aria-label="LinkedIn" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM8 10v7M8 7.2h.01M12 17v-4.5c0-1.4 1-2.5 2.3-2.5S16 11 16 12.5V17"></path></svg></a><a href="#" aria-label="Facebook" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8h-2c-.6 0-1 .6-1 1.2V11h3l-.4 3H12v6h-3v-6H7v-3h2V9c0-2 1.4-4 4-4h2z"></path></svg></a><a href="#" aria-label="Instagram" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM16.5 7.5h.01"></path></svg></a><a href="#" aria-label="YouTube" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5c0-1.4 1-2.5 2.5-2.5h11c1.5 0 2.5 1.1 2.5 2.5v7c0 1.4-1 2.5-2.5 2.5h-11C5 18 4 16.9 4 15.5zM10 9.5l5 2.5-5 2.5z"></path></svg></a><a href="#" aria-label="TikTok" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v9.5a2.5 2.5 0 1 1-2-2.45M14 4c.3 2 1.8 3.5 4 3.7"></path></svg></a></div></div></div></footer></div>
+
+</div>
+</div></div>
+<script src="ds/vendor/react.production.min.js"></script><script src="ds/vendor/react-dom.production.min.js"></script><script src="ds/bundle.js"></script>
+<script>class DCLogic{constructor(){this.props={};this.state={};}setState(s){Object.assign(this.state,s);window.__render&&window.__render();}}
+
+
+class Component extends DCLogic {
+  renderVals() {
+    const roleLinks = [
+      { label: 'Finance & Accounting', href: 'role-finance-accounting.html' },
+      { label: 'Assistants', href: 'role-assistants.html' },
+      { label: 'Customer Support & Sales', href: 'role-customer-support-sales.html' },
+      { label: 'Marketing', href: 'role-marketing.html' },
+      { label: 'IT & Technology', href: 'role-it-technology.html' },
+      { label: 'Human Resources', href: 'role-hr.html' },
+      { label: 'Legal', href: 'role-legal.html' },
+      { label: 'Healthcare', href: 'role-healthcare.html' },
+      { label: 'ISP / MSP', href: 'role-isp-msp.html' }
+    ];
+    const bench = [{"ini": "MA", "role": "Senior Bookkeeper", "meta": "Philippines · Senior · 11 yrs", "blurb": "Ran full-cycle books for three US property firms; closes in five days.", "tags": [{"t": "QuickBooks Online"}, {"t": "AppFolio"}, {"t": "Month-end close"}], "status": "Available now"}, {"ini": "JT", "role": "AR Specialist", "meta": "Philippines · Mid · 6 yrs", "blurb": "Cut DSO by double digits at her last two clients; collections without friction.", "tags": [{"t": "Collections"}, {"t": "Aging analysis"}, {"t": "Bill.com"}], "status": "Available now"}, {"ini": "RC", "role": "AP Specialist", "meta": "Philippines · Mid · 5 yrs", "blurb": "High-volume AP across multi-entity builds; vendor relationships stay warm.", "tags": [{"t": "Bill.com"}, {"t": "3-way match"}, {"t": "NetSuite"}], "status": "Available now"}];
+    return {
+      bench,
+      crumbs: [{ label: "Talent", href: "talent.html" }, { label: "Countries", href: "countries.html" }, { label: "Philippines" }],
+      navItems: [
+        { label: 'Home', href: 'index.html' },
+        { label: 'Talent', href: 'talent.html', columns: [{ heading: 'Who You Can Hire', links: roleLinks }] },
+        { label: 'Industries', href: '/industries/' },
+        { label: 'About', href: 'about.html' }
+      ],
+      subTabs: ["Top roles","Recently placed","Available now","Build your team","Countries"],
+      footerChips: ['SOC 2 Type II', 'Great Place to Work Certified', '30-day cancellation'],
+      footerColumns: [
+        { heading: 'Roles', links: roleLinks },
+        { heading: 'Industries', links: [{ label: 'Explore Industries', href: '/industries/' }] },
+        { heading: 'Company', links: [{ label: 'About DOXA', href: 'about.html' }] },
+        { heading: 'Get Started', links: [{ label: 'Build Your Team', href: 'index.html#build-your-team' }, { label: 'Calculate Your Team Cost', href: 'index.html#calculate-your-team-cost' }, { label: 'Explore Talent', href: 'index.html#roles' }] }
+      ],
+      noLinks: []
+    };
+  }
+}
+
+
+(function(){
+const get=(s,p)=>p.split('.').reduce((o,k)=>o==null?o:o[k],s);
+const full=/^\{\{\s*([\w.$]+)\s*\}\}$/;
+const interp=(t,s)=>t.replace(/\{\{\s*([\w.$]+)\s*\}\}/g,(_,p)=>{const v=get(s,p);return v==null?'':v;});
+const cam=n=>n.replace(/-([a-z])/g,(_,c)=>c.toUpperCase());
+const inst=new Component();
+let roots=[];
+let mounts=[];
+function proc(node,scope,parent){
+  node.childNodes.slice?0:0;
+  [...node.childNodes].forEach(ch=>{
+    if(ch.nodeType===3){ch.textContent=interp(ch.textContent,scope);return;}
+    if(ch.nodeType!==1)return;
+    const t=ch.tagName.toLowerCase();
+    if(t==='sc-for'){
+      const list=get(scope,ch.getAttribute('list').replace(/[{}\s]/g,''))||[];const as=ch.getAttribute('as');
+      list.forEach((it,i)=>{const c=ch.cloneNode(true);const sc=Object.assign({},scope,{[as]:it,$index:i});proc(c,sc);[...c.childNodes].forEach(n=>node.insertBefore(n,ch));});
+      ch.remove();return;}
+    if(t==='sc-if'){const v=get(scope,ch.getAttribute('value').replace(/[{}\s]/g,''));if(v){proc(ch,scope);[...ch.childNodes].forEach(n=>node.insertBefore(n,ch));}ch.remove();return;}
+    if(t==='x-import'){
+      const props={};
+      for(const a of ch.attributes){
+        if(a.name==='component-from-global-scope'||a.name==='style'||a.name.startsWith('hint-'))continue;
+        const m=a.value.match(full);props[cam(a.name)]=m?get(scope,m[1]):interp(a.value,scope);
+      }
+      proc(ch,scope);
+      const comp=get(window,ch.getAttribute('component-from-global-scope'));
+      const holder=document.createElement('div');holder.style.display='contents';
+      const html=ch.innerHTML.trim();
+      if(html)props.children=React.createElement('div',{style:{display:'contents'},dangerouslySetInnerHTML:{__html:html}});
+      node.insertBefore(holder,ch);ch.remove();mounts.push([holder,comp,props]);return;}
+    for(const a of [...ch.attributes]){if(!a.value.includes('{{'))continue;const m=a.value.match(full);
+      if(/^on/.test(a.name)&&m){const fn=get(scope,m[1]);ch.removeAttribute(a.name);ch.addEventListener(a.name==='onchange'?'input':a.name.slice(2),fn);}
+      else ch.setAttribute(a.name,interp(a.value,scope));}
+    proc(ch,scope);
+  });
+}
+function render(){
+  roots.forEach(x=>x.unmount());roots=[];mounts=[];
+  const y=scrollY;const ae=document.activeElement;const aid=ae&&ae.id,as=ae&&ae.selectionStart;
+  const frag=document.getElementById('tpl').content.cloneNode(true);
+  const root=document.createElement('div');root.appendChild(frag);
+  proc(root,inst.renderVals());
+  const app=document.getElementById('app');app.innerHTML='';app.appendChild(root);
+  mounts.forEach(([h,c,p])=>{const x=ReactDOM.createRoot(h);roots.push(x);x.render(React.createElement(c,p));});
+  scrollTo(0,y);if(aid){const n=document.getElementById(aid);if(n){n.focus();try{n.setSelectionRange(as,as)}catch(e){}}}
+}
+window.__render=render;render();
+})();
+</script></body></html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About DOXA Talent | Global Talent, Directly Employed</title><meta name="description" content="DOXA was founded on one belief: the principles behind a strong team should not stop applying because the person works in another country. Here is what that means.">
+<link rel="stylesheet" href="ds/tokens.css"><link rel="stylesheet" href="ds/bundle.css"><style>
+body{margin:0}
+:root{--container-pad:clamp(24px,2rem + 5vw,125px)}
+.cta{font-family:var(--font-display);font-weight:600;font-size:var(--text-body-sm);border-radius:var(--radius-md);display:inline-flex;align-items:center;justify-content:center;padding:var(--space-2) 18px;min-height:44px;box-sizing:border-box;text-decoration:none;position:relative}
+.ds-btn:not(.ds-tag){text-transform:uppercase;letter-spacing:.03em}
+.ds-btn.ds-btn-secondary{box-shadow:inset 0 0 0 1px var(--navy) !important}
+.ds-btn.ds-btn-secondary.on-dark{background:rgba(255,255,255,.10);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.15) !important}
+.ds-btn.ds-btn-secondary.on-dark:hover{background:rgba(255,255,255,.18)}
+.ds-btn-accent{isolation:isolate;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 2px 6px rgba(5,37,56,.05),0 1px 2px rgba(5,37,56,.04)}
+.ds-btn-accent::before{z-index:-1}
+a.ds-btn.cta.ds-btn-accent,a.ds-btn.cta.ds-btn-accent:visited,a.ds-btn.cta.ds-btn-accent:hover{color:var(--navy)}
+nav a.ds-btn-accent{padding:var(--space-2) 18px !important;font-size:var(--text-caption) !important;font-weight:700 !important;letter-spacing:.03em;line-height:1.65}
+a.ds-btn.ds-btn-primary,a.ds-btn.ds-btn-primary:visited{color:var(--white)}
+a.ds-btn.ds-btn-primary.on-dark,a.ds-btn.ds-btn-primary.on-dark:visited{color:var(--navy)}
+a.ds-btn.ds-btn-primary.on-dark:hover{color:var(--navy)}
+a.ds-btn.ds-btn-secondary,a.ds-btn.ds-btn-secondary:visited{color:var(--navy)}
+a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{color:var(--white)}
+.hero-wrap div[style*="background-image"]{background-image:url(office-team.png) !important;background-position:50% 30% !important}
+@media (max-width:860px){
+  footer > div:first-child{grid-template-columns:1fr 1fr !important}
+  .sec-h{font-size:1.75rem !important}
+  .purpose{font-size:2.25rem !important}
+  .sec-pad{padding-top:var(--space-16) !important;padding-bottom:var(--space-16) !important}
+}
+@media (max-width:520px){
+  footer > div:first-child{grid-template-columns:1fr !important}
+}
+</style></head><body>
+<template id="tpl">
+
+<div style="width:100%;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body);overflow-x:clip">
+
+  <!-- NAV -->
+  <x-import component-from-global-scope="DoxaDS.SkipLink" href="#main-content">Skip to content</x-import>
+  <div style="position:sticky;top:0;z-index:30"><x-import component-from-global-scope="DoxaDS.Nav" variant="inline" tone="dark" logo="doxa-logo-white.png" items="{{navItems}}" cta-label="Build Your Team" cta-href="index.html#build-your-team"></x-import></div>
+
+  <!-- HERO -->
+  <div id="main-content" class="hero-wrap"><x-import component-from-global-scope="DoxaDS.Hero" variant="photo" layout="full" headline="The Standard We Wanted Didn't Exist. So We Built It." body="DOXA was founded on a simple belief: the principles used to build a strong team should not stop applying because the person works in another country.">
+    <a class="cta ds-btn ds-btn-primary" href="#standard">Explore Ethical Outsourcing</a>
+  </x-import></div>
+
+  <!-- THE STANDARD -->
+  <section id="standard" class="sec-pad" style="padding:var(--space-24) var(--container-pad);display:flex;flex-wrap:wrap;gap:var(--space-10) var(--space-16);align-items:flex-start">
+    <h2 class="sec-h" style="flex:1 1 420px;min-width:0;margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">The standard shouldn't change because the border does.</h2>
+    <p style="flex:1 1 420px;min-width:0;margin:0;font-size:var(--text-body-lg);line-height:1.65;color:var(--text-secondary)">Global professionals deserve proper employment, benefits, good equipment, development, support, and the opportunity to build a career. Clients need committed people, lower costs, security, transparency, and accountability after the hire. DOXA was built on the belief that those interests should reinforce each other.</p>
+  </section>
+
+  <!-- PEOPLE-FIRST -->
+  <section class="sec-pad" style="background:var(--paper-soft);padding:var(--space-24) var(--container-pad);display:flex;flex-wrap:wrap-reverse;gap:var(--space-10) var(--space-16);align-items:flex-start">
+    <p style="flex:1 1 420px;min-width:0;margin:0;font-size:var(--text-body-lg);line-height:1.65;color:var(--text-secondary)">DOXA directly employs its professionals. We call them V.I.P.s, because the person behind the role matters. We provide comprehensive benefits. We equip people for secure remote work. We invest in learning and development. And we remain involved after the hire. Those choices influence stability, retention, capability, security, and the experience clients have with their teams.</p>
+    <h2 class="sec-h" style="flex:1 1 420px;min-width:0;margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">People-first isn't separate from performance.</h2>
+  </section>
+
+  <!-- OUR PURPOSE -->
+  <section class="sec-pad" style="background:var(--surface-dark);color:var(--text-inverse);padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-6)">
+    <div style="display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--cyan)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Our Purpose</div>
+    <p class="purpose" style="margin:0;max-width:980px;font-family:var(--font-display);font-size:var(--text-display-2);font-weight:700;line-height:1.1;letter-spacing:-0.01em;color:var(--text-inverse)">Transform global communities by creating meaningful work.</p>
+  </section>
+
+  <!-- FOUNDING BELIEF -->
+  <section class="sec-pad" style="padding:var(--space-24) var(--container-pad);display:flex;flex-wrap:wrap;gap:var(--space-10) var(--space-16);align-items:flex-start">
+    <h2 class="sec-h" style="flex:1 1 420px;min-width:0;margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Our founding belief stayed the same. The work didn't.</h2>
+    <div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:var(--space-5)">
+      <p style="margin:0;font-size:var(--text-body-lg);line-height:1.65;color:var(--text-secondary)">DOXA began by challenging how global professionals were employed and supported. Now AI is changing the skills people need, the work they perform, and what businesses expect from their teams. People-first has never meant standing still. DOXA V.I.P.s are in the process of becoming independently AI-certified, building practical capabilities they can apply as the work changes.</p>
+      <p style="margin:0;font-size:var(--text-body-lg);line-height:1.65;color:var(--text-primary);font-weight:600">The goal is not simply better talent on day one. It is talent that can keep getting better.</p>
+    </div>
+  </section>
+
+  <!-- C.O.R.E. VALUES -->
+  <section class="sec-pad" style="background:var(--surface-muted);padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-10)">
+    <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">C.O.R.E. Values</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-6)">
+      <sc-for list="{{values}}" as="value" hint-placeholder-count="4">
+        <x-import component-from-global-scope="DoxaDS.Card" title="{{value.title}}">{{value.body}}</x-import>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="sec-pad" style="padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-10)">
+    <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Leadership Team</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-8) var(--space-6)">
+      <sc-for list="{{leaders}}" as="person" hint-placeholder-count="9">
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">{{person.name}}</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">{{person.role}}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- BOARD -->
+  <section class="sec-pad" style="background:var(--surface-muted);padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-10)">
+    <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Board of Directors</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-8) var(--space-6)">
+      <sc-for list="{{board}}" as="person" hint-placeholder-count="4">
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">{{person.name}}</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">{{person.role}}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- BY THE NUMBERS -->
+  <section class="sec-pad" style="background:var(--surface-dark);color:var(--text-inverse);padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-10)">
+    <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-inverse)">By the numbers</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-10) var(--space-8)">
+      <x-import component-from-global-scope="DoxaDS.Stat" tone="dark" value="1,000+" label="professionals placed"></x-import>
+      <x-import component-from-global-scope="DoxaDS.Stat" tone="dark" value="84" label="NPS"></x-import>
+      <x-import component-from-global-scope="DoxaDS.Stat" tone="dark" value="72" label="eNPS"></x-import>
+      <x-import component-from-global-scope="DoxaDS.Stat" tone="dark" value="14%" label="voluntary turnover"></x-import>
+      <x-import component-from-global-scope="DoxaDS.Stat" tone="dark" value="115%" label="average client team expansion"></x-import>
+    </div>
+    <ul style="list-style:none;margin:0;padding:var(--space-6) 0 0;border-top:1px solid rgba(255,255,255,.2);display:flex;flex-wrap:wrap;gap:var(--space-3) var(--space-8);font-size:var(--text-body);font-weight:600">
+      <li style="display:flex;align-items:center;gap:var(--space-3)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan)" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>SOC 2 Type II</li>
+      <li style="display:flex;align-items:center;gap:var(--space-3)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan)" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Great Place to Work Certified</li>
+      <li style="display:flex;align-items:center;gap:var(--space-3)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan)" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Inc. 5000 two-time honoree</li>
+    </ul>
+    <div style="display:flex;flex-wrap:wrap;gap:var(--space-3)">
+      <a class="cta ds-btn ds-btn-accent" href="#standard">Explore Ethical Outsourcing</a>
+      <a class="cta ds-btn ds-btn-secondary on-dark" href="index.html#build-your-team">Build Your Team</a>
+    </div>
+  </section>
+
+  <!-- STRAIGHT ANSWERS -->
+  <section class="sec-pad" style="padding:var(--space-24) var(--container-pad);display:flex;flex-wrap:wrap;gap:var(--space-10) var(--space-16);align-items:flex-start">
+    <div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:var(--space-6)">
+      <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Straight Answers</h2>
+      <p style="margin:0;font-size:var(--text-body-lg);line-height:1.65;color:var(--text-primary);font-weight:600;padding-top:var(--space-5);border-top:4px solid var(--navy)">We publish the numbers, the leadership, and the employment model because the alternative is asking you to take our word for it.</p>
+    </div>
+    <div style="flex:2 1 520px;min-width:0">
+      <x-import component-from-global-scope="DoxaDS.FAQAccordion" items="{{faqs}}" default-open="{{faqOpen}}"></x-import>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <x-import component-from-global-scope="DoxaDS.Footer" variant="standard" logo="doxa-logo-white.png" brand-description="DOXA Talent recruits, directly employs, equips, develops, and supports dedicated offshore professionals for its clients." chips="{{footerChips}}" columns="{{footerColumns}}" legal-links="{{noLinks}}" copyright="© 2026 DOXA. All rights reserved."></x-import>
+
+</div>
+</template><div id="app"><div>
+
+<div style="width:100%;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body);overflow-x:clip">
+
+  <!-- NAV -->
+  <div style="display: contents;"><a href="#main-content" style="position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;"><div style="display: contents;">Skip to content</div></a></div>
+  <div style="position:sticky;top:0;z-index:30"><div style="display: contents;"><div style="position: relative; font-family: var(--font-body);"><nav style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-4) var(--container-pad); background: var(--doxa-navy); border-bottom: 4px solid transparent; border-image: var(--brand-gradient) 1;"><img src="doxa-logo-white.png" alt="DOXA" style="height: 28px; margin-right: var(--space-8);"><span style="cursor: pointer; color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></span></nav><div style="position: absolute; top: 100%; left: 0px; right: 0px; background: var(--doxa-navy); border-bottom: 1px solid rgba(255, 255, 255, 0.12); box-shadow: var(--shadow-lg); max-height: 0px; overflow-y: auto; opacity: 0; transition: opacity var(--duration-base) var(--ease-standard); pointer-events: none; z-index: var(--z-sticky); padding: 0 var(--container-pad);"><div style="border-bottom: 1px solid rgba(255, 255, 255, 0.12);"><a href="index.html" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 4px; font-family: var(--font-body); font-size: var(--text-body); font-weight: 600; color: var(--text-inverse); text-decoration: none; cursor: pointer;">Home</a></div><div style="border-bottom: 1px solid rgba(255, 255, 255, 0.12);"><a style="display: flex; align-items: center; justify-content: space-between; padding: 16px 4px; font-family: var(--font-body); font-size: var(--text-body); font-weight: 600; color: var(--text-inverse); text-decoration: none; cursor: pointer;">Talent<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transition: transform var(--duration-base) var(--ease-standard); transform: none;"><path d="M6 9l6 6 6-6"></path></svg></a><div style="max-height: 0px; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);"><div style="display: flex; flex-direction: column; gap: 18px; padding: 4px 4px 18px;"><div style="display: flex; flex-direction: column; gap: 8px;"><div style="font-size: var(--text-caption); font-weight: 600; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: rgba(255, 255, 255, 0.55);">Who You Can Hire</div><a href="role-finance-accounting.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Finance &amp; Accounting</a><a href="role-assistants.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Assistants</a><a href="role-customer-support-sales.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Customer Support &amp; Sales</a><a href="role-marketing.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Marketing</a><a href="role-it-technology.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">IT &amp; Technology</a><a href="role-hr.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Human Resources</a><a href="role-legal.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Legal</a><a href="role-healthcare.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">Healthcare</a><a href="role-isp-msp.html" style="font-size: var(--text-body-sm); font-weight: 500; color: var(--text-inverse); text-decoration: none;">ISP / MSP</a></div></div></div></div><div style="border-bottom: 1px solid rgba(255, 255, 255, 0.12);"><a href="industries.html" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 4px; font-family: var(--font-body); font-size: var(--text-body); font-weight: 600; color: var(--text-inverse); text-decoration: none; cursor: pointer;">Industries</a></div><div style="border-bottom: 1px solid rgba(255, 255, 255, 0.12);"><a href="about.html" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 4px; font-family: var(--font-body); font-size: var(--text-body); font-weight: 600; color: var(--text-inverse); text-decoration: none; cursor: pointer;">About</a></div><div style="display: flex; align-items: center; gap: 16px; padding-top: 18px;"><span style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM21 21l-4.3-4.3"></path></svg></span><a href="index.html#build-your-team" class="ds-btn ds-btn-accent on-dark" style="font-family: var(--font-display); font-weight: 600; font-size: var(--text-body-sm); padding: 10px 20px; border-radius: var(--radius-md); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; position: relative; flex: 1 1 0%; text-align: center;">Build Your Team</a></div></div></div></div></div>
+
+  <!-- HERO -->
+  <div id="main-content" class="hero-wrap"><div style="display: contents;"><div style="position: relative; border-radius: 0px; overflow: hidden; padding: var(--space-24) var(--container-pad) var(--space-20); display: flex; flex-direction: column; gap: var(--space-4); min-height: 0px; justify-content: center; background-image: url(&quot;/_blob/e65bbd7df1e2e26f55d49371583552f6&quot;); background-color: var(--doxa-navy-10); background-size: cover; background-position: center 25%;"><div style="position: absolute; inset: 0px; background: linear-gradient(160deg,var(--doxa-cyan) 0%,var(--doxa-green) 100%); mix-blend-mode: multiply;"></div><div style="position: relative; max-width: 620px;"><h1 style="font-family: var(--font-display); font-size: var(--text-h1); font-weight: 700; color: var(--doxa-white); margin: 0px; line-height: 1.1;">The Standard We Wanted Didn't Exist. So We Built It.</h1><p style="font-family: var(--font-body); font-size: var(--text-body-lg); color: rgba(255, 255, 255, 0.85); margin-top: var(--space-4); line-height: 1.6;">DOXA was founded on a simple belief: the principles used to build a strong team should not stop applying because the person works in another country.</p><div style="margin-top: var(--space-6); display: flex; gap: var(--space-3);"><div style="display: contents;"><a class="cta ds-btn ds-btn-primary" href="#standard">Explore Ethical Outsourcing</a></div></div></div></div></div></div>
+
+  <!-- THE STANDARD -->
+  <section id="standard" class="sec-pad" style="padding:var(--space-24) var(--container-pad);display:flex;flex-wrap:wrap;gap:var(--space-10) var(--space-16);align-items:flex-start">
+    <h2 class="sec-h" style="flex:1 1 420px;min-width:0;margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">The standard shouldn't change because the border does.</h2>
+    <p style="flex:1 1 420px;min-width:0;margin:0;font-size:var(--text-body-lg);line-height:1.65;color:var(--text-secondary)">Global professionals deserve proper employment, benefits, good equipment, development, support, and the opportunity to build a career. Clients need committed people, lower costs, security, transparency, and accountability after the hire. DOXA was built on the belief that those interests should reinforce each other.</p>
+  </section>
+
+  <!-- PEOPLE-FIRST -->
+  <section class="sec-pad" style="background:var(--paper-soft);padding:var(--space-24) var(--container-pad);display:flex;flex-wrap:wrap-reverse;gap:var(--space-10) var(--space-16);align-items:flex-start">
+    <p style="flex:1 1 420px;min-width:0;margin:0;font-size:var(--text-body-lg);line-height:1.65;color:var(--text-secondary)">DOXA directly employs its professionals. We call them V.I.P.s, because the person behind the role matters. We provide comprehensive benefits. We equip people for secure remote work. We invest in learning and development. And we remain involved after the hire. Those choices influence stability, retention, capability, security, and the experience clients have with their teams.</p>
+    <h2 class="sec-h" style="flex:1 1 420px;min-width:0;margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">People-first isn't separate from performance.</h2>
+  </section>
+
+  <!-- OUR PURPOSE -->
+  <section class="sec-pad" style="background:var(--surface-dark);color:var(--text-inverse);padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-6)">
+    <div style="display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--cyan)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Our Purpose</div>
+    <p class="purpose" style="margin:0;max-width:980px;font-family:var(--font-display);font-size:var(--text-display-2);font-weight:700;line-height:1.1;letter-spacing:-0.01em;color:var(--text-inverse)">Transform global communities by creating meaningful work.</p>
+  </section>
+
+  <!-- FOUNDING BELIEF -->
+  <section class="sec-pad" style="padding:var(--space-24) var(--container-pad);display:flex;flex-wrap:wrap;gap:var(--space-10) var(--space-16);align-items:flex-start">
+    <h2 class="sec-h" style="flex:1 1 420px;min-width:0;margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Our founding belief stayed the same. The work didn't.</h2>
+    <div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:var(--space-5)">
+      <p style="margin:0;font-size:var(--text-body-lg);line-height:1.65;color:var(--text-secondary)">DOXA began by challenging how global professionals were employed and supported. Now AI is changing the skills people need, the work they perform, and what businesses expect from their teams. People-first has never meant standing still. DOXA V.I.P.s are in the process of becoming independently AI-certified, building practical capabilities they can apply as the work changes.</p>
+      <p style="margin:0;font-size:var(--text-body-lg);line-height:1.65;color:var(--text-primary);font-weight:600">The goal is not simply better talent on day one. It is talent that can keep getting better.</p>
+    </div>
+  </section>
+
+  <!-- C.O.R.E. VALUES -->
+  <section class="sec-pad" style="background:var(--surface-muted);padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-10)">
+    <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">C.O.R.E. Values</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-6)">
+      
+        <div style="display: contents;"><div style="position: relative; overflow: hidden; background: var(--surface-card); color: var(--text-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm); padding: var(--space-6); font-family: var(--font-body);"><div style="position: absolute; top: 0px; left: 0px; right: 0px; height: 4px; background: var(--brand-gradient);"></div><div style="font-family: var(--font-display); font-size: var(--text-h4); font-weight: 700; margin-bottom: 8px;">Curiosity First</div><div style="font-size: var(--text-body); line-height: var(--leading-relaxed); opacity: 1;"><div style="display: contents;">Our V.I.P.s and clients face opportunities and challenges with an open mind and a commitment to learning.</div></div></div></div>
+      
+        <div style="display: contents;"><div style="position: relative; overflow: hidden; background: var(--surface-card); color: var(--text-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm); padding: var(--space-6); font-family: var(--font-body);"><div style="position: absolute; top: 0px; left: 0px; right: 0px; height: 4px; background: var(--brand-gradient);"></div><div style="font-family: var(--font-display); font-size: var(--text-h4); font-weight: 700; margin-bottom: 8px;">Ownership Mentality</div><div style="font-size: var(--text-body); line-height: var(--leading-relaxed); opacity: 1;"><div style="display: contents;">Take responsibility for the work, the outcome, and the impact.</div></div></div></div>
+      
+        <div style="display: contents;"><div style="position: relative; overflow: hidden; background: var(--surface-card); color: var(--text-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm); padding: var(--space-6); font-family: var(--font-body);"><div style="position: absolute; top: 0px; left: 0px; right: 0px; height: 4px; background: var(--brand-gradient);"></div><div style="font-family: var(--font-display); font-size: var(--text-h4); font-weight: 700; margin-bottom: 8px;">Relationships Matter</div><div style="font-size: var(--text-body); line-height: var(--leading-relaxed); opacity: 1;"><div style="display: contents;">Build lasting relationships through trust and mutual respect.</div></div></div></div>
+      
+        <div style="display: contents;"><div style="position: relative; overflow: hidden; background: var(--surface-card); color: var(--text-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm); padding: var(--space-6); font-family: var(--font-body);"><div style="position: absolute; top: 0px; left: 0px; right: 0px; height: 4px; background: var(--brand-gradient);"></div><div style="font-family: var(--font-display); font-size: var(--text-h4); font-weight: 700; margin-bottom: 8px;">Excellence Every Day</div><div style="font-size: var(--text-body); line-height: var(--leading-relaxed); opacity: 1;"><div style="display: contents;">Bring a consistent commitment to doing the work well.</div></div></div></div>
+      
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="sec-pad" style="padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-10)">
+    <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Leadership Team</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-8) var(--space-6)">
+      
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">David Nilssen</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">Chief Executive Officer</div>
+        </div>
+      
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Lauren Hoover</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">Chief Operating Officer</div>
+        </div>
+      
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Stephen Hosemann</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">Chief Financial Officer</div>
+        </div>
+      
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Steve Gire</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">Chief Information Officer</div>
+        </div>
+      
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Ralph Nilssen</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">Chief Sales Officer</div>
+        </div>
+      
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Edward Lim</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">President, Philippines</div>
+        </div>
+      
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Ira Crisologo</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">General Manager, Philippines</div>
+        </div>
+      
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Elena Barreneche</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">General Manager, Colombia</div>
+        </div>
+      
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Steffy Casallas</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">Global Head of Recruitment</div>
+        </div>
+      
+    </div>
+  </section>
+
+  <!-- BOARD -->
+  <section class="sec-pad" style="background:var(--surface-muted);padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-10)">
+    <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Board of Directors</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-8) var(--space-6)">
+      
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">David Nilssen</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">Chairman</div>
+        </div>
+      
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Ben Elowitz</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">Director</div>
+        </div>
+      
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Edward Lim</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">Director</div>
+        </div>
+      
+        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
+          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Eliot Gattegno</div>
+          <div style="font-size:var(--text-body);color:var(--text-secondary)">Director</div>
+        </div>
+      
+    </div>
+  </section>
+
+  <!-- BY THE NUMBERS -->
+  <section class="sec-pad" style="background:var(--surface-dark);color:var(--text-inverse);padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-10)">
+    <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-inverse)">By the numbers</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-10) var(--space-8)">
+      <div style="display: contents;"><div style="text-align: left; font-family: var(--font-body);"><div style="font-family: var(--font-display); font-weight: 700; font-size: var(--text-display-2); color: var(--doxa-cyan); line-height: 1.1;">1,000+</div><div style="font-size: var(--text-body-sm); color: rgba(255, 255, 255, 0.75); margin-top: 4px;">professionals placed</div></div></div>
+      <div style="display: contents;"><div style="text-align: left; font-family: var(--font-body);"><div style="font-family: var(--font-display); font-weight: 700; font-size: var(--text-display-2); color: var(--doxa-cyan); line-height: 1.1;">84</div><div style="font-size: var(--text-body-sm); color: rgba(255, 255, 255, 0.75); margin-top: 4px;">NPS</div></div></div>
+      <div style="display: contents;"><div style="text-align: left; font-family: var(--font-body);"><div style="font-family: var(--font-display); font-weight: 700; font-size: var(--text-display-2); color: var(--doxa-cyan); line-height: 1.1;">72</div><div style="font-size: var(--text-body-sm); color: rgba(255, 255, 255, 0.75); margin-top: 4px;">eNPS</div></div></div>
+      <div style="display: contents;"><div style="text-align: left; font-family: var(--font-body);"><div style="font-family: var(--font-display); font-weight: 700; font-size: var(--text-display-2); color: var(--doxa-cyan); line-height: 1.1;">14%</div><div style="font-size: var(--text-body-sm); color: rgba(255, 255, 255, 0.75); margin-top: 4px;">voluntary turnover</div></div></div>
+      <div style="display: contents;"><div style="text-align: left; font-family: var(--font-body);"><div style="font-family: var(--font-display); font-weight: 700; font-size: var(--text-display-2); color: var(--doxa-cyan); line-height: 1.1;">115%</div><div style="font-size: var(--text-body-sm); color: rgba(255, 255, 255, 0.75); margin-top: 4px;">average client team expansion</div></div></div>
+    </div>
+    <ul style="list-style:none;margin:0;padding:var(--space-6) 0 0;border-top:1px solid rgba(255,255,255,.2);display:flex;flex-wrap:wrap;gap:var(--space-3) var(--space-8);font-size:var(--text-body);font-weight:600">
+      <li style="display:flex;align-items:center;gap:var(--space-3)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan)" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>SOC 2 Type II</li>
+      <li style="display:flex;align-items:center;gap:var(--space-3)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan)" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Great Place to Work Certified</li>
+      <li style="display:flex;align-items:center;gap:var(--space-3)"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="var(--cyan)" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Inc. 5000 two-time honoree</li>
+    </ul>
+    <div style="display:flex;flex-wrap:wrap;gap:var(--space-3)">
+      <a class="cta ds-btn ds-btn-accent" href="#standard">Explore Ethical Outsourcing</a>
+      <a class="cta ds-btn ds-btn-secondary on-dark" href="index.html#build-your-team">Build Your Team</a>
+    </div>
+  </section>
+
+  <!-- STRAIGHT ANSWERS -->
+  <section class="sec-pad" style="padding:var(--space-24) var(--container-pad);display:flex;flex-wrap:wrap;gap:var(--space-10) var(--space-16);align-items:flex-start">
+    <div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:var(--space-6)">
+      <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Straight Answers</h2>
+      <p style="margin:0;font-size:var(--text-body-lg);line-height:1.65;color:var(--text-primary);font-weight:600;padding-top:var(--space-5);border-top:4px solid var(--navy)">We publish the numbers, the leadership, and the employment model because the alternative is asking you to take our word for it.</p>
+    </div>
+    <div style="flex:2 1 520px;min-width:0">
+      <div style="display: contents;"><div style="font-family: var(--font-body); border-top: 1px solid var(--border-subtle);"><div style="border-bottom: 2px solid var(--border-subtle);"><button style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: var(--space-4); margin: 0 calc(-1*var(--space-4)); box-sizing: border-box; background: var(--doxa-navy); border-radius: var(--radius-md); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; cursor: pointer; text-align: left; font-family: var(--font-display); font-weight: 600; font-size: var(--text-body); color: var(--doxa-white); transition: background var(--duration-base) var(--ease-standard),color var(--duration-base) var(--ease-standard);"><span>What does DOXA mean?</span><span style="position: relative; flex-shrink: 0; width: 16px; height: 16px;"><span style="position: absolute; top: 50%; left: 0px; width: 16px; height: 3px; background: var(--doxa-white); transform: translateY(-50%); transition: background var(--duration-base) var(--ease-standard);"></span><span style="position: absolute; top: 0px; left: 50%; width: 3px; height: 16px; background: var(--doxa-white); transform: translateX(-50%) scaleY(0); transition: transform var(--duration-base) var(--ease-standard),background var(--duration-base) var(--ease-standard);"></span></span></button><div style="padding: var(--space-3) 24px var(--space-5) var(--space-4); font-size: var(--text-body-sm); color: var(--doxa-navy); line-height: var(--leading-relaxed);">DOXA is derived from the Greek word meaning belief or perception. The name reflects the company’s willingness to question accepted assumptions about global work and build a higher standard.</div></div><div style="border-bottom: 2px solid var(--border-subtle);"><button style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: var(--space-4); margin: 0px; box-sizing: border-box; background: none; border-radius: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; cursor: pointer; text-align: left; font-family: var(--font-display); font-weight: 600; font-size: var(--text-body); color: var(--text-primary); transition: background var(--duration-base) var(--ease-standard),color var(--duration-base) var(--ease-standard);"><span>Where does DOXA hire from?</span><span style="position: relative; flex-shrink: 0; width: 16px; height: 16px;"><span style="position: absolute; top: 50%; left: 0px; width: 16px; height: 3px; background: var(--doxa-navy); transform: translateY(-50%); transition: background var(--duration-base) var(--ease-standard);"></span><span style="position: absolute; top: 0px; left: 50%; width: 3px; height: 16px; background: var(--doxa-navy); transform: translateX(-50%) scaleY(1); transition: transform var(--duration-base) var(--ease-standard),background var(--duration-base) var(--ease-standard);"></span></span></button></div></div></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div style="display: contents;"><footer style="background: var(--doxa-navy); color: var(--text-inverse); font-family: var(--font-body); padding: var(--space-10) var(--container-pad) var(--space-6);"><div style="display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: var(--space-8);"><div><img src="doxa-logo-white.png" alt="DOXA" style="height: 32px;"><p style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-body-sm); margin-top: var(--space-4); max-width: 280px;">DOXA Talent recruits, directly employs, equips, develops, and supports dedicated offshore professionals for its clients.</p><div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); margin-top: var(--space-4);"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: rgba(255, 255, 255, 0.85);">SOC 2 Type II</span><span aria-hidden="true" style="color: rgba(255, 255, 255, 0.3); font-weight: 400;">|</span><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: rgba(255, 255, 255, 0.85);">Great Place to Work Certified</span><span aria-hidden="true" style="color: rgba(255, 255, 255, 0.3); font-weight: 400;">|</span><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: rgba(255, 255, 255, 0.85);">30-day cancellation</span></div></div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--doxa-white); margin-bottom: 4px;">Roles</div><a href="role-finance-accounting.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Finance &amp; Accounting</a><a href="role-assistants.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Assistants</a><a href="role-customer-support-sales.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Customer Support &amp; Sales</a><a href="role-marketing.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Marketing</a><a href="role-it-technology.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">IT &amp; Technology</a><a href="role-hr.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Human Resources</a><a href="role-legal.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Legal</a><a href="role-healthcare.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Healthcare</a><a href="role-isp-msp.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">ISP / MSP</a></div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--doxa-white); margin-bottom: 4px;">Industries</div><a href="industries.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Explore Industries</a></div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--doxa-white); margin-bottom: 4px;">Company</div><a href="about.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">About DOXA</a></div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--doxa-white); margin-bottom: 4px;">Get Started</div><a href="index.html#build-your-team" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Build Your Team</a><a href="index.html#calculate-your-team-cost" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Calculate Your Team Cost</a><a href="index.html#roles" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Explore Talent</a></div></div><div style="display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; justify-content: space-between; margin-top: var(--space-8); padding-top: var(--space-5); border-top: 1px solid rgba(255, 255, 255, 0.15); font-size: var(--text-caption); color: rgba(255, 255, 255, 0.6);"><span>© 2026 DOXA. All rights reserved.</span><div style="display: flex; align-items: center; gap: var(--space-6); flex-wrap: wrap;"><div style="display: flex; gap: var(--space-4);"></div><div style="display: flex; align-items: center; gap: 14px;"><a href="#" aria-label="LinkedIn" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM8 10v7M8 7.2h.01M12 17v-4.5c0-1.4 1-2.5 2.3-2.5S16 11 16 12.5V17"></path></svg></a><a href="#" aria-label="Facebook" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8h-2c-.6 0-1 .6-1 1.2V11h3l-.4 3H12v6h-3v-6H7v-3h2V9c0-2 1.4-4 4-4h2z"></path></svg></a><a href="#" aria-label="Instagram" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM16.5 7.5h.01"></path></svg></a><a href="#" aria-label="YouTube" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5c0-1.4 1-2.5 2.5-2.5h11c1.5 0 2.5 1.1 2.5 2.5v7c0 1.4-1 2.5-2.5 2.5h-11C5 18 4 16.9 4 15.5zM10 9.5l5 2.5-5 2.5z"></path></svg></a><a href="#" aria-label="TikTok" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v9.5a2.5 2.5 0 1 1-2-2.45M14 4c.3 2 1.8 3.5 4 3.7"></path></svg></a></div></div></div></footer></div>
+
+</div>
+</div></div>
+<script src="ds/vendor/react.production.min.js"></script><script src="ds/vendor/react-dom.production.min.js"></script><script src="ds/bundle.js"></script>
+<script>class DCLogic{constructor(){this.props={};this.state={};}setState(s){Object.assign(this.state,s);window.__render&&window.__render();}}
+
+
+class Component extends DCLogic {
+  renderVals() {
+    const roleLinks = [
+      { label: 'Finance & Accounting', href: 'role-finance-accounting.html' },
+      { label: 'Assistants', href: 'role-assistants.html' },
+      { label: 'Customer Support & Sales', href: 'role-customer-support-sales.html' },
+      { label: 'Marketing', href: 'role-marketing.html' },
+      { label: 'IT & Technology', href: 'role-it-technology.html' },
+      { label: 'Human Resources', href: 'role-hr.html' },
+      { label: 'Legal', href: 'role-legal.html' },
+      { label: 'Healthcare', href: 'role-healthcare.html' },
+      { label: 'ISP / MSP', href: 'role-isp-msp.html' }
+    ];
+    return {
+      navItems: [
+        { label: 'Home', href: 'index.html' },
+        { label: 'Talent', href: 'talent.html', columns: [{ heading: 'Who You Can Hire', links: roleLinks }] },
+        { label: 'Industries', href: '/industries/' },
+        { label: 'About', href: 'about.html' }
+      ],
+      values: [
+        { title: 'Curiosity First', body: 'Our V.I.P.s and clients face opportunities and challenges with an open mind and a commitment to learning.' },
+        { title: 'Ownership Mentality', body: 'Take responsibility for the work, the outcome, and the impact.' },
+        { title: 'Relationships Matter', body: 'Build lasting relationships through trust and mutual respect.' },
+        { title: 'Excellence Every Day', body: 'Bring a consistent commitment to doing the work well.' }
+      ],
+      leaders: [
+        { name: 'David Nilssen', role: 'Chief Executive Officer' },
+        { name: 'Lauren Hoover', role: 'Chief Operating Officer' },
+        { name: 'Stephen Hosemann', role: 'Chief Financial Officer' },
+        { name: 'Steve Gire', role: 'Chief Information Officer' },
+        { name: 'Ralph Nilssen', role: 'Chief Sales Officer' },
+        { name: 'Edward Lim', role: 'President, Philippines' },
+        { name: 'Ira Crisologo', role: 'General Manager, Philippines' },
+        { name: 'Elena Barreneche', role: 'General Manager, Colombia' },
+        { name: 'Steffy Casallas', role: 'Global Head of Recruitment' }
+      ],
+      board: [
+        { name: 'David Nilssen', role: 'Chairman' },
+        { name: 'Ben Elowitz', role: 'Director' },
+        { name: 'Edward Lim', role: 'Director' },
+        { name: 'Eliot Gattegno', role: 'Director' }
+      ],
+      faqs: [
+        { question: 'What does DOXA mean?', answer: 'DOXA is derived from the Greek word meaning belief or perception. The name reflects the company’s willingness to question accepted assumptions about global work and build a higher standard.' },
+        { question: 'Where does DOXA hire from?', answer: 'The Philippines, Colombia, Vietnam and Kenya. DOXA is the legal employer in each, which is what makes benefits, development and retention DOXA’s responsibility rather than yours.' }
+      ],
+      faqOpen: 0,
+      footerChips: ['SOC 2 Type II', 'Great Place to Work Certified', '30-day cancellation'],
+      footerColumns: [
+        { heading: 'Roles', links: roleLinks },
+        { heading: 'Industries', links: [{ label: 'Explore Industries', href: '/industries/' }] },
+        { heading: 'Company', links: [{ label: 'About DOXA', href: 'about.html' }] },
+        { heading: 'Get Started', links: [{ label: 'Build Your Team', href: 'index.html#build-your-team' }, { label: 'Calculate Your Team Cost', href: 'index.html#calculate-your-team-cost' }, { label: 'Explore Talent', href: 'index.html#roles' }] }
+      ],
+      noLinks: []
+    };
+  }
+}
+
+
+(function(){
+const get=(s,p)=>p.split('.').reduce((o,k)=>o==null?o:o[k],s);
+const full=/^\{\{\s*([\w.$]+)\s*\}\}$/;
+const interp=(t,s)=>t.replace(/\{\{\s*([\w.$]+)\s*\}\}/g,(_,p)=>{const v=get(s,p);return v==null?'':v;});
+const cam=n=>n.replace(/-([a-z])/g,(_,c)=>c.toUpperCase());
+const inst=new Component();
+let roots=[];
+let mounts=[];
+function proc(node,scope,parent){
+  node.childNodes.slice?0:0;
+  [...node.childNodes].forEach(ch=>{
+    if(ch.nodeType===3){ch.textContent=interp(ch.textContent,scope);return;}
+    if(ch.nodeType!==1)return;
+    const t=ch.tagName.toLowerCase();
+    if(t==='sc-for'){
+      const list=get(scope,ch.getAttribute('list').replace(/[{}\s]/g,''))||[];const as=ch.getAttribute('as');
+      list.forEach((it,i)=>{const c=ch.cloneNode(true);const sc=Object.assign({},scope,{[as]:it,$index:i});proc(c,sc);[...c.childNodes].forEach(n=>node.insertBefore(n,ch));});
+      ch.remove();return;}
+    if(t==='sc-if'){const v=get(scope,ch.getAttribute('value').replace(/[{}\s]/g,''));if(v){proc(ch,scope);[...ch.childNodes].forEach(n=>node.insertBefore(n,ch));}ch.remove();return;}
+    if(t==='x-import'){
+      const props={};
+      for(const a of ch.attributes){
+        if(a.name==='component-from-global-scope'||a.name==='style'||a.name.startsWith('hint-'))continue;
+        const m=a.value.match(full);props[cam(a.name)]=m?get(scope,m[1]):interp(a.value,scope);
+      }
+      proc(ch,scope);
+      const comp=get(window,ch.getAttribute('component-from-global-scope'));
+      const holder=document.createElement('div');holder.style.display='contents';
+      const html=ch.innerHTML.trim();
+      if(html)props.children=React.createElement('div',{style:{display:'contents'},dangerouslySetInnerHTML:{__html:html}});
+      node.insertBefore(holder,ch);ch.remove();mounts.push([holder,comp,props]);return;}
+    for(const a of [...ch.attributes]){if(!a.value.includes('{{'))continue;const m=a.value.match(full);
+      if(/^on/.test(a.name)&&m){const fn=get(scope,m[1]);ch.removeAttribute(a.name);ch.addEventListener(a.name==='onchange'?'input':a.name.slice(2),fn);}
+      else ch.setAttribute(a.name,interp(a.value,scope));}
+    proc(ch,scope);
+  });
+}
+function render(){
+  roots.forEach(x=>x.unmount());roots=[];mounts=[];
+  const y=scrollY;const ae=document.activeElement;const aid=ae&&ae.id,as=ae&&ae.selectionStart;
+  const frag=document.getElementById('tpl').content.cloneNode(true);
+  const root=document.createElement('div');root.appendChild(frag);
+  proc(root,inst.renderVals());
+  const app=document.getElementById('app');app.innerHTML='';app.appendChild(root);
+  mounts.forEach(([h,c,p])=>{const x=ReactDOM.createRoot(h);roots.push(x);x.render(React.createElement(c,p));});
+  scrollTo(0,y);if(aid){const n=document.getElementById(aid);if(n){n.focus();try{n.setSelectionRange(as,as)}catch(e){}}}
+}
+window.__render=render;render();
+})();
+</script></body></html>

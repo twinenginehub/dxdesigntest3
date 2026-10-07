@@ -1,0 +1,153 @@
+/* Bridge block — legacy DOXA variable names that don't map 1:1 onto the generated
+   token variables (doxa- prefixed colors, motion timing, z-index, gradients, and the
+   type-scale sizes, which the token system expresses as classes, not variables).
+   Everything else (space-*, radius-*, shadow-*, container-*, font-display/body/system,
+   text-primary/secondary/muted/inverse/link*, surface-*, border-*, focus-ring, state-*)
+   comes straight from tokens.css and needs no bridging. */
+:root{
+  --doxa-navy:var(--navy);
+  --doxa-cyan:var(--cyan);
+  --doxa-green:var(--green);
+  --doxa-white:var(--white);
+  --doxa-magenta:var(--magenta);
+  --doxa-gold:var(--gold);
+  --doxa-navy-10:var(--navy-10);
+  --doxa-navy-20:var(--navy-20);
+  --doxa-cyan-dark:var(--cyan-dark);
+  --doxa-cyan-700:var(--cyan-700);
+  --doxa-cyan-a11y:var(--cyan-a11y);
+  --doxa-cyan-50:var(--cyan-50);
+  --doxa-cyan-100:var(--cyan-100);
+  --doxa-green-dark:var(--green-dark);
+  --doxa-fog-50:var(--fog-50);
+  --doxa-fog-100:var(--fog-100);
+  --doxa-fog-200:var(--fog-200);
+  --doxa-slate-400:var(--slate-400);
+  --doxa-slate-600:var(--slate-600);
+  --doxa-navy-50:var(--navy-50);
+  --doxa-navy-100:var(--navy-100);
+  --doxa-navy-200:var(--navy-200);
+  --doxa-navy-300:var(--navy-300);
+  --doxa-navy-400:var(--navy-400);
+  --doxa-navy-500:var(--navy-500);
+  --doxa-navy-700:var(--navy-700);
+  --doxa-emerald-700:var(--emerald-700);
+  --doxa-paper-soft:var(--paper-soft);
+
+  /* Brand gradients — not expressible as color tokens (multi-stop functions), defined here instead */
+  --brand-gradient:linear-gradient(90deg,var(--cyan) 0%,var(--green) 100%);
+  --doxa-grad-tilt:linear-gradient(135deg,var(--cyan) 0%,var(--green) 100%);
+  --doxa-grad-soft:linear-gradient(135deg,rgba(0,174,239,.1) 0%,rgba(5,175,114,.1) 100%);
+
+  /* Type scale, in px/rem — the token system expresses these as classes (.h1, .body, …),
+     but every component here reads them as variables, so they're bridged as variables too. */
+  --text-display-1:4.5rem;
+  --text-display-2:3.25rem;
+  --text-hero:4.25rem;
+  --text-h1:2.75rem;
+  --text-h2:2rem;
+  --text-h3:1.25rem;
+  --text-h4:1.0625rem;
+  --text-body-lg:1.125rem;
+  --text-body:1rem;
+  --text-body-sm:0.875rem;
+  --text-caption:0.75rem;
+  --text-eyebrow:0.7rem;
+  --leading-tight:1.1;
+  --leading-snug:1.25;
+  --leading-normal:1.5;
+  --leading-relaxed:1.65;
+  --tracking-eyebrow:.12em;
+  --tracking-tight:-.01em;
+  --weight-light:300;
+  --weight-regular:400;
+  --weight-medium:500;
+  --weight-semibold:600;
+  --weight-bold:700;
+
+  /* Motion — deliberately not part of the token system (no motion family) */
+  --duration-fast:120ms;
+  --duration-base:180ms;
+  --duration-slow:280ms;
+  --ease-standard:cubic-bezier(.4,0,.2,1);
+  --ease-out:cubic-bezier(0,0,.2,1);
+
+  /* Stacking order */
+  --z-dropdown:20;
+  --z-sticky:30;
+  --z-overlay:40;
+  --z-modal:50;
+  --z-toast:60;
+  --z-tooltip:70;
+}
+
+/* Global link + focus rules (tokens/base.css in the legacy system) */
+a{color:var(--text-link);text-decoration:underline;text-underline-offset:2px}
+a:hover{background:var(--brand-gradient);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:transparent;text-decoration:underline;text-decoration-color:var(--green)}
+a:visited{color:var(--text-link-visited);text-decoration:underline}
+a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-webkit-text-fill-color:currentColor;text-decoration:none}
+body{font-family:var(--font-body)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
+input[type="checkbox"],input[type="radio"]{position:absolute;opacity:0;width:1px;height:1px}
+input[type="checkbox"]:focus-visible+span,input[type="radio"]:focus-visible+span{box-shadow:var(--shadow-focus)}
+
+/* Button family */
+.ds-btn{transition:background var(--duration-base) var(--ease-standard),transform var(--duration-fast) var(--ease-standard)}
+.ds-btn:active{transform:scale(.96)}
+.ds-btn-primary{background:var(--doxa-navy);color:var(--doxa-white)}
+.ds-btn-primary:hover{background:var(--doxa-cyan)}
+.ds-btn-primary:active{background:var(--doxa-navy)}
+.ds-btn-primary.on-dark{background:var(--doxa-cyan);color:var(--doxa-navy)}
+.ds-btn-primary.on-dark:hover{background:var(--doxa-white);color:var(--doxa-navy)}
+.ds-btn-primary.on-dark:active{background:var(--doxa-fog-200);color:var(--doxa-navy)}
+.ds-btn-accent{background:linear-gradient(145deg,var(--doxa-cyan),var(--doxa-green));color:var(--doxa-white)}
+.ds-btn-accent::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--doxa-white);opacity:0;transition:opacity var(--duration-base) var(--ease-standard)}
+.ds-btn-accent:hover::before{opacity:1}
+.ds-btn-accent:hover{color:var(--doxa-navy)}
+.ds-btn-accent:active{background:var(--doxa-cyan)}
+.ds-btn-secondary{background:transparent;color:var(--doxa-navy);box-shadow:inset 0 0 0 1.5px var(--doxa-navy)}
+.ds-btn-secondary:hover{background:var(--doxa-fog-100)}
+.ds-btn-secondary:active{background:var(--doxa-fog-200)}
+.ds-btn-secondary.on-dark{color:var(--doxa-white);box-shadow:inset 0 0 0 1.5px var(--doxa-white)}
+.ds-btn-secondary.on-dark:hover{background:rgba(255,255,255,.12)}
+.ds-btn-secondary.on-dark:active{background:rgba(255,255,255,.2)}
+.ds-btn-ghost{background:transparent;color:var(--doxa-navy)}
+.ds-btn-ghost:hover{background:var(--doxa-fog-100)}
+.ds-btn-ghost:active{background:var(--doxa-fog-200)}
+.ds-btn-ghost.on-dark{color:var(--doxa-white)}
+.ds-btn-ghost.on-dark:hover{background:rgba(255,255,255,.12)}
+.ds-btn-ghost.on-dark:active{background:rgba(255,255,255,.2)}
+.ds-iconbtn-ghost{background:transparent;color:var(--doxa-navy)}
+.ds-iconbtn-ghost:hover{background:var(--doxa-fog-100)}
+.ds-iconbtn-ghost:active{background:var(--doxa-fog-200)}
+.ds-iconbtn-solid{background:var(--doxa-navy);color:var(--doxa-white)}
+.ds-iconbtn-solid:hover{background:var(--doxa-cyan)}
+.ds-iconbtn-solid:active{background:var(--doxa-navy)}
+.ds-iconbtn-outline{background:transparent;color:var(--doxa-navy);box-shadow:inset 0 0 0 1.5px var(--border-strong)}
+.ds-iconbtn-outline:hover{background:var(--doxa-fog-100)}
+.ds-iconbtn-outline:active{background:var(--doxa-fog-200)}
+
+@keyframes ds-spin{to{transform:rotate(360deg)}}
+@keyframes ds-skeleton{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+.ds-page-active{background:var(--brand-gradient)}
+.ds-page-active:hover{background:var(--doxa-cyan)}
+.ds-load-more{box-shadow:inset 0 0 0 1.5px var(--border-subtle)}
+
+.ds-tag{display:inline-flex;align-items:center;border:1.5px solid var(--border-subtle);background:transparent;color:var(--text-primary)}
+.ds-tag:hover{background:var(--doxa-fog-100)}
+.ds-tag:active{background:var(--doxa-fog-200)}
+.ds-tag.active{border-color:var(--doxa-navy);background:var(--doxa-navy);color:var(--doxa-white)}
+.ds-tag.active:hover{background:var(--doxa-cyan);border-color:var(--doxa-cyan);color:var(--doxa-navy)}
+.ds-tag.active:active{background:var(--doxa-navy);border-color:var(--doxa-navy);color:var(--doxa-white)}
+.ds-tag-cyan{border-color:transparent;background:color-mix(in srgb,var(--doxa-cyan) 10%,transparent);color:var(--doxa-navy)}
+.ds-tag-cyan:hover{background:color-mix(in srgb,var(--doxa-cyan) 55%,transparent)}
+.ds-tag-cyan:active{background:color-mix(in srgb,var(--doxa-cyan) 70%,transparent)}
+
+.ds-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px 4px 14px;border-radius:var(--radius-md);font-family:var(--font-body);font-size:var(--text-caption);font-weight:700;letter-spacing:.03em;text-transform:uppercase}
+.ds-chip-outline{background:transparent;color:var(--doxa-navy);box-shadow:inset 0 0 0 1px var(--doxa-navy)}
+.ds-chip-outline:hover{background:var(--doxa-fog-100)}
+.ds-chip-accent{background:linear-gradient(145deg,var(--doxa-cyan),var(--doxa-green));color:var(--doxa-white)}
+.ds-chip-accent:hover{background:var(--doxa-green)}
+.ds-chip-remove{all:unset;cursor:pointer;line-height:1;font-size:14px;padding:2px;border-radius:50%}
+.ds-chip-remove:hover{background:rgba(5,37,56,.12)}
