@@ -157,3 +157,6 @@ button[style*="calc(-1*var(--space-4))"]{margin-left:0 !important;margin-right:0
 
 /* RoleCard: +10px below the description (14px -> 24px) before the "Explore" link */
 a > div > div[style*="margin-bottom: 14px"]{margin-bottom:24px !important}
+
+/* Footer: more line-height on the brand description */
+footer p[style*="max-width: 280px"]{line-height:1.6 !important}
