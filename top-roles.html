@@ -33,6 +33,20 @@ a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{colo
   .hero-wrap div[style*="margin-top: var(--space-6)"]{flex-direction:column !important;align-items:stretch !important}
   .hero-wrap .cta{width:100%}
 }
+@media (max-width:700px){
+  .rank-table{min-width:0 !important}
+  .rank-table thead{display:none}
+  .rank-table,.rank-table tbody,.rank-table tr{display:block;width:100%;box-sizing:border-box}
+  .rank-table tr{padding:var(--space-4);border-bottom:1px solid var(--border-subtle)}
+  .rank-table tr:last-child{border-bottom:0}
+  .rank-table td{display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-4);padding:var(--space-1) 0 !important;white-space:normal !important;text-align:right}
+  .rank-table td[data-label]::before{content:attr(data-label);flex-shrink:0;text-align:left;font-size:var(--text-caption);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary)}
+  .rank-table td:first-child{display:block;text-align:left;padding-bottom:0 !important}
+  .rank-table td:first-child::before{content:"#"}
+  .rank-table td:nth-child(2){display:block;text-align:left;padding-bottom:var(--space-2) !important}
+  .rank-table td:nth-child(4){flex-wrap:wrap;text-align:left}
+  .rank-table td:nth-child(4)>div{width:100%}
+}
 </style></head><body>
 <template id="tpl">
 
@@ -53,7 +67,7 @@ a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{colo
   <!-- RANKING TABLE -->
   <section class="sec-pad" style="background:var(--paper-soft);padding:var(--space-16) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-4)">
     <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);overflow-x:auto">
-      <table style="width:100%;min-width:820px;border-collapse:collapse;text-align:left">
+      <table class="rank-table" style="width:100%;min-width:820px;border-collapse:collapse;text-align:left">
         <thead>
           <tr style="background:var(--paper-soft);border-bottom:1px solid var(--border-subtle)">
             <th scope="col" style="padding:var(--space-4) var(--space-5);font-size:var(--text-caption);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary)">#</th>
@@ -68,98 +82,98 @@ a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{colo
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">1</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Bookkeeper</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Bookkeeping</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-finance-accounting.html" style="font-size:var(--text-body-sm);font-weight:600">Finance &amp; Accounting</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">94</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:90px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,800–$2,600</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">The most-hired role in the network, four years running.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-finance-accounting.html" style="font-size:var(--text-body-sm);font-weight:600">Finance &amp; Accounting</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">94</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:90px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,800–$2,600</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">The most-hired role in the network, four years running.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">2</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Executive Assistant</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Executive Assistants</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-assistants.html" style="font-size:var(--text-body-sm);font-weight:600">Assistants</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">81</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:78px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,200–$1,800</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">The fastest route to founder leverage.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-assistants.html" style="font-size:var(--text-body-sm);font-weight:600">Assistants</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">81</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:78px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,200–$1,800</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">The fastest route to founder leverage.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">3</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Customer Support Rep</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Customer Support</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-customer-support-sales.html" style="font-size:var(--text-body-sm);font-weight:600">Customer Support &amp; Sales</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">68</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:65px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,100–$1,700</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Pods of 2–6 are the common shape.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-customer-support-sales.html" style="font-size:var(--text-body-sm);font-weight:600">Customer Support &amp; Sales</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">68</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:65px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,100–$1,700</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Pods of 2–6 are the common shape.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">4</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Staff Accountant</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Staff Accounting</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-finance-accounting.html" style="font-size:var(--text-body-sm);font-weight:600">Finance &amp; Accounting</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">55</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:53px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,800–$2,600</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Accounting firms' workhorse hire.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-finance-accounting.html" style="font-size:var(--text-body-sm);font-weight:600">Finance &amp; Accounting</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">55</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:53px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,800–$2,600</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Accounting firms' workhorse hire.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">5</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Helpdesk Technician</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Helpdesk L1–L2</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-isp-msp.html" style="font-size:var(--text-body-sm);font-weight:600">ISP / MSP</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">47</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:45px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,500–$2,300</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">MSPs hire L1–L2 in pairs for coverage.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-isp-msp.html" style="font-size:var(--text-body-sm);font-weight:600">ISP / MSP</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">47</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:45px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,500–$2,300</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">MSPs hire L1–L2 in pairs for coverage.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">6</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Medical Biller</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Medical Billing</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-healthcare.html" style="font-size:var(--text-body-sm);font-weight:600">Healthcare</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">41</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:39px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,400–$2,100</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Denials management is the differentiator.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-healthcare.html" style="font-size:var(--text-body-sm);font-weight:600">Healthcare</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">41</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:39px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,400–$2,100</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Denials management is the differentiator.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">7</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">AR / AP Specialist</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Accounts Receivable</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-finance-accounting.html" style="font-size:var(--text-body-sm);font-weight:600">Finance &amp; Accounting</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">38</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:36px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,600–$2,300</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Often the second finance hire after a bookkeeper.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-finance-accounting.html" style="font-size:var(--text-body-sm);font-weight:600">Finance &amp; Accounting</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">38</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:36px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,600–$2,300</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Often the second finance hire after a bookkeeper.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">8</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">SDR</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Sales Development</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-customer-support-sales.html" style="font-size:var(--text-body-sm);font-weight:600">Customer Support &amp; Sales</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">33</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:32px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,400–$2,200</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Colombia's timezone advantage shows here.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-customer-support-sales.html" style="font-size:var(--text-body-sm);font-weight:600">Customer Support &amp; Sales</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">33</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:32px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,400–$2,200</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Colombia's timezone advantage shows here.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">9</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Paralegal</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Paralegals</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-legal.html" style="font-size:var(--text-body-sm);font-weight:600">Legal</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">29</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:28px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,700–$2,500</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">PI and immigration firms lead demand.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-legal.html" style="font-size:var(--text-body-sm);font-weight:600">Legal</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">29</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:28px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,700–$2,500</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">PI and immigration firms lead demand.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">10</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Full-Stack Developer</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Software Development</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-it-technology.html" style="font-size:var(--text-body-sm);font-weight:600">IT &amp; Technology</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">26</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:25px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$2,800–$4,200</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Vietnam's engineering bench at work.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-it-technology.html" style="font-size:var(--text-body-sm);font-weight:600">IT &amp; Technology</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">26</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:25px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$2,800–$4,200</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Vietnam's engineering bench at work.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">11</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Recruiter</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Recruiting</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-hr.html" style="font-size:var(--text-body-sm);font-weight:600">HR</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">22</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:21px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,600–$2,400</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Recruiting-as-a-subscription drives this.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-hr.html" style="font-size:var(--text-body-sm);font-weight:600">HR</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">22</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:21px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,600–$2,400</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Recruiting-as-a-subscription drives this.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">12</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">SEO Specialist</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">SEO &amp; Content</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-marketing.html" style="font-size:var(--text-body-sm);font-weight:600">Marketing</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">19</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:18px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,500–$2,300</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Agencies hire these in twos and threes.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-marketing.html" style="font-size:var(--text-body-sm);font-weight:600">Marketing</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">19</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:18px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,500–$2,300</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Agencies hire these in twos and threes.</td>
           </tr>
         </tbody>
       </table>
@@ -217,98 +231,98 @@ a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{colo
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">1</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Bookkeeper</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Bookkeeping</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-finance-accounting.html" style="font-size:var(--text-body-sm);font-weight:600">Finance &amp; Accounting</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">94</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:90px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,800–$2,600</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">The most-hired role in the network, four years running.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-finance-accounting.html" style="font-size:var(--text-body-sm);font-weight:600">Finance &amp; Accounting</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">94</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:90px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,800–$2,600</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">The most-hired role in the network, four years running.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">2</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Executive Assistant</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Executive Assistants</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-assistants.html" style="font-size:var(--text-body-sm);font-weight:600">Assistants</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">81</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:78px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,200–$1,800</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">The fastest route to founder leverage.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-assistants.html" style="font-size:var(--text-body-sm);font-weight:600">Assistants</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">81</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:78px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,200–$1,800</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">The fastest route to founder leverage.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">3</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Customer Support Rep</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Customer Support</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-customer-support-sales.html" style="font-size:var(--text-body-sm);font-weight:600">Customer Support &amp; Sales</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">68</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:65px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,100–$1,700</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Pods of 2–6 are the common shape.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-customer-support-sales.html" style="font-size:var(--text-body-sm);font-weight:600">Customer Support &amp; Sales</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">68</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:65px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,100–$1,700</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Pods of 2–6 are the common shape.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">4</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Staff Accountant</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Staff Accounting</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-finance-accounting.html" style="font-size:var(--text-body-sm);font-weight:600">Finance &amp; Accounting</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">55</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:53px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,800–$2,600</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Accounting firms' workhorse hire.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-finance-accounting.html" style="font-size:var(--text-body-sm);font-weight:600">Finance &amp; Accounting</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">55</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:53px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,800–$2,600</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Accounting firms' workhorse hire.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">5</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Helpdesk Technician</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Helpdesk L1–L2</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-isp-msp.html" style="font-size:var(--text-body-sm);font-weight:600">ISP / MSP</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">47</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:45px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,500–$2,300</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">MSPs hire L1–L2 in pairs for coverage.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-isp-msp.html" style="font-size:var(--text-body-sm);font-weight:600">ISP / MSP</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">47</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:45px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,500–$2,300</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">MSPs hire L1–L2 in pairs for coverage.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">6</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Medical Biller</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Medical Billing</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-healthcare.html" style="font-size:var(--text-body-sm);font-weight:600">Healthcare</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">41</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:39px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,400–$2,100</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Denials management is the differentiator.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-healthcare.html" style="font-size:var(--text-body-sm);font-weight:600">Healthcare</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">41</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:39px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,400–$2,100</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Denials management is the differentiator.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">7</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">AR / AP Specialist</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Accounts Receivable</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-finance-accounting.html" style="font-size:var(--text-body-sm);font-weight:600">Finance &amp; Accounting</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">38</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:36px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,600–$2,300</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Often the second finance hire after a bookkeeper.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-finance-accounting.html" style="font-size:var(--text-body-sm);font-weight:600">Finance &amp; Accounting</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">38</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:36px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,600–$2,300</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Often the second finance hire after a bookkeeper.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">8</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">SDR</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Sales Development</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-customer-support-sales.html" style="font-size:var(--text-body-sm);font-weight:600">Customer Support &amp; Sales</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">33</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:32px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,400–$2,200</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Colombia's timezone advantage shows here.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-customer-support-sales.html" style="font-size:var(--text-body-sm);font-weight:600">Customer Support &amp; Sales</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">33</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:32px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,400–$2,200</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Colombia's timezone advantage shows here.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">9</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Paralegal</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Paralegals</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-legal.html" style="font-size:var(--text-body-sm);font-weight:600">Legal</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">29</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:28px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,700–$2,500</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">PI and immigration firms lead demand.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-legal.html" style="font-size:var(--text-body-sm);font-weight:600">Legal</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">29</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:28px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,700–$2,500</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">PI and immigration firms lead demand.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">10</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Full-Stack Developer</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Software Development</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-it-technology.html" style="font-size:var(--text-body-sm);font-weight:600">IT &amp; Technology</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">26</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:25px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$2,800–$4,200</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Vietnam's engineering bench at work.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-it-technology.html" style="font-size:var(--text-body-sm);font-weight:600">IT &amp; Technology</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">26</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:25px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$2,800–$4,200</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Vietnam's engineering bench at work.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">11</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">Recruiter</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">Recruiting</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-hr.html" style="font-size:var(--text-body-sm);font-weight:600">HR</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">22</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:21px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,600–$2,400</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Recruiting-as-a-subscription drives this.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-hr.html" style="font-size:var(--text-body-sm);font-weight:600">HR</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">22</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:21px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,600–$2,400</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Recruiting-as-a-subscription drives this.</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border-subtle)">
             <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body);font-weight:800;color:var(--text-secondary)">12</td>
             <td style="padding:var(--space-4) var(--space-5)"><div style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">SEO Specialist</div><div style="font-size:var(--text-caption);color:var(--text-secondary)">SEO &amp; Content</div></td>
-            <td style="padding:var(--space-4) var(--space-5)"><a href="role-marketing.html" style="font-size:var(--text-body-sm);font-weight:600">Marketing</a></td>
-            <td style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">19</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:18px"></span></div></td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,500–$2,300</td>
-            <td style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Agencies hire these in twos and threes.</td>
+            <td data-label="Family" style="padding:var(--space-4) var(--space-5)"><a href="role-marketing.html" style="font-size:var(--text-body-sm);font-weight:600">Marketing</a></td>
+            <td data-label="Placements (12 mo)" style="padding:var(--space-4) var(--space-5)"><div style="display:flex;align-items:center;gap:var(--space-3)"><span style="font-size:var(--text-body-sm);font-weight:700;color:var(--text-primary)">19</span><span aria-hidden="true" style="display:block;height:8px;border-radius:var(--radius-sm);background:var(--brand-gradient);width:18px"></span></div></td>
+            <td data-label="All-inclusive / mo" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);font-weight:600;color:var(--text-primary);white-space:nowrap">$1,500–$2,300</td>
+            <td data-label="Why it leads" style="padding:var(--space-4) var(--space-5);font-size:var(--text-body-sm);line-height:1.6;color:var(--text-secondary)">Agencies hire these in twos and threes.</td>
           </tr>
         </tbody>
       </table>
