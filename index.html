@@ -53,6 +53,11 @@ a.rfr-more:hover{color:rgba(255,255,255,.8)}
   .hero-wrap div[style*="margin-top: var(--space-6)"]{flex-direction:column !important;align-items:stretch !important}
   .hero-wrap .cta{width:100%}
 }
+@media (max-width:600px){
+  div:has(> .stat-card){grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:var(--space-3) !important}
+  .stat-card{padding:var(--space-5) var(--space-3) !important}
+  .stat-card:last-child{grid-column:1 / -1}
+}
 </style></head><body>
 <template id="tpl">
 
