@@ -154,3 +154,6 @@ input[type="checkbox"]:focus-visible+span,input[type="radio"]:focus-visible+span
 
 /* FAQAccordion: keep the open question's bar inside the column (the component's -16px side margins pushed it out to the left) */
 button[style*="calc(-1*var(--space-4))"]{margin-left:0 !important;margin-right:0 !important}
+
+/* RoleCard: +10px below the description (14px -> 24px) before the "Explore" link */
+a > div > div[style*="margin-bottom: 14px"]{margin-bottom:24px !important}
