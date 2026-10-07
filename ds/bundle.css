@@ -151,3 +151,6 @@ input[type="checkbox"]:focus-visible+span,input[type="radio"]:focus-visible+span
 .ds-chip-accent:hover{background:var(--doxa-green)}
 .ds-chip-remove{all:unset;cursor:pointer;line-height:1;font-size:14px;padding:2px;border-radius:50%}
 .ds-chip-remove:hover{background:rgba(5,37,56,.12)}
+
+/* FAQAccordion: keep the open question's bar inside the column (the component's -16px side margins pushed it out to the left) */
+button[style*="calc(-1*var(--space-4))"]{margin-left:0 !important;margin-right:0 !important}
