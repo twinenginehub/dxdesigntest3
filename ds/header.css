@@ -90,3 +90,8 @@ html:active-view-transition-type(pixelate-dissolve)::view-transition-new(root) {
     opacity: 1;
   }
 }
+
+/* Footer: brand column is one third of the row on every page; the four link columns share the rest. */
+@media (min-width:861px) {
+  footer > div:first-child { grid-template-columns: minmax(0,1fr) repeat(4, minmax(0,.5fr)) !important; }
+}
