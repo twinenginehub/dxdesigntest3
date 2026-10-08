@@ -5,6 +5,9 @@ body{margin:0}
 :root{--straddle:clamp(220px,28vw,360px)}
 #standard{padding-bottom:calc(var(--space-12) + var(--straddle) / 2) !important}
 #standard + .straddle + section{padding-top:calc(var(--space-12) + var(--straddle) / 2) !important}
+#standard + .straddle + section{border:3px solid transparent;border-image:var(--brand-gradient) 1}
+.purpose{background:var(--brand-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent !important;width:fit-content}
+.straddle img{box-sizing:border-box;border:3px solid transparent;background:linear-gradient(var(--paper-soft),var(--paper-soft)) padding-box,var(--brand-gradient) border-box}
 :root{--container-pad:clamp(24px,2rem + 5vw,125px)}
 .cta{font-family:var(--font-display);font-weight:600;font-size:var(--text-body-sm);border-radius:var(--radius-md);display:inline-flex;align-items:center;justify-content:center;padding:var(--space-2) 18px;min-height:44px;box-sizing:border-box;text-decoration:none;position:relative}
 .ds-btn:not(.ds-tag){text-transform:uppercase;letter-spacing:.03em}
