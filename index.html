@@ -20,6 +20,9 @@ a.ds-btn.ds-btn-secondary,a.ds-btn.ds-btn-secondary:visited{color:var(--navy)}
 a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{color:var(--white)}
 .hero-wrap div[style*="background-image"]{background-image:url(hero-team.jpg) !important;background-position:50% 70% !important;padding-top:300px !important;justify-content:flex-end !important}
 .hero-wrap{position:relative}
+.typing-caret::after{content:"";display:inline-block;width:0;height:.82em;border-right:.07em solid currentColor;margin-right:-.07em;vertical-align:-.04em;animation:typing-blink 1s steps(1) infinite}
+.typing-caret.typing-done::after{display:none}
+@keyframes typing-blink{50%{opacity:0}}
 .hero-wrap div[style*="max-width: 620px"]{max-width:65% !important}
 .hero-wrap a.ds-btn-primary{background:linear-gradient(145deg,var(--doxa-cyan),var(--doxa-green))}
 .hero-wrap a.ds-btn-primary:hover{background:var(--doxa-navy)}
@@ -630,5 +633,6 @@ function render(){
 window.__render=render;render();
 })();
 </script>
+<script src="ds/typing.js"></script>
 
 </body></html>
