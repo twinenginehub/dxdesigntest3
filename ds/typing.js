@@ -29,5 +29,5 @@
       setTimeout(function () { typed.classList.add('typing-done'); }, 1800);
     }
   }
-  setTimeout(tick, 400);
+  setTimeout(tick, 1600);
 })();
