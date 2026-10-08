@@ -21,7 +21,6 @@ def header(cur):
       '<a class="site-nav__logo" href="index.html" aria-label="DOXA Talent home"><img src="doxa-logo-white.png" alt="DOXA"></a>'
       '<div class="site-nav__links" id="site-menu">'
       f'<div class="nav-item">{a("Home","index.html")}</div>'
-      f'<div class="nav-item">{a("Talent","talent.html",CHEV)}<div class="nav-drop"><div class="nav-drop__grid">{drop}</div></div></div>'
       f'<div class="nav-item">{a("Industries","industries.html")}</div>'
       f'<div class="nav-item">{a("About","about.html")}</div>'
       '<div class="nav-item nav-item--cta"><a class="site-nav__cta" href="index.html#build-your-team">Build your team</a></div>'
