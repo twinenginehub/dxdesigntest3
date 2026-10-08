@@ -52,3 +52,41 @@
   .nav-item--cta{display:block;border-bottom:0;padding-top:var(--space-4)}
   .nav-item--cta .site-nav__cta{display:flex;width:100%;min-height:44px}
 }
+
+/* Cross-page view transition (Chromium; ignored elsewhere). Both pages must load this file to opt in. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+    types: pixelate-dissolve;
+  }
+}
+
+html:active-view-transition-type(pixelate-dissolve)::view-transition-old(root) {
+  animation: pixelate-out 1.4s ease forwards;
+}
+
+html:active-view-transition-type(pixelate-dissolve)::view-transition-new(root) {
+  animation: pixelate-in 1.4s ease forwards;
+}
+
+@keyframes pixelate-out {
+  0% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+}
+
+@keyframes pixelate-in {
+  0% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
