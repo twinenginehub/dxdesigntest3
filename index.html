@@ -60,8 +60,9 @@ a.rfr-more:hover{color:rgba(255,255,255,.8)}
   .better-way .bw-text{order:2;flex:1 1 50% !important}
 }
 @media (min-width:601px) and (max-width:1279px){
-  img[src^="better-way-woman"]{width:17% !important}
-  img[src="better-way-man.png"]{width:19% !important}
+  .bw-collage{display:grid !important;grid-template-columns:minmax(0,3.2fr) minmax(0,1fr);grid-template-rows:repeat(3,minmax(0,1fr));gap:var(--space-4)}
+  .bw-collage > img:first-child{grid-column:1;grid-row:1 / 4}
+  .bw-collage > img:not(:first-child){position:static !important;grid-column:2;width:100% !important;height:100% !important;min-height:0;aspect-ratio:auto !important;contain:size;object-position:50% 25%}
 }
 @media (max-width:600px){
   img[src^="better-way-woman"]{width:16% !important}
