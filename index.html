@@ -21,7 +21,7 @@ a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{colo
 .hero-wrap div[style*="background-image"]{background-image:url(hero-team.jpg) !important;background-position:50% 70% !important;padding-top:300px !important;justify-content:flex-end !important}
 .hero-wrap{position:relative}
 /* Testimonials: slow vertical ticker that runs past the top and bottom edges of the navy section */
-.testi-sec{display:grid !important;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:center;gap:var(--space-10) var(--space-16)}
+.testi-sec{margin-block:80px !important;display:grid !important;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:center;gap:var(--space-10) var(--space-16)}
 .testi-sec .testi{display:block !important;position:relative;z-index:3;align-self:stretch;height:auto;min-height:420px;margin:-176px 0;overflow:hidden;-webkit-mask-image:linear-gradient(transparent 0,#000 70px,#000 calc(100% - 70px),transparent 100%);mask-image:linear-gradient(transparent 0,#000 70px,#000 calc(100% - 70px),transparent 100%)}
 .testi-track{position:absolute;top:0;left:0;right:0;animation:testi-scroll 48s linear infinite}
 .testi-callout{display:inline-flex;align-items:center;gap:var(--space-3);width:fit-content;font-family:var(--font-display);font-weight:700;font-size:var(--text-h4);line-height:1.2;color:var(--text-inverse);text-decoration:none;margin-top:var(--space-2)}
@@ -33,7 +33,7 @@ a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{colo
 @keyframes testi-scroll{to{transform:translateY(-33.3333%)}}
 @media (prefers-reduced-motion:reduce){.testi-track{animation:none}}
 @media (max-width:860px){
-  .testi-sec{grid-template-columns:minmax(0,1fr)}
+  .testi-sec{grid-template-columns:minmax(0,1fr);margin-block:48px 64px !important}
   .testi-sec .testi{align-self:auto;height:540px;min-height:0;margin:0 0 -108px}
 }
 .typing-caret::after{content:"";display:inline-block;width:0;height:.82em;border-right:.07em solid currentColor;margin-right:-.07em;vertical-align:-.04em;animation:typing-blink 1s steps(1) infinite}
