@@ -122,35 +122,15 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .proof-strip{display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-6);padding-block:var(--space-4);font-size:var(--text-caption);color:var(--text-muted);font-weight:500}
 
 /* Footer — full-bleed */
-.site-footer{background:var(--doxa-navy);color:rgba(255,255,255,.72);padding:var(--space-10) var(--container-pad) var(--space-6)}
-.site-footer img{height:32px}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:var(--space-8);margin-top:var(--space-8)}
-.footer-brand p{color:rgba(255,255,255,.7);font-size:var(--text-body-sm);margin-top:var(--space-4);max-width:280px}
-.footer-chips{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2);margin-top:var(--space-4)}
-.footer-chip{font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:rgba(255,255,255,.85)}
-.footer-chip:not(:last-child)::after{content:'|';margin-left:var(--space-2);color:rgba(255,255,255,.3);font-weight:400}
-.footer-col h4{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--doxa-white);margin:0 0 var(--space-3)}
-.footer-col a{display:block;font-size:14px;color:rgba(255,255,255,.7);text-decoration:none;margin-bottom:10px}
-.footer-col a:hover{color:var(--doxa-white);background:none;-webkit-text-fill-color:unset}
-.site-footer .legal-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-1) var(--space-4);font-size:var(--text-caption);color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.15);margin-top:var(--space-8);padding-top:var(--space-5)}
-.site-footer .legal-row a{color:rgba(255,255,255,.6);text-decoration:underline}
-.site-footer .legal-links{display:flex;gap:var(--space-4)}
-.site-footer .legal-row__right{display:flex;align-items:center;gap:var(--space-6);flex-wrap:wrap}
-.site-footer .social-icons{display:flex;align-items:center;gap:14px}
-.site-footer .social-icons a{color:#fff;display:inline-flex}
 
 @media (max-width:900px){
   .tile-grid{grid-template-columns:repeat(2,1fr)}
   .nav-drop{min-width:420px}
-  .footer-grid{grid-template-columns:1fr 1fr 1fr}
-  .footer-brand{grid-column:1 / -1}
 }
 @media (max-width:640px){
   .site-nav__links{display:none}
   .tile-grid{grid-template-columns:1fr}
   .hero__inner{padding-block:var(--space-16) var(--space-12)}
-  .footer-grid{grid-template-columns:1fr 1fr}
-  .site-footer .legal-row{flex-direction:column}
 }
 </style>
 <link rel="stylesheet" href="ds/header.css">
@@ -280,114 +260,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="doxa-logo-white.png" alt="DOXA">
-      <p>Conscious Outsourcing&trade;. Ethically employed, directly hired global teams across the Philippines, Colombia, Vietnam, and Kenya. 81 NPS &middot; 50% better retention.</p>
-      <div class="footer-chips">
-        <span class="footer-chip">SOC 2 Type I</span>
-        <span class="footer-chip">NIST 2.0 aligned</span>
-        <span class="footer-chip">Great Place to Work&reg;</span>
-        <span class="footer-chip">Fortune 100 Best Workplaces (SE Asia)</span>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Roles</h4>
-      <label for="demo-industry-select" style="display:block;font-size:11px;font-weight:400;text-transform:none;letter-spacing:normal;color:rgba(255,255,255,.5);margin-bottom:6px">Demo: preview by industry</label>
-      <select id="demo-industry-select" style="width:100%;margin-bottom:var(--space-3);padding:6px 8px;font-size:13px;background:rgba(255,255,255,.08);color:var(--doxa-white);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-sm)">
-        <option value="accounting-firms">Accounting firms</option>
-        <option value="law-firms">Law firms</option>
-        <option value="healthcare">Healthcare &amp; medical practices</option>
-        <option value="msps-it">MSPs &amp; IT services</option>
-        <option value="real-estate">Real estate &amp; property management</option>
-        <option value="ecommerce">E-commerce &amp; retail</option>
-        <option value="construction">Construction &amp; trades</option>
-        <option value="financial-services">Financial services</option>
-        <option value="insurance">Insurance</option>
-        <option value="logistics">Logistics &amp; transportation</option>
-        <option value="saas-tech">SaaS &amp; technology</option>
-        <option value="professional-services">Professional services</option>
-        <option value="hospitality">Hospitality &amp; travel</option>
-      </select>
-      <div id="footer-roles-list">
-        <a href="accountant-cpa.html">Accountant (CPA)</a>
-        <a href="#">Outsourced Bookkeeper</a>
-        <a href="#">Outsourced AR/AP Clerk</a>
-        <a href="#">Outsourced Finance Specialist</a>
-        <a href="#">Outsourced Payroll Specialist</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Industries</h4>
-      <a href="accounting-firms.html">Accounting Firms</a>
-      <a href="#">Law Firms</a>
-      <a href="#">Healthcare &amp; Medical Practices</a>
-      <a href="#">MSPs &amp; IT Services</a>
-      <a href="industries.html">View all industries &rarr;</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="about.html">About DOXA</a>
-      <a href="#">Ethical Outsourcing</a>
-      <a href="#">Security &amp; Compliance</a>
-      <a href="#">Careers</a>
-    </div>
-    <div class="footer-col">
-      <h4>Get Started</h4>
-      <a href="#">Build your team</a>
-      <a href="#">Calculate your team cost</a>
-      <a href="#">Explore talent</a>
-    </div>
-  </div>
-  <div class="legal-row">
-    <span>Copyright &copy; 2026 DOXA. All rights reserved. Conscious Outsourcing is a trademark of DOXA Talent.</span>
-    <div class="legal-row__right">
-      <div class="legal-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">For AI</a>
-      </div>
-      <div class="social-icons">
-        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM8 10v7M8 7.2h.01M12 17v-4.5c0-1.4 1-2.5 2.3-2.5S16 11 16 12.5V17"/></svg></a>
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8h-2c-.6 0-1 .6-1 1.2V11h3l-.4 3H12v6h-3v-6H7v-3h2V9c0-2 1.4-4 4-4h2z"/></svg></a>
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM16.5 7.5h.01"/></svg></a>
-        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5c0-1.4 1-2.5 2.5-2.5h11c1.5 0 2.5 1.1 2.5 2.5v7c0 1.4-1 2.5-2.5 2.5h-11C5 18 4 16.9 4 15.5zM10 9.5l5 2.5-5 2.5z"/></svg></a>
-        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v9.5a2.5 2.5 0 1 1-2-2.45M14 4c.3 2 1.8 3.5 4 3.7"/></svg></a>
-      </div>
-    </div>
-  </div>
-</footer>
-<script>
-(function(){
-  var ROLE_MAP = {
-    'accounting-firms': [['Accountant (CPA)','accountant-cpa.html'],['Outsourced Bookkeeper','#'],['Outsourced AR/AP Clerk','#'],['Outsourced Finance Specialist','#'],['Outsourced Payroll Specialist','#']],
-    'law-firms': [['Paralegal','#'],['Outsourced Legal Assistant','#'],['Outsourced Contract Reviewer','#'],['Outsourced Legal Transcriptionist','#'],['Outsourced Case Manager','#']],
-    'healthcare': [['Medical Biller','#'],['Outsourced Medical Coder','#'],['Outsourced Patient Care Coordinator','#'],['Outsourced Prior Authorization Specialist','#'],['Outsourced Medical Scribe','#']],
-    'msps-it': [['IT Support Specialist','#'],['Outsourced Network Administrator','#'],['Outsourced Help Desk Technician','#'],['Outsourced Systems Engineer','#'],['Outsourced Cybersecurity Analyst','#']],
-    'real-estate': [['Property Manager','#'],['Outsourced Transaction Coordinator','#'],['Outsourced Leasing Assistant','#'],['Outsourced Listing Coordinator','#'],['Outsourced Real Estate Assistant','#']],
-    'ecommerce': [['Customer Support Specialist','#'],['Outsourced Inventory Coordinator','#'],['Outsourced Order Fulfillment Specialist','#'],['Outsourced Catalog Manager','#'],['Outsourced Ecommerce Assistant','#']],
-    'construction': [['Project Coordinator','#'],['Outsourced Estimator','#'],['Outsourced Permit Specialist','#'],['Outsourced Scheduling Coordinator','#'],['Outsourced Construction Admin','#']],
-    'financial-services': [['Financial Analyst','#'],['Outsourced Loan Processor','#'],['Outsourced Underwriting Assistant','#'],['Outsourced Compliance Specialist','#'],['Outsourced Client Services Associate','#']],
-    'insurance': [['Claims Processor','#'],['Outsourced Policy Administrator','#'],['Outsourced Underwriting Support','#'],['Outsourced Customer Service Rep','#'],['Outsourced Insurance Assistant','#']],
-    'logistics': [['Dispatch Coordinator','#'],['Outsourced Freight Broker Assistant','#'],['Outsourced Logistics Coordinator','#'],['Outsourced Supply Chain Analyst','#'],['Outsourced Customer Service Rep','#']],
-    'saas-tech': [['Technical Support Specialist','#'],['Outsourced QA Tester','#'],['Outsourced Customer Success Associate','#'],['Outsourced Implementation Specialist','#'],['Outsourced Data Analyst','#']],
-    'professional-services': [['Executive Assistant','#'],['Outsourced Research Analyst','#'],['Outsourced Client Services Coordinator','#'],['Outsourced Project Coordinator','#'],['Outsourced Virtual Assistant','#']],
-    'hospitality': [['Reservations Specialist','#'],['Outsourced Guest Services Coordinator','#'],['Outsourced Revenue Management Analyst','#'],['Outsourced Front Desk Assistant','#'],['Outsourced Concierge Support','#']]
-  };
-  var DEFAULT_INDUSTRY = 'accounting-firms';
-  var select = document.getElementById('demo-industry-select');
-  var list = document.getElementById('footer-roles-list');
-  function escapeHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
-  function render(key){
-    var roles = ROLE_MAP[key] || ROLE_MAP[DEFAULT_INDUSTRY];
-    list.innerHTML = roles.map(function(r){return '<a href="'+r[1]+'">'+escapeHtml(r[0])+'</a>';}).join('');
-  }
-  if (select && list) {
-    select.value = DEFAULT_INDUSTRY;
-    select.addEventListener('change', function(){ render(this.value); });
-  }
-})();
-</script>
+<footer style="background: var(--doxa-navy); color: var(--text-inverse); font-family: var(--font-body); padding: var(--space-10) var(--container-pad) var(--space-6);"><div style="display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: var(--space-8);"><div><img src="doxa-logo-white.png" alt="DOXA" style="height: 32px;"><p style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-body-sm); margin-top: var(--space-4); max-width: 280px;">DOXA Talent recruits, directly employs, equips, develops, and supports dedicated offshore professionals for its clients.</p><div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); margin-top: var(--space-4);"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: rgba(255, 255, 255, 0.85);">SOC 2 Type II</span><span aria-hidden="true" style="color: rgba(255, 255, 255, 0.3); font-weight: 400;">|</span><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: rgba(255, 255, 255, 0.85);">Great Place to Work Certified</span><span aria-hidden="true" style="color: rgba(255, 255, 255, 0.3); font-weight: 400;">|</span><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: rgba(255, 255, 255, 0.85);">30-day cancellation</span></div></div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--doxa-white); margin-bottom: 4px;">Roles</div><a href="role-finance-accounting.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Finance &amp; Accounting</a><a href="role-assistants.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Assistants</a><a href="role-customer-support-sales.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Customer Support &amp; Sales</a><a href="role-marketing.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Marketing</a><a href="role-it-technology.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">IT &amp; Technology</a><a href="role-hr.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Human Resources</a><a href="role-legal.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Legal</a><a href="role-healthcare.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Healthcare</a><a href="role-isp-msp.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">ISP / MSP</a></div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--doxa-white); margin-bottom: 4px;">Industries</div><a href="accounting-firms.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Accounting Firms</a><a href="#" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Law Firms</a><a href="#" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Healthcare &amp; Medical Practices</a><a href="#" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">MSPs &amp; IT Services</a><a href="industries.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">View all industries →</a></div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--doxa-white); margin-bottom: 4px;">Company</div><a href="about.html" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">About DOXA</a></div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--doxa-white); margin-bottom: 4px;">Get Started</div><a href="index.html#build-your-team" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Build Your Team</a><a href="index.html#calculate-your-team-cost" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Calculate Your Team Cost</a><a href="index.html#roles" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none;">Explore Talent</a></div></div><div style="display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; justify-content: space-between; margin-top: var(--space-8); padding-top: var(--space-5); border-top: 1px solid rgba(255, 255, 255, 0.15); font-size: var(--text-caption); color: rgba(255, 255, 255, 0.6);"><span>© 2026 DOXA. All rights reserved.</span><div style="display: flex; align-items: center; gap: var(--space-6); flex-wrap: wrap;"><div style="display: flex; gap: var(--space-4);"></div><div style="display: flex; align-items: center; gap: 14px;"><a href="#" aria-label="LinkedIn" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM8 10v7M8 7.2h.01M12 17v-4.5c0-1.4 1-2.5 2.3-2.5S16 11 16 12.5V17"></path></svg></a><a href="#" aria-label="Facebook" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8h-2c-.6 0-1 .6-1 1.2V11h3l-.4 3H12v6h-3v-6H7v-3h2V9c0-2 1.4-4 4-4h2z"></path></svg></a><a href="#" aria-label="Instagram" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM16.5 7.5h.01"></path></svg></a><a href="#" aria-label="YouTube" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5c0-1.4 1-2.5 2.5-2.5h11c1.5 0 2.5 1.1 2.5 2.5v7c0 1.4-1 2.5-2.5 2.5h-11C5 18 4 16.9 4 15.5zM10 9.5l5 2.5-5 2.5z"></path></svg></a><a href="#" aria-label="TikTok" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v9.5a2.5 2.5 0 1 1-2-2.45M14 4c.3 2 1.8 3.5 4 3.7"></path></svg></a></div></div></div></footer>
+
 </body>
 </html>

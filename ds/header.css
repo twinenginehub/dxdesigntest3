@@ -102,3 +102,8 @@ html:active-view-transition-type(pixelate-dissolve)::view-transition-new(root) {
 /* Header fades out when the footer is reached (see header.js). */
 .site-nav{transition:opacity .4s ease,visibility 0s linear 0s}
 .site-nav.is-faded{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .4s ease,visibility 0s linear .4s}
+
+/* Footer on hand-built pages (matches the home footer) */
+#footer-roles-list a { font-size: 14px; color: rgba(255,255,255,.7); text-decoration: none; }
+@media (max-width: 860px) { footer > div:first-child { grid-template-columns: 1fr 1fr !important; } }
+@media (max-width: 520px) { footer > div:first-child { grid-template-columns: 1fr !important; } }
