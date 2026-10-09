@@ -592,9 +592,9 @@ React.createElement(FooterLegalRow,{links:legalLinks})
 )
 );
 }
-var brandDescription=props.brandDescription||'Conscious Outsourcing®. Ethically employed, directly hired global teams across the Philippines, Colombia, Vietnam, and Kenya. 81 NPS · 50% better retention.';
+var brandDescription=props.brandDescription||'Conscious Outsourcing™. Ethically employed, directly hired global teams across the Philippines, Colombia, Vietnam, and Kenya. 81 NPS · 50% better retention.';
 var chips=props.chips||['SOC 2 Type I','NIST 2.0 aligned','Great Place to Work®','Fortune 100 Best Workplaces (SE Asia)'];
-var copyright=props.copyright||'Copyright © '+new Date().getFullYear()+' DOXA. All rights reserved. Conscious Outsourcing® is a registered trademark of DOXA Talent.';
+var copyright=props.copyright||'Copyright © '+new Date().getFullYear()+' DOXA. All rights reserved. Conscious Outsourcing is a trademark of DOXA Talent.';
 var defaultGroups=columns||[
 {heading:'Roles',links:[{label:'Accountant (CPA)'},{label:'Outsourced Bookkeeper'},{label:'Outsourced AR/AP Clerk'},{label:'Outsourced Finance Specialist'},{label:'Outsourced Payroll Specialist'}]},
 {heading:'Industries',links:[{label:'Accounting Firms'},{label:'Law Firms'},{label:'Healthcare & Medical Practices'},{label:'MSPs & IT Services'},{label:'View all industries →'}]},
