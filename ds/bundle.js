@@ -776,7 +776,11 @@ React.createElement('span',{style:{position:'absolute',top:'50%',left:0,width:16
 React.createElement('span',{style:{position:'absolute',top:0,left:'50%',width:3,height:16,background:plusColor,transform:isOpen?'translateX(-50%) scaleY(0)':'translateX(-50%) scaleY(1)',transition:'transform var(--duration-base) var(--ease-standard),background var(--duration-base) var(--ease-standard)'}})
 )
 ),
-isOpen&&React.createElement('div',{style:{padding:'var(--space-3) 24px var(--space-5) var(--space-4)',fontSize:'var(--text-body-sm)',color:dark?'rgba(255,255,255,.8)':'var(--doxa-navy)',lineHeight:'var(--leading-relaxed)'}},it.answer)
+React.createElement('div',{'aria-hidden':isOpen?'false':'true',style:{display:'grid',gridTemplateRows:isOpen?'1fr':'0fr',opacity:isOpen?1:0,visibility:isOpen?'visible':'hidden',transition:'grid-template-rows 350ms var(--ease-standard),opacity 300ms ease,visibility 0s linear '+(isOpen?'0s':'350ms')}},
+React.createElement('div',{style:{overflow:'hidden',minHeight:0}},
+React.createElement('div',{style:{padding:'var(--space-3) 24px var(--space-5) var(--space-4)',fontSize:'var(--text-body-sm)',color:dark?'rgba(255,255,255,.8)':'var(--doxa-navy)',lineHeight:'var(--leading-relaxed)'}},it.answer)
+)
+)
 );
 }
 function FAQAccordion(props){
