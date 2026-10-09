@@ -25,7 +25,7 @@ def header(cur):
       f'<div class="nav-item">{a("About","about.html")}</div>'
       '<div class="nav-item nav-item--cta"><a class="site-nav__cta" href="index.html#build-your-team">Build your team</a></div>'
       '</div>'
-      f'<div class="site-nav__right">{SEARCH}<a class="site-nav__cta" href="index.html#build-your-team">Build your team</a>'
+      f'<div class="site-nav__right"><a class="site-nav__cta" href="index.html#build-your-team">Build your team</a>'
       f'<button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">{BURGER}</button></div>'
       '</nav>')
 def add_assets(t):
