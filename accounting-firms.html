@@ -155,11 +155,6 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .faq__answer{padding:var(--space-3) 24px var(--space-5) var(--space-4);font-size:var(--text-body-sm);color:var(--text-secondary);max-width:760px}
 
 /* CTA band */
-.cta-band{margin-top:var(--space-24);display:flex;align-items:center;justify-content:space-between;gap:var(--space-8);flex-wrap:wrap;background:var(--doxa-navy);border-radius:var(--radius-lg);padding:var(--space-10)}
-.cta-band>div{flex:1;min-width:0}
-.cta-band h3{color:var(--text-inverse);font-size:var(--text-h3);font-weight:700}
-.cta-band p{color:rgba(255,255,255,.8);margin-top:var(--space-2)}
-.cta-band__actions{display:flex;justify-content:flex-end;gap:var(--space-3);flex-wrap:wrap}
 
 /* Proof strip */
 .proof-strip{display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-6);padding-block:var(--space-4);font-size:var(--text-caption);color:var(--text-muted);font-weight:500}
@@ -202,6 +197,12 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   .footer-grid{grid-template-columns:1fr 1fr}
   .site-footer .legal-row{flex-direction:column}
 }
+/* Closing CTA (same pattern as the home, industries and about pages) */
+.cta-final{margin-top:var(--space-24);display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--space-6)}
+.cta-final h2{margin:0;max-width:760px;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)}
+.cta-final h2 span{background:var(--brand-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.cta-final p{margin:0;max-width:640px;font-size:var(--text-body-lg);line-height:1.65;color:var(--text-secondary)}
+.cta-final__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-3)}
 </style>
 <link rel="stylesheet" href="ds/header.css">
 <script src="ds/header.js" defer></script>
@@ -315,14 +316,12 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
       </div>
     </div>
 
-    <div class="cta-band">
-      <div>
-        <h3>Build your team without expanding your overhead.</h3>
-        <p>Move recurring accounting work to a dedicated global team and give your senior staff room to focus on what grows the firm.</p>
-      </div>
-      <div class="cta-band__actions">
-        <a class="ds-btn ds-btn-primary on-dark btn-md" href="#"><span>Build your team</span></a>
-        <a class="ds-btn ds-btn-secondary on-dark btn-md" href="#"><span>Explore talent</span></a>
+    <div class="cta-final">
+      <h2>Build your team <span>without expanding your overhead.</span></h2>
+      <p>Move recurring accounting work to a dedicated global team and give your senior staff room to focus on what grows the firm.</p>
+      <div class="cta-final__actions">
+        <a class="ds-btn ds-btn-secondary btn-md" href="#"><span>Explore talent</span></a>
+        <a class="ds-btn ds-btn-accent btn-md" href="#"><span>Build your team</span> <svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg></a>
       </div>
     </div>
   </div>
