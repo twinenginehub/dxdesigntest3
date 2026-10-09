@@ -98,3 +98,7 @@ html:active-view-transition-type(pixelate-dissolve)::view-transition-new(root) {
   footer > div:first-child > :nth-child(4) { grid-column: 4; grid-row: 1; }
   footer > div:first-child > :nth-child(5) { grid-column: 4; grid-row: 2; align-self: start; }
 }
+
+/* Header fades out when the footer is reached (see header.js). */
+.site-nav{transition:opacity .4s ease,visibility 0s linear 0s}
+.site-nav.is-faded{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .4s ease,visibility 0s linear .4s}

@@ -17,3 +17,18 @@
     if (window.innerWidth > 860) document.querySelectorAll('.site-nav.is-open').forEach(function (n) { set(n, false); });
   });
 })();
+
+/* Fade the sticky header out once the footer comes into view (checked on scroll so it survives page re-renders). */
+(function () {
+  function update() {
+    var footer = document.querySelector('footer');
+    var navs = document.querySelectorAll('.site-nav');
+    if (!footer || !navs.length) return;
+    var reached = footer.getBoundingClientRect().top < window.innerHeight - 100;
+    navs.forEach(function (n) { n.classList.toggle('is-faded', reached && !n.classList.contains('is-open')); });
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  window.addEventListener('load', update);
+  update();
+})();
