@@ -91,17 +91,10 @@ html:active-view-transition-type(pixelate-dissolve)::view-transition-new(root) {
   }
 }
 
-/* Footer: brand column is one third of the row on every page; the four link columns share the rest. */
+/* Footer: brand column is one third of the row; Roles and Industries each get a column; Company sits above Get Started in the fourth. */
 @media (min-width:861px) {
-  footer > div:first-child { grid-template-columns: minmax(0,1fr) repeat(4, minmax(0,.5fr)) !important; }
-}
-
-/* Native <details> accordions (accounting-firms, accountant-cpa): fade the answer in and out.
-   ::details-content + allow-discrete lets the close animate too (Chromium; other browsers just snap). */
-@media (prefers-reduced-motion: no-preference) {
-  .faq details::details-content {
-    opacity: 0;
-    transition: opacity .3s ease, content-visibility .3s allow-discrete;
-  }
-  .faq details[open]::details-content { opacity: 1; }
+  footer > div:first-child { grid-template-columns: minmax(0,1fr) repeat(3, minmax(0,.6667fr)) !important; grid-template-rows: auto 1fr !important; }
+  footer > div:first-child > :nth-child(-n+3) { grid-row: 1 / span 2; }
+  footer > div:first-child > :nth-child(4) { grid-column: 4; grid-row: 1; }
+  footer > div:first-child > :nth-child(5) { grid-column: 4; grid-row: 2; align-self: start; }
 }
