@@ -45,6 +45,12 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .container{padding-inline:var(--container-pad)}
 .eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--doxa-navy)}
 .eyebrow--on-dark{color:var(--doxa-cyan-700)}
+/* Breadcrumb — surfaces/Breadcrumb.jsx, adapted for a dark hero */
+.breadcrumb{display:flex;align-items:center;gap:8px;list-style:none;margin:0 0 var(--space-4);padding:0;font-size:var(--text-body-sm);flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,.7);text-decoration:none;font-weight:500}
+.breadcrumb a:hover{background:none;-webkit-text-fill-color:unset;color:var(--doxa-white)}
+.breadcrumb .current{color:var(--doxa-white);font-weight:600}
+.breadcrumb .sep{color:rgba(255,255,255,.4);font-weight:700}
 
 /* Buttons — mirrors tokens/base.css ds-btn system */
 .ds-btn{font-family:var(--font-display);font-weight:700;border:none;border-radius:var(--radius-md);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;position:relative;text-decoration:none;text-transform:uppercase;letter-spacing:.03em;box-shadow:0 2px 6px rgba(5,37,56,.05),0 1px 2px rgba(5,37,56,.04);transition:background var(--duration-base) var(--ease-standard),transform var(--duration-fast) var(--ease-standard)}
@@ -199,7 +205,11 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   </div>
   <div class="hero__page hero__page--text">
     <div class="container">
-      <div class="eyebrow eyebrow--on-dark"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Accounting firms</div>
+      <ol class="breadcrumb">
+        <li><a href="industries.html">Industries</a></li>
+        <li class="sep">&rsaquo;</li>
+        <li class="current" aria-current="page">Accounting Firms</li>
+      </ol>
       <h1>Scale your accounting firm without expanding overhead at the same rate.</h1>
       <p>Rising labor costs, talent shortages, busy-season pressure, and growing client expectations are forcing accounting firms to rethink how they add capacity. DOXA<sup>&reg;</sup> helps firms build dedicated global accounting teams that support growth while protecting margins and senior-level capacity.</p>
       <div class="hero__actions">
