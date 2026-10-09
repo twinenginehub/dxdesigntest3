@@ -107,3 +107,29 @@ html:active-view-transition-type(pixelate-dissolve)::view-transition-new(root) {
 #footer-roles-list a { font-size: 14px; color: rgba(255,255,255,.7); text-decoration: none; }
 @media (max-width: 860px) { footer > div:first-child { grid-template-columns: 1fr 1fr !important; } }
 @media (max-width: 520px) { footer > div:first-child { grid-template-columns: 1fr !important; } }
+
+/* Native <details> accordions (accounting-firms, accountant-cpa): same motion as the home page accordion --
+   question bar color, plus/minus icon, and the answer sliding open while it fades (Chromium: ::details-content + interpolate-size;
+   other browsers just snap open and closed). */
+@media (prefers-reduced-motion: no-preference) {
+  .faq { interpolate-size: allow-keywords; }
+  .faq summary {
+    transition: background var(--duration-base,180ms) var(--ease-standard,cubic-bezier(.4,0,.2,1)),
+                color var(--duration-base,180ms) var(--ease-standard,cubic-bezier(.4,0,.2,1)),
+                padding var(--duration-base,180ms) var(--ease-standard,cubic-bezier(.4,0,.2,1));
+  }
+  .faq summary .glyph::before,
+  .faq summary .glyph::after {
+    transition: transform var(--duration-base,180ms) var(--ease-standard,cubic-bezier(.4,0,.2,1)),
+                background var(--duration-base,180ms) var(--ease-standard,cubic-bezier(.4,0,.2,1));
+  }
+  .faq details::details-content {
+    block-size: 0;
+    overflow: clip;
+    opacity: 0;
+    transition: block-size 350ms var(--ease-standard,cubic-bezier(.4,0,.2,1)),
+                opacity 300ms ease,
+                content-visibility 350ms allow-discrete;
+  }
+  .faq details[open]::details-content { block-size: auto; opacity: 1; }
+}
