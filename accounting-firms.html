@@ -145,6 +145,14 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .rc__body a{display:inline-flex;align-items:center;gap:4px;margin-top:var(--space-3);font-weight:600;font-size:var(--text-eyebrow);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase}
 @media (prefers-reduced-motion:reduce){.rc-track{transition:none}.rc-set[aria-hidden="true"]{display:none}.rc-marquee{overflow-x:auto}}
 .talent-grid>div{min-width:0}
+@media (min-width:641px) and (max-width:1000px){
+  .talent-grid{grid-template-rows:auto auto 1fr;column-gap:var(--space-8);row-gap:0}
+  .talent-grid>div:first-child{display:contents}
+  .talent-grid h2,.talent-grid>div:first-child>p{grid-column:1/-1;max-width:none}
+  .talent-grid .rc-marquee{grid-column:1;grid-row:3;margin-top:var(--space-6);padding-top:0;min-width:0}
+  .talent-grid__media{grid-column:2;grid-row:3;margin-top:var(--space-6)}
+  .talent-grid__plus{top:calc(100% - 170px)}
+}
 .talent-grid h2{margin-bottom:var(--space-4)}
 .talent-grid__media{width:100%;height:100%;min-height:280px;object-fit:cover;border-radius:var(--radius-lg);display:block}
 
