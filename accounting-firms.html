@@ -130,13 +130,12 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 
 /* Talent two-column layout */
 .talent-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:start}
-.talent-grid__plus{position:absolute;z-index:2;left:50%;top:58%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:var(--radius-lg);background:var(--brand-gradient);display:flex;align-items:center;justify-content:center;pointer-events:none}
+.talent-grid__plus{position:absolute;z-index:2;left:50%;top:calc(58% + 50px);transform:translate(-50%,-50%);width:76px;height:76px;border-radius:var(--radius-lg);background:var(--brand-gradient);display:flex;align-items:center;justify-content:center;pointer-events:none}
 .talent-grid__plus::before,.talent-grid__plus::after{content:"";position:absolute;background:#fff;border-radius:2px}
 .talent-grid__plus::before{width:30px;height:5px}
 .talent-grid__plus::after{width:5px;height:30px}
-.rc-marquee{margin-top:var(--space-6);overflow:hidden;padding:var(--space-2) 0 var(--space-4);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 56px,#000 calc(100% - 56px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 56px,#000 calc(100% - 56px),transparent 100%)}
-.rc-track{display:flex;width:max-content;animation:rc-scroll 60s linear infinite}
-.rc-marquee:hover .rc-track,.rc-marquee:focus-within .rc-track{animation-play-state:paused}
+.rc-marquee{margin-top:calc(var(--space-6) + 50px);overflow:hidden;padding:var(--space-2) 0 var(--space-4)}
+.rc-track{display:flex;width:max-content;transition:transform .7s cubic-bezier(.4,0,.2,1);will-change:transform}
 .rc-set{display:flex;flex-shrink:0;gap:var(--space-5);padding-right:var(--space-5)}
 .rc{flex:0 0 220px;border-radius:var(--radius-lg);overflow:hidden;background:var(--surface-card);box-shadow:0 2px 6px rgba(5,37,56,.08),0 1px 2px rgba(5,37,56,.06)}
 .rc img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:500/560;object-fit:cover}
@@ -144,8 +143,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .rc__body h4{font-size:var(--text-h4);font-weight:700;color:var(--text-primary)}
 .rc__body p{margin:var(--space-2) 0 0;color:var(--text-secondary);font-size:var(--text-body-sm)}
 .rc__body a{display:inline-flex;align-items:center;gap:4px;margin-top:var(--space-3);font-weight:600;font-size:var(--text-eyebrow);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase}
-@keyframes rc-scroll{to{transform:translateX(-33.3333%)}}
-@media (prefers-reduced-motion:reduce){.rc-track{animation:none}.rc-set[aria-hidden="true"]{display:none}.rc-marquee{overflow-x:auto}}
+@media (prefers-reduced-motion:reduce){.rc-track{transition:none}.rc-set[aria-hidden="true"]{display:none}.rc-marquee{overflow-x:auto}}
 .talent-grid>div{min-width:0}
 .talent-grid h2{margin-bottom:var(--space-4)}
 .talent-grid__media{width:100%;height:100%;min-height:280px;object-fit:cover;border-radius:var(--radius-lg);display:block}
@@ -409,6 +407,29 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
     select.value = DEFAULT_INDUSTRY;
     select.addEventListener('change', function(){ render(this.value); });
   }
+})();
+</script>
+<script>
+/* Role cards: step one card to the right every 3 seconds, pausing on hover/focus. The set is repeated, so after
+   reaching the first set it snaps (no transition) to the identical second set and keeps going. */
+(function () {
+  var box = document.querySelector('.rc-marquee'), track = box && box.querySelector('.rc-track');
+  if (!track || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  var n = track.querySelectorAll('.rc-set:first-child .rc').length, i = n, paused = false;
+  function step() { var c = track.querySelectorAll('.rc'); return c[1].offsetLeft - c[0].offsetLeft; }
+  function go(k) { track.style.transform = 'translateX(' + (-k * step()) + 'px)'; }
+  function jump(k) { track.style.transition = 'none'; i = k; go(k); void track.offsetWidth; track.style.transition = ''; }
+  jump(n);
+  setInterval(function () {
+    if (paused || document.hidden) return;
+    i--; go(i);
+    if (i <= 0) setTimeout(function () { jump(n); }, 750);
+  }, 3000);
+  box.addEventListener('mouseenter', function () { paused = true; });
+  box.addEventListener('mouseleave', function () { paused = false; });
+  box.addEventListener('focusin', function () { paused = true; });
+  box.addEventListener('focusout', function () { paused = false; });
+  window.addEventListener('resize', function () { jump(i); });
 })();
 </script>
 </body>
