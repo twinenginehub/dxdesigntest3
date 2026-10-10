@@ -237,6 +237,11 @@ table.data tr:last-child td{border-bottom:none}
   .related{flex-direction:column;align-items:flex-start}
   .faq{column-count:1}
 }
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero__page--media{height:clamp(200px,34vw,280px);min-height:0}
+  .hero__page--media img{object-position:center 18%}
+}
 /* Closing CTA (same pattern as the home, industries and about pages) */
 .section--white{background:#fff;padding-block:var(--space-20)}
 .cta-final{margin-top:0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--space-6)}
