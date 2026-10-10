@@ -133,3 +133,8 @@ html:active-view-transition-type(pixelate-dissolve)::view-transition-new(root) {
   }
   .faq details[open]::details-content { block-size: auto; opacity: 1; }
 }
+
+/* Scroll-in fade (see header.js). Sections only fade; cards also rise slightly. */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease var(--rv-d,0s),transform .7s cubic-bezier(.2,.7,.2,1) var(--rv-d,0s)}
+.rv.rv-sec{transform:none}
+.rv.rv-in{opacity:1;transform:none}

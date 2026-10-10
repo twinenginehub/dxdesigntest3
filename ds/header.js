@@ -32,3 +32,42 @@
   window.addEventListener('load', update);
   update();
 })();
+
+/* Scroll-in fade for sections and cards. Only elements still below the fold are hidden, so nothing flashes in view
+   and the page is fully visible without JS or with reduced motion. Re-scans when a page re-renders its markup. */
+(function () {
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var SEC = 'section, .cta-final';
+  var CARD = '.stat-card, .resp-card, .role-card, .tile, .cost-card, .related, [class*="role-card"]';
+  var SKIP = 'nav, footer, .hero-wrap, header, .hero, .trust-bar, .testi, .rfr, .roles-carousel, .site-nav';
+  var seen = new WeakSet();
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      io.unobserve(el);
+      el.classList.add('rv-in');
+      setTimeout(function () { el.classList.remove('rv', 'rv-in', 'rv-sec'); el.style.removeProperty('--rv-d'); }, 1100);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+  function prep(el, isSec) {
+    if (seen.has(el) || el.closest(SKIP)) return;
+    seen.add(el);
+    var r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight * 0.94) return;   // already on screen: leave it alone
+    if (isSec) el.classList.add('rv-sec');
+    var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+    el.style.setProperty('--rv-d', (isSec ? 0 : Math.min(sibs, 5) * 0.08) + 's');
+    el.classList.add('rv');
+    io.observe(el);
+  }
+  function scan() {
+    document.querySelectorAll(SEC).forEach(function (el) { prep(el, true); });
+    document.querySelectorAll(CARD).forEach(function (el) { prep(el, false); });
+  }
+  var t;
+  function later() { clearTimeout(t); t = setTimeout(scan, 120); }
+  new MutationObserver(later).observe(document.documentElement, { childList: true, subtree: true });
+  if (document.readyState === 'complete') later(); else window.addEventListener('load', later);
+})();
