@@ -11,7 +11,7 @@ def current_for(page):
     if n=='index.html': return 'Home'
     if n=='about.html': return 'About'
     if n=='industries.html': return 'Industries'
-    if n in ('accounting-firms.html','accountant-cpa.html'): return 'Accounting'
+    if n=='accounting-firms.html': return 'Accounting'
     return 'Roles'    # talent index, role pages, country pages
 def header(cur):
     def a(label,href,extra=''):
@@ -22,7 +22,7 @@ def header(cur):
       '<a class="site-nav__logo" href="index.html" aria-label="DOXA Talent home"><img src="doxa-logo-white.png" alt="DOXA"></a>'
       '<div class="site-nav__links" id="site-menu">'
       f'<div class="nav-item">{a("Accounting","accounting-firms.html")}</div>'
-      f'<div class="nav-item">{a("Roles","talent.html")}</div>'
+      f'<div class="nav-item">{a("Roles","accountant-cpa.html")}</div>'
       f'<div class="nav-item">{a("Industries","industries.html")}</div>'
       '<div class="nav-item nav-item--cta"><a class="site-nav__cta" href="index.html#build-your-team">Build your team</a></div>'
       '</div>'
