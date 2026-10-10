@@ -149,8 +149,9 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   .talent-grid{grid-template-rows:auto auto 1fr;column-gap:var(--space-8);row-gap:0}
   .talent-grid>div:first-child{display:contents}
   .talent-grid h2,.talent-grid>div:first-child>p{grid-column:1/-1;max-width:none}
-  .talent-grid .rc-marquee{grid-column:1;grid-row:3;align-self:center;margin-top:var(--space-6);padding-top:0;min-width:0}
-  .talent-grid__media{grid-column:2;grid-row:3;margin-top:var(--space-6)}
+  .talent-grid .rc-marquee{grid-column:1;grid-row:3;align-self:stretch;display:flex;align-items:center;margin-top:0;padding:0;min-width:0}
+  .talent-grid__media{grid-column:2;grid-row:3;margin-top:0;height:auto;align-self:start}
+  .talent-grid>div:first-child>p{margin-bottom:var(--space-6)}
   .talent-grid__plus{top:calc(100% - 170px)}
 }
 .talent-grid h2{margin-bottom:var(--space-4)}
