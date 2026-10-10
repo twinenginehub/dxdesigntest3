@@ -107,7 +107,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 
 /* Trust bar */
 .trust-bar{background:var(--brand-gradient);color:var(--white,#fff)}
-.trust-ticker{overflow:hidden;padding-block:var(--space-5)}
+.trust-ticker{overflow:hidden;padding-block:var(--space-5);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 96px,#000 calc(100% - 96px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 96px,#000 calc(100% - 96px),transparent 100%)}
 .trust-ticker__track{display:flex;width:max-content;animation:trust-scroll 60s linear infinite}
 .trust-ticker:hover .trust-ticker__track,.trust-ticker:focus-within .trust-ticker__track{animation-play-state:paused}
 .trust-ticker__set{display:flex;flex-shrink:0;gap:var(--space-16);padding-right:var(--space-16)}
