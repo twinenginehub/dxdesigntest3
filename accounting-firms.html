@@ -164,6 +164,10 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   .talent-grid>div:first-child>p{margin-bottom:var(--space-6)}
   .talent-grid .talent-grid__plus{position:relative;grid-column:1/-1;grid-row:3;left:auto;top:auto;transform:none;justify-self:center;align-self:center}
 }
+@media (min-width:1001px){
+  .talent-grid{grid-template-columns:minmax(0,7fr) minmax(0,3fr)}
+  .talent-grid .talent-grid__plus{grid-column:2;justify-self:start;margin-left:calc(-38px - var(--space-8) / 2)}
+}
 .talent-grid h2{margin-bottom:var(--space-4)}
 .talent-grid__media{align-self:stretch;width:100%;height:100%;min-height:280px;object-fit:cover;border-radius:var(--radius-lg);display:block}
 
