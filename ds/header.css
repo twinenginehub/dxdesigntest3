@@ -138,3 +138,12 @@ html:active-view-transition-type(pixelate-dissolve)::view-transition-new(root) {
 .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease var(--rv-d,0s),transform .7s cubic-bezier(.2,.7,.2,1) var(--rv-d,0s)}
 .rv.rv-sec{transform:none}
 .rv.rv-in{opacity:1;transform:none}
+
+/* Mobile: body copy is 2px smaller across the site (html:root beats each page's own :root token block). */
+@media (max-width: 640px) {
+  html:root {
+    --text-body-lg: calc(1.125rem - 2px);
+    --text-body: calc(1rem - 2px);
+    --text-body-sm: calc(.875rem - 2px);
+  }
+}
