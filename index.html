@@ -26,6 +26,12 @@ a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{colo
 }
 /* Testimonials: slow vertical ticker that runs past the top and bottom edges of the navy section */
 .built-first{padding-block:var(--space-12) !important}
+@media (max-width:860px){
+  .testi-sec .testi{flex-direction:row !important;gap:var(--space-4);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .testi-sec .testi::-webkit-scrollbar{display:none}
+  .testi-item,.testi-item--left,.testi-item--right,.testi-item--mid{flex:0 0 100%;width:100%;align-self:stretch;transform:none;scroll-snap-align:start;box-sizing:border-box}
+  .testi-item > div,.testi-item > div > div{height:100%}
+}
 @media (min-width:601px){
   .trust-bar{flex-wrap:nowrap !important;gap:var(--space-4) !important}
   .trust-bar > div{white-space:nowrap;font-size:clamp(.72rem,1.35vw,.875rem) !important}
@@ -646,6 +652,25 @@ window.__render=render;render();
 })();
 </script>
 <script src="ds/typing.js"></script>
+<script>
+/* Testimonials on narrow screens: swipeable one-at-a-time carousel (scroll-snap) that also steps every 3 seconds.
+   Pauses while the visitor is touching or hovering it, and does nothing for reduced-motion visitors or the desktop layout. */
+(function () {
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var paused = false;
+  function box() { return document.querySelector('.testi'); }
+  setInterval(function () {
+    var b = box(); if (!b || paused || document.hidden) return;
+    if (b.scrollWidth <= b.clientWidth + 2) return;           // desktop layout: nothing to scroll
+    var step = b.clientWidth + (parseFloat(getComputedStyle(b).columnGap) || 0);
+    var atEnd = b.scrollLeft + b.clientWidth >= b.scrollWidth - 4;
+    b.scrollTo({ left: atEnd ? 0 : b.scrollLeft + step, behavior: 'smooth' });
+  }, 3000);
+  ['touchstart', 'mouseover', 'focusin'].forEach(function (ev) { document.addEventListener(ev, function (e) { if (e.target.closest && e.target.closest('.testi')) paused = true; }, { passive: true }); });
+  ['touchend', 'mouseout', 'focusout'].forEach(function (ev) { document.addEventListener(ev, function (e) { if (e.target.closest && e.target.closest('.testi')) setTimeout(function () { paused = false; }, ev === 'touchend' ? 4000 : 0); }, { passive: true }); });
+})();
+</script>
+
 
 
 </body></html>
