@@ -148,37 +148,23 @@ html:active-view-transition-type(pixelate-dissolve)::view-transition-new(root) {
   }
 }
 
-/* Mobile menu button: liquid-glass look (frosted translucent fill, bright specular rim, soft depth). */
+/* Mobile menu button: DOXA liquid glass, taken from the design system's glass "pill" (Tabs, segmented / dark mode in ds/bundle.js):
+   neutral translucent fill, refraction filter (#doxa-glass, injected by header.js), the layered inset highlights and shadows, no border. */
 .site-nav__toggle {
   position: relative;
-  isolation: isolate;
-  border: 1px solid rgba(255,255,255,.28);
-  border-radius: 14px;
-  background:
-    radial-gradient(120% 90% at 22% 8%, rgba(255,255,255,.34) 0%, rgba(255,255,255,0) 52%),
-    linear-gradient(150deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.06) 48%, rgba(0,174,239,.14) 100%);
-  -webkit-backdrop-filter: blur(14px) saturate(180%);
-  backdrop-filter: blur(14px) saturate(180%);
+  border: 0;
+  border-radius: 999px;
+  background-color: rgba(187,187,188,.36);
+  -webkit-backdrop-filter: blur(1px) saturate(150%);
+  backdrop-filter: blur(1px) url(#doxa-glass) saturate(150%);
   box-shadow:
-    inset 0 1.5px 0 rgba(255,255,255,.55),
-    inset 0 -1px 0 rgba(255,255,255,.12),
-    inset 0 0 14px rgba(255,255,255,.10),
-    0 6px 16px rgba(0,0,0,.28),
-    0 1px 2px rgba(0,0,0,.2);
-  transition: transform .18s var(--ease-standard,ease), box-shadow .18s var(--ease-standard,ease), background-color .18s ease;
+    inset 0 0 0 1px rgba(255,255,255,.10),
+    inset 2px 1px 0 -1px rgba(255,255,255,.90),
+    inset -1.5px -1px 0 -1px rgba(255,255,255,.80),
+    inset -2px -6px 1px -5px rgba(255,255,255,.60),
+    inset -1px 2px 3px -1px rgba(0,0,0,.20),
+    inset 0 -4px 1px -2px rgba(0,0,0,.10),
+    0 3px 6px 0 rgba(0,0,0,.08);
+  transition: background-color 400ms cubic-bezier(1,0,.4,1), box-shadow 400ms cubic-bezier(1,0,.4,1);
 }
-.site-nav__toggle::before {          /* glossy sheen along the top */
-  content: "";
-  position: absolute;
-  inset: 1px 1px 52% 1px;
-  border-radius: 13px 13px 40% 40% / 13px 13px 22% 22%;
-  background: linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,0));
-  pointer-events: none;
-  z-index: -1;
-}
-.site-nav__toggle:hover { box-shadow: inset 0 1.5px 0 rgba(255,255,255,.65), inset 0 -1px 0 rgba(255,255,255,.16), inset 0 0 16px rgba(255,255,255,.16), 0 8px 20px rgba(0,0,0,.32), 0 1px 2px rgba(0,0,0,.2); }
-.site-nav__toggle:active { transform: scale(.94); }
-.site-nav.is-open .site-nav__toggle { background:
-    radial-gradient(120% 90% at 22% 8%, rgba(255,255,255,.40) 0%, rgba(255,255,255,0) 52%),
-    linear-gradient(150deg, rgba(255,255,255,.26) 0%, rgba(0,174,239,.20) 55%, rgba(0,166,107,.22) 100%); }
 @media (prefers-reduced-motion: reduce) { .site-nav__toggle { transition: none; } }
