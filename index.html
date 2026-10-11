@@ -26,6 +26,10 @@ a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{colo
 }
 /* Testimonials: slow vertical ticker that runs past the top and bottom edges of the navy section */
 .built-first{padding-block:var(--space-12) !important}
+@media (min-width:601px){
+  .trust-bar{flex-wrap:nowrap !important;gap:var(--space-4) !important}
+  .trust-bar > div{white-space:nowrap;font-size:clamp(.72rem,1.35vw,.875rem) !important}
+}
 #pricing{margin-block:0 40px;margin-top:-40px}
 @media (max-width:860px){#pricing{margin-block:0 24px;margin-top:-16px}}
 #how{scroll-margin-top:96px}
