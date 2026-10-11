@@ -242,6 +242,12 @@ table.data tr:last-child td{border-bottom:none}
   .hero__page--media{height:clamp(200px,34vw,280px);min-height:0}
   .hero__page--media img{object-position:center 18%}
 }
+@media (max-width:640px){
+  .roles-carousel{flex-direction:column;flex-wrap:nowrap}
+  .role-card{flex:0 0 auto;flex-direction:row;width:100%}
+  .role-card img{width:40%;height:auto;aspect-ratio:auto;align-self:stretch;min-height:150px}
+  .role-card__body{flex:1;min-width:0;padding:var(--space-4) var(--space-5)}
+}
 /* Closing CTA (same pattern as the home, industries and about pages) */
 .section--white{background:#fff;padding-block:var(--space-20)}
 .cta-final{margin-top:0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--space-6)}
