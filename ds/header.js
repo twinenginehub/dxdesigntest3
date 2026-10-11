@@ -71,19 +71,3 @@
   new MutationObserver(later).observe(document.documentElement, { childList: true, subtree: true });
   if (document.readyState === 'complete') later(); else window.addEventListener('load', later);
 })();
-
-/* Refraction filter for the liquid-glass menu button (same turbulence + displacement map the design system's glass Tabs use). */
-(function () {
-  function add() {
-    if (document.getElementById('doxa-glass-defs') || !document.body) return;
-    var wrap = document.createElement('div');
-    wrap.id = 'doxa-glass-defs';
-    wrap.setAttribute('aria-hidden', 'true');
-    wrap.style.cssText = 'position:absolute;width:0;height:0;overflow:hidden';
-    wrap.innerHTML = '<svg width="0" height="0" aria-hidden="true"><defs><filter id="doxa-glass" x="0" y="0" width="100%" height="100%" filterUnits="objectBoundingBox">' +
-      '<feTurbulence type="fractalNoise" baseFrequency="0.003 0.007" numOctaves="1" result="turbulence"></feTurbulence>' +
-      '<feDisplacementMap in="SourceGraphic" in2="turbulence" scale="200" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter></defs></svg>';
-    document.body.appendChild(wrap);
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', add); else add();
-})();
