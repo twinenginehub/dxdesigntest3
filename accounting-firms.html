@@ -134,16 +134,13 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .talent-grid__plus::before,.talent-grid__plus::after{content:"";position:absolute;background:#fff;border-radius:2px}
 .talent-grid__plus::before{width:30px;height:5px}
 .talent-grid__plus::after{width:5px;height:30px}
-.rc-marquee{margin-top:calc(var(--space-6) + 50px);overflow:hidden;padding:var(--space-2) 0 var(--space-4)}
-.rc-track{display:flex;width:max-content;transition:transform .7s cubic-bezier(.4,0,.2,1);will-change:transform}
-.rc-set{display:flex;flex-shrink:0;gap:var(--space-5);padding-right:var(--space-5)}
-.rc{flex:0 0 220px;border-radius:var(--radius-lg);overflow:hidden;background:var(--surface-card);box-shadow:0 2px 6px rgba(5,37,56,.08),0 1px 2px rgba(5,37,56,.06)}
-.rc img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:500/560;object-fit:cover}
+.rc-grid{margin-top:var(--space-6);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5)}
+.rc{border-radius:var(--radius-lg);overflow:hidden;background:var(--surface-card);box-shadow:0 2px 6px rgba(5,37,56,.08),0 1px 2px rgba(5,37,56,.06)}
+.rc img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:500/400;object-fit:cover}
 .rc__body{padding:var(--space-4) var(--space-5) var(--space-5)}
 .rc__body h4{font-size:var(--text-h4);font-weight:700;color:var(--text-primary)}
 .rc__body p{margin:var(--space-2) 0 0;color:var(--text-secondary);font-size:var(--text-body-sm)}
 .rc__body a{display:inline-flex;align-items:center;gap:4px;margin-top:var(--space-3);font-weight:600;font-size:var(--text-eyebrow);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase}
-@media (prefers-reduced-motion:reduce){.rc-track{transition:none}.rc-set[aria-hidden="true"]{display:none}.rc-marquee{overflow-x:auto}}
 @media (max-width:900px){
   .hero{grid-template-columns:1fr;min-height:0}
   .hero__page--media{height:clamp(200px,34vw,280px);min-height:0}
@@ -154,13 +151,13 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   .talent-grid{grid-template-rows:auto auto 1fr;column-gap:var(--space-8);row-gap:0}
   .talent-grid>div:first-child{display:contents}
   .talent-grid h2,.talent-grid>div:first-child>p{grid-column:1/-1;max-width:none}
-  .talent-grid .rc-marquee{grid-column:1;grid-row:3;align-self:stretch;display:flex;align-items:center;margin-top:0;padding:0;min-width:0}
-  .talent-grid__media{grid-column:2;grid-row:3;margin-top:0;height:auto;align-self:start}
+  .talent-grid .rc-grid{grid-column:1;grid-row:3;margin-top:0;min-width:0}
+  .talent-grid__media{grid-column:2;grid-row:3;margin-top:0;height:100%;align-self:stretch}
   .talent-grid>div:first-child>p{margin-bottom:var(--space-6)}
   .talent-grid__plus{top:calc(100% - 170px)}
 }
 .talent-grid h2{margin-bottom:var(--space-4)}
-.talent-grid__media{width:100%;height:100%;min-height:280px;object-fit:cover;border-radius:var(--radius-lg);display:block}
+.talent-grid__media{align-self:stretch;width:100%;height:100%;min-height:280px;object-fit:cover;border-radius:var(--radius-lg);display:block}
 
 /* Role links list */
 .role-links{margin-top:var(--space-6);display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-5)}
@@ -287,31 +284,12 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
         <div>
           <h2>Where global talent can add capacity</h2>
           <p style="max-width:none">In accounting firms, the constraint is often senior review capacity and recurring production work, especially during peak periods.</p>
-          <div class="rc-marquee">
-    <div class="rc-track">
-      <div class="rc-set">
-        <div class="rc"><img src="accountant-hero.png" alt="Accountant on a video call with a DOXA team member" loading="lazy" style="object-position:62% 30%"><div class="rc__body"><h4>Accountant (CPA)</h4><p>Staff accountant through CPA level</p><a href="accountant-cpa.html" id="link-accountant-cpa">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
+          <div class="rc-grid">
         <div class="rc"><img src="role-bookkeeper.jpg" alt="Bookkeeper reviewing financial reports at a laptop" loading="lazy" style="object-position:55% 50%"><div class="rc__body"><h4>Bookkeeper</h4><p>Financial records, daily transactions</p><a href="https://doxatalent.com/roles/bookkeeper/">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
         <div class="rc"><img src="role-finance-specialist.jpg" alt="Finance specialist smiling at a desk with two monitors" loading="lazy" style="object-position:32% 50%"><div class="rc__body"><h4>Finance Specialist</h4><p>Analysis, reporting, forecasting</p><a href="https://doxatalent.com/roles/finance-specialist/">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
         <div class="rc"><img src="role-ar-ap-clerk-new.webp" alt="AR/AP clerk smiling at her laptop with spreadsheets on her desk" loading="lazy" style="object-position:52% 50%"><div class="rc__body"><h4>AR/AP Clerk</h4><p>Invoices, payments, collections</p><a href="https://doxatalent.com/roles/ar-ap-clerk/">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
         <div class="rc"><img src="role-payroll-specialist-new.webp" alt="Payroll specialist writing notes at a desk" loading="lazy" style="object-position:68% 50%"><div class="rc__body"><h4>Payroll Specialist</h4><p>Payroll, tax filings, compliance</p><a href="https://doxatalent.com/roles/payroll-specialist/">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
-      </div>
-      <div class="rc-set" aria-hidden="true">
-        <div class="rc"><img src="accountant-hero.png" alt="" loading="lazy" style="object-position:62% 30%"><div class="rc__body"><h4>Accountant (CPA)</h4><p>Staff accountant through CPA level</p><a href="accountant-cpa.html" tabindex="-1">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
-        <div class="rc"><img src="role-bookkeeper.jpg" alt="" loading="lazy" style="object-position:55% 50%"><div class="rc__body"><h4>Bookkeeper</h4><p>Financial records, daily transactions</p><a href="https://doxatalent.com/roles/bookkeeper/" tabindex="-1">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
-        <div class="rc"><img src="role-finance-specialist.jpg" alt="" loading="lazy" style="object-position:32% 50%"><div class="rc__body"><h4>Finance Specialist</h4><p>Analysis, reporting, forecasting</p><a href="https://doxatalent.com/roles/finance-specialist/" tabindex="-1">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
-        <div class="rc"><img src="role-ar-ap-clerk-new.webp" alt="" loading="lazy" style="object-position:52% 50%"><div class="rc__body"><h4>AR/AP Clerk</h4><p>Invoices, payments, collections</p><a href="https://doxatalent.com/roles/ar-ap-clerk/" tabindex="-1">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
-        <div class="rc"><img src="role-payroll-specialist-new.webp" alt="" loading="lazy" style="object-position:68% 50%"><div class="rc__body"><h4>Payroll Specialist</h4><p>Payroll, tax filings, compliance</p><a href="https://doxatalent.com/roles/payroll-specialist/" tabindex="-1">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
-      </div>
-      <div class="rc-set" aria-hidden="true">
-        <div class="rc"><img src="accountant-hero.png" alt="" loading="lazy" style="object-position:62% 30%"><div class="rc__body"><h4>Accountant (CPA)</h4><p>Staff accountant through CPA level</p><a href="accountant-cpa.html" tabindex="-1">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
-        <div class="rc"><img src="role-bookkeeper.jpg" alt="" loading="lazy" style="object-position:55% 50%"><div class="rc__body"><h4>Bookkeeper</h4><p>Financial records, daily transactions</p><a href="https://doxatalent.com/roles/bookkeeper/" tabindex="-1">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
-        <div class="rc"><img src="role-finance-specialist.jpg" alt="" loading="lazy" style="object-position:32% 50%"><div class="rc__body"><h4>Finance Specialist</h4><p>Analysis, reporting, forecasting</p><a href="https://doxatalent.com/roles/finance-specialist/" tabindex="-1">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
-        <div class="rc"><img src="role-ar-ap-clerk-new.webp" alt="" loading="lazy" style="object-position:52% 50%"><div class="rc__body"><h4>AR/AP Clerk</h4><p>Invoices, payments, collections</p><a href="https://doxatalent.com/roles/ar-ap-clerk/" tabindex="-1">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
-        <div class="rc"><img src="role-payroll-specialist-new.webp" alt="" loading="lazy" style="object-position:68% 50%"><div class="rc__body"><h4>Payroll Specialist</h4><p>Payroll, tax filings, compliance</p><a href="https://doxatalent.com/roles/payroll-specialist/" tabindex="-1">Learn more <span aria-hidden="true">&rsaquo;</span></a></div></div>
-      </div>
-    </div>
-  </div>
+          </div>
         </div>
         <span class="talent-grid__plus" aria-hidden="true"></span>
         <img class="talent-grid__media" src="talent-document-review.webp" alt="Colleagues reviewing a document and laptop together">
@@ -421,29 +399,6 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
     select.value = DEFAULT_INDUSTRY;
     select.addEventListener('change', function(){ render(this.value); });
   }
-})();
-</script>
-<script>
-/* Role cards: step one card to the right every 3 seconds, pausing on hover/focus. The set is repeated, so after
-   reaching the first set it snaps (no transition) to the identical second set and keeps going. */
-(function () {
-  var box = document.querySelector('.rc-marquee'), track = box && box.querySelector('.rc-track');
-  if (!track || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
-  var n = track.querySelectorAll('.rc-set:first-child .rc').length, i = n, paused = false;
-  function step() { var c = track.querySelectorAll('.rc'); return c[1].offsetLeft - c[0].offsetLeft; }
-  function go(k) { track.style.transform = 'translateX(' + (-k * step()) + 'px)'; }
-  function jump(k) { track.style.transition = 'none'; i = k; go(k); void track.offsetWidth; track.style.transition = ''; }
-  jump(n);
-  setInterval(function () {
-    if (paused || document.hidden) return;
-    i--; go(i);
-    if (i <= 0) setTimeout(function () { jump(n); }, 750);
-  }, 3000);
-  box.addEventListener('mouseenter', function () { paused = true; });
-  box.addEventListener('mouseleave', function () { paused = false; });
-  box.addEventListener('focusin', function () { paused = true; });
-  box.addEventListener('focusout', function () { paused = false; });
-  window.addEventListener('resize', function () { jump(i); });
 })();
 </script>
 </body>
