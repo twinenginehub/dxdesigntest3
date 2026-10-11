@@ -166,6 +166,9 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 }
 @media (min-width:1001px){
   .talent-grid{grid-template-columns:minmax(0,7fr) minmax(0,3fr)}
+  .talent-grid .rc-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-4)}
+  .talent-grid .rc__body{padding:var(--space-4)}
+  .talent-grid .rc__body h4{font-size:var(--text-body)}
   .talent-grid .talent-grid__plus{grid-column:2;justify-self:start;margin-left:calc(-38px - var(--space-8) / 2)}
 }
 .talent-grid h2{margin-bottom:var(--space-4)}
