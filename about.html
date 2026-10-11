@@ -42,6 +42,13 @@ a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{colo
 }
 /* About, "By the numbers": gradient figures (the Stat component sets a solid cyan inline) */
 div[style*="color: var(--doxa-cyan)"]{display:inline-block;width:fit-content;background:var(--brand-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent !important}
+.person{position:relative;padding-top:var(--space-5);display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-1)}
+.person::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--navy)}
+.person::after{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--brand-gradient);opacity:0;transition:opacity .35s ease}
+.person:hover::after,.person:focus-within::after{opacity:1}
+.person__photo{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 20%;display:block;margin-bottom:var(--space-3);background:var(--surface-muted)}
+.person__name{font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)}
+.person__role{font-size:var(--text-body);color:var(--text-secondary)}
 </style><script src="ds/header.js" defer=""></script>
 </head><body>
 <template id="tpl">
@@ -100,10 +107,7 @@ div[style*="color: var(--doxa-cyan)"]{display:inline-block;width:fit-content;bac
     <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Leadership Team</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-8) var(--space-6)">
       <sc-for list="{{leaders}}" as="person" hint-placeholder-count="9">
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">{{person.name}}</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">{{person.role}}</div>
-        </div>
+        <div class="person"><img class="person__photo" src="{{person.photo}}" alt="{{person.name}} headshot" width="96" height="96" loading="lazy"><div class="person__name">{{person.name}}</div><div class="person__role">{{person.role}}</div></div>
       </sc-for>
     </div>
   </section>
@@ -113,10 +117,7 @@ div[style*="color: var(--doxa-cyan)"]{display:inline-block;width:fit-content;bac
     <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Board of Directors</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-8) var(--space-6)">
       <sc-for list="{{board}}" as="person" hint-placeholder-count="4">
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">{{person.name}}</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">{{person.role}}</div>
-        </div>
+        <div class="person"><img class="person__photo" src="{{person.photo}}" alt="{{person.name}} headshot" width="96" height="96" loading="lazy"><div class="person__name">{{person.name}}</div><div class="person__role">{{person.role}}</div></div>
       </sc-for>
     </div>
   </section>
@@ -206,50 +207,23 @@ div[style*="color: var(--doxa-cyan)"]{display:inline-block;width:fit-content;bac
     <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Leadership Team</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-8) var(--space-6)">
       
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">David Nilssen</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">Chief Executive Officer</div>
-        </div>
+        <div class="person"><img class="person__photo" src="team/David-Nilssen.webp" alt="David Nilssen headshot" width="96" height="96" loading="lazy"><div class="person__name">David Nilssen</div><div class="person__role">Chief Executive Officer</div></div>
       
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Lauren Hoover</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">Chief Operating Officer</div>
-        </div>
+        <div class="person"><img class="person__photo" src="team/Lauren-Hoover.webp" alt="Lauren Hoover headshot" width="96" height="96" loading="lazy"><div class="person__name">Lauren Hoover</div><div class="person__role">Chief Operating Officer</div></div>
       
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Stephen Hosemann</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">Chief Financial Officer</div>
-        </div>
+        <div class="person"><img class="person__photo" src="team/Stephen-Hosemann.webp" alt="Stephen Hosemann headshot" width="96" height="96" loading="lazy"><div class="person__name">Stephen Hosemann</div><div class="person__role">Chief Financial Officer</div></div>
       
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Steve Gire</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">Chief Information Officer</div>
-        </div>
+        <div class="person"><img class="person__photo" src="team/Steve-Gire.webp" alt="Steve Gire headshot" width="96" height="96" loading="lazy"><div class="person__name">Steve Gire</div><div class="person__role">Chief Information Officer</div></div>
       
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Ralph Nilssen</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">Chief Sales Officer</div>
-        </div>
+        <div class="person"><img class="person__photo" src="team/Ralph-Nilssen.webp" alt="Ralph Nilssen headshot" width="96" height="96" loading="lazy"><div class="person__name">Ralph Nilssen</div><div class="person__role">Chief Sales Officer</div></div>
       
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Edward Lim</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">President, Philippines</div>
-        </div>
+        <div class="person"><img class="person__photo" src="team/Edward-Lim.webp" alt="Edward Lim headshot" width="96" height="96" loading="lazy"><div class="person__name">Edward Lim</div><div class="person__role">President, Philippines</div></div>
       
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Ira Crisologo</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">General Manager, Philippines</div>
-        </div>
+        <div class="person"><img class="person__photo" src="team/Ira-Crisologo.webp" alt="Ira Crisologo headshot" width="96" height="96" loading="lazy"><div class="person__name">Ira Crisologo</div><div class="person__role">General Manager, Philippines</div></div>
       
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Elena Barreneche</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">General Manager, Colombia</div>
-        </div>
+        <div class="person"><img class="person__photo" src="team/Elena-Barreneche.webp" alt="Elena Barreneche headshot" width="96" height="96" loading="lazy"><div class="person__name">Elena Barreneche</div><div class="person__role">General Manager, Colombia</div></div>
       
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Steffy Casallas</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">Global Head of Recruitment</div>
-        </div>
+        <div class="person"><img class="person__photo" src="team/Steffy-Casallas.webp" alt="Steffy Casallas headshot" width="96" height="96" loading="lazy"><div class="person__name">Steffy Casallas</div><div class="person__role">Global Head of Recruitment</div></div>
       
     </div>
   </section>
@@ -259,25 +233,13 @@ div[style*="color: var(--doxa-cyan)"]{display:inline-block;width:fit-content;bac
     <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Board of Directors</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-8) var(--space-6)">
       
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">David Nilssen</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">Chairman</div>
-        </div>
+        <div class="person"><img class="person__photo" src="team/David-Nilssen.webp" alt="David Nilssen headshot" width="96" height="96" loading="lazy"><div class="person__name">David Nilssen</div><div class="person__role">Chairman</div></div>
       
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Ben Elowitz</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">Director</div>
-        </div>
+        <div class="person"><img class="person__photo" src="team/Ben-Elowitz.webp" alt="Ben Elowitz headshot" width="96" height="96" loading="lazy"><div class="person__name">Ben Elowitz</div><div class="person__role">Director</div></div>
       
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Edward Lim</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">Director</div>
-        </div>
+        <div class="person"><img class="person__photo" src="team/Edward-Lim.webp" alt="Edward Lim headshot" width="96" height="96" loading="lazy"><div class="person__name">Edward Lim</div><div class="person__role">Director</div></div>
       
-        <div style="padding-top:var(--space-4);border-top:4px solid var(--navy);display:flex;flex-direction:column;gap:var(--space-1)">
-          <div style="font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)">Eliot Gattegno</div>
-          <div style="font-size:var(--text-body);color:var(--text-secondary)">Director</div>
-        </div>
+        <div class="person"><img class="person__photo" src="team/Eliot-Gategno.webp" alt="Eliot Gattegno headshot" width="96" height="96" loading="lazy"><div class="person__name">Eliot Gattegno</div><div class="person__role">Director</div></div>
       
     </div>
   </section>
@@ -339,21 +301,21 @@ class Component extends DCLogic {
         { title: 'Excellence Every Day', body: 'Bring a consistent commitment to doing the work well.' }
       ],
       leaders: [
-        { name: 'David Nilssen', role: 'Chief Executive Officer' },
-        { name: 'Lauren Hoover', role: 'Chief Operating Officer' },
-        { name: 'Stephen Hosemann', role: 'Chief Financial Officer' },
-        { name: 'Steve Gire', role: 'Chief Information Officer' },
-        { name: 'Ralph Nilssen', role: 'Chief Sales Officer' },
-        { name: 'Edward Lim', role: 'President, Philippines' },
-        { name: 'Ira Crisologo', role: 'General Manager, Philippines' },
-        { name: 'Elena Barreneche', role: 'General Manager, Colombia' },
-        { name: 'Steffy Casallas', role: 'Global Head of Recruitment' }
+        { name: 'David Nilssen', photo: 'team/David-Nilssen.webp', role: 'Chief Executive Officer' },
+        { name: 'Lauren Hoover', photo: 'team/Lauren-Hoover.webp', role: 'Chief Operating Officer' },
+        { name: 'Stephen Hosemann', photo: 'team/Stephen-Hosemann.webp', role: 'Chief Financial Officer' },
+        { name: 'Steve Gire', photo: 'team/Steve-Gire.webp', role: 'Chief Information Officer' },
+        { name: 'Ralph Nilssen', photo: 'team/Ralph-Nilssen.webp', role: 'Chief Sales Officer' },
+        { name: 'Edward Lim', photo: 'team/Edward-Lim.webp', role: 'President, Philippines' },
+        { name: 'Ira Crisologo', photo: 'team/Ira-Crisologo.webp', role: 'General Manager, Philippines' },
+        { name: 'Elena Barreneche', photo: 'team/Elena-Barreneche.webp', role: 'General Manager, Colombia' },
+        { name: 'Steffy Casallas', photo: 'team/Steffy-Casallas.webp', role: 'Global Head of Recruitment' }
       ],
       board: [
-        { name: 'David Nilssen', role: 'Chairman' },
-        { name: 'Ben Elowitz', role: 'Director' },
-        { name: 'Edward Lim', role: 'Director' },
-        { name: 'Eliot Gattegno', role: 'Director' }
+        { name: 'David Nilssen', photo: 'team/David-Nilssen.webp', role: 'Chairman' },
+        { name: 'Ben Elowitz', photo: 'team/Ben-Elowitz.webp', role: 'Director' },
+        { name: 'Edward Lim', photo: 'team/Edward-Lim.webp', role: 'Director' },
+        { name: 'Eliot Gattegno', photo: 'team/Eliot-Gategno.webp', role: 'Director' }
       ],
       faqs: [
         { question: 'What does DOXA mean?', answer: 'DOXA is derived from the Greek word meaning belief or perception. The name reflects the company’s willingness to question accepted assumptions about global work and build a higher standard.' },
