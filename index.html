@@ -29,20 +29,22 @@ a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{colo
 @media (max-width:860px){#pricing{margin-block:56px}}
 #how{scroll-margin-top:96px}
 .testi-sec{margin-block:80px !important;display:grid !important;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:center;gap:var(--space-10) var(--space-16)}
-.testi-sec .testi{display:block !important;position:relative;z-index:3;align-self:stretch;height:auto;min-height:420px;margin:-176px 0;overflow:hidden}
-.testi-track{position:absolute;top:0;left:0;right:0;animation:testi-scroll 48s linear infinite}
+.testi-sec .testi{display:block !important;position:relative;z-index:3;align-self:center;height:auto;min-height:0;margin:0;padding-block:var(--space-4);overflow:hidden}
+.testi-track{display:flex;gap:var(--space-6);transition:transform .7s cubic-bezier(.4,0,.2,1);will-change:transform}
 .testi-callout{display:inline-flex;align-items:center;gap:var(--space-3);width:fit-content;font-family:var(--font-display);font-weight:700;font-size:var(--text-h4);line-height:1.2;color:var(--text-inverse);text-decoration:none;margin-top:var(--space-2)}
 .testi-callout svg{color:var(--cyan);width:9px;height:13px;flex-shrink:0;transition:transform var(--duration-base) var(--ease-standard)}
 .testi-callout:hover svg,.testi-callout:focus-visible svg{transform:translateX(6px)}
-.testi:hover .testi-track{animation-play-state:paused}
-.testi-set{display:flex;flex-direction:column;gap:var(--space-6);padding-bottom:var(--space-6)}
+/* one card per view: the repeated sets sit in one row; testi.js steps the track every 3s */
+.testi-set{display:contents}
+.testi-set > div{display:contents}
+.testi-set > div > div{flex:0 0 100%;min-width:0;box-sizing:border-box}
 .testi-set > div > div{background:rgb(40,68,84) !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important;box-shadow:0 10px 28px rgba(5,37,56,.28),inset 0 1px 0 rgba(255,255,255,.25) !important}
-@keyframes testi-scroll{to{transform:translateY(-33.3333%)}}
-@media (prefers-reduced-motion:reduce){.testi-track{animation:none}}
-@media (min-width:1100px){.testi-sec{grid-template-columns:minmax(0,1fr) minmax(0,33%)}}
+
+@media (prefers-reduced-motion:reduce){.testi-track{transition:none}}
+@media (min-width:1100px){.testi-sec{grid-template-columns:minmax(0,1fr) minmax(0,40%)}}
 @media (max-width:860px){
   .testi-sec{grid-template-columns:minmax(0,1fr);margin-block:48px 64px !important}
-  .testi-sec .testi{align-self:auto;height:540px;min-height:0;margin:0 0 -108px}
+  .testi-sec .testi{align-self:auto;height:auto;min-height:0;margin:0}
 }
 .typing-caret::after{content:"";display:inline-block;width:0;height:.82em;border-right:.07em solid currentColor;margin-right:-.07em;vertical-align:-.04em;animation:typing-blink 1s steps(1) infinite}
 .typing-caret.typing-done::after{display:none}
@@ -660,5 +662,30 @@ window.__render=render;render();
 })();
 </script>
 <script src="ds/typing.js"></script>
+<script>
+/* Testimonials: one card at a time, sliding left every 3 seconds. The card set is repeated, so after the last real card
+   the track snaps (no transition) back to the identical first set. Re-finds the track each tick because the page
+   re-renders its markup; pauses while hovered or focused; reduced-motion visitors get no auto-advance. */
+(function () {
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var i = 0, paused = false;
+  function cards(t) { return t.querySelectorAll('.testi-set:first-child > div > div'); }
+  function step(t) { var c = t.querySelectorAll('.testi-set > div > div'); return c.length > 1 ? c[1].offsetLeft - c[0].offsetLeft : 0; }
+  function go(t, k) { t.style.transform = 'translateX(' + (-k * step(t)) + 'px)'; }
+  setInterval(function () {
+    var t = document.querySelector('.testi-track'); if (!t || paused || document.hidden) return;
+    var n = cards(t).length; if (!n) return;
+    i++; t.style.transition = ''; go(t, i);
+    if (i >= n) setTimeout(function () {
+      var t2 = document.querySelector('.testi-track'); if (!t2) return;
+      t2.style.transition = 'none'; i = 0; go(t2, 0); void t2.offsetWidth; t2.style.transition = '';
+    }, 750);
+  }, 3000);
+  document.addEventListener('mouseover', function (e) { if (e.target.closest && e.target.closest('.testi')) paused = true; });
+  document.addEventListener('mouseout', function (e) { if (e.target.closest && e.target.closest('.testi')) paused = false; });
+  window.addEventListener('resize', function () { var t = document.querySelector('.testi-track'); if (t) { t.style.transition = 'none'; go(t, i); } });
+})();
+</script>
+
 
 </body></html>
