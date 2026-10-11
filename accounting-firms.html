@@ -218,7 +218,8 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   .reason-grid{grid-template-columns:1fr}
   .check-list{grid-template-columns:1fr}
   .talent-grid{grid-template-columns:1fr}
-  .talent-grid__plus{left:auto;right:var(--space-5);top:auto;bottom:calc(var(--space-5) * -1);transform:none;width:56px;height:56px}
+  .talent-grid__plus{position:relative;left:auto;top:auto;bottom:auto;right:auto;transform:translateY(var(--space-6));width:56px;height:56px;justify-self:end;margin:-28px var(--space-5) -28px 0}
+  .talent-grid{row-gap:var(--space-6)}
   .faq{column-count:1}
 }
 /* Closing CTA (same pattern as the home, industries and about pages) */
