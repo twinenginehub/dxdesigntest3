@@ -230,6 +230,8 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 @media (max-width:640px){.sl-hero__inner>h1,.sl-hero__inner>p{max-width:none}}
 .dd-three{display:grid;gap:var(--space-6);grid-template-columns:repeat(3,minmax(0,1fr))}
 .dd-three .sl-part p{font-size:var(--text-body);line-height:1.6}
+.sl-table.dd-table{table-layout:fixed}
+.sl-table.dd-table tbody th{width:auto}
 .dd-q{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-4);counter-reset:q}
 .dd-q li{counter-increment:q;display:grid;grid-template-columns:56px minmax(0,1fr);gap:var(--space-5);align-items:start;background:#fff;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-6);box-shadow:var(--shadow-sm)}
 .dd-q li::before{content:counter(q);font-size:2.25rem;font-weight:700;line-height:1;background:var(--brand-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
@@ -316,7 +318,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
       <h2>How DOXA compares</h2>
       <p>Three ways to add capacity. Here is what each one actually gives you.</p>
     </div>
-    <div class="sl-table-wrap"><table class="sl-table" style="min-width:640px">
+    <div class="sl-table-wrap"><table class="sl-table dd-table" style="min-width:640px"><colgroup><col style="width:34%"><col><col><col></colgroup>
       <thead><tr><th scope="col"></th><th scope="col" class="is-doxa">DOXA</th><th scope="col">Freelance</th><th scope="col">US hire</th></tr></thead>
       <tbody><tr><th scope="row">Vetted talent</th><td class="is-doxa"><span>Yes</span></td><td>No</td><td>Varies</td></tr><tr><th scope="row">SOC 2 Type II</th><td class="is-doxa"><span>Yes</span></td><td>No</td><td>Varies</td></tr><tr><th scope="row">Encrypted DOXA-issued device</th><td class="is-doxa"><span>Yes</span></td><td>No</td><td>No, rarely</td></tr><tr><th scope="row">Employer of Record</th><td class="is-doxa"><span>Yes</span></td><td>No</td><td>No, your burden</td></tr><tr><th scope="row">Structured onboarding</th><td class="is-doxa"><span>Yes</span></td><td>No</td><td>Varies, sometimes</td></tr><tr><th scope="row">HR, payroll &amp; benefits</th><td class="is-doxa"><span>Yes, handled by DOXA</span></td><td>No</td><td>No, your cost</td></tr><tr><th scope="row">Cost vs U.S. hire</th><td class="is-doxa"><span>Up to 70% savings</span></td><td>Varies</td><td>Full cost</td></tr><tr><th scope="row">Your time zone</th><td class="is-doxa"><span>Yes</span></td><td>No</td><td>Yes</td></tr></tbody>
     </table></div>
