@@ -5,45 +5,50 @@
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var text = null, typed = null, rest = null, i = 0, started = false, done = false;
 
-  var g = 0, gT = null, gR = null;
+  var segs = null, parts = null;   // segs: [{t: text, g: gradient?}], parts: [{typed, rest, wrap}]
 
   function render() {
-    var gi = Math.min(i, g), ti = Math.max(i - g, 0);
-    gT.textContent = text.slice(0, gi);
-    gR.textContent = text.slice(gi, g);
-    typed.textContent = text.slice(g, g + ti);
-    rest.textContent = text.slice(g + ti);
-    var onG = g > 0 && i < g;
-    gT.className = onG ? 'typing-caret' : '';
-    typed.className = onG ? '' : 'typing-caret';
+    var shown = i, active = -1;
+    for (var k = 0; k < segs.length; k++) {
+      var s = segs[k], n = Math.max(0, Math.min(s.t.length, shown));
+      parts[k].typed.textContent = s.t.slice(0, n);
+      parts[k].rest.textContent = s.t.slice(n);
+      if (active < 0 && n < s.t.length) active = k;   // caret sits in the segment currently being typed
+      shown -= s.t.length;
+    }
+    if (active < 0) active = segs.length - 1;
+    for (var j = 0; j < parts.length; j++) parts[j].typed.className = j === active ? 'typing-caret' : '';
+    typed = parts[active].typed;
   }
 
   function attach() {
     var h = document.querySelector('.hero-wrap h1, .sl-hero h1');
     if (!h) return false;
     if (text === null) {
-      text = h.textContent;
-      var tg = h.querySelector('.tg');   // optional brand-gradient prefix, e.g. <span class="tg">Build the Team.</span>
-      g = tg ? tg.textContent.length : 0;
+      // Optional brand-gradient phrases are marked in the markup, e.g. <span class="tg">Build the Team.</span>
+      segs = [];
+      Array.prototype.forEach.call(h.childNodes, function (n) {
+        var s = n.textContent;
+        if (!s) return;
+        segs.push({ t: s, g: n.nodeType === 1 && n.classList.contains('tg') });
+      });
+      text = segs.map(function (s) { return s.t; }).join('');
     }
     h.setAttribute('aria-label', text);
     h.textContent = '';
-    var wrap = document.createElement('span');
-    wrap.className = 'tg';
-    gT = document.createElement('span');
-    gR = document.createElement('span');
-    gR.style.visibility = 'hidden';
-    wrap.appendChild(gT);
-    wrap.appendChild(gR);
-    typed = document.createElement('span');
-    rest = document.createElement('span');
-    wrap.setAttribute('aria-hidden', 'true');
-    typed.setAttribute('aria-hidden', 'true');
-    rest.setAttribute('aria-hidden', 'true');
-    rest.style.visibility = 'hidden';
-    h.appendChild(wrap);
-    h.appendChild(typed);
-    h.appendChild(rest);
+    parts = segs.map(function (s) {
+      var wrap = document.createElement('span');
+      if (s.g) wrap.className = 'tg';
+      wrap.setAttribute('aria-hidden', 'true');
+      var ty = document.createElement('span'), re = document.createElement('span');
+      re.style.visibility = 'hidden';
+      wrap.appendChild(ty);
+      wrap.appendChild(re);
+      h.appendChild(wrap);
+      return { wrap: wrap, typed: ty, rest: re };
+    });
+    typed = parts[0].typed;
+    rest = parts[parts.length - 1].rest;
     render();
     return true;
   }
@@ -65,7 +70,7 @@
   function claim() {
     if (done) return;
     var h = document.querySelector('.hero-wrap h1, .sl-hero h1');
-    if (h && !(typed && typed.parentNode === h)) attach();
+    if (h && !(parts && parts[0].wrap.parentNode === h)) attach();
   }
   claim();
   var mo = new MutationObserver(function () { if (done) mo.disconnect(); else claim(); });
