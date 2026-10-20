@@ -752,12 +752,12 @@ props=props||{};
 var image=props.image,title=props.title,description=props.description,href=props.href,label=props.label||'Learn More',aspect=props.aspect||'landscape';
 var ratio=aspect==='portrait'?'500/650':'16/10';
 var s=useState(false),hover=s[0],setHover=s[1];
-return React.createElement('a',{href:href,onMouseEnter:function(){setHover(true);},onMouseLeave:function(){setHover(false);},style:{display:'block',position:'relative',textDecoration:'none',color:'inherit',background:'var(--surface-card)',WebkitTextFillColor:'unset',borderRadius:'var(--radius-lg)',overflow:'hidden',boxShadow:'var(--shadow-md)',fontFamily:'var(--font-body)'}},
+return React.createElement('a',{href:href,onMouseEnter:function(){setHover(true);},onMouseLeave:function(){setHover(false);},style:{display:'flex',flexDirection:'column',position:'relative',textDecoration:'none',color:'inherit',background:'var(--surface-card)',WebkitTextFillColor:'unset',borderRadius:'var(--radius-lg)',overflow:'hidden',boxShadow:'var(--shadow-md)',fontFamily:'var(--font-body)'}},
 React.createElement('div',{style:{position:'absolute',top:0,left:0,right:0,height:4,background:'var(--brand-gradient)'}}),
 image&&React.createElement('div',{style:{aspectRatio:ratio,background:"url('"+image+"') center/cover"}}),
-React.createElement('div',{style:{padding:'var(--space-5)'}},
+React.createElement('div',{style:{padding:'var(--space-5)',flex:1,display:'flex',flexDirection:'column',alignItems:'flex-start'}},
 React.createElement('div',{style:{fontFamily:'var(--font-display)',fontWeight:700,fontSize:'var(--text-h4)',color:'var(--text-primary)',marginBottom:6}},title),
-React.createElement('div',{style:{fontSize:'var(--text-body-sm)',color:'var(--text-secondary)',marginBottom:14}},description),
+React.createElement('div',{style:{fontSize:'var(--text-body-sm)',color:'var(--text-secondary)',marginBottom:14,flex:1}},description),
 React.createElement('span',{style:Object.assign({display:'inline-flex',alignItems:'center',gap:4,fontSize:'var(--text-eyebrow)',fontWeight:600,letterSpacing:'var(--tracking-eyebrow)',textTransform:'uppercase',textDecoration:'underline',textUnderlineOffset:2,textDecorationColor:hover?'var(--doxa-green)':'var(--doxa-navy)'},hover?{background:'var(--brand-gradient)',backgroundClip:'text',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',color:'transparent'}:{color:'var(--doxa-navy)'})},label,BrandChevron({width:8,height:12,style:{color:hover?'var(--doxa-green)':'var(--doxa-navy)',marginTop:1}}))
 )
 );
