@@ -71,3 +71,37 @@
   new MutationObserver(later).observe(document.documentElement, { childList: true, subtree: true });
   if (document.readyState === 'complete') later(); else window.addEventListener('load', later);
 })();
+
+/* Smooth anchor scrolling: eased, distance-scaled, honours reduced motion and scroll-margin-top. */
+(function(){
+  if(window.__smoothAnchors)return;window.__smoothAnchors=true;
+  var raf=0;
+  var ease=function(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2};
+  function go(el,hash){
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var off=parseFloat(getComputedStyle(el).scrollMarginTop)||0;
+    var max=document.documentElement.scrollHeight-innerHeight;
+    var to=Math.max(0,Math.min(max,el.getBoundingClientRect().top+scrollY-off));
+    var from=scrollY,dist=to-from;
+    cancelAnimationFrame(raf);
+    if(reduce||Math.abs(dist)<2){scrollTo(0,to);return}
+    var dur=Math.min(1400,Math.max(700,Math.abs(dist)*.6)),t0=performance.now();
+    function step(now){
+      var p=Math.min(1,(now-t0)/dur);
+      scrollTo(0,from+dist*ease(p));
+      if(p<1)raf=requestAnimationFrame(step);
+    }
+    raf=requestAnimationFrame(step);
+  }
+  addEventListener('wheel',function(){cancelAnimationFrame(raf)},{passive:true});
+  addEventListener('touchstart',function(){cancelAnimationFrame(raf)},{passive:true});
+  document.addEventListener('click',function(e){
+    if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href*="#"]');if(!a)return;
+    var u=new URL(a.href,location.href);
+    if(u.pathname!==location.pathname||u.origin!==location.origin||!u.hash||u.hash==='#')return;
+    var el=document.getElementById(decodeURIComponent(u.hash.slice(1)));if(!el)return;
+    e.preventDefault();go(el);
+    history.pushState(null,'',u.hash);
+  });
+})();
