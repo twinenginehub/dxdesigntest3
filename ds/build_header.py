@@ -18,7 +18,7 @@ def header(cur):
     def a(label,href,extra=''):
         c=' class="nav-current" aria-current="page"' if label==cur else ''
         return f'<a href="{href}"{c}>{label}{extra}</a>'
-    about_drop='<div class="nav-drop nav-drop--sm"><a href="about.html">About</a><a href="reviews.html">Testimonials</a><a href="about.html#leadership">Leadership Team</a></div>'
+    about_drop='<div class="nav-drop nav-drop--sm"><a href="about.html">About DOXA</a><a href="reviews.html">Testimonials</a><a href="about.html#leadership">Leadership Team</a></div>'
     drop=''.join(f'<a href="{h}.html">{l.replace("&","&amp;")}</a>' for l,h in ROLES)
     return ('<nav class="site-nav" aria-label="Main">'
       '<a class="site-nav__logo" href="index.html" aria-label="DOXA Talent home"><img src="doxa-logo-white.png" alt="DOXA"></a>'
