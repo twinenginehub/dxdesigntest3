@@ -224,6 +224,10 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .dd-stat span{display:block;font-size:var(--text-caption);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-inverse,#fff)}
 .dd-stat small{display:block;margin-top:2px;font-size:var(--text-caption);color:rgba(255,255,255,.7)}
 .dd-badge{display:block;height:88px;width:auto;max-width:100%;object-fit:contain;margin-bottom:var(--space-2)}
+.dd-bgnum{position:relative;overflow:hidden}
+.dd-bgnum>.container{position:relative;z-index:1}
+.dd-bgnum__num{position:absolute;right:var(--container-pad);top:50%;transform:translateY(-50%);z-index:0;margin:0;font-family:var(--font-display);font-weight:800;font-size:clamp(8rem,22vw,19rem);line-height:1;letter-spacing:-.05em;white-space:nowrap;pointer-events:none;user-select:none;background:var(--brand-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;opacity:.15}
+@media (max-width:640px){.dd-bgnum__num{opacity:.12;right:-.05em}}
 .dd-navy{background:var(--doxa-navy)}
 .dd-navy .sl-head h2{color:#fff}
 .dd-incl{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-4) var(--space-10);grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -321,7 +325,8 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   </div>
 </section>
 
-<section class="sl-sec sl-sec--muted" id="savings">
+<section class="sl-sec sl-sec--muted dd-bgnum" id="savings">
+  <div class="dd-bgnum__num" aria-hidden="true">70%</div>
   <div class="container">
     <div class="dd-text">
       <div class="sl-head" style="margin-bottom:0"><h2>The savings are a result, not the reason.</h2></div>
