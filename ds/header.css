@@ -45,7 +45,7 @@
   .nav-item{border-bottom:1px solid rgba(255,255,255,.12)}
   .nav-item>a{display:flex;padding:var(--space-4) var(--space-1);font-size:var(--text-body)}
   .nav-item svg,.nav-drop{display:none}
-  .nav-item .nav-drop--sm{display:flex;flex-direction:column;position:static;opacity:1;pointer-events:auto;transform:none;min-width:0;background:none;border:0;box-shadow:none;padding:0 0 var(--space-2) var(--space-4)}
+  .nav-item .nav-drop--sm,.nav-item:hover .nav-drop--sm,.nav-item:focus-within .nav-drop--sm{display:flex;flex-direction:column;position:static;opacity:1;pointer-events:auto;transform:none;min-width:0;background:none;border:0;box-shadow:none;padding:0 0 var(--space-2) var(--space-4)}
   .nav-drop--sm a{color:rgba(255,255,255,.85);padding:var(--space-3) var(--space-1);font-size:var(--text-body-sm)}
   .nav-drop--sm a:hover{color:#fff}
 }
