@@ -42,13 +42,13 @@ a.ds-btn.ds-btn-secondary.on-dark,a.ds-btn.ds-btn-secondary.on-dark:visited{colo
 div[style*="color: var(--doxa-cyan)"]{display:inline-block;width:fit-content;background:var(--brand-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent !important}
 .rule-top{position:relative}
 .rule-top::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;border-radius:999px;background:var(--brand-gradient)}
-.person{position:relative;padding-top:var(--space-5);display:grid;grid-template-columns:96px minmax(0,1fr);grid-template-rows:1fr 1fr;column-gap:var(--space-5);align-items:center;text-align:left}
+.person{position:relative;padding-top:var(--space-5);display:grid;grid-template-columns:96px minmax(0,1fr);grid-template-rows:1fr auto auto 1fr;column-gap:var(--space-5);align-items:center;text-align:left}
 .person::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;border-radius:999px;background:var(--navy)}
 .person::after{content:"";position:absolute;top:0;left:0;right:0;height:4px;border-radius:999px;background:var(--brand-gradient);opacity:0;transition:opacity .35s ease}
 .person:hover::after,.person:focus-within::after{opacity:1}
-.person__photo{grid-row:1 / span 2;width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 20%;display:block;transform:scale(1.1);clip-path:circle(45.5%);background:var(--surface-muted)}
-.person__name{grid-column:2;align-self:end;font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)}
-.person__role{grid-column:2;align-self:start;margin-top:var(--space-1);font-size:var(--text-body);color:var(--text-secondary)}
+.person__photo{grid-row:1 / span 4;align-self:center;width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 20%;display:block;transform:scale(1.1);clip-path:circle(45.5%);background:var(--surface-muted)}
+.person__name{grid-column:2;grid-row:2;align-self:end;font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)}
+.person__role{grid-column:2;grid-row:3;align-self:start;margin-top:var(--space-1);font-size:var(--text-body);color:var(--text-secondary)}
 #leadership{scroll-margin-top:80px}
 .sec-founding{padding-bottom:0 !important}
 .sec-core{padding-top:var(--space-12) !important}
