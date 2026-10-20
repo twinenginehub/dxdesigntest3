@@ -260,8 +260,11 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .dd-statement::before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;border-radius:999px;background:var(--brand-gradient)}
 .dd-statement+p{margin:var(--space-3) 0 0;font-size:var(--text-body-lg);color:var(--text-secondary)}
 .dd-split{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-12);align-items:stretch}
-.dd-split__img{width:100%;height:100%;min-height:320px;object-fit:cover;object-position:50% 30%;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);display:block}
-@media (max-width:1000px){.dd-split{grid-template-columns:1fr}.dd-split__img{height:auto;aspect-ratio:16/10;min-height:0}}
+.dd-collage{position:relative;min-height:440px}
+.dd-collage img{position:absolute;display:block;object-fit:cover;border-radius:var(--radius-lg)}
+.dd-collage__main{top:0;left:0;width:82%;height:68%;box-shadow:var(--shadow-md)}
+.dd-collage__inset{right:0;bottom:0;width:64%;height:50%;border:6px solid #fff;box-shadow:var(--shadow-lg)}
+@media (max-width:1000px){.dd-split{grid-template-columns:1fr}.dd-collage{min-height:0;aspect-ratio:1/.85}}
 .dd-duo{display:grid;gap:var(--space-10);grid-template-columns:repeat(2,minmax(0,1fr));margin-top:var(--space-20)}
 .dd-duo h3{margin:0;font-size:var(--text-h3);color:var(--doxa-navy)}
 .dd-duo p{margin:var(--space-3) 0 0;line-height:1.65;color:var(--text-secondary)}
@@ -367,7 +370,10 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
           <p>They&rsquo;re part of the operating model that produces performance.</p>
         </div>
       </div>
-      <img class="dd-split__img" src="office-team.png" alt="DOXA team members talking together in an open office" width="1451" height="1084" loading="lazy">
+      <div class="dd-collage">
+        <img class="dd-collage__main" src="dd-team-smiles.webp" alt="Four smiling DOXA team members at a desk" width="1200" height="900" loading="lazy">
+        <img class="dd-collage__inset" src="dd-team-video-call.webp" alt="DOXA team members meeting together on a video call" width="1200" height="896" loading="lazy">
+      </div>
     </div>
     <div class="dd-duo">
       <div><h3>Work from home is part of the model, not a perk bolted onto it.</h3><p>DOXA operates as a distributed company. Remote work eliminates daily commuting for professionals, expands the talent pool available to clients, and gives employees more control over the time surrounding their workday.</p></div>
