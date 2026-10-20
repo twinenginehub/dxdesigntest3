@@ -8,7 +8,7 @@ SEARCH='<svg class="site-nav__icon" viewBox="0 0 24 24" fill="none" stroke="curr
 BURGER='<svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6l-12 12M6 6l12 12"></path></svg>'
 def current_for(page):
     n=os.path.basename(page)
-    if n=='index.html': return 'Home'
+    if n in ('index.html','index-v2.html'): return 'Home'
     if n=='industries.html': return 'Industries'
     if n in ('about.html','reviews.html'): return 'Why DOXA'
     if n in ('solutions.html','doxa-difference.html'): return 'Solutions'
