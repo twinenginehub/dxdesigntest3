@@ -6,7 +6,7 @@
   var text = null, typed = null, rest = null, i = 0, started = false, done = false;
 
   function attach() {
-    var h = document.querySelector('.hero-wrap h1');
+    var h = document.querySelector('.hero-wrap h1, .sl-hero h1');
     if (!h) return false;
     if (text === null) text = h.textContent;
     h.setAttribute('aria-label', text);
@@ -41,7 +41,7 @@
   // Take over the headline immediately (so it never flashes in full) and again if the app swaps it out.
   function claim() {
     if (done) return;
-    var h = document.querySelector('.hero-wrap h1');
+    var h = document.querySelector('.hero-wrap h1, .sl-hero h1');
     if (h && !(typed && typed.parentNode === h)) attach();
   }
   claim();
