@@ -12,6 +12,7 @@ def current_for(page):
     if n=='industries.html': return 'Industries'
     if n in ('about.html','reviews.html'): return 'Why DOXA'
     if n=='solutions.html': return 'Solutions'
+    if n=='get-started.html': return ''
     if n=='accounting-firms.html': return 'Accounting'
     return 'Roles'    # talent index, role pages, country pages
 def header(cur):
