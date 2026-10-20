@@ -14,7 +14,7 @@
   --cyan-50: #e6f7fe; /* Lightest cyan tint — subtle fills/backgrounds. */
   --cyan-100: #cceffd; /* Light cyan tint, one step darker than cyan-50. */
   --green-dark: #048f5d; /* Green hover/press shade. */
-  --fog-50: #f4f7f9; /* Lightest neutral gray — muted section background. */
+  --fog-50: rgba(0,174,239,.05); /* Lightest neutral gray — muted section background. */
   --fog-100: #e7edf1; /* Light neutral gray — hover fills, secondary surfaces. */
   --fog-200: #cdd9e0; /* Neutral gray — subtle borders, active-state fills. */
   --slate-400: #6b8494; /* Muted/placeholder text color. */
