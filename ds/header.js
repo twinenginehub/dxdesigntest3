@@ -105,3 +105,24 @@
     history.pushState(null,'',u.hash);
   });
 })();
+
+/* Comparison-table carousel: arrows + counter for .sl-car-nav (shown at <= 860px) */
+(function () {
+  document.querySelectorAll('.sl-car-nav').forEach(function (nav) {
+    var wrap = nav.previousElementSibling, t = wrap && wrap.querySelector('tbody');
+    if (!t) return;
+    var prev = nav.querySelector('[data-dir="-1"]'), next = nav.querySelector('[data-dir="1"]'), cnt = nav.querySelector('.sl-car-count'), n = t.children.length;
+    function step() { return t.children[0].getBoundingClientRect().width + (parseFloat(getComputedStyle(t).columnGap) || 0); }
+    function upd() {
+      var atEnd = t.scrollLeft + t.clientWidth >= t.scrollWidth - 4, i = atEnd ? n - 1 : Math.round(t.scrollLeft / step());
+      cnt.textContent = (i + 1) + ' / ' + n; prev.disabled = t.scrollLeft <= 4; next.disabled = atEnd;
+    }
+    nav.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b || b.disabled) return;
+      t.scrollBy({ left: step() * (+b.dataset.dir), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    });
+    t.addEventListener('scroll', upd, { passive: true });
+    addEventListener('resize', upd);
+    upd();
+  });
+})();
