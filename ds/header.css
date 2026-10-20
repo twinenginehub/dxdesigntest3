@@ -172,3 +172,17 @@ html:active-view-transition-type(pixelate-dissolve)::view-transition-new(root) {
 }
 .site-nav__toggle:hover, .site-nav.is-open .site-nav__toggle { background: rgba(255,255,255,.18); }
 @media (prefers-reduced-motion: reduce) { .site-nav__toggle { transition: none; } }
+
+/* CSS-only typewriter headline: real text, one span per character, revealed by staggered animation delays.
+   Markup: <h1 class="tw" aria-label="…"><span class="tw-w"><span class="tw-c" style="--i:0">G</span>…</span> …</h1>
+   Tune with --tw-delay (start) and --tw-step (time per letter). */
+.tw{--tw-delay:1.6s;--tw-step:55ms}
+.tw-w{display:inline-block;white-space:nowrap}
+.tw-c{opacity:0;animation:tw-in 1ms linear forwards;animation-delay:calc(var(--tw-delay) + var(--i) * var(--tw-step))}
+.tw-c::after{content:"";display:inline-block;width:0;height:.82em;border-right:.07em solid currentColor;margin-right:-.07em;vertical-align:-.04em;opacity:0;animation:tw-caret var(--tw-step) steps(1,end) calc(var(--tw-delay) + var(--i) * var(--tw-step))}
+.tw-last::after{animation:tw-blink 1s steps(1,end) calc(var(--tw-delay) + var(--i) * var(--tw-step)) 2}
+.tw-g{color:var(--doxa-cyan,#00aeef);color:color-mix(in srgb,var(--doxa-cyan,#00aeef) calc(100% - var(--g)),var(--doxa-green,#05af72) var(--g))}
+@keyframes tw-in{to{opacity:1}}
+@keyframes tw-caret{from,to{opacity:1}}
+@keyframes tw-blink{0%{opacity:1}50%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.tw-c{opacity:1;animation:none}.tw-c::after{display:none}}

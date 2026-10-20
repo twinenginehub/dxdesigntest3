@@ -431,6 +431,18 @@ return React.createElement('a',{href:href,style:{position:'absolute',left:-9999,
 
 /* ============================= marketing ================================= */
 
+/* typewriterHeadline — splits a headline into per-character spans (real text) so ds/header.css can reveal it with CSS-only animation delays. */
+function typewriterHeadline(text){
+var out=[],i=0,words=String(text).split(' '),total=String(text).replace(/ /g,'').length;
+words.forEach(function(w,wi){
+if(wi>0)out.push(' ');
+out.push(React.createElement('span',{key:'w'+wi,className:'tw-w','aria-hidden':'true'},w.split('').map(function(ch,ci){
+var idx=i++;
+return React.createElement('span',{key:ci,className:'tw-c'+(idx===total-1?' tw-last':''),style:{'--i':idx}},ch);
+})));
+});
+return out;
+}
 function Hero(props){
 props=props||{};
 var variant=props.variant||'photo',layout=props.layout||'contained',eyebrow=props.eyebrow,headline=props.headline,body=props.body,children=props.children;
@@ -467,7 +479,7 @@ React.createElement('path',{d:'M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11
 ),
 eyebrow
 ),
-React.createElement('h1',{style:{fontFamily:'var(--font-display)',fontSize:'var(--text-h1)',fontWeight:700,color:'var(--doxa-white)',margin:0,lineHeight:1.1}},headline),
+React.createElement('h1',Object.assign({style:{fontFamily:'var(--font-display)',fontSize:'var(--text-h1)',fontWeight:700,color:'var(--doxa-white)',margin:0,lineHeight:1.1}},props.typewriter?{className:'tw','aria-label':headline}:{}),props.typewriter?typewriterHeadline(headline):headline),
 body&&React.createElement('p',{style:{fontFamily:'var(--font-body)',fontSize:'var(--text-body-lg)',color:'rgba(255,255,255,.85)',marginTop:'var(--space-4)',lineHeight:1.6}},body),
 children&&React.createElement('div',{style:{marginTop:'var(--space-6)',display:'flex',gap:'var(--space-3)'}},children)
 )
