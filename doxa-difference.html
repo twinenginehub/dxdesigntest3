@@ -259,14 +259,18 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .dd-statement{margin:0;padding-top:calc(var(--space-5) + 4px);position:relative;font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)}
 .dd-statement::before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;border-radius:999px;background:var(--brand-gradient)}
 .dd-statement+p{margin:var(--space-3) 0 0;font-size:var(--text-body-lg);color:var(--text-secondary)}
-.dd-duo{display:grid;gap:var(--space-10);grid-template-columns:repeat(2,minmax(0,1fr));margin-top:var(--space-10)}
+.dd-split{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-12);align-items:stretch}
+.dd-split__img{width:100%;height:100%;min-height:320px;object-fit:cover;object-position:50% 30%;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);display:block}
+@media (max-width:1000px){.dd-split{grid-template-columns:1fr}.dd-split__img{height:auto;aspect-ratio:16/10;min-height:0}}
+.dd-duo{display:grid;gap:var(--space-10);grid-template-columns:repeat(2,minmax(0,1fr));margin-top:var(--space-20)}
 .dd-duo h3{margin:0;font-size:var(--text-h3);color:var(--doxa-navy)}
 .dd-duo p{margin:var(--space-3) 0 0;line-height:1.65;color:var(--text-secondary)}
 .dd-quotes{display:grid;gap:var(--space-6);grid-template-columns:repeat(2,minmax(0,1fr))}
 .dd-quotes figure{margin:0;padding:var(--space-8);border-radius:var(--radius-lg);background:rgba(255,255,255,.10);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
 .dd-quotes blockquote{margin:0;color:#fff;font-size:var(--text-body-lg);line-height:1.65}
-.dd-quotes figcaption{margin-top:var(--space-5);color:rgba(255,255,255,.85);font-size:var(--text-body-sm)}
+.dd-quotes figcaption{display:flex;align-items:center;gap:var(--space-4);margin-top:var(--space-5);color:rgba(255,255,255,.85);font-size:var(--text-body-sm)}
 .dd-quotes figcaption b{display:block;color:#fff}
+.dd-av{flex:none;width:56px;height:56px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px rgba(255,255,255,.35)}
 .dd-close{margin:var(--space-8) 0 0;font-size:var(--text-body-lg);font-weight:400;line-height:1.65;color:var(--text-secondary);max-width:820px}
 .breadcrumb{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0;font-size:var(--text-body-sm);color:rgba(255,255,255,.7)}
 .breadcrumb a{color:rgba(255,255,255,.7);text-decoration:none}
@@ -352,13 +356,18 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 
 <section class="sl-sec sl-sec--white" id="both-sides">
   <div class="container">
-    <div class="dd-text" style="max-width:none">
-      <div class="sl-head" style="margin-bottom:0"><h2>A better model has to <span style="background:var(--brand-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent">work on both sides.</span></h2></div>
-      <p style="max-width:820px">Global staffing should not solve a company problem by creating a people problem somewhere else. DOXA is designed to create a healthier system for the client and the VIP, with proper employment, support, security, development, and clear accountability.</p>
-    </div>
-    <div style="margin-top:var(--space-12);max-width:820px">
-      <p class="dd-statement">Ethics aren&rsquo;t separate from performance.</p>
-      <p>They&rsquo;re part of the operating model that produces performance.</p>
+    <div class="dd-split">
+      <div class="dd-split__text">
+        <div class="dd-text" style="max-width:none">
+          <div class="sl-head" style="margin-bottom:0"><h2>A better model has to <span style="background:var(--brand-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent">work on both sides.</span></h2></div>
+          <p>Global staffing should not solve a company problem by creating a people problem somewhere else. DOXA is designed to create a healthier system for the client and the VIP, with proper employment, support, security, development, and clear accountability.</p>
+        </div>
+        <div style="margin-top:var(--space-12)">
+          <p class="dd-statement">Ethics aren&rsquo;t separate from performance.</p>
+          <p>They&rsquo;re part of the operating model that produces performance.</p>
+        </div>
+      </div>
+      <img class="dd-split__img" src="office-team.png" alt="DOXA team members talking together in an open office" width="1451" height="1084" loading="lazy">
     </div>
     <div class="dd-duo">
       <div><h3>Work from home is part of the model, not a perk bolted onto it.</h3><p>DOXA operates as a distributed company. Remote work eliminates daily commuting for professionals, expands the talent pool available to clients, and gives employees more control over the time surrounding their workday.</p></div>
@@ -371,8 +380,8 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   <div class="container">
     <h2 style="color:#fff;margin:0 0 var(--space-6);font-size:var(--text-h2)">What clients say</h2>
     <div class="dd-quotes">
-      <figure><blockquote>&ldquo;We currently have five DOXA VIPs that work for us in various roles. They have been phenomenal. The caliber of candidates that we&rsquo;ve received has been by far superior to what we&rsquo;ve been able to find locally. They aren&rsquo;t afraid to dig deep and give us the results we need and go above and beyond in everything that they do.&rdquo;</blockquote><figcaption><b>Tiffany Grigsby</b>Director of Operations, DSL Northwest Inc.</figcaption></figure>
-      <figure><blockquote>&ldquo;DOXA has helped us find quality candidates in a much faster timeframe than what we&rsquo;ve been able to source domestically and allowed us the opportunity to find the people that we need who are able to help us move and scale quickly.&rdquo;</blockquote><figcaption><b>Jim Neil</b>President, DSL Northwest</figcaption></figure>
+      <figure><blockquote>&ldquo;We currently have five DOXA VIPs that work for us in various roles. They have been phenomenal. The caliber of candidates that we&rsquo;ve received has been by far superior to what we&rsquo;ve been able to find locally. They aren&rsquo;t afraid to dig deep and give us the results we need and go above and beyond in everything that they do.&rdquo;</blockquote><figcaption><img class="dd-av" src="team/tiffany-grigsby.jpg" alt="" width="56" height="56" loading="lazy"><span><b>Tiffany Grigsby</b>Director of Operations, DSL Northwest Inc.</span></figcaption></figure>
+      <figure><blockquote>&ldquo;DOXA has helped us find quality candidates in a much faster timeframe than what we&rsquo;ve been able to source domestically and allowed us the opportunity to find the people that we need who are able to help us move and scale quickly.&rdquo;</blockquote><figcaption><img class="dd-av" src="team/jim-neil.jpg" alt="" width="56" height="56" loading="lazy"><span><b>Jim Neil</b>President, DSL Northwest</span></figcaption></figure>
     </div>
   </div>
 </section>
