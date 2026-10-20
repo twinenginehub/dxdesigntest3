@@ -16,6 +16,8 @@
 .nav-drop__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-2) var(--space-6)}
 .nav-drop a{font-size:var(--text-body-sm);font-weight:500;color:var(--text-primary);text-decoration:none;padding:6px 0}
 .nav-drop a:hover{background:none;-webkit-text-fill-color:unset;color:var(--doxa-cyan-700)}
+.nav-drop--sm{min-width:200px;display:flex;flex-direction:column;gap:2px;padding:var(--space-3) var(--space-5)}
+.nav-drop--sm::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
 .site-nav__right{display:flex;align-items:center;gap:var(--space-4)}
 .site-nav__icon{width:18px;height:18px;color:rgba(255,255,255,.7)}
 /* CTA: accent button, sized like the source's .btn-sm (self-contained so it works on every page) */
@@ -43,6 +45,9 @@
   .nav-item{border-bottom:1px solid rgba(255,255,255,.12)}
   .nav-item>a{display:flex;padding:var(--space-4) var(--space-1);font-size:var(--text-body)}
   .nav-item svg,.nav-drop{display:none}
+  .nav-item .nav-drop--sm{display:flex;flex-direction:column;position:static;opacity:1;pointer-events:auto;transform:none;min-width:0;background:none;border:0;box-shadow:none;padding:0 0 var(--space-2) var(--space-4)}
+  .nav-drop--sm a{color:rgba(255,255,255,.85);padding:var(--space-3) var(--space-1);font-size:var(--text-body-sm)}
+  .nav-drop--sm a:hover{color:#fff}
 }
 
 /* Mobile and tablet menu layout (1240px and below): the CTA lives in the opened menu, not in the bar */

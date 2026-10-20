@@ -51,6 +51,7 @@ div[style*="color: var(--doxa-cyan)"]{display:inline-block;width:fit-content;bac
 .person__photo{grid-row:1 / span 2;width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 20%;display:block;transform:scale(1.1);clip-path:circle(45.5%);background:var(--surface-muted)}
 .person__name{grid-column:2;align-self:end;font-family:var(--font-display);font-size:var(--text-h3);font-weight:700;line-height:1.25;color:var(--text-primary)}
 .person__role{grid-column:2;align-self:start;margin-top:var(--space-1);font-size:var(--text-body);color:var(--text-secondary)}
+#leadership{scroll-margin-top:80px}
 </style><script src="ds/header.js" defer=""></script>
 </head><body>
 <template id="tpl">
@@ -59,7 +60,7 @@ div[style*="color: var(--doxa-cyan)"]{display:inline-block;width:fit-content;bac
 
   <!-- NAV -->
   <x-import component-from-global-scope="DoxaDS.SkipLink" href="#main-content">Skip to content</x-import>
-  <nav class="site-nav" aria-label="Main"><a class="site-nav__logo" href="index.html" aria-label="DOXA Talent home"><img src="doxa-logo-white.png" alt="DOXA"></a><div class="site-nav__links" id="site-menu"><div class="nav-item"><a href="index.html">Home</a></div><div class="nav-item"><a href="solutions.html">Solutions</a></div><div class="nav-item"><a href="industries.html">Industries</a></div><div class="nav-item"><a href="accounting-firms.html">Accounting</a></div><div class="nav-item"><a href="accountant-cpa.html">Roles</a></div><div class="nav-item"><a href="reviews.html">Testimonials</a></div><div class="nav-item"><a href="about.html" class="nav-current" aria-current="page">About</a></div><div class="nav-item nav-item--cta"><a class="site-nav__cta" href="index.html#build-your-team">Build your team</a></div></div><div class="site-nav__right"><a class="site-nav__cta" href="index.html#build-your-team">Build your team</a><button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6l-12 12M6 6l12 12"></path></svg></button></div></nav>
+  <nav class="site-nav" aria-label="Main"><a class="site-nav__logo" href="index.html" aria-label="DOXA Talent home"><img src="doxa-logo-white.png" alt="DOXA"></a><div class="site-nav__links" id="site-menu"><div class="nav-item"><a href="solutions.html">Solutions</a></div><div class="nav-item"><a href="industries.html">Industries</a></div><div class="nav-item"><a href="accounting-firms.html">Accounting</a></div><div class="nav-item"><a href="accountant-cpa.html">Roles</a></div><div class="nav-item"><a href="about.html" class="nav-current" aria-current="page">About<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.707 8.293a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1 -1.414 0l-6 -6a1 1 0 0 1 1.414 -1.414l5.293 5.293l5.293 -5.293a1 1 0 0 1 1.414 0"></path></svg></a><div class="nav-drop nav-drop--sm"><a href="about.html">About</a><a href="reviews.html">Testimonials</a><a href="about.html#leadership">Leadership Team</a></div></div><div class="nav-item nav-item--cta"><a class="site-nav__cta" href="index.html#build-your-team">Build your team</a></div></div><div class="site-nav__right"><a class="site-nav__cta" href="index.html#build-your-team">Build your team</a><button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6l-12 12M6 6l12 12"></path></svg></button></div></nav>
 
   <!-- HERO -->
   <div id="main-content" class="hero-wrap"><x-import component-from-global-scope="DoxaDS.Hero" variant="photo" layout="full" headline="The Standard We Wanted Didn't Exist. So We Built It." body="DOXA was founded on a simple belief: the principles used to build a strong team should not stop applying because the person works in another country.">
@@ -105,7 +106,7 @@ div[style*="color: var(--doxa-cyan)"]{display:inline-block;width:fit-content;bac
   </section>
 
   <!-- LEADERSHIP -->
-  <section class="sec-pad" style="padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-10)">
+  <section id="leadership" class="sec-pad" style="padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-10)">
     <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Leadership Team</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-8) var(--space-6)">
       <sc-for list="{{leaders}}" as="person" hint-placeholder-count="9">
@@ -205,7 +206,7 @@ div[style*="color: var(--doxa-cyan)"]{display:inline-block;width:fit-content;bac
   </section>
 
   <!-- LEADERSHIP -->
-  <section class="sec-pad" style="padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-10)">
+  <section id="leadership" class="sec-pad" style="padding:var(--space-24) var(--container-pad);display:flex;flex-direction:column;gap:var(--space-10)">
     <h2 class="sec-h" style="margin:0;font-family:var(--font-display);font-size:var(--text-h2);font-weight:700;line-height:1.25;color:var(--text-primary)">Leadership Team</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-8) var(--space-6)">
       
