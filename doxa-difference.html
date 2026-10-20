@@ -91,7 +91,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 /* Hero — photo variant */
 .hero{position:relative;overflow:hidden;background:var(--surface-dark)}
 .hero__inner{position:relative;padding-block:var(--space-24) var(--space-20)}
-.hero__inner>*{max-width:620px}
+.hero__inner>*{max-width:none}
 .hero h1{color:var(--doxa-white);font-size:var(--text-h1);font-weight:700;margin-top:var(--space-3)}
 .hero p{color:rgba(255,255,255,.88);font-size:var(--text-body-lg);margin-top:var(--space-4)}
 
@@ -106,7 +106,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .tile{display:flex;flex-direction:column;background:var(--surface-card);border:1px solid var(--border-subtle);border-top:4px solid transparent;background-image:linear-gradient(var(--doxa-navy),var(--doxa-navy));background-size:100% 4px;background-repeat:no-repeat;background-position:0 0;background-origin:border-box;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);text-decoration:none;color:inherit;transition:box-shadow var(--duration-base) var(--ease-standard)}
 .tile__media{width:100%;height:100px;object-fit:cover;display:block;flex-shrink:0}
 .tile__body{display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-6) var(--space-5);flex:1}
-.tile:hover,.tile:active,.tile:focus-visible{background-color:var(--surface-card);background-image:var(--brand-gradient);background-size:100% 4px;background-repeat:no-repeat;background-position:0 0;background-origin:border-box;color:inherit;-webkit-text-fill-color:unset;text-decoration:none;box-shadow:var(--shadow-md);border-radius:var(--radius-lg)}
+.tile:hover,.tile:active,.tile:focus-visible{background-color:var(--surface-card);background-image:var(--brand-gradient);background-size:100% 4px;background-repeat:no-repeat;background-position:0 0;background-origin:border-box;background-clip:border-box;-webkit-background-clip:border-box;color:inherit;-webkit-text-fill-color:unset;text-decoration:none;box-shadow:var(--shadow-md);border-radius:var(--radius-lg)}
 .tile h4{font-size:var(--text-h4);font-weight:700}
 .tile__cta{display:inline-flex;align-items:center;gap:6px;font-size:var(--text-body-sm);font-weight:600;color:var(--doxa-navy);text-decoration:underline;text-underline-offset:2px;text-decoration-color:var(--doxa-navy);margin-top:auto}
 .tile__cta svg{width:14px;height:14px}
@@ -134,6 +134,15 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   .tile-grid{grid-template-columns:1fr}
   .hero__inner{padding-block:var(--space-16) var(--space-12)}
 }
+.trust-bar{background:var(--brand-gradient);color:var(--white,#fff)}
+.trust-ticker{overflow:hidden;padding-block:var(--space-5);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 96px,#000 calc(100% - 96px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 96px,#000 calc(100% - 96px),transparent 100%)}
+.trust-ticker__track{display:flex;width:max-content;animation:trust-scroll 145s linear infinite}
+.trust-ticker:hover .trust-ticker__track,.trust-ticker:focus-within .trust-ticker__track{animation-play-state:paused}
+.trust-ticker__set{display:flex;flex-shrink:0;gap:var(--space-16);padding-right:var(--space-16)}
+.trust-ticker__item{display:flex;align-items:center;gap:var(--space-2);white-space:nowrap;font-size:var(--text-body-sm);font-weight:600;color:#fff}
+.trust-ticker__item svg{flex-shrink:0}
+@keyframes trust-scroll{to{transform:translateX(-25%)}}
+@media (prefers-reduced-motion:reduce){.trust-ticker__track{animation:none}.trust-ticker__set[aria-hidden="true"]{display:none}.trust-ticker{overflow-x:auto}}
 </style>
 <link rel="stylesheet" href="ds/header.css">
 <script src="ds/header.js" defer></script>
@@ -205,6 +214,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .faq details[open] summary .glyph::after{transform:translate(-50%,-50%) scaleY(0)}
 .faq details[open] summary{background:var(--doxa-navy);color:var(--doxa-white);padding-inline:var(--space-4);border-radius:var(--radius-md)}
 .faq details[open] summary .glyph::before,.faq details[open] summary .glyph::after{background:var(--doxa-white)}
+.faq__answer{padding:var(--space-3) 24px var(--space-5) var(--space-4);font-size:var(--text-body-sm);color:var(--text-secondary);max-width:760px}
 @media (max-width:1200px){.sl-parts{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:1000px){.faq{column-count:1}@media (max-width:640px){.sl-parts{grid-template-columns:1fr}.sl-sec,.sl-quote{padding-block:var(--space-12)}.sl-hero__inner{padding-block:var(--space-16) var(--space-12)}.sl-proof ul{flex-direction:column}}
 </style>
