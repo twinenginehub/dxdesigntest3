@@ -192,17 +192,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 #compare.sl-sec--muted{background:linear-gradient(180deg,rgba(0,174,239,.08),#fff)}
 .sl-quote{background:var(--doxa-navy);padding-block:var(--space-20)}
 .sl-quote figure{margin:0;max-width:880px;padding:var(--space-8);border-radius:var(--radius-lg);background:rgba(255,255,255,.10);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
-.sl-quote__grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,3fr);gap:var(--space-8);align-items:center}
-.sl-quote__grid figure{max-width:none}
-.vf{position:relative;aspect-ratio:16/9;border-radius:var(--radius-lg);overflow:hidden;background:#000;box-shadow:var(--shadow-lg)}
-.vf__btn{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:none;cursor:pointer;display:block}
-.vf__btn img{width:100%;height:100%;object-fit:cover;display:block}
-.vf__play{position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);display:grid;place-items:center;transition:background .18s}
-.vf__btn:hover .vf__play,.vf__btn:focus-visible .vf__play{background:rgba(255,255,255,.28)}
-.vf__play svg{width:22px;height:22px;fill:#fff;margin-left:3px}
-.vf iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-@media (max-width:1024px){.sl-quote__grid{grid-template-columns:1fr}}
-@media (max-width:640px){.sl-quote .sl-quote__grid blockquote{font-size:var(--text-body)}.sl-quote .sl-quote__grid figure{padding-inline:var(--space-5)}}
+@media (max-width:640px){.sl-quote>.container>figure blockquote{font-size:var(--text-body)}.sl-quote>.container>figure{padding-inline:var(--space-5)}}
 .sl-quote h2{color:#fff;margin:0 0 var(--space-6);font-size:var(--text-h2)}
 .sl-quote blockquote{margin:0;color:#fff;font-size:var(--text-body-lg);line-height:1.65}
 .sl-quote figcaption{margin-top:var(--space-5);color:rgba(255,255,255,.85);font-size:var(--text-body-sm)}
