@@ -21,12 +21,14 @@ def header(cur):
         return f'<a href="{href}"{c}>{label}{extra}</a>'
     about_drop='<div class="nav-drop nav-drop--sm"><a href="about.html">About</a><a href="reviews.html">Testimonials</a><a href="about.html#leadership">Leadership Team</a></div>'
     sol_drop='<div class="nav-drop nav-drop--sm"><a href="solutions.html">Solutions overview</a><a href="doxa-difference.html">The DOXA Difference</a></div>'
+    IND=[("Accounting firms","accounting-firms.html"),("Law firms",None),("Healthcare &amp; medical practices",None),("MSPs &amp; IT services",None),("Real estate &amp; property management",None),("E-commerce &amp; retail",None),("Construction &amp; trades",None),("Financial services",None),("Insurance",None),("Logistics &amp; transportation",None),("SaaS &amp; technology",None),("Professional services",None),("Hospitality &amp; travel",None)]
+    ind_drop='<div class="nav-drop nav-drop--sm nav-drop--ind"><a href="industries.html" class="nav-drop__all">All industries</a>'+''.join(f'<a href="{h}">{n}</a>' if h else f'<span class="nav-drop__soon" aria-disabled="true">{n}</span>' for n,h in IND)+'</div>'
     drop=''.join(f'<a href="{h}.html">{l.replace("&","&amp;")}</a>' for l,h in ROLES)
     return ('<nav class="site-nav" aria-label="Main">'
       '<a class="site-nav__logo" href="index.html" aria-label="DOXA Talent home"><img src="doxa-logo-white.png" alt="DOXA"></a>'
       '<div class="site-nav__links" id="site-menu">'
       f'<div class="nav-item">{a("Solutions","solutions.html",CHEV)}{sol_drop}</div>'
-      f'<div class="nav-item">{a("Industries","industries.html")}</div>'
+      f'<div class="nav-item">{a("Industries","industries.html",CHEV)}{ind_drop}</div>'
       f'<div class="nav-item">{a("Accounting","accounting-firms.html")}</div>'
       f'<div class="nav-item">{a("Roles","accountant-cpa.html")}</div>'
       f'<div class="nav-item">{a("Why DOXA","about.html",CHEV)}{about_drop}</div>'

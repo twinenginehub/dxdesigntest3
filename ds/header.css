@@ -19,6 +19,9 @@
 .nav-drop--sm{min-width:200px;display:flex;flex-direction:column;gap:2px;padding:var(--space-3) var(--space-5)}
 .nav-drop--sm a{display:block;padding:var(--space-2) var(--space-3);margin-inline:calc(-1 * var(--space-3));border-radius:var(--radius-md);transition:background var(--duration-base,180ms) var(--ease-standard,ease)}
 .nav-drop--sm a:hover,.nav-drop--sm a:focus-visible{background:rgba(0,174,239,.10);color:var(--doxa-cyan-700)}
+.nav-drop--ind{min-width:520px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--space-5)}
+.nav-drop--ind .nav-drop__all{grid-column:1/-1;font-weight:700}
+.nav-drop__soon{display:block;padding:var(--space-2) var(--space-3);margin-inline:calc(-1 * var(--space-3));font-size:var(--text-body-sm);font-weight:500;color:var(--doxa-slate-400);opacity:.7;cursor:default;user-select:none}
 .nav-drop--sm::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
 .site-nav__right{display:flex;align-items:center;gap:var(--space-4)}
 .site-nav__icon{width:18px;height:18px;color:rgba(255,255,255,.7)}
@@ -50,6 +53,7 @@
   .nav-item .nav-drop--sm,.nav-item:hover .nav-drop--sm,.nav-item:focus-within .nav-drop--sm{display:flex;flex-direction:column;position:static;opacity:1;pointer-events:auto;transform:none;min-width:0;background:none;border:0;box-shadow:none;padding:0 0 var(--space-2) var(--space-4)}
   .nav-drop--sm a{color:rgba(255,255,255,.85);padding:var(--space-3) var(--space-1);font-size:var(--text-body-sm)}
   .nav-drop--sm a:hover{color:#fff}
+  .nav-drop__soon{color:rgba(255,255,255,.4);opacity:1;padding:var(--space-3) var(--space-1);margin-inline:0}
 }
 
 /* Mobile and tablet menu layout (1240px and below): the CTA lives in the opened menu, not in the bar */
