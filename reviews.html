@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reviews | DOXA Talent</title>
+<title>Testimonials | DOXA Talent</title>
 <style>
 @font-face{font-family:'Work Sans';src:url('fonts/WorkSans-Light.ttf') format('truetype');font-weight:300;font-style:normal;font-display:swap}
 @font-face{font-family:'Work Sans';src:url('fonts/WorkSans-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
@@ -89,7 +89,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 /* Hero — photo variant */
 .hero{position:relative;overflow:hidden;background:var(--surface-dark)}
 .hero__inner{position:relative;padding-block:var(--space-24) var(--space-20)}
-.hero__inner>*{max-width:620px}
+.hero__inner>*{max-width:none}
 .hero h1{color:var(--doxa-white);font-size:var(--text-h1);font-weight:700;margin-top:var(--space-3)}
 .hero p{color:rgba(255,255,255,.88);font-size:var(--text-body-lg);margin-top:var(--space-4)}
 
@@ -132,6 +132,15 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
   .tile-grid{grid-template-columns:1fr}
   .hero__inner{padding-block:var(--space-16) var(--space-12)}
 }
+.trust-bar{background:var(--brand-gradient);color:var(--white,#fff)}
+.trust-ticker{overflow:hidden;padding-block:var(--space-5);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 96px,#000 calc(100% - 96px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 96px,#000 calc(100% - 96px),transparent 100%)}
+.trust-ticker__track{display:flex;width:max-content;animation:trust-scroll 145s linear infinite}
+.trust-ticker:hover .trust-ticker__track,.trust-ticker:focus-within .trust-ticker__track{animation-play-state:paused}
+.trust-ticker__set{display:flex;flex-shrink:0;gap:var(--space-16);padding-right:var(--space-16)}
+.trust-ticker__item{display:flex;align-items:center;gap:var(--space-2);white-space:nowrap;font-size:var(--text-body-sm);font-weight:600;color:#fff}
+.trust-ticker__item svg{flex-shrink:0}
+@keyframes trust-scroll{to{transform:translateX(-25%)}}
+@media (prefers-reduced-motion:reduce){.trust-ticker__track{animation:none}.trust-ticker__set[aria-hidden="true"]{display:none}.trust-ticker{overflow-x:auto}}
 </style>
 <link rel="stylesheet" href="ds/header.css">
 <script src="ds/header.js" defer></script>
@@ -139,6 +148,11 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 <style>
 .rv-hero{position:relative;overflow:hidden;background:var(--surface-dark)}
 .rv-hero__inner{padding-block:var(--space-24) var(--space-20);max-width:860px}
+.breadcrumb{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0;font-size:var(--text-body-sm);color:rgba(255,255,255,.7)}
+.breadcrumb a{color:rgba(255,255,255,.7);text-decoration:none}
+.breadcrumb a:hover{background:none;-webkit-text-fill-color:unset;color:#fff}
+.breadcrumb .current{color:#fff;font-weight:600}
+.breadcrumb .sep{color:rgba(255,255,255,.4);font-weight:700}
 .rv-hero h1{color:#fff;font-size:var(--text-h1);font-weight:700;margin:var(--space-3) 0 0;line-height:1.15}
 .rv-hero a.jump{display:inline-flex;align-items:center;gap:8px;margin-top:var(--space-6);color:#fff;font-weight:600;text-decoration:none;border-bottom:1.5px solid rgba(255,255,255,.5);padding-bottom:2px}
 .rv-hero a.jump:hover{color:#fff;-webkit-text-fill-color:#fff;border-color:#fff}
@@ -199,7 +213,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 
 <header class="rv-hero">
   <div class="container rv-hero__inner">
-    <div class="eyebrow eyebrow--on-dark"><svg viewBox="0 0 25.22 37.46" width="7" height="10" fill="currentColor" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"></path></svg>Reviews</div>
+    <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="about.html">Why DOXA</a></li><li class="sep" aria-hidden="true">&rsaquo;</li><li class="current" aria-current="page">Testimonials</li></ol>
     <h1>Business owners and leaders love <span style="background:var(--brand-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent">working with DOXA<sup style="font-size:.45em;line-height:0">&reg;</sup></span></h1>
     <a class="jump" href="#reviews">Read the reviews</a>
   </div>
