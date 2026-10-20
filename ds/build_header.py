@@ -11,6 +11,7 @@ def current_for(page):
     if n=='index.html': return 'Home'
     if n=='about.html': return 'About'
     if n=='industries.html': return 'Industries'
+    if n=='reviews.html': return ''
     if n=='accounting-firms.html': return 'Accounting'
     return 'Roles'    # talent index, role pages, country pages
 def header(cur):
