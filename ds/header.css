@@ -186,3 +186,9 @@ html:active-view-transition-type(pixelate-dissolve)::view-transition-new(root) {
 @keyframes tw-caret{from,to{opacity:1}}
 @keyframes tw-blink{0%{opacity:1}50%{opacity:0}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.tw-c{opacity:1;animation:none}.tw-c::after{display:none}}
+
+/* Page side margins are 50% larger on desktop and tablet-landscape (>= 861px). The nav keeps the original gutter so all seven links still fit. */
+@media (min-width:861px){
+  html:root{--container-pad:clamp(36px,3rem + 7.5vw,188px)}
+  html:root .site-nav{padding-inline:clamp(24px,2rem + 5vw,125px)}
+}
