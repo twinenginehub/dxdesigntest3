@@ -33,7 +33,7 @@
 .site-nav.is-open .site-nav__toggle .icon-open{display:none}
 .site-nav.is-open .site-nav__toggle .icon-close{display:block}
 .site-nav__toggle:focus-visible,.site-nav a:focus-visible{outline:2px solid var(--doxa-cyan);outline-offset:2px}
-@media (max-width:860px){
+@media (max-width:1240px){
   .site-nav{gap:var(--space-3)}
   .site-nav__logo img{margin-right:0}
   .site-nav__icon{display:none}
@@ -45,9 +45,9 @@
   .nav-item svg,.nav-drop{display:none}
 }
 
-/* Mobile and tablet menu layout (860px and below): the CTA lives in the opened menu, not in the bar */
+/* Mobile and tablet menu layout (1240px and below): the CTA lives in the opened menu, not in the bar */
 .nav-item--cta{display:none}
-@media (max-width:860px){
+@media (max-width:1240px){
   .site-nav__right .site-nav__cta{display:none}
   .nav-item--cta{display:block;border-bottom:0;padding-top:var(--space-4)}
   .nav-item--cta .site-nav__cta{display:flex;width:100%;min-height:44px}

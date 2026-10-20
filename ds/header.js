@@ -14,7 +14,7 @@
     if (e.key === 'Escape') document.querySelectorAll('.site-nav.is-open').forEach(function (n) { set(n, false); var b = n.querySelector('.site-nav__toggle'); if (b) b.focus(); });
   });
   window.addEventListener('resize', function () {
-    if (window.innerWidth > 860) document.querySelectorAll('.site-nav.is-open').forEach(function (n) { set(n, false); });
+    if (window.innerWidth > 1240) document.querySelectorAll('.site-nav.is-open').forEach(function (n) { set(n, false); });
   });
 })();
 
