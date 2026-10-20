@@ -210,7 +210,8 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 </style>
 <style>
 .sl-hero__inner{max-width:none}
-.sl-hero p{max-width:none}
+.sl-hero__inner>h1,.sl-hero__inner>p{max-width:80%}
+@media (max-width:640px){.sl-hero__inner>h1,.sl-hero__inner>p{max-width:none}}
 .dd-three{display:grid;gap:var(--space-6);grid-template-columns:repeat(3,minmax(0,1fr))}
 .dd-three .sl-part p{font-size:var(--text-body);line-height:1.6}
 .dd-q{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-4);counter-reset:q}
