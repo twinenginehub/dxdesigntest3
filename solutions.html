@@ -178,14 +178,16 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .sl-proof ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-4) var(--space-8)}
 .sl-proof li{font-weight:700;font-size:var(--text-body-lg);display:flex;flex-direction:row;align-items:baseline;gap:var(--space-2)}
 .sl-proof li span{font-weight:500;font-size:var(--text-caption);letter-spacing:.08em;text-transform:uppercase;opacity:.9}
-.sl-table-wrap{overflow-x:auto;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);background:#fff}
+.sl-table-wrap{overflow-x:auto;border:1px solid var(--border-subtle);border-left:0;border-right:0;border-radius:0;background:#fff}
 .sl-table{width:100%;min-width:860px;border-collapse:separate;border-spacing:0;font-size:var(--text-body-sm)}
 .sl-table th,.sl-table td{text-align:left;vertical-align:top;padding:var(--space-4);border-bottom:1px solid var(--border-subtle);line-height:1.5;color:var(--text-secondary)}
 .sl-table tr:last-child th,.sl-table tr:last-child td{border-bottom:0}
-.sl-table thead th{color:var(--doxa-navy);font-weight:700;background:var(--doxa-fog-50)}
+.sl-table thead th{color:#fff;font-weight:700;background:var(--doxa-navy);border-bottom:0}
 .sl-table tbody th{color:var(--doxa-navy);font-weight:600;width:19%}
-.sl-table .is-doxa{background:rgba(0,174,239,.06);color:var(--doxa-navy);font-weight:500}
-.sl-table thead .is-doxa{background:var(--doxa-navy);color:#fff}
+.sl-table tbody tr:nth-child(even) th,.sl-table tbody tr:nth-child(even) td{background-color:rgba(0,174,239,.05)}
+.sl-table tbody .is-doxa{font-weight:600}
+.sl-table tbody .is-doxa span{background:var(--brand-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.sl-table thead .is-doxa{color:#fff;-webkit-text-fill-color:#fff;font-weight:700;background:var(--doxa-navy)}
 .sl-quote{background:var(--doxa-navy);padding-block:var(--space-20)}
 .sl-quote figure{margin:0;max-width:880px;padding:var(--space-8);border-radius:var(--radius-lg);background:rgba(255,255,255,.10);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
 .sl-quote h2{color:#fff;margin:0 0 var(--space-6);font-size:var(--text-h2)}
@@ -256,7 +258,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
     </div>
     <div class="sl-table-wrap"><table class="sl-table">
       <thead><tr><th scope="col">Question</th><th scope="col" class="is-doxa">DOXA managed offshore staffing</th><th scope="col">Traditional BPO</th><th scope="col">EOR</th><th scope="col">VA marketplace</th></tr></thead>
-      <tbody><tr><th scope="row">Who employs the person?</th><td class="is-doxa">DOXA directly employs the professional</td><td>The BPO provider</td><td>The EOR provider</td><td>Usually an independent contractor</td></tr><tr><th scope="row">Who recruits?</th><td class="is-doxa">DOXA recruits to the client role</td><td>Provider recruits for its delivery model</td><td>Client typically sources the person</td><td>Client selects from marketplace profiles</td></tr><tr><th scope="row">Who directs day-to-day work?</th><td class="is-doxa">Client</td><td>Provider typically manages the outsourced process or team</td><td>Client</td><td>Client</td></tr><tr><th scope="row">Equipment and security</th><td class="is-doxa">DOXA-managed equipment and security controls</td><td>Varies by provider and engagement</td><td>Usually client responsibility unless added</td><td>Varies by individual and marketplace</td></tr><tr><th scope="row">Ongoing development and support</th><td class="is-doxa">Included in the DOXA model</td><td>Varies</td><td>Not the core EOR service</td><td>Varies</td></tr><tr><th scope="row">Pricing structure</th><td class="is-doxa">One transparent DOXA rate per professional</td><td>Usually seat, team, or process based</td><td>Employment fee plus compensation and related costs</td><td>Usually hourly, project, or marketplace based</td></tr></tbody>
+      <tbody><tr><th scope="row">Who employs the person?</th><td class="is-doxa"><span>DOXA directly employs the professional</span></td><td>The BPO provider</td><td>The EOR provider</td><td>Usually an independent contractor</td></tr><tr><th scope="row">Who recruits?</th><td class="is-doxa"><span>DOXA recruits to the client role</span></td><td>Provider recruits for its delivery model</td><td>Client typically sources the person</td><td>Client selects from marketplace profiles</td></tr><tr><th scope="row">Who directs day-to-day work?</th><td class="is-doxa"><span>Client</span></td><td>Provider typically manages the outsourced process or team</td><td>Client</td><td>Client</td></tr><tr><th scope="row">Equipment and security</th><td class="is-doxa"><span>DOXA-managed equipment and security controls</span></td><td>Varies by provider and engagement</td><td>Usually client responsibility unless added</td><td>Varies by individual and marketplace</td></tr><tr><th scope="row">Ongoing development and support</th><td class="is-doxa"><span>Included in the DOXA model</span></td><td>Varies</td><td>Not the core EOR service</td><td>Varies</td></tr><tr><th scope="row">Pricing structure</th><td class="is-doxa"><span>One transparent DOXA rate per professional</span></td><td>Usually seat, team, or process based</td><td>Employment fee plus compensation and related costs</td><td>Usually hourly, project, or marketplace based</td></tr></tbody>
     </table></div>
   </div>
 </section>

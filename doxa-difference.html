@@ -178,14 +178,16 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
 .sl-proof ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-4) var(--space-8)}
 .sl-proof li{font-weight:700;font-size:var(--text-body-lg);display:flex;flex-direction:row;align-items:baseline;gap:var(--space-2)}
 .sl-proof li span{font-weight:500;font-size:var(--text-caption);letter-spacing:.08em;text-transform:uppercase;opacity:.9}
-.sl-table-wrap{overflow-x:auto;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);background:#fff}
+.sl-table-wrap{overflow-x:auto;border:1px solid var(--border-subtle);border-left:0;border-right:0;border-radius:0;background:#fff}
 .sl-table{width:100%;min-width:860px;border-collapse:separate;border-spacing:0;font-size:var(--text-body-sm)}
 .sl-table th,.sl-table td{text-align:left;vertical-align:top;padding:var(--space-4);border-bottom:1px solid var(--border-subtle);line-height:1.5;color:var(--text-secondary)}
 .sl-table tr:last-child th,.sl-table tr:last-child td{border-bottom:0}
-.sl-table thead th{color:var(--doxa-navy);font-weight:700;background:var(--doxa-fog-50)}
+.sl-table thead th{color:#fff;font-weight:700;background:var(--doxa-navy);border-bottom:0}
 .sl-table tbody th{color:var(--doxa-navy);font-weight:600;width:19%}
-.sl-table .is-doxa{background:rgba(0,174,239,.06);color:var(--doxa-navy);font-weight:500}
-.sl-table thead .is-doxa{background:var(--doxa-navy);color:#fff}
+.sl-table tbody tr:nth-child(even) th,.sl-table tbody tr:nth-child(even) td{background-color:rgba(0,174,239,.05)}
+.sl-table tbody .is-doxa{font-weight:600}
+.sl-table tbody .is-doxa span{background:var(--brand-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.sl-table thead .is-doxa{color:#fff;-webkit-text-fill-color:#fff;font-weight:700;background:var(--doxa-navy)}
 .sl-quote{background:var(--doxa-navy);padding-block:var(--space-20)}
 .sl-quote figure{margin:0;max-width:880px;padding:var(--space-8);border-radius:var(--radius-lg);background:rgba(255,255,255,.10);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
 .sl-quote h2{color:#fff;margin:0 0 var(--space-6);font-size:var(--text-h2)}
@@ -307,7 +309,7 @@ a.ds-btn:hover{background-clip:border-box;-webkit-background-clip:border-box;-we
     </div>
     <div class="sl-table-wrap"><table class="sl-table" style="min-width:640px">
       <thead><tr><th scope="col"></th><th scope="col" class="is-doxa">DOXA</th><th scope="col">Freelance</th><th scope="col">US hire</th></tr></thead>
-      <tbody><tr><th scope="row">Vetted talent</th><td class="is-doxa">Yes</td><td>No</td><td>Varies</td></tr><tr><th scope="row">SOC 2 Type II</th><td class="is-doxa">Yes</td><td>No</td><td>Varies</td></tr><tr><th scope="row">Encrypted DOXA-issued device</th><td class="is-doxa">Yes</td><td>No</td><td>No, rarely</td></tr><tr><th scope="row">Employer of Record</th><td class="is-doxa">Yes</td><td>No</td><td>No, your burden</td></tr><tr><th scope="row">Structured onboarding</th><td class="is-doxa">Yes</td><td>No</td><td>Varies, sometimes</td></tr><tr><th scope="row">HR, payroll &amp; benefits</th><td class="is-doxa">Yes, handled by DOXA</td><td>No</td><td>No, your cost</td></tr><tr><th scope="row">Cost vs U.S. hire</th><td class="is-doxa">Up to 70% savings</td><td>Varies</td><td>Full cost</td></tr><tr><th scope="row">Your time zone</th><td class="is-doxa">Yes</td><td>No</td><td>Yes</td></tr></tbody>
+      <tbody><tr><th scope="row">Vetted talent</th><td class="is-doxa"><span>Yes</span></td><td>No</td><td>Varies</td></tr><tr><th scope="row">SOC 2 Type II</th><td class="is-doxa"><span>Yes</span></td><td>No</td><td>Varies</td></tr><tr><th scope="row">Encrypted DOXA-issued device</th><td class="is-doxa"><span>Yes</span></td><td>No</td><td>No, rarely</td></tr><tr><th scope="row">Employer of Record</th><td class="is-doxa"><span>Yes</span></td><td>No</td><td>No, your burden</td></tr><tr><th scope="row">Structured onboarding</th><td class="is-doxa"><span>Yes</span></td><td>No</td><td>Varies, sometimes</td></tr><tr><th scope="row">HR, payroll &amp; benefits</th><td class="is-doxa"><span>Yes, handled by DOXA</span></td><td>No</td><td>No, your cost</td></tr><tr><th scope="row">Cost vs U.S. hire</th><td class="is-doxa"><span>Up to 70% savings</span></td><td>Varies</td><td>Full cost</td></tr><tr><th scope="row">Your time zone</th><td class="is-doxa"><span>Yes</span></td><td>No</td><td>Yes</td></tr></tbody>
     </table></div>
   </div>
 </section>
