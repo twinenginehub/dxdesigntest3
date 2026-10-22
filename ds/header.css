@@ -206,3 +206,6 @@ html:active-view-transition-type(pixelate-dissolve)::view-transition-new(root) {
   .sl-car-prev svg{transform:rotate(180deg)}
   .sl-car-count{min-width:56px;text-align:center;font-weight:600;font-size:var(--text-body-sm);color:var(--text-secondary)}
 }
+
+/* Footer brand description fills its column instead of stopping at 280px */
+footer > div:first-child > div:first-child > p{max-width:none !important}
