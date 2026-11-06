@@ -6,7 +6,7 @@ import { QUESTIONS, COMPANY, byId, OTHER } from './questions.js';
 const UI = {
   password: 'Password', signIn: 'Sign in', signingIn: 'Signing in…', badPassword: 'Incorrect password.', locked: 'Too many attempts. Try again in 15 minutes.',
   notConfigured: 'The dashboard is not configured yet.', loadFailed: 'Could not load the results.',
-  title: 'ICP survey results', toc: 'Contents', tocOverview: 'Overview',
+  title: 'ICP survey results', toc: 'Contents', email: 'Email address', tocOverview: 'Overview',
   hint: 'Click any bar, segment or word to filter every chart on this page. Click it again to undo.',
   showing: (n, total) => `Showing ${n} of ${total} responses`, clearAll: 'Clear all filters',
   responses: 'Responses', completion: 'Completion rate', nps: 'Net promoter score', median: 'Median time to complete',
@@ -277,6 +277,7 @@ function qaList(r) {
     else node = val != null && val !== '' ? document.createTextNode(String(val)) : null;
     out.push(el('div', { class: 'dx-qa' }, el('dt', {}, label), el('dd', {}, node || UI.notAnswered)));
   };
+  add(UI.email, r.email);
   for (const q of QUESTIONS) {
     const lab = `${q.n}${q.sub || ''}. ${q.short}`;
     if (q.id === 'industry') add(lab, r.industry === OTHER ? `${r.industry}: ${r.industry_other || ''}` : r.industry);

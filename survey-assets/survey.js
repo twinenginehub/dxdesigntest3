@@ -8,6 +8,8 @@ const UI = {
   welcomeHeading: 'Welcome to the DOXA Talent client survey',
   welcomeBody: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
   getStarted: 'Get Started',
+  emailLabel: 'Email address',
+  emailInvalid: 'Please enter a valid email address.',
   next: 'Next', back: 'Back', skip: 'Skip', submit: 'Submit', sending: 'Sending…',
   questionOf: (n, t) => `Question ${n} of ${t}`,
   chooseOne: 'Please choose an option.',
@@ -28,6 +30,7 @@ const UI = {
   rateLimited: 'Too many submissions from this network. Please try again later.',
 };
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const DRAFT_KEY = 'dx_survey_draft_v1';
 const CHECK = '<svg viewBox="0 0 10 8" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 4l2.5 2.5L9 1"/></svg>';
 const CHEV = '<svg viewBox="0 0 25.22 37.46" aria-hidden="true"><path d="M12.42,0s-.09,0-.14,0H.87c3.92,6.27,7.96,12.01,11.76,17.94C8.5,24.29,4.42,30.57.26,36.98c-.05.08-.21.35-.26.43,0,0,.86.02,1.11.02,1.23,0,2.45,0,3.68,0,2.31,0,4.61,0,6.92.03h.08c.95-.01,1.41-.51,1.86-1.24,1.66-2.68,5.8-9.05,6.51-10.12l5.06-8.29-5.06-7.71c-.39-.54-.63-.85-.84-1.19-1.62-2.57-3.26-5.13-4.84-7.72-.49-.81-1.08-1.2-2-1.21h-.05Z"/></svg>';
@@ -262,10 +265,22 @@ function show() {
   saveDraft();
 
   if (step.kind === 'welcome') {
-    const start = el('button', { type: 'button', class: 'sv-btn', id: 'sv-start', onclick: () => move(1) }, UI.getStarted, el('span', { html: CHEV }));
+    const start = el('button', { type: 'submit', class: 'sv-btn', id: 'sv-start' }, UI.getStarted, el('span', { html: CHEV }));
     const h = el('h1', { class: 'sv-q', tabindex: '-1', id: 'sv-q' }, UI.welcomeHeading);
-    card.replaceChildren(el('div', { class: 'sv-step sv-welcome', role: 'group', 'aria-labelledby': 'sv-q' },
-      h, el('p', { class: 'sv-welcome__body' }, UI.welcomeBody), el('div', { class: 'sv-actions sv-actions--start' }, start)));
+    const email = el('input', { class: 'sv-input', type: 'email', id: 'f_email', name: 'email', maxlength: 254, autocomplete: 'email', inputmode: 'email', value: a.email || '', required: true, 'aria-describedby': 'sv-error' });
+    const err = el('p', { class: 'sv-error', id: 'sv-error', role: 'alert' });
+    email.addEventListener('input', () => { a.email = email.value.trim(); err.textContent = ''; saveDraft(); });
+    const form = el('form', { class: 'sv-step sv-welcome', novalidate: true, 'aria-labelledby': 'sv-q' },
+      h, el('p', { class: 'sv-welcome__body' }, UI.welcomeBody),
+      el('div', { class: 'sv-body' }, el('div', { class: 'sv-field' }, el('label', { class: 'sv-label', for: 'f_email' }, UI.emailLabel), email), err),
+      el('div', { class: 'sv-actions sv-actions--start' }, start));
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      a.email = email.value.trim();
+      if (!EMAIL_RE.test(a.email)) { err.textContent = UI.emailInvalid; email.focus(); return; }
+      move(1);
+    });
+    card.replaceChildren(form);
     window.scrollTo({ top: 0, behavior: 'auto' });
     h.focus({ preventScroll: true });
     return;
