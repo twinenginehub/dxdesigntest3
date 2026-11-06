@@ -16,7 +16,7 @@ const UI = {
   rank1: 'Ranked 1st', rank2: 'Ranked 2nd', rank3: 'Ranked 3rd',
   tabOutcome: 'What they can do now', tabFollow: 'Who they would tell', tabBoth: 'Both',
   showAll: (n) => `Show all ${n}`, showFewer: 'Show fewer', prev: 'Previous', next: 'Next', pageOf: (p, t) => `Page ${p} of ${t}`,
-  colCompany: 'Company', colIndustry: 'Industry', colNps: 'Score', colDate: 'Submitted',
+  colCompany: 'Company', colEmail: 'Email', colIndustry: 'Industry', colNps: 'Score', colDate: 'Submitted',
   close: 'Close', notAnswered: 'Not answered',
 };
 
@@ -263,9 +263,9 @@ function tableCard(rows) {
   S.page = Math.min(S.page, pages - 1);
   const slice = rows.slice(S.page * PAGE, S.page * PAGE + PAGE);
   const tbody = el('tbody', {}, slice.map((r) => el('tr', { onclick: () => openDrawer(r) },
-    el('td', {}, el('button', { type: 'button', onclick: (e) => { e.stopPropagation(); openDrawer(r); } }, r.company_name)), el('td', {}, industryLabel(r)), el('td', {}, r.nps == null ? '–' : String(r.nps)), el('td', {}, fmtDate(r.submitted_at)))));
+    el('td', {}, el('button', { type: 'button', onclick: (e) => { e.stopPropagation(); openDrawer(r); } }, r.company_name)), el('td', { class: 'dx-table__email' }, r.email || '–'), el('td', {}, industryLabel(r)), el('td', {}, r.nps == null ? '–' : String(r.nps)), el('td', {}, fmtDate(r.submitted_at)))));
   return el('section', { class: 'dx-card dx-card--wide' }, el('h2', {}, UI.all), el('p', { class: 'dx-card__sub' }, UI.showing(rows.length, S.rows.length)),
-    el('div', { class: 'dx-tablewrap' }, el('table', { class: 'dx-table' }, el('thead', {}, el('tr', {}, [UI.colCompany, UI.colIndustry, UI.colNps, UI.colDate].map((h) => el('th', { scope: 'col' }, h)))), tbody)),
+    el('div', { class: 'dx-tablewrap' }, el('table', { class: 'dx-table' }, el('thead', {}, el('tr', {}, [UI.colCompany, UI.colEmail, UI.colIndustry, UI.colNps, UI.colDate].map((h) => el('th', { scope: 'col' }, h)))), tbody)),
     el('div', { class: 'dx-pager' }, el('button', { type: 'button', disabled: S.page === 0 ? true : null, onclick: () => { S.page--; render(); } }, UI.prev), el('span', {}, UI.pageOf(S.page + 1, pages)), el('button', { type: 'button', disabled: S.page >= pages - 1 ? true : null, onclick: () => { S.page++; render(); } }, UI.next)));
 }
 

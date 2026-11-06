@@ -166,3 +166,4 @@ html{scroll-behavior:smooth}
   .dx-filters{top:108px}
   .dx-content [id]{scroll-margin-top:170px}
 }
+.dx-table .dx-table__email{overflow-wrap:anywhere;min-width:160px}
