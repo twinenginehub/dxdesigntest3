@@ -98,3 +98,8 @@ fieldset.sv-group{border:0;margin:0;padding:0;min-width:0;display:grid;gap:var(-
   .sv-progress__label{font-size:11px}
   .sv-btn{padding:12px 22px}
 }
+
+/* welcome step */
+.sv-welcome__body{margin:var(--space-4) 0 0;font-size:var(--text-body-lg);line-height:1.6;color:var(--text-secondary)}
+.sv-actions--start{justify-content:flex-start}
+@media (max-width:640px){.sv-actions--start{position:static;margin:var(--space-6) 0 0;padding:0;border:0}.sv-actions--start .sv-btn{width:100%}}

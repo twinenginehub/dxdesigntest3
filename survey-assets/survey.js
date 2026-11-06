@@ -4,6 +4,10 @@ import { COMPANY, QUESTIONS, TOTAL_QUESTIONS, OTHER, byId } from './questions.js
 // Interface strings that are not question wording. Edit here; nothing else needs to change.
 const UI = {
   title: 'DOXA Talent ICP Client Survey',
+  // Placeholder welcome copy: replace with approved wording.
+  welcomeHeading: 'Welcome to the DOXA Talent client survey',
+  welcomeBody: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+  getStarted: 'Get Started',
   next: 'Next', back: 'Back', skip: 'Skip', submit: 'Submit', sending: 'Sending…',
   questionOf: (n, t) => `Question ${n} of ${t}`,
   chooseOne: 'Please choose an option.',
@@ -45,10 +49,10 @@ const uid = () => (crypto.randomUUID ? crypto.randomUUID() : 'xxxxxxxx-xxxx-4xxx
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // ---------- state ----------
-let state = loadDraft() || { sid: uid(), startedAt: Date.now(), answers: {}, stepId: COMPANY.id };
+let state = loadDraft() || { sid: uid(), startedAt: Date.now(), answers: {}, stepId: 'welcome' };
 const steps = () => {
   const a = state.answers;
-  const list = [{ id: COMPANY.id, kind: 'company' }];
+  const list = [{ id: 'welcome', kind: 'welcome' }, { id: COMPANY.id, kind: 'company' }];
   for (const q of QUESTIONS) {
     if (q.id === 'main_trigger' && (a.triggers || []).length < 2) continue; // only ask when there is something to choose between
     list.push({ id: q.id, kind: 'question', q });
@@ -79,7 +83,7 @@ function renderProgress(list, idx, finished) {
   fill.style.width = pct + '%';
   bar.setAttribute('aria-valuenow', String(pct));
   const s = list[idx];
-  label.textContent = finished || s.kind === 'company' ? '' : UI.questionOf(s.q.n, TOTAL_QUESTIONS);
+  label.textContent = finished || s.kind === 'company' || s.kind === 'welcome' ? '' : UI.questionOf(s.q.n, TOTAL_QUESTIONS);
   bar.setAttribute('aria-valuetext', label.textContent || `${pct}%`);
 }
 
@@ -255,8 +259,18 @@ function show() {
   else if ((a.triggers || []).length === 0 || !(a.triggers || []).includes(a.main_trigger)) delete a.main_trigger;
 
   renderProgress(list, idx, false);
-  ping(questionNumber(step));
   saveDraft();
+
+  if (step.kind === 'welcome') {
+    const start = el('button', { type: 'button', class: 'sv-btn', id: 'sv-start', onclick: () => move(1) }, UI.getStarted, el('span', { html: CHEV }));
+    const h = el('h1', { class: 'sv-q', tabindex: '-1', id: 'sv-q' }, UI.welcomeHeading);
+    card.replaceChildren(el('div', { class: 'sv-step sv-welcome', role: 'group', 'aria-labelledby': 'sv-q' },
+      h, el('p', { class: 'sv-welcome__body' }, UI.welcomeBody), el('div', { class: 'sv-actions sv-actions--start' }, start)));
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    h.focus({ preventScroll: true });
+    return;
+  }
+  ping(questionNumber(step));
 
   const isLast = idx === list.length - 1;
   const errBox = el('p', { class: 'sv-error', id: 'sv-error', role: 'alert' });
