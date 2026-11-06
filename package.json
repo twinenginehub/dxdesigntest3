@@ -1,0 +1,16 @@
+{
+  "name": "dxdesigntest3",
+  "private": true,
+  "type": "module",
+  "description": "DOXA marketing site (static) plus the ICP survey API (Vercel functions, Postgres).",
+  "scripts": {
+    "dev": "node dev-server.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "pg": "8.13.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.2.17"
+  }
+}

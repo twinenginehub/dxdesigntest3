@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DOXA ICP Survey Dashboard</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/survey-assets/tokens.css">
+<link rel="stylesheet" href="/survey-assets/dashboard.css">
+</head>
+<body>
+<header class="dx-top">
+  <div class="dx-top__bar">
+    <img src="/doxa-logo-white.png" alt="DOXA">
+    <nav class="dx-top__actions" id="dx-actions" hidden>
+      <a class="dx-top__link" href="/api/survey/export" download>Download CSV</a>
+      <button type="button" class="dx-top__link" id="dx-signout">Sign out</button>
+    </nav>
+  </div>
+</header>
+
+<main class="dx-main" id="dx-main">
+  <p class="dx-note" id="dx-loading">Loading…</p>
+</main>
+
+<dialog class="dx-drawer" id="dx-drawer" aria-labelledby="dx-drawer-title"></dialog>
+<script type="module" src="/survey-assets/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* DOXA design tokens, copied from the client design system (Work Sans, brand colors, spacing, radii, shadows). */
+@font-face{font-family:'Work Sans';src:url('../fonts/WorkSans-Light.ttf') format('truetype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Work Sans';src:url('../fonts/WorkSans-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Work Sans';src:url('../fonts/WorkSans-Medium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Work Sans';src:url('../fonts/WorkSans-SemiBold.ttf') format('truetype');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Work Sans';src:url('../fonts/WorkSans-Bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Work Sans';src:url('../fonts/WorkSans-ExtraBold.ttf') format('truetype');font-weight:800;font-style:normal;font-display:swap}
+:root{
+  --doxa-navy:#052538; --doxa-cyan:#00AEEF; --doxa-green:#05AF72; --doxa-white:#FFFFFF;
+  --surface-dark-alt:#0d3a52; --doxa-cyan-dark:#0090c8; --doxa-cyan-700:#007099; --doxa-green-dark:#048f5d;
+  --doxa-fog-50:rgba(0,174,239,.08); --doxa-fog-100:#e7edf1; --doxa-fog-200:#cdd9e0; --doxa-slate-400:#6b8494; --doxa-slate-600:#3d5566;
+  --surface-page:var(--doxa-white); --surface-muted:var(--doxa-fog-50); --surface-card:var(--doxa-white); --surface-dark:var(--doxa-navy);
+  --text-primary:var(--doxa-navy); --text-secondary:var(--doxa-slate-600); --text-muted:var(--doxa-slate-400); --text-inverse:var(--doxa-white);
+  --border-subtle:var(--doxa-fog-200); --brand-gradient:linear-gradient(90deg,var(--doxa-cyan) 0%,var(--doxa-green) 100%);
+  --radius-sm:2px; --radius-md:5px; --radius-lg:8px; --radius-circle:50%;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:20px; --space-6:24px; --space-8:32px; --space-10:40px; --space-12:48px; --space-16:64px; --space-20:80px;
+  --shadow-sm:0 1px 2px rgba(5,37,56,.06); --shadow-md:0 4px 12px rgba(5,37,56,.10); --shadow-lg:0 12px 32px rgba(5,37,56,.14);
+  --focus-ring:var(--doxa-cyan-700);
+  --font-display:'Work Sans',Arial,Helvetica,sans-serif; --font-body:'Work Sans',Arial,Helvetica,sans-serif;
+  --text-h1:clamp(2rem, calc(1.4rem + 2vw), 2.75rem); --text-h2:clamp(1.5rem, calc(1.2rem + 1.1vw), 2rem);
+  --text-h3:1.25rem; --text-body-lg:1.125rem; --text-body:1rem; --text-body-sm:.875rem; --text-caption:.75rem;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font-body);font-size:var(--text-body);line-height:1.5;color:var(--text-primary);background:var(--surface-muted)}
+:focus-visible{outline:3px solid var(--focus-ring);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important}}

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /survey
+Disallow: /survey/
+Disallow: /survey.html
+Disallow: /survey-dashboard.html
+Disallow: /survey-assets/
+Disallow: /api/
