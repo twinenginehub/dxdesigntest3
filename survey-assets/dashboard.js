@@ -6,7 +6,7 @@ import { QUESTIONS, COMPANY, byId, OTHER } from './questions.js';
 const UI = {
   password: 'Password', signIn: 'Sign in', signingIn: 'Signing in…', badPassword: 'Incorrect password.', locked: 'Too many attempts. Try again in 15 minutes.',
   notConfigured: 'The dashboard is not configured yet.', loadFailed: 'Could not load the results.',
-  title: 'ICP survey results',
+  title: 'ICP survey results', toc: 'Contents', tocOverview: 'Overview',
   hint: 'Click any bar, segment or word to filter every chart on this page. Click it again to undo.',
   showing: (n, total) => `Showing ${n} of ${total} responses`, clearAll: 'Clear all filters',
   responses: 'Responses', completion: 'Completion rate', nps: 'Net promoter score', median: 'Median time to complete',
@@ -318,6 +318,23 @@ function kpis(rows) {
     k(fmtDur(med), UI.median, 'times over an hour are left out'));
 }
 
+
+// ---------- table of contents: highlight the section being read ----------
+let spy;
+function watchSections(ids) {
+  if (spy) spy.disconnect();
+  const links = new Map(ids.map((id) => [id, $(`.dx-toc [data-toc="${id}"]`)]));
+  const setActive = (id) => links.forEach((a, k) => { if (a) { a.classList.toggle('is-active', k === id); if (k === id) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current'); } });
+  const visible = new Set();
+  spy = new IntersectionObserver((entries) => {
+    entries.forEach((e) => (e.isIntersecting ? visible.add(e.target.id) : visible.delete(e.target.id)));
+    const first = ids.find((id) => visible.has(id));
+    if (first) setActive(first);
+  }, { rootMargin: '-150px 0px -65% 0px' });
+  ids.forEach((id) => { const t = document.getElementById(id); if (t) spy.observe(t); });
+  setActive(ids[0]);
+}
+
 // ---------- page ----------
 function render() {
   tmUsed = false;
@@ -328,20 +345,30 @@ function render() {
     el('span', { class: 'dx-filters__count' }, UI.showing(rows.length, S.rows.length)),
     chips, chips.length ? el('button', { type: 'button', class: 'dx-clear', onclick: () => { S.filters = []; S.page = 0; render(); } }, UI.clearAll) : el('span', { class: 'dx-filters__hint' }, UI.hint));
   const q = byId;
-  main.replaceChildren(
-    el('h1', { class: 'dx-h1' }, UI.title), bar, kpis(rows),
-    npsCard(q.nps),
-    el('h2', { class: 'dx-section-title' }, UI.who),
+  const withId = (node, id) => { node.id = id; return node; };
+  const sections = [
+    ['dx-overview', UI.tocOverview], ['dx-nps', UI.nps], ['dx-who', UI.who], ['dx-why', UI.why], ['dx-choice', UI.choice],
+    ['dx-results', UI.results], ['dx-words', UI.words], ['dx-funnel', UI.progress], ['dx-responses', UI.all],
+  ];
+  const toc = el('nav', { class: 'dx-toc', 'aria-label': UI.toc },
+    el('p', { class: 'dx-toc__title' }, UI.toc),
+    el('ul', {}, sections.map(([id, label]) => el('li', {}, el('a', { href: '#' + id, 'data-toc': id }, label)))));
+  const content = el('div', { class: 'dx-content' },
+    el('h1', { class: 'dx-h1' }, UI.title), bar, withId(kpis(rows), 'dx-overview'),
+    withId(npsCard(q.nps), 'dx-nps'),
+    withId(el('h2', { class: 'dx-section-title' }, UI.who), 'dx-who'),
     el('div', { class: 'dx-grid' }, singleCard(q.industry, 'industry'), singleCard({ ...q.role_decision, short: q.role_decision.role.label }, 'role', q.role_decision.role.options),
       dualCard(q.company_size, q.company_size.fields[0]), dualCard(q.company_size, q.company_size.fields[1]),
       multiCard({ ...q.role_decision, short: q.role_decision.others.label, options: q.role_decision.others.options }, 'decision_others')),
-    el('h2', { class: 'dx-section-title' }, UI.why),
+    withId(el('h2', { class: 'dx-section-title' }, UI.why), 'dx-why'),
     el('div', { class: 'dx-grid' }, multiCard(q.triggers), singleCard(q.main_trigger, 'main_trigger', q.triggers.options), multiCard(q.alternatives), multiCard(q.readiness)),
-    el('h2', { class: 'dx-section-title' }, UI.choice), el('div', { class: 'dx-grid' }, rankCard(q.why_ranked)),
-    el('h2', { class: 'dx-section-title' }, UI.results),
+    withId(el('h2', { class: 'dx-section-title' }, UI.choice), 'dx-choice'), el('div', { class: 'dx-grid' }, rankCard(q.why_ranked)),
+    withId(el('h2', { class: 'dx-section-title' }, UI.results), 'dx-results'),
     el('div', { class: 'dx-grid' }, dualCard(q.team_size, q.team_size.fields[0]), dualCard(q.team_size, q.team_size.fields[1])),
-    el('h2', { class: 'dx-section-title' }, UI.words), el('div', { class: 'dx-grid' }, cloudCard()),
-    funnelCard(), tableCard(rows));
+    withId(el('h2', { class: 'dx-section-title' }, UI.words), 'dx-words'), el('div', { class: 'dx-grid' }, cloudCard()),
+    withId(funnelCard(), 'dx-funnel'), withId(tableCard(rows), 'dx-responses'));
+  main.replaceChildren(el('div', { class: 'dx-layout' }, toc, content));
+  watchSections(sections.map(([id]) => id));
   window.scrollTo(0, y);
 }
 
