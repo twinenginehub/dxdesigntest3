@@ -95,7 +95,9 @@ fieldset.sv-group{border:0;margin:0;padding:0;min-width:0;display:grid;gap:var(-
   .sv-scale{grid-template-columns:repeat(6,minmax(0,1fr))}
   .sv-other{margin-left:0}
   .sv-actions{position:sticky;bottom:0;margin:var(--space-6) calc(-1 * var(--space-5)) calc(-1 * var(--space-5));padding:var(--space-3) var(--space-5);background:#fff;border-top:1px solid var(--border-subtle);border-radius:0 0 var(--radius-lg) var(--radius-lg)}
-  .sv-progress__label{font-size:11px}
+  .sv-progress{flex-direction:column;align-items:stretch;gap:5px}
+  .sv-progress__track{flex:none}
+  .sv-progress__label{font-size:11px;text-align:right;min-height:1em}
   .sv-btn{padding:12px 22px}
 }
 

@@ -12,6 +12,7 @@ const UI = {
   emailInvalid: 'Please enter a valid email address.',
   next: 'Next', back: 'Back', skip: 'Skip', submit: 'Submit', sending: 'Sending…',
   questionOf: (n, t) => `Question ${n} of ${t}`,
+  status: (done, total) => `${done} completed · ${total - done} pending`,
   chooseOne: 'Please choose an option.',
   chooseBoth: 'Please choose an option in each list.',
   chooseAny: 'Please select at least one.',
@@ -86,7 +87,8 @@ function renderProgress(list, idx, finished) {
   fill.style.width = pct + '%';
   bar.setAttribute('aria-valuenow', String(pct));
   const s = list[idx];
-  label.textContent = finished || s.kind === 'company' || s.kind === 'welcome' ? '' : UI.questionOf(s.q.n, TOTAL_QUESTIONS);
+  const done = finished ? TOTAL_QUESTIONS : s.kind === 'welcome' ? null : s.kind === 'company' ? 0 : (s.q.sub ? s.q.n : s.q.n - 1);
+  label.textContent = done == null ? '' : UI.status(done, TOTAL_QUESTIONS);
   bar.setAttribute('aria-valuetext', label.textContent || `${pct}%`);
 }
 
