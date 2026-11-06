@@ -220,7 +220,7 @@ function cloudCard() {
   }, t)));
   const cloud = words.length ? el('div', { class: 'dx-cloud' }, words.map(([w, c], i) => el('button', {
     type: 'button', class: 'dx-word', 'aria-pressed': isOn('word', w) ? 'true' : 'false', title: `${w}: ${c} response${c === 1 ? '' : 's'}`, 'aria-label': `${w}, mentioned in ${c} response${c === 1 ? '' : 's'}`,
-    style: `font-size:${(14 + Math.sqrt(c / max) * 34).toFixed(1)}px;color:${colors[(w.length + c) % colors.length]}`,
+    style: `font-size:${(14 + Math.sqrt(c / max) * 34).toFixed(1)}px;color:color-mix(in srgb, ${colors[(w.length + c) % colors.length]} 80%, #fff)`,
     onclick: () => toggle({ field: 'word', kind: 'word', value: w, tab: S.tab, label: `Word: “${w}”` }),
   }, w))) : el('p', { class: 'dx-empty' }, UI.noData);
   // quotes (all active filters applied)
