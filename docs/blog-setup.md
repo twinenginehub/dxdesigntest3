@@ -74,3 +74,10 @@ HTML for search engines. There is no text search on this page.
 Cards use the **Case study details** group in the Studio (client name or anonymous description, optional logo, industry, company size, region, use case and a
 headline result). Filter options come from the values you enter, so spell industries and use cases consistently. Preview: `/case-studies`.
 The Case Studies tab and "View all" on `/blog` link here.
+
+## Case study page
+Content type **Case study** uses the customer-story layout: client logo, outcome headline and team photo in the header; a row of up to three key results;
+an "At a glance" box (client, industry, region, company size, services with optional links) beside the story; then **Story sections** (label, headline, text and an
+optional pull quote with name, title and company; typically the challenge, the solution and the results); a "Why teams choose DOXA" band and a closing call to action.
+Everything lives in the **Case study details** group in the Studio. The main body text is optional and appears after the sections. The "Why teams choose DOXA"
+figures are fixed in `lib/blog/casestudy.js` (`COMPANY_STATS`): only numbers already on the site. Preview: `/blog/sample-case-study-3`.

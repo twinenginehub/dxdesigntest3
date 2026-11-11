@@ -170,7 +170,7 @@ export const post = defineType({
     }),
     defineField({
       name: 'caseStudy', title: 'Case study details', type: 'object',
-      description: 'Only for the Case study content type. These power the search filters and the cards on /case-studies.',
+      description: 'Only for the Case study content type. The first fields power the filters and cards on /case-studies; the rest build the case study page. The main body below is optional extra text shown after the story sections.',
       hidden: ({ document }) => document?.contentType !== 'case-study',
       options: { collapsible: false },
       fields: [
@@ -182,6 +182,29 @@ export const post = defineType({
         defineField({ name: 'useCase', title: 'Use case', type: 'string', description: 'e.g. Bookkeeping, Customer support, Payroll. Becomes a filter option.' }),
         defineField({ name: 'keyResultValue', title: 'Key result (number)', type: 'string', description: 'The headline figure shown on the card, e.g. 62% or 3x.', validation: (r) => r.max(14) }),
         defineField({ name: 'keyResultLabel', title: 'Key result (label)', type: 'string', description: 'e.g. lower cost per hire', validation: (r) => r.max(80) }),
+        defineField({ name: 'keyStats', title: 'Key results row', type: 'array', validation: (r) => r.max(3), description: 'Up to three big numbers shown right under the photo, e.g. 62% / lower cost per hire.', of: [defineArrayMember({
+          type: 'object', fields: [
+            defineField({ name: 'value', type: 'string', validation: (r) => r.required().max(14) }),
+            defineField({ name: 'label', type: 'string', validation: (r) => r.required().max(120) }),
+            defineField({ name: 'note', type: 'string' }),
+          ], preview: { select: { title: 'value', subtitle: 'label' } } })] }),
+        defineField({ name: 'services', title: 'Services used', type: 'array', description: 'Shown in the "At a glance" box. Add a link to a DOXA page if you like (a site path such as /accounting-firms.html, or an https link).', of: [defineArrayMember({
+          type: 'object', fields: [
+            defineField({ name: 'label', type: 'string', validation: (r) => r.required() }),
+            defineField({ name: 'url', title: 'Link (optional)', type: 'string', validation: (r) => r.custom((v) => !v || /^\/[^/\\]/.test(v) || /^https:\/\//.test(v) || 'Start with / for a page on this site, or https://') }),
+          ], preview: { select: { title: 'label', subtitle: 'url' } } })] }),
+        defineField({ name: 'sections', title: 'Story sections', type: 'array', description: 'The story, in order. Typically three: the challenge, the solution and the results. Each can end with a pull quote.', of: [defineArrayMember({
+          type: 'object', fields: [
+            defineField({ name: 'label', type: 'string', description: 'Small label above the heading.', initialValue: 'The challenge', options: { list: ['The challenge', 'The solution', 'The results'] } }),
+            defineField({ name: 'heading', type: 'string', description: 'The section headline.', validation: (r) => r.max(160) }),
+            defineField({ name: 'body', type: 'array', of: [defineArrayMember({ type: 'block', styles: [{ title: 'Paragraph', value: 'normal' }], lists: [{ title: 'Bullets', value: 'bullet' }, { title: 'Numbered', value: 'number' }] })] }),
+            defineField({ name: 'quote', title: 'Pull quote (optional)', type: 'object', fields: [
+              defineField({ name: 'text', type: 'text', rows: 3, validation: (r) => r.max(600) }),
+              defineField({ name: 'name', type: 'string' }),
+              defineField({ name: 'title', type: 'string' }),
+              defineField({ name: 'company', type: 'string' }),
+            ] }),
+          ], preview: { select: { title: 'heading', subtitle: 'label' } } })] }),
       ],
     }),
     defineField({ name: 'seoTitle', title: 'SEO title', type: 'string', description: 'Optional. Defaults to the post title.' }),

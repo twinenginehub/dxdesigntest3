@@ -4,6 +4,7 @@ import { renderPress } from '../lib/blog/press.js';
 import { renderGated } from '../lib/blog/gated.js';
 import { whitepaperView } from '../lib/blog/whitepaper.js';
 import { renderCaseStudies } from '../lib/blog/render-cases.js';
+import { caseStudyView } from '../lib/blog/casestudy.js';
 import assert from 'node:assert/strict';
 
 const X = '<img src=x onerror=alert(1)>';
@@ -44,4 +45,13 @@ const cs = renderCaseStudies([{ title: X, slug: 's', excerpt: X, publishedAt: '2
 assert(!cs.includes('<img src=x'), 'case studies escape');
 assert(!cs.includes('javascript:'), 'case studies drop unsafe image urls');
 assert(renderCaseStudies([], 'https://x.test').includes('No case studies have been published yet'), 'empty state');
+// case study page
+const csv = caseStudyView({ title: 't', caseStudy: { clientName: X, logo: 'javascript:1', industry: X, region: X, companySize: X,
+  keyStats: [{ value: X, label: X }], services: [{ label: X, url: 'javascript:alert(1)' }, { label: 'ok', url: '/accounting-firms.html' }, { label: 'ext', url: 'http://insecure.test' }],
+  sections: [{ label: X, heading: X, body: [], quote: { text: X, name: X, title: X, company: X } }, { label: 'empty' }] } }, 'https://x.test', { html: '' });
+const csAll = csv.heroTop + csv.before + csv.rail + csv.articleHtml + csv.after;
+assert(!csAll.includes('<img src=x'), 'case study page escapes');
+assert(!csAll.includes('javascript:') && !csAll.includes('insecure.test'), 'case study page drops unsafe urls');
+assert(csv.rail.includes('/accounting-firms.html'), 'case study keeps safe service link');
+assert(!csv.articleHtml.includes('empty'), 'empty section is skipped');
 console.log('all blog template safety checks passed');
