@@ -18,7 +18,7 @@
 .gt-field label{display:block;margin-bottom:6px;font-size:.875rem;font-weight:600;color:var(--doxa-navy,#052538)}
 .gt-field label span[aria-hidden]{color:#b42318}
 .gt-opt{font-weight:400;color:var(--text-secondary,#3d5566)}
-.gt-field input{width:100%;min-height:46px;padding:0 14px;border:1.5px solid var(--fog-300,#aebfca);border-radius:6px;background:#fff;font:inherit;font-size:1rem;color:var(--text-primary,#052538)}
+.gt-field input{box-sizing:border-box;width:100%;min-height:46px;padding:0 14px;border:1.5px solid var(--fog-300,#aebfca);border-radius:6px;background:#fff;font:inherit;font-size:1rem;color:var(--text-primary,#052538)}
 .gt-field input:focus{outline:none;border-color:var(--cyan-700,#007099);box-shadow:0 0 0 3px rgba(0,174,239,.3)}
 .gt-field input[aria-invalid="true"]{border-color:#b42318}
 .gt-err{margin:6px 0 0;font-size:.8125rem;font-weight:600;color:#b42318}
