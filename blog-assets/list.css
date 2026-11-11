@@ -32,6 +32,7 @@ body{margin:0;background:#fff;color:var(--text-primary,#052538);font-family:var(
 .bl-section--tint{background:var(--navy-50,#f0f6f9)}
 .bl-head{display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-4,16px);margin-bottom:var(--space-6,24px)}
 .bl-head h2{margin:0;font-family:var(--font-display,'Work Sans',sans-serif);font-size:var(--text-h2,2rem);font-weight:700;line-height:1.2}
+.bl-eyebrow{margin:0 0 var(--space-2,8px);font-size:var(--text-caption,.75rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan-700,#007099)}
 .bl-sub{font-size:.875rem;font-weight:600;color:var(--text-secondary,#3d5566);text-transform:uppercase;letter-spacing:.08em}
 .bl-viewall{font-weight:700;color:var(--cyan-700,#007099);text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
 .bl-empty{padding:var(--space-8,32px) 0;color:var(--text-secondary,#3d5566);font-size:1.0625rem}
