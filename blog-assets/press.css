@@ -1,9 +1,9 @@
 /* Press release template. Loaded after post.css and data.css. */
-.pr-hero{background:var(--doxa-navy,#052538);color:#fff;border-bottom:4px solid transparent;border-image:linear-gradient(90deg,#00AEEF,#05AF72) 1}
+.pr-hero{background:var(--doxa-navy,#052538);color:var(--white);border-bottom:4px solid transparent;border-image:var(--brand-gradient) 1}
 .pr-hero__inner{max-width:1100px;margin:0 auto;padding:var(--space-12,48px) var(--post-pad)}
 .pr-hero h1{margin:0;max-width:24ch;font-family:var(--font-display,'Work Sans',sans-serif);font-size:clamp(2rem,calc(1.4rem + 2.4vw),3.25rem);font-weight:700;line-height:1.15;letter-spacing:-.01em;text-wrap:balance}
 .pr-hero .post-dek{max-width:62ch}
-.pr-flag{display:inline-block;margin:0 0 var(--space-4,16px);padding:4px 12px;border:1px solid rgba(255,255,255,.4);border-radius:3px;font-size:var(--text-caption,.75rem);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.pr-flag{display:inline-block;margin:0 0 var(--space-4,16px);padding:4px 12px;border:1px solid rgba(255,255,255,.4);border-radius:var(--radius-sm);font-size:var(--text-caption,.75rem);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--white)}
 .pr-date{display:flex;flex-wrap:wrap;gap:var(--space-4,16px);margin:var(--space-6,24px) 0 0;font-size:var(--text-body-sm,.875rem);color:rgba(255,255,255,.8)}
 .pr-date span+span,.pr-date time+span{position:relative;padding-left:var(--space-4,16px)}
 .pr-date time+span::before{content:"";position:absolute;left:0;top:50%;width:4px;height:4px;margin-top:-2px;border-radius:50%;background:currentColor;opacity:.5}
@@ -17,7 +17,7 @@
 .pr-about p{font-size:1rem;color:var(--text-secondary,#3d5566)}
 .pr-aside{position:sticky;top:96px;align-self:start;display:grid;gap:var(--space-4,16px)}
 .pr-card{padding:var(--space-5,20px);border:1px solid var(--fog-200,#cdd9e0);border-radius:var(--radius-lg,8px);background:var(--navy-50,#f0f6f9)}
-.pr-card h2{margin:0 0 var(--space-3,12px);font-size:var(--text-caption,.75rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan-700,#007099)}
+.pr-card h2{margin:0 0 var(--space-3,12px);font-size:var(--text-caption,.75rem);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--cyan-700,#007099)}
 .pr-contact{display:flex;flex-direction:column;gap:2px;margin:0 0 var(--space-3,12px);font-size:.9375rem;line-height:1.4}
 .pr-contact:last-child{margin-bottom:0}
 .pr-contact span{color:var(--text-secondary,#3d5566);font-size:.875rem}
@@ -25,13 +25,13 @@
 .pr-contact a:hover,.pr-assets a:hover{color:var(--doxa-navy,#052538);-webkit-background-clip:border-box;background-clip:border-box}
 .pr-assets{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-2,8px)}
 .pr-assets a{display:inline-flex;align-items:center;gap:8px;font-size:.9375rem}
-.pr-print{min-height:44px;padding:0 20px;border:1px solid var(--doxa-navy,#052538);border-radius:5px;background:#fff;font:inherit;font-weight:700;color:var(--doxa-navy,#052538);cursor:pointer}
-.pr-print:hover{background:var(--doxa-navy,#052538);color:#fff}
+.pr-print{min-height:44px;padding:0 20px;border:1px solid var(--doxa-navy,#052538);border-radius:5px;background:var(--white);font:inherit;font-weight:700;color:var(--doxa-navy,#052538);cursor:pointer}
+.pr-print:hover{background:var(--doxa-navy,#052538);color:var(--white)}
 .pr-print:focus-visible{outline:3px solid var(--cyan-700,#007099);outline-offset:2px}
 @media (max-width:960px){.pr-layout{grid-template-columns:minmax(0,720px)}.pr-aside{position:static}}
 @media print{
   .site-nav,footer,.post-skip,.pr-print,.pr-feature{display:none!important}
-  .pr-hero{background:none!important;color:#000;border:0}.pr-hero h1,.pr-hero .post-dek,.pr-date,.pr-flag,.post-crumbs,.post-crumbs a{color:#000!important}
+  .pr-hero{background:none!important;color:var(--navy);border:0}.pr-hero h1,.pr-hero .post-dek,.pr-date,.pr-flag,.post-crumbs,.post-crumbs a{color:var(--navy)!important}
   .pr-layout{display:block;padding:0}.pr-aside{position:static;margin-top:24px}.pr-card{background:none}
 }
 

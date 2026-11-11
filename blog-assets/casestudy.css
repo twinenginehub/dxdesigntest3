@@ -1,17 +1,17 @@
 /* Case study variant. Loaded after post.css and data.css, only on case study posts. */
 .csp-logo{margin:0 0 var(--space-6,24px)}
-.csp-logo span{display:inline-flex;align-items:center;padding:12px 20px;border-radius:var(--radius-md,5px);background:#fff}
+.csp-logo span{display:inline-flex;align-items:center;padding:12px 20px;border-radius:var(--radius-md,5px);background:var(--white)}
 .csp-logo img{display:block;width:auto;max-width:220px;height:40px;object-fit:contain}
 
 /* key results row, straight under the hero photo */
 .csp-stats__inner{max-width:1100px;margin:0 auto;padding:var(--space-10,40px) var(--post-pad) 0}
 .csp-stats .stat-grid{margin:0}
-.csp-stats .stat-grid li.stat{background:#fff;border:1px solid var(--fog-200,#cdd9e0);border-top:4px solid var(--c0)}
+.csp-stats .stat-grid li.stat{background:var(--white);border:1px solid var(--fog-200,#cdd9e0);border-top:4px solid var(--c0)}
 
 /* fact sheet beside the story */
 .csp-facts{position:sticky;top:96px;align-self:start}
 .csp-facts dl{margin:0;padding:0;border-left:2px solid var(--fog-200,#cdd9e0)}
-.csp-facts dl>div{padding:10px 0 10px 14px}
+.csp-facts dl>div{padding:var(--space-3) 0 var(--space-3) var(--space-4)}
 .csp-facts dt{margin:0 0 2px;font-size:var(--text-caption,.75rem);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary,#3d5566)}
 .csp-facts dd{margin:0;font-size:.9375rem;line-height:1.4;color:var(--doxa-navy,#052538);font-weight:600}
 .csp-facts ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
@@ -20,7 +20,7 @@
 
 /* story sections */
 .post-body .csp-section{margin:0 0 var(--space-12,48px)}
-.csp-label{margin:0 0 6px;font-size:var(--text-caption,.75rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan-700,#007099)}
+.csp-label{margin:0 0 var(--space-2);font-size:var(--text-caption,.75rem);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--cyan-700,#007099)}
 .post-body .csp-section>h2{margin-top:0}
 .post-body .csp-quote{margin:2.25em 0 0}
 .post-body .csp-quote blockquote{margin:0}
@@ -28,7 +28,7 @@
 .csp-quote figcaption strong{color:var(--doxa-navy,#052538)}
 
 /* closing call to action */
-.csp-cta{background:var(--doxa-navy,#052538);color:#fff}
+.csp-cta{background:var(--doxa-navy,#052538);color:var(--white)}
 .csp-cta__inner{max-width:1100px;margin:0 auto;padding:var(--space-10,40px) var(--post-pad);display:flex;align-items:center;justify-content:space-between;gap:var(--space-8,32px);flex-wrap:wrap}
 .csp-cta h2{margin:0 0 var(--space-2,8px);font-family:var(--font-display,'Work Sans',sans-serif);font-size:var(--text-h3,1.5rem)}
 .csp-cta p{margin:0;color:rgba(255,255,255,.85)}
