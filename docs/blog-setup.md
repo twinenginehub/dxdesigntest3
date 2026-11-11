@@ -25,3 +25,9 @@ be previewed at `/blog/sample-post` locally and on Vercel preview deployments (n
 
 ## Changing the nav or footer
 Blog pages carry a generated copy of the site nav and footer. After editing them, run `python3 scripts/build-blog-chrome.py`.
+
+## Blog page (/blog)
+The listing page at `/blog` shows six content types (Articles, Case Studies, Learning, Podcast, Press, Whitepapers). Each post needs a
+**Content type** in Sanity (copy the updated `sanity/post.schema.js`; posts without one count as Articles). Tick **Featured** on up to
+three posts to control "Featured and trending" (otherwise the three newest show). "Browse by topic" is built from each post's Category.
+Views: `/blog?type=case-studies`, `/blog?topic=hiring`, `/blog?type=articles&page=2`. Search runs in the browser.

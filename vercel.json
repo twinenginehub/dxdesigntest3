@@ -2,6 +2,10 @@
   "outputDirectory": ".",
   "rewrites": [
     {
+      "source": "/blog",
+      "destination": "/api/blog/index"
+    },
+    {
       "source": "/survey",
       "destination": "/survey.html"
     },

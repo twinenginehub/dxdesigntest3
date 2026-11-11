@@ -21,6 +21,9 @@ export const post = defineType({
   name: 'post', title: 'Post', type: 'document',
   fields: [
     defineField({ name: 'title', type: 'string', validation: (r) => r.required().max(120) }),
+    defineField({ name: 'contentType', title: 'Content type', type: 'string', initialValue: 'article', validation: (r) => r.required(),
+      options: { list: [{ title: 'Article', value: 'article' }, { title: 'Case study', value: 'case-study' }, { title: 'Learning', value: 'learning' }, { title: 'Podcast', value: 'podcast' }, { title: 'Press', value: 'press' }, { title: 'Whitepaper', value: 'whitepaper' }], layout: 'radio' } }),
+    defineField({ name: 'featured', type: 'boolean', initialValue: false, description: 'Shows in "Featured and trending" at the top of the blog page (the three most recent featured posts).' }),
     defineField({ name: 'slug', type: 'slug', options: { source: 'title', maxLength: 80 }, validation: (r) => r.required(), description: 'The URL: /blog/<slug>' }),
     defineField({ name: 'publishedAt', title: 'Publish date', type: 'datetime', description: 'A post goes live on this date. Leave empty to keep it unpublished.' }),
     defineField({ name: 'category', type: 'string' }),
