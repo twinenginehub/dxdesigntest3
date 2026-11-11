@@ -68,9 +68,9 @@ speed bump, not real access control. Preview: `/resources/sample-guide`.
 After copying `sanity/post.schema.js` into the Studio, register every exported type (see the last line of that file).
 
 ## Case Studies listing (/case-studies)
-A search-and-filter page for every published post with Content type **Case study**. Search matches client, title, summary, industry, company size, region
-and use case; four filters (Industry, Company size, Region, Use case) combine with search; "Clear all" resets; 12 cards at a time with "Load more".
-The URL keeps the state (`/case-studies?q=payroll&industry=Accounting`) so views can be shared. All cards are in the page HTML for search engines.
+A filter page for every published post with Content type **Case study**. Four filters (Industry, Company size, Region, Use case) combine; "Clear all" resets;
+12 cards at a time with "Load more". The URL keeps the state (`/case-studies?industry=Accounting&region=Europe`) so views can be shared. All cards are in the page
+HTML for search engines. There is no text search on this page.
 Cards use the **Case study details** group in the Studio (client name or anonymous description, optional logo, industry, company size, region, use case and a
 headline result). Filter options come from the values you enter, so spell industries and use cases consistently. Preview: `/case-studies`.
 The Case Studies tab and "View all" on `/blog` link here.
