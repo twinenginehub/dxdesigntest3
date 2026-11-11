@@ -46,13 +46,17 @@ for f in files:
         if re.search(r'linear-gradient\(', line) and 'var(--brand-gradient' not in line and 'data:image' not in line and 'color-mix' not in line:
             add('Gradient not using --brand-gradient', f, n, line)
         if re.search(r'rgba\(5,\s*37,\s*56', re.sub(r'var\(--shadow[^)]*\)', '', line)) and f.endswith('.css'): add('rgba navy literal (use a token or colour-mix)', f, n, line)
+        if re.search(r'var\(--text-body(-sm|-lg)?[,)]', line) and f.endswith('.css'): add('Uses a body text token that header.css shrinks by 2px (use the design-system size)', f, n, line)
+        if re.search(r'font-size:\s*(\.8125|\.9375|1\.1875|1\.375|1\.2rem|\.6875|13px)', line): add('Font size between design-system steps', f, n, line)
+        if f.endswith('.js') and re.search(r'stroke=\"currentColor\"[^>]*stroke-width', line) and 'icons.js' not in f: add('Hand-drawn stroke icon (use icons.js / Tabler)', f, n, line)
+        if re.search(r'offshore staffing|staffs\b|staffing', line, re.I) and not f.endswith('audit-blog-design.py'): add('Brand wording: say professionals, not staffing', f, n, line)
         if re.search(r'letter-spacing:\s*\.12em', line): add('Eyebrow tracking literal (use --tracking-eyebrow)', f, n, line)
         if re.search(r'text-transform:\s*uppercase', line) and not re.search(r'eyebrow|__label|-label|__title|caption|--text-caption|--text-eyebrow|font-size:\s*(var\(--text-(caption|eyebrow)|\.7|\.8)', line):
             add('Uppercase outside an eyebrow/tag/label context (check)', f, n, line)
         if re.search(r'border-radius:\s*(999|99|50%)', line) and 'avatar' not in line and '::before' not in line and 'logo' not in line:
             add('Circle/pill shape (circles are for avatars, icon buttons, knobs only)', f, n, line)
 
-order = ['Colour outside the token set', 'Literal hex where a token exists', 'Radius off the 2/5/8 scale (or pill)', 'Shadow not from the token set', 'Font weight outside 400-700',
+order = ['Uses a body text token that header.css shrinks by 2px (use the design-system size)', 'Font size between design-system steps', 'Hand-drawn stroke icon (use icons.js / Tabler)', 'Brand wording: say professionals, not staffing', 'Colour outside the token set', 'Literal hex where a token exists', 'Radius off the 2/5/8 scale (or pill)', 'Shadow not from the token set', 'Font weight outside 400-700',
          'Transition not using duration tokens', 'Animates box-shadow (system animates colour/background and position/size only)', 'Gradient not using --brand-gradient',
          'rgba navy literal (use a token or colour-mix)', 'Eyebrow tracking literal (use --tracking-eyebrow)', 'Uppercase outside an eyebrow/tag/label context (check)',
          'Circle/pill shape (circles are for avatars, icon buttons, knobs only)']

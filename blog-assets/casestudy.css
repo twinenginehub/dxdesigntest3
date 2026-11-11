@@ -13,7 +13,7 @@
 .csp-facts dl{margin:0;padding:0;border-left:2px solid var(--fog-200,#cdd9e0)}
 .csp-facts dl>div{padding:var(--space-3) 0 var(--space-3) var(--space-4)}
 .csp-facts dt{margin:0 0 2px;font-size:var(--text-caption,.75rem);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary,#3d5566)}
-.csp-facts dd{margin:0;font-size:.9375rem;line-height:1.4;color:var(--doxa-navy,#052538);font-weight:600}
+.csp-facts dd{margin:0;font-size:.875rem;line-height:1.4;color:var(--doxa-navy,#052538);font-weight:600}
 .csp-facts ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
 .csp-facts a{color:var(--cyan-700,#007099);text-decoration:underline;text-underline-offset:3px;font-weight:600;-webkit-text-fill-color:currentColor;background:none}
 .csp-facts a:hover{color:var(--doxa-navy,#052538);-webkit-text-fill-color:currentColor;-webkit-background-clip:border-box;background-clip:border-box}
@@ -24,7 +24,7 @@
 .post-body .csp-section>h2{margin-top:0}
 .post-body .csp-quote{margin:2.25em 0 0}
 .post-body .csp-quote blockquote{margin:0}
-.csp-quote figcaption{margin-top:var(--space-3,12px);padding-left:calc(var(--space-6,24px) + 4px);font-size:.9375rem;line-height:1.4;color:var(--text-secondary,#3d5566)}
+.csp-quote figcaption{margin-top:var(--space-3,12px);padding-left:calc(var(--space-6,24px) + 4px);font-size:.875rem;line-height:1.4;color:var(--text-secondary,#3d5566)}
 .csp-quote figcaption strong{color:var(--doxa-navy,#052538)}
 
 /* closing call to action */

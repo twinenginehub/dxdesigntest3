@@ -13,7 +13,7 @@
 .pod-embed{display:block;width:100%;height:232px;border:0;border-radius:var(--radius-lg)}
 .pod-embed--video{height:auto;aspect-ratio:16/9}
 .pod-platforms{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3,12px);margin-top:var(--space-4,16px)}
-.pod-platforms>span{font-size:var(--text-body-sm,.875rem);font-weight:600;color:var(--text-secondary,#3d5566)}
+.pod-platforms>span{font-size:.875rem;font-weight:600;color:var(--text-secondary,#3d5566)}
 .pod-platforms ul{display:flex;flex-wrap:wrap;gap:var(--space-2,8px);list-style:none;margin:0;padding:0}
 .pod-platforms a{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border:1px solid var(--fog-200,#cdd9e0);border-radius:var(--radius-md,5px);font-size:.875rem;font-weight:700;color:var(--doxa-navy,#052538);text-decoration:none;-webkit-text-fill-color:currentColor;background:var(--white)}
 .pod-platforms a:hover{background:var(--doxa-navy,#052538);border-color:var(--doxa-navy,#052538);color:var(--white);-webkit-background-clip:border-box;background-clip:border-box;text-decoration:none}
@@ -29,8 +29,8 @@
 .pod-guest .pod-guest__avatar{font-size:1.5rem;color:var(--navy);display:grid;place-items:center;line-height:1;background:var(--brand-gradient);font-weight:700;font-size:1.5rem}
 .pod-guest div{display:flex;flex-direction:column;gap:2px;min-width:0;line-height:1.35}
 .pod-guest strong{color:var(--doxa-navy,#052538)}
-.pod-guest span{font-size:var(--text-body-sm,.875rem);color:var(--text-secondary,#3d5566)}
-.pod-guest a{font-size:var(--text-body-sm,.875rem);font-weight:700;color:var(--cyan-700,#007099);text-decoration:underline;text-underline-offset:3px;-webkit-text-fill-color:currentColor;background:none}
+.pod-guest span{font-size:.875rem;color:var(--text-secondary,#3d5566)}
+.pod-guest a{font-size:.875rem;font-weight:700;color:var(--cyan-700,#007099);text-decoration:underline;text-underline-offset:3px;-webkit-text-fill-color:currentColor;background:none}
 .pod-guest a:hover{color:var(--doxa-navy,#052538);-webkit-background-clip:border-box;background-clip:border-box}
 
 .pod-chapters{list-style:none;margin:0;padding:0;border-top:1px solid var(--fog-200,#cdd9e0)}

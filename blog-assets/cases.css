@@ -4,12 +4,12 @@
 /* filter bar (the result count is a visually hidden live region for screen readers) */
 .cs-filters{background:var(--navy-50,#f0f6f9);border-bottom:1px solid var(--fog-200,#cdd9e0)}
 .cs-filters__row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3,12px);padding-top:var(--space-5,20px);padding-bottom:var(--space-5,20px)}
-.cs-filters__label{font-size:var(--text-body-sm,.875rem);font-weight:700;color:var(--doxa-navy,#052538);margin-right:var(--space-2,8px)}
+.cs-filters__label{font-size:.875rem;font-weight:700;color:var(--doxa-navy,#052538);margin-right:var(--space-2,8px)}
 .cs-select{position:relative}
-.cs-select select{appearance:none;-webkit-appearance:none;box-sizing:border-box;min-height:44px;min-width:170px;padding:0 40px 0 14px;border:1.5px solid var(--border-subtle,#cdd9e0);border-radius:var(--radius-md,5px);background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23052538' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") right 12px center/16px no-repeat;font:inherit;font-size:1rem;color:var(--text-primary);cursor:pointer}
+.cs-select select{appearance:none;-webkit-appearance:none;box-sizing:border-box;min-height:44px;min-width:170px;padding:0 40px 0 14px;border:1.5px solid var(--border-subtle,#cdd9e0);border-radius:var(--radius-md,5px);background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23052538'%3E%3Cpath d='M18.707 8.293a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1 -1.414 0l-6 -6a1 1 0 0 1 1.414 -1.414l5.293 5.293l5.293 -5.293a1 1 0 0 1 1.414 0'/%3E%3C/svg%3E") right 12px center/16px no-repeat;font:inherit;font-size:1rem;color:var(--text-primary);cursor:pointer}
 .cs-select select:hover{border-color:var(--doxa-navy,#052538)}
 .cs-select select:focus-visible{outline:3px solid var(--cyan-700,#007099);outline-offset:2px}
-.cs-clear{min-height:44px;padding:0 8px;border:0;background:none;font:inherit;font-size:var(--text-body-sm,.875rem);font-weight:700;color:var(--cyan-700,#007099);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.cs-clear{min-height:44px;padding:0 8px;border:0;background:none;font:inherit;font-size:.875rem;font-weight:700;color:var(--cyan-700,#007099);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .cs-clear:hover{color:var(--doxa-navy,#052538)}
 .cs-clear:focus-visible{outline:3px solid var(--cyan-700,#007099);outline-offset:2px}
 
