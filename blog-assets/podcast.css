@@ -16,7 +16,7 @@
 .pod-platforms{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3,12px);margin-top:var(--space-4,16px)}
 .pod-platforms>span{font-size:var(--text-body-sm,.875rem);font-weight:600;color:var(--text-secondary,#3d5566)}
 .pod-platforms ul{display:flex;flex-wrap:wrap;gap:var(--space-2,8px);list-style:none;margin:0;padding:0}
-.pod-platforms a{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border:1px solid var(--fog-200,#cdd9e0);border-radius:999px;font-size:.875rem;font-weight:700;color:var(--doxa-navy,#052538);text-decoration:none;-webkit-text-fill-color:currentColor;background:#fff}
+.pod-platforms a{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border:1px solid var(--fog-200,#cdd9e0);border-radius:var(--radius-md,5px);font-size:.875rem;font-weight:700;color:var(--doxa-navy,#052538);text-decoration:none;-webkit-text-fill-color:currentColor;background:#fff}
 .pod-platforms a:hover{background:var(--doxa-navy,#052538);border-color:var(--doxa-navy,#052538);color:#fff;-webkit-background-clip:border-box;background-clip:border-box;text-decoration:none}
 .pod-platforms a:focus-visible,.pod-time:focus-visible{outline:3px solid var(--cyan-700,#007099);outline-offset:2px}
 
