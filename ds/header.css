@@ -106,6 +106,8 @@ html:active-view-transition-type(pixelate-dissolve)::view-transition-new(root) {
 @media (min-width:861px) {
   footer > div:first-child { grid-template-columns: clamp(33.333%, calc(33.333% + (100vw - 1100px) * .12), 40%) repeat(3, minmax(0,1fr)) !important; grid-template-rows: auto 1fr !important; }
   footer > div:first-child > :nth-child(-n+3) { grid-row: 1 / span 2; }
+  /* more room between the brand column and the menu columns */
+  footer > div:first-child > :first-child { padding-right: clamp(32px, 5vw, 80px); box-sizing: border-box; }
   footer > div:first-child > :nth-child(4) { grid-column: 4; grid-row: 1; }
   footer > div:first-child > :nth-child(5) { grid-column: 4; grid-row: 2; align-self: start; }
 }
