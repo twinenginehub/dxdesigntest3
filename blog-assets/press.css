@@ -34,3 +34,5 @@
   .pr-hero{background:none!important;color:#000;border:0}.pr-hero h1,.pr-hero .post-dek,.pr-date,.pr-flag,.post-crumbs,.post-crumbs a{color:#000!important}
   .pr-layout{display:block;padding:0}.pr-aside{position:static;margin-top:24px}.pr-card{background:none}
 }
+
+.pr-contact a:hover,.pr-assets a:hover{-webkit-text-fill-color:currentColor;background:none}

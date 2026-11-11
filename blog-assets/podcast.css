@@ -51,3 +51,5 @@ button.pod-time:hover{background:var(--doxa-navy,#052538);color:#fff}
   .pod-art{flex:none;width:100%;max-width:240px}
   .post-body .pod-chapters li{gap:var(--space-3,12px)}
 }
+
+.pod-platforms a:hover,.pod-guest a:hover{-webkit-text-fill-color:currentColor}

@@ -87,3 +87,7 @@ html{scroll-behavior:smooth}
 .ds-btn-accent:visited{color:#fff}
 .ds-btn-accent:hover{color:var(--doxa-navy,#052538)}
 .ds-btn:focus-visible{outline:3px solid var(--cyan-700,#007099);outline-offset:3px}
+
+/* Same guard for links inside posts: the global a:hover would turn their text transparent. */
+.post-body a:hover,.post-crumbs a:hover,.post-tags a:hover{-webkit-text-fill-color:currentColor;-webkit-background-clip:border-box;background-clip:border-box;background:none}
+.post-body a:hover{color:var(--doxa-navy,#052538)}

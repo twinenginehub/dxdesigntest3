@@ -103,3 +103,9 @@ body{margin:0;background:#fff;color:var(--text-primary,#052538);font-family:var(
 .ds-btn-accent:visited{color:#fff}
 .ds-btn-accent:hover{color:var(--doxa-navy,#052538)}
 .ds-btn:focus-visible{outline:3px solid var(--cyan-700,#007099);outline-offset:3px}
+
+/* The site's global a:hover makes link text transparent (gradient clip). Keep real text colors on every hover/focus state here. */
+.bl-card:hover,.bl-card:hover *,.bl-card:focus-visible,.bl-tabs a:hover,.bl-chips a:hover,.bl-pager a:hover,.bl-viewall:hover,.bl-crumbs a:hover{-webkit-text-fill-color:currentColor;-webkit-background-clip:border-box;background-clip:border-box}
+.bl-viewall:hover,.bl-crumbs a:hover{background:none}
+.bl-card:hover{color:inherit}
+.bl-viewall:hover{color:var(--doxa-navy,#052538)}

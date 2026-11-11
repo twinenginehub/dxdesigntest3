@@ -40,3 +40,5 @@
   .gt-about__inner{flex-direction:column;align-items:stretch}.gt-cover{flex:none;max-width:320px}
 }
 @media (max-width:480px){.gt-grid{grid-template-columns:minmax(0,1fr)}.gt-card{padding:var(--space-5,20px)}}
+
+.gt-download:hover,.gt-submit:hover{-webkit-text-fill-color:currentColor}
