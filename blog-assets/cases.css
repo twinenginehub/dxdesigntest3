@@ -15,7 +15,7 @@
 .cs-count{margin:0 0 0 auto;font-size:var(--text-body-sm,.875rem);color:var(--text-secondary,#3d5566)}
 
 /* grid and cards */
-.cs-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-6,24px)}
+.cs-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-12,48px) var(--space-10,40px)}
 .cs-item[hidden]{display:none}
 .cs-card{display:flex;flex-direction:column;height:100%;background:#fff;border:1px solid var(--fog-200,#cdd9e0);border-radius:var(--radius-lg,8px);overflow:hidden;color:inherit;text-decoration:none;-webkit-text-fill-color:currentColor;box-shadow:var(--shadow-sm,0 1px 2px rgba(5,37,56,.06));transition:box-shadow .18s,transform .18s,border-color .18s}
 .cs-card:hover,.cs-card:hover *{-webkit-text-fill-color:currentColor;-webkit-background-clip:border-box;background-clip:border-box}
@@ -44,7 +44,7 @@
 
 @media (max-width:1000px){.cs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){
-  .cs-grid{grid-template-columns:minmax(0,1fr)}
+  .cs-grid{grid-template-columns:minmax(0,1fr);gap:var(--space-8,32px)}
   .cs-filters__row{flex-direction:column;align-items:stretch}
   .cs-select select{width:100%}
   .cs-filters__label{display:none}
