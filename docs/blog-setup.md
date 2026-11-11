@@ -82,10 +82,14 @@ optional pull quote with name, title and company; typically the challenge, the s
 Everything lives in the **Case study details** group in the Studio. The main body text is optional and appears after the sections. Preview: `/blog/sample-case-study-3`.
 
 ## Resources hub (/resources)
-Every **Resource (gated download)** in the Studio appears on `/resources`: a filter panel (**Resource type**: checklist, course, guide, report, template;
-**Topic**; **Resources for**; **Business size**) with live counts, multiple selections per group, "Clear all", "Load more" (12 at a time) and shareable
-URLs such as `/resources?type=checklist&type=template&topic=Onboarding`. On phones the panel sits behind a "Filter resources" button. Each card links to
-`/resources/<slug>`. Topic, Resources for and Business size come from the fields on each resource, so spell topics the same way every time. Preview: `/resources`.
+Every **Resource (gated download)** in the Studio appears on `/resources`. Filtering works like the Deel resource hub: a search bar ("Find a resource") and a
+**Filter** button that opens a slide-in drawer with four collapsible groups (**Resource types**, **Topics**, **Resources for**, **Business size**), a count beside each
+option, "Clear all" and "Apply (N results)". Selections only take effect when you press Apply (Esc or the close button discards them). Active filters show as removable
+chips under the header with "Showing X of Y results" and "Clear all"; "Load more" reveals 12 at a time. The URL keeps the state, e.g.
+`/resources?type=checklist&type=template&topic=Onboarding&q=review`.
+Resource types: Checklist, Course, Guide, Report, Template, Tool, Webinar (a type only appears in the drawer once a resource uses it). Resources for: Finance, Founders,
+HR, IT managers, Legal, Operations, Talent acquisition, Franchise brands. Business size: Startup, Mid-market, Enterprise. Topics come from each resource's Topic field, so spell
+them the same way every time. Preview: `/resources`.
 
 ## Resource pages and one-sheets (/resources/<slug>)
 A resource page is the gated download (hero with the form). Fill in the optional fields and it becomes a full **one-sheet page**: explainer text, key takeaways,

@@ -62,6 +62,7 @@ const hub = renderResources([{ title: X, slug: 's', assetType: X, topic: X, audi
 assert(!hub.includes('<img src=x') && !hub.includes('javascript:'), 'resources hub escapes and drops unsafe urls');
 assert(renderResources([], 'https://x.test').includes('No resources have been published yet'), 'resources empty state');
 assert(hub.includes('data-type="template"'), 'resources cards carry the type filter value');
+assert(hub.includes('id="rs-drawer"') && hub.includes('Apply ('), 'resources hub has the filter drawer with Apply');
 const rich = renderGated({ title: 't', slug: 's', assetType: X, headline: X, subheadline: X, topic: X, downloadUrl: 'javascript:1', takeaways: [X], previewItems: [X], previewTitle: X,
   steps: [{ title: X, text: X }], benefits: [X], audience: [X], faqs: [{ question: X, answer: X }],
   related: [{ slug: '../evil"', title: 'bad', assetType: 'Guide' }, { slug: 'good-one', title: X, assetType: X }] }, 'https://x.test');
