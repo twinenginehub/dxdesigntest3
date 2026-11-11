@@ -1,7 +1,7 @@
 /* Case studies listing. Loaded after list.css (hero, search, CTA, cta link styles come from there). */
 .cs-hero{padding-bottom:var(--space-12,48px)}
 
-/* filter bar */
+/* filter bar (the result count is a visually hidden live region for screen readers) */
 .cs-filters{background:var(--navy-50,#f0f6f9);border-bottom:1px solid var(--fog-200,#cdd9e0)}
 .cs-filters__row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3,12px);padding-top:var(--space-5,20px);padding-bottom:var(--space-5,20px)}
 .cs-filters__label{font-size:var(--text-body-sm,.875rem);font-weight:700;color:var(--doxa-navy,#052538);margin-right:var(--space-2,8px)}
@@ -12,7 +12,6 @@
 .cs-clear{min-height:44px;padding:0 8px;border:0;background:none;font:inherit;font-size:var(--text-body-sm,.875rem);font-weight:700;color:var(--cyan-700,#007099);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .cs-clear:hover{color:var(--doxa-navy,#052538)}
 .cs-clear:focus-visible{outline:3px solid var(--cyan-700,#007099);outline-offset:2px}
-.cs-count{margin:0 0 0 auto;font-size:var(--text-body-sm,.875rem);color:var(--text-secondary,#3d5566)}
 
 /* grid and cards */
 .cs-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-12,48px) var(--space-10,40px)}
@@ -48,5 +47,4 @@
   .cs-filters__row{flex-direction:column;align-items:stretch}
   .cs-select select{width:100%}
   .cs-filters__label{display:none}
-  .cs-count{margin:0}
 }
