@@ -24,6 +24,7 @@ export const post = defineType({
     defineField({ name: 'slug', type: 'slug', options: { source: 'title', maxLength: 80 }, validation: (r) => r.required(), description: 'The URL: /blog/<slug>' }),
     defineField({ name: 'publishedAt', title: 'Publish date', type: 'datetime', description: 'A post goes live on this date. Leave empty to keep it unpublished.' }),
     defineField({ name: 'category', type: 'string' }),
+    defineField({ name: 'tags', type: 'array', of: [{ type: 'string' }], options: { layout: 'tags' }, description: 'Shown at the bottom of the post.' }),
     defineField({ name: 'author', type: 'reference', to: [{ type: 'author' }] }),
     defineField({ name: 'excerpt', type: 'text', rows: 3, validation: (r) => r.max(220), description: 'Shown under the title and used as the search description if none is set.' }),
     defineField({ name: 'mainImage', title: 'Featured image', type: 'image', options: { hotspot: true }, fields: [
