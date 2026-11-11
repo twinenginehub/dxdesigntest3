@@ -31,3 +31,10 @@ The listing page at `/blog` shows six content types (Articles, Case Studies, Lea
 **Content type** in Sanity (copy the updated `sanity/post.schema.js`; posts without one count as Articles). Tick **Featured** on up to
 three posts to control "Featured and trending" (otherwise the three newest show). "Browse by topic" is built from each post's Category.
 Views: `/blog?type=case-studies`, `/blog?topic=hiring`, `/blog?type=articles&page=2`. Search runs in the browser.
+
+## Podcast episodes
+Set **Content type** to Podcast and a "Podcast episode" group appears in the Studio: episode and season numbers, duration, audio file URL (direct https
+MP3 from your podcast host, which gives a built-in player and clickable chapter times), an optional embed URL (Spotify, Apple Podcasts, YouTube, Vimeo,
+Simplecast, Buzzsprout, Transistor, SoundCloud, Captivate or Megaphone only), "Listen on" links, guests, chapters and an optional transcript. The post
+body becomes the show notes. Preview locally at `/blog/sample-podcast-4`. Audio is not stored in Sanity; host files with your podcast provider.
+The page marks the series as "DOXA Podcast" in its structured data (`lib/blog/podcast.js`); rename it there if the show has another name.

@@ -44,6 +44,38 @@ export const post = defineType({
       ] }),
       defineArrayMember({ type: 'callout' }),
     ] }),
+    defineField({
+      name: 'podcast', title: 'Podcast episode', type: 'object',
+      description: 'Only for the Podcast content type. The body above becomes the show notes.',
+      hidden: ({ document }) => document?.contentType !== 'podcast',
+      options: { collapsible: false },
+      fields: [
+        defineField({ name: 'episodeNumber', title: 'Episode number', type: 'number', validation: (r) => r.integer().min(0) }),
+        defineField({ name: 'season', type: 'number', validation: (r) => r.integer().min(0) }),
+        defineField({ name: 'duration', type: 'string', description: 'Length as m:ss or h:mm:ss, e.g. 42:10.', validation: (r) => r.regex(/^(\d{1,2}:)?\d{1,2}:\d{2}$/, { name: 'time' }).error('Use m:ss or h:mm:ss, e.g. 42:10') }),
+        defineField({ name: 'audioUrl', title: 'Audio file URL', type: 'url', description: 'Direct https link to the episode MP3 from your podcast host. Shows a built-in player and lets chapters jump to a time.', validation: (r) => r.uri({ scheme: ['https'] }) }),
+        defineField({ name: 'embedUrl', title: 'Player embed URL (optional)', type: 'url', description: 'Used when there is no audio file URL. Spotify, Apple Podcasts, YouTube, Vimeo, Simplecast, Buzzsprout, Transistor, SoundCloud, Captivate or Megaphone embed links only.', validation: (r) => r.uri({ scheme: ['https'] }) }),
+        defineField({ name: 'platforms', title: 'Listen on', type: 'array', of: [defineArrayMember({
+          type: 'object', fields: [
+            defineField({ name: 'name', type: 'string', description: 'e.g. Spotify, Apple Podcasts, YouTube', validation: (r) => r.required() }),
+            defineField({ name: 'url', type: 'url', validation: (r) => r.required().uri({ scheme: ['https'] }) }),
+          ], preview: { select: { title: 'name', subtitle: 'url' } } })] }),
+        defineField({ name: 'guests', type: 'array', of: [defineArrayMember({
+          type: 'object', fields: [
+            defineField({ name: 'name', type: 'string', validation: (r) => r.required() }),
+            defineField({ name: 'role', type: 'string' }),
+            defineField({ name: 'company', type: 'string' }),
+            defineField({ name: 'image', type: 'image', options: { hotspot: true } }),
+            defineField({ name: 'linkedin', title: 'LinkedIn URL', type: 'url', validation: (r) => r.uri({ scheme: ['https'] }) }),
+          ], preview: { select: { title: 'name', subtitle: 'role', media: 'image' } } })] }),
+        defineField({ name: 'chapters', type: 'array', description: 'Timestamps shown as a list. With an audio file URL, clicking a time jumps the player there.', of: [defineArrayMember({
+          type: 'object', fields: [
+            defineField({ name: 'time', type: 'string', description: 'm:ss or h:mm:ss', validation: (r) => r.required().regex(/^(\d{1,2}:)?\d{1,2}:\d{2}$/, { name: 'time' }) }),
+            defineField({ name: 'title', type: 'string', validation: (r) => r.required() }),
+          ], preview: { select: { title: 'title', subtitle: 'time' } } })] }),
+        defineField({ name: 'transcript', type: 'array', description: 'Optional. Plain paragraphs; shown in a collapsed section (good for search engines and accessibility).', of: [defineArrayMember({ type: 'block', styles: [{ title: 'Paragraph', value: 'normal' }], lists: [], marks: { decorators: [{ title: 'Bold', value: 'strong' }, { title: 'Italic', value: 'em' }], annotations: [] } })] }),
+      ],
+    }),
     defineField({ name: 'seoTitle', title: 'SEO title', type: 'string', description: 'Optional. Defaults to the post title.' }),
     defineField({ name: 'seoDescription', title: 'SEO description', type: 'text', rows: 2, validation: (r) => r.max(170) }),
   ],
