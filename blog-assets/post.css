@@ -93,3 +93,6 @@ html{scroll-behavior:smooth}
 .post-body a:hover{color:var(--doxa-navy,#052538)}
 
 .post-skip:hover{-webkit-text-fill-color:currentColor;-webkit-background-clip:border-box;background-clip:border-box;color:var(--navy)}
+
+/* the site sets button labels in uppercase */
+.ds-btn:not(.ds-tag){text-transform:uppercase;letter-spacing:.03em}

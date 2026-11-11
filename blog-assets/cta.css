@@ -1,0 +1,10 @@
+/* End-of-page call to action: the site's "cta-final" pattern. */
+.cta-section{background:var(--white);padding-block:var(--space-20)}
+.cta-wrap{max-width:1100px;margin:0 auto;padding:0 var(--post-pad,var(--space-6))}
+.cta-final{display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--space-6)}
+.cta-final h2{margin:0;max-width:760px;font-family:var(--font-display);font-size:var(--text-h2,2rem);font-weight:700;line-height:1.25;color:var(--text-primary)}
+.cta-final h2 span{background:var(--brand-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.cta-final p{margin:0;max-width:640px;font-size:1.125rem;line-height:1.65;color:var(--text-secondary)}
+.cta-final__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-3)}
+.cta-section .btn-md{padding:12px 24px;font-size:.875rem}
+@media (max-width:640px){.cta-section{padding-block:var(--space-12)}.cta-final__actions{flex-direction:column;align-self:stretch}.cta-final__actions .ds-btn{width:100%}}

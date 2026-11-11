@@ -115,3 +115,6 @@ body{margin:0;background:var(--white);color:var(--text-primary,#052538);font-fam
 
 /* Skip links are block-level anchors: keep their text visible under the global a:hover rule. */
 .bl-skip:hover,.post-skip:hover{-webkit-text-fill-color:currentColor;-webkit-background-clip:border-box;background-clip:border-box;color:var(--navy)}
+
+/* the site sets button labels in uppercase */
+.ds-btn:not(.ds-tag){text-transform:uppercase;letter-spacing:.03em}

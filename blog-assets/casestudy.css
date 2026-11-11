@@ -27,11 +27,6 @@
 .csp-quote figcaption{margin-top:var(--space-3,12px);padding-left:calc(var(--space-6,24px) + 4px);font-size:.875rem;line-height:1.4;color:var(--text-secondary,#3d5566)}
 .csp-quote figcaption strong{color:var(--doxa-navy,#052538)}
 
-/* closing call to action */
-.csp-cta{background:var(--doxa-navy,#052538);color:var(--white)}
-.csp-cta__inner{max-width:1100px;margin:0 auto;padding:var(--space-10,40px) var(--post-pad);display:flex;align-items:center;justify-content:space-between;gap:var(--space-8,32px);flex-wrap:wrap}
-.csp-cta h2{margin:0 0 var(--space-2,8px);font-family:var(--font-display,'Work Sans',sans-serif);font-size:var(--text-h3,1.5rem)}
-.csp-cta p{margin:0;color:rgba(255,255,255,.85)}
 
 @media (max-width:960px){
   .csp-facts{position:static;padding:var(--space-5,20px);border:1px solid var(--fog-200,#cdd9e0);border-radius:var(--radius-lg,8px);background:var(--navy-50,#f0f6f9)}

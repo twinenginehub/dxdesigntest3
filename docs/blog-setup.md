@@ -80,3 +80,21 @@ Content type **Case study** uses the customer-story layout: client logo, outcome
 an "At a glance" box (client, industry, region, company size, services with optional links) beside the story; then **Story sections** (label, headline, text and an
 optional pull quote with name, title and company; typically the challenge, the solution and the results) and a closing call to action.
 Everything lives in the **Case study details** group in the Studio. The main body text is optional and appears after the sections. Preview: `/blog/sample-case-study-3`.
+
+## Resources hub (/resources)
+Every **Resource (gated download)** in the Studio appears on `/resources`: a filter panel (**Resource type**: checklist, course, guide, report, template;
+**Topic**; **Resources for**; **Business size**) with live counts, multiple selections per group, "Clear all", "Load more" (12 at a time) and shareable
+URLs such as `/resources?type=checklist&type=template&topic=Onboarding`. On phones the panel sits behind a "Filter resources" button. Each card links to
+`/resources/<slug>`. Topic, Resources for and Business size come from the fields on each resource, so spell topics the same way every time. Preview: `/resources`.
+
+## Resource pages and one-sheets (/resources/<slug>)
+A resource page is the gated download (hero with the form). Fill in the optional fields and it becomes a full **one-sheet page**: explainer text, key takeaways,
+"what is inside", numbered how-to steps, benefits, who it is for, FAQs (also added as structured data), and "More resources" (hand-picked, or the same type or topic
+automatically), then a "Download for free" strip and the shared end-of-page CTA. The example PDF is `blog-assets/sample-one-sheet.pdf`, built from
+`scripts/one-sheet/sample-one-sheet.html` with `sh scripts/one-sheet/build.sh` (headless Chrome, US Letter, one page). Preview: `/resources/sample-one-sheet`.
+The form is still front end only (see "Gated downloads").
+
+## End-of-page call to action
+All post templates (article, case study, learning, podcast, press, whitepaper, franchise post, case study page and resource pages) end with the same block,
+modelled on the site's "cta-final": headline with a gradient second line, one paragraph, an "Explore talent" and a "Build your team" button. It lives in
+`lib/blog/cta.js` and `blog-assets/cta.css`; change the wording there. Listing pages keep their navy band.

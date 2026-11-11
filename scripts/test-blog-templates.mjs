@@ -5,6 +5,8 @@ import { renderGated } from '../lib/blog/gated.js';
 import { whitepaperView } from '../lib/blog/whitepaper.js';
 import { renderCaseStudies } from '../lib/blog/render-cases.js';
 import { caseStudyView } from '../lib/blog/casestudy.js';
+import { renderResources } from '../lib/blog/render-resources.js';
+import { ctaFinal } from '../lib/blog/cta.js';
 import assert from 'node:assert/strict';
 
 const X = '<img src=x onerror=alert(1)>';
@@ -49,9 +51,22 @@ assert(renderCaseStudies([], 'https://x.test').includes('No case studies have be
 const csv = caseStudyView({ title: 't', caseStudy: { clientName: X, logo: 'javascript:1', industry: X, region: X, companySize: X,
   keyStats: [{ value: X, label: X }], services: [{ label: X, url: 'javascript:alert(1)' }, { label: 'ok', url: '/accounting-firms.html' }, { label: 'ext', url: 'http://insecure.test' }],
   sections: [{ label: X, heading: X, body: [], quote: { text: X, name: X, title: X, company: X } }, { label: 'empty' }] } }, 'https://x.test', { html: '' });
-const csAll = csv.heroTop + csv.before + csv.rail + csv.articleHtml + csv.after;
+const csAll = csv.heroTop + csv.before + csv.rail + csv.articleHtml;
 assert(!csAll.includes('<img src=x'), 'case study page escapes');
 assert(!csAll.includes('javascript:') && !csAll.includes('insecure.test'), 'case study page drops unsafe urls');
 assert(csv.rail.includes('/accounting-firms.html'), 'case study keeps safe service link');
 assert(!csv.articleHtml.includes('empty'), 'empty section is skipped');
+// resources hub + rich resource page
+const hub = renderResources([{ title: X, slug: 's', assetType: X, topic: X, audience: [X], businessSize: [X], summary: X, pages: 3, cover: { url: 'javascript:1', alt: X } },
+  { title: 'ok', slug: 'ok', assetType: 'Template', topic: 'Hiring', audience: ['HR'], businessSize: ['Under 50 employees'], summary: 's' }], 'https://x.test');
+assert(!hub.includes('<img src=x') && !hub.includes('javascript:'), 'resources hub escapes and drops unsafe urls');
+assert(renderResources([], 'https://x.test').includes('No resources have been published yet'), 'resources empty state');
+assert(hub.includes('data-type="template"'), 'resources cards carry the type filter value');
+const rich = renderGated({ title: 't', slug: 's', assetType: X, headline: X, subheadline: X, topic: X, downloadUrl: 'javascript:1', takeaways: [X], previewItems: [X], previewTitle: X,
+  steps: [{ title: X, text: X }], benefits: [X], audience: [X], faqs: [{ question: X, answer: X }],
+  related: [{ slug: '../evil"', title: 'bad', assetType: 'Guide' }, { slug: 'good-one', title: X, assetType: X }] }, 'https://x.test');
+assert(!rich.includes('<img src=x') && !rich.includes('javascript:'), 'rich resource page escapes and drops unsafe urls');
+assert(!rich.includes('evil') && rich.includes('/resources/good-one'), 'related links must be plain slugs');
+assert(rich.includes('FAQPage') && rich.includes('cta-final'), 'faq structured data and the shared end CTA are present');
+assert(ctaFinal().includes('Explore talent') && ctaFinal().includes('Build your team'), 'shared CTA has both buttons');
 console.log('all blog template safety checks passed');

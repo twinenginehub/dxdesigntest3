@@ -230,12 +230,15 @@ export const franchisePost = defineType({
 
 // ---- Gated download / lead-magnet landing page. Lives at /resources/<slug>. ----
 export const leadMagnet = defineType({
-  name: 'leadMagnet', title: 'Gated download', type: 'document',
+  name: 'leadMagnet', title: 'Resource (gated download)', type: 'document',
   fields: [
     defineField({ name: 'title', type: 'string', description: 'Internal name.', validation: (r) => r.required().max(120) }),
     defineField({ name: 'slug', type: 'slug', options: { source: 'title', maxLength: 80 }, validation: (r) => r.required(), description: 'The URL: /resources/<slug>' }),
     defineField({ name: 'publishedAt', title: 'Publish date', type: 'datetime', description: 'The page goes live on this date. Leave empty to keep it unpublished.' }),
-    defineField({ name: 'assetType', title: 'Type of download', type: 'string', initialValue: 'Guide', options: { list: ['Guide', 'Whitepaper', 'Report', 'Checklist', 'Template', 'Ebook', 'Playbook'] } }),
+    defineField({ name: 'assetType', title: 'Resource type', type: 'string', initialValue: 'Guide', validation: (r) => r.required(), options: { list: ['Checklist', 'Course', 'Guide', 'Report', 'Template'] }, description: 'Used for the type filter on /resources.' }),
+    defineField({ name: 'topic', type: 'string', description: 'One topic, e.g. Hiring, Onboarding, Compliance. Becomes a filter option, so spell it the same way every time.' }),
+    defineField({ name: 'audience', title: 'Resources for', type: 'array', of: [{ type: 'string' }], options: { list: ['Finance', 'HR', 'Operations', 'Owners and founders', 'Franchise brands', 'IT'] }, description: 'Who it is for. Shown as "Who it is for" on the page and used for the filter.' }),
+    defineField({ name: 'businessSize', title: 'Business size', type: 'array', of: [{ type: 'string' }], options: { list: ['Under 50 employees', '50 to 500 employees', 'Over 500 employees'] } }),
     defineField({ name: 'headline', type: 'string', description: 'Big heading on the page.', validation: (r) => r.required().max(120) }),
     defineField({ name: 'subheadline', type: 'text', rows: 3, validation: (r) => r.max(300) }),
     defineField({ name: 'bullets', title: 'What you\'ll learn', type: 'array', of: [{ type: 'string' }], validation: (r) => r.max(8), description: 'Three to five short benefits.' }),
@@ -243,6 +246,19 @@ export const leadMagnet = defineType({
     defineField({ name: 'cover', title: 'Cover image', type: 'image', options: { hotspot: true }, fields: [defineField({ name: 'alt', type: 'string', title: 'Alt text', validation: (r) => r.required() })] }),
     defineField({ name: 'file', title: 'File to download', type: 'file', description: 'Upload the file here, or paste a link below. Note: the download link is delivered to the browser after the form is filled in, so treat the file as "low friction", not secret.' }),
     defineField({ name: 'fileUrl', title: 'File link (if not uploading)', type: 'url', validation: (r) => r.uri({ scheme: ['https'] }) }),
+    defineField({ name: 'takeaways', title: 'Key takeaways', type: 'array', of: [{ type: 'string' }], validation: (r) => r.max(5), description: 'Optional. Up to five short points shown in a box near the top.' }),
+    defineField({ name: 'previewTitle', title: 'What is inside: heading', type: 'string', description: 'Optional, e.g. "Starter questions". Shown above the list below.' }),
+    defineField({ name: 'previewItems', title: 'What is inside: list', type: 'array', of: [{ type: 'string' }], description: 'Optional. A sample of the content (questions, checklist items, sections).' }),
+    defineField({ name: 'steps', title: 'How to use it', type: 'array', description: 'Optional. Numbered steps.', of: [defineArrayMember({ type: 'object', fields: [
+      defineField({ name: 'title', type: 'string', validation: (r) => r.required() }),
+      defineField({ name: 'text', type: 'text', rows: 2 }),
+    ], preview: { select: { title: 'title', subtitle: 'text' } } })] }),
+    defineField({ name: 'benefits', type: 'array', of: [{ type: 'string' }], description: 'Optional. Why use it.' }),
+    defineField({ name: 'faqs', title: 'FAQs', type: 'array', description: 'Optional. Also added to the page for search engines.', of: [defineArrayMember({ type: 'object', fields: [
+      defineField({ name: 'question', type: 'string', validation: (r) => r.required() }),
+      defineField({ name: 'answer', type: 'text', rows: 3, validation: (r) => r.required() }),
+    ], preview: { select: { title: 'question' } } })] }),
+    defineField({ name: 'related', title: 'More resources (optional)', type: 'array', of: [defineArrayMember({ type: 'reference', to: [{ type: 'leadMagnet' }] })], validation: (r) => r.max(6), description: 'Hand-pick related resources. Leave empty to show resources of the same type or topic automatically.' }),
     defineField({ name: 'buttonLabel', title: 'Form button label', type: 'string', initialValue: 'Get the guide', validation: (r) => r.max(40) }),
     defineField({ name: 'thankYouTitle', title: 'Thank-you heading', type: 'string' }),
     defineField({ name: 'thankYouText', title: 'Thank-you text', type: 'text', rows: 2 }),

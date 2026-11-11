@@ -51,7 +51,7 @@ for f in files:
         if f.endswith('.js') and re.search(r'stroke=\"currentColor\"[^>]*stroke-width', line) and 'icons.js' not in f: add('Hand-drawn stroke icon (use icons.js / Tabler)', f, n, line)
         if re.search(r'offshore staffing|staffs\b|staffing', line, re.I) and not f.endswith('audit-blog-design.py'): add('Brand wording: say professionals, not staffing', f, n, line)
         if re.search(r'letter-spacing:\s*\.12em', line): add('Eyebrow tracking literal (use --tracking-eyebrow)', f, n, line)
-        if re.search(r'text-transform:\s*uppercase', line) and not re.search(r'eyebrow|__label|-label|__title|caption|--text-caption|--text-eyebrow|font-size:\s*(var\(--text-(caption|eyebrow)|\.7|\.8)', line):
+        if re.search(r'text-transform:\s*uppercase', line) and '.ds-btn:not(.ds-tag)' not in line and not re.search(r'eyebrow|__label|-label|__title|caption|--text-caption|--text-eyebrow|font-size:\s*(var\(--text-(caption|eyebrow)|\.7|\.8)', line):
             add('Uppercase outside an eyebrow/tag/label context (check)', f, n, line)
         if re.search(r'border-radius:\s*(999|99|50%)', line) and 'avatar' not in line and '::before' not in line and 'logo' not in line:
             add('Circle/pill shape (circles are for avatars, icon buttons, knobs only)', f, n, line)
