@@ -53,7 +53,7 @@ Content type **Press** switches to the press layout: "For immediate release" fla
 
 ## Franchise Blog (/franchise-blog)
 A separate section with its own Sanity document type, **Franchise post** (audience: Franchisors or Franchisees). Listing at `/franchise-blog`
-(`?audience=franchisees`, `?topic=growth`, `?page=2`), posts at `/franchise-blog/<slug>`. It reuses the post template and the listing styles. Preview: `/franchise-blog`.
+(`?topic=growth`, `?page=2`; tabs are the post categories), posts at `/franchise-blog/<slug>`. It reuses the post template and the listing styles. Preview: `/franchise-blog`.
 
 ## Gated downloads (/resources/<slug>)
 Sanity document type **Gated download**: headline, benefits list, cover, file (upload or link), button and thank-you text. The page shows a form
