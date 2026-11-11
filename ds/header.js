@@ -24,7 +24,8 @@
     var footer = document.querySelector('footer');
     var navs = document.querySelectorAll('.site-nav');
     if (!footer || !navs.length) return;
-    var reached = footer.getBoundingClientRect().top < window.innerHeight - 100;
+    /* Only after scrolling: on a short page (e.g. an empty blog) the footer is in view at the top, which would hide the nav on load. */
+    var reached = window.scrollY > 80 && footer.getBoundingClientRect().top < window.innerHeight - 100;
     navs.forEach(function (n) { n.classList.toggle('is-faded', reached && !n.classList.contains('is-open')); });
   }
   window.addEventListener('scroll', update, { passive: true });
