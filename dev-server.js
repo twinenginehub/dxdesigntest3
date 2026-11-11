@@ -56,6 +56,7 @@ http.createServer(async (req, res) => {
   if (/^\/franchise-blog\/?$/.test(pathname)) { req.url = '/api/blog/index?section=franchise' + (u.search ? '&' + u.search.slice(1) : ''); pathname = '/api/blog/index'; }
   const fr = pathname.match(/^\/franchise-blog\/([^/]+)\/?$/);
   if (fr) { req.url = '/api/blog/post?section=franchise&slug=' + encodeURIComponent(fr[1]); pathname = '/api/blog/post'; }
+  if (/^\/case-studies\/?$/.test(pathname)) { req.url = '/api/blog/index?view=case-studies'; pathname = '/api/blog/index'; }
   const rs = pathname.match(/^\/resources\/([^/]+)\/?$/);
   if (rs) { req.url = '/api/blog/post?kind=resource&slug=' + encodeURIComponent(rs[1]); pathname = '/api/blog/post'; }
 

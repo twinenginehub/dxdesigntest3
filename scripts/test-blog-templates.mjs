@@ -3,6 +3,7 @@ import { chartHtml, statGridHtml, dataTableHtml } from '../lib/blog/charts.js';
 import { renderPress } from '../lib/blog/press.js';
 import { renderGated } from '../lib/blog/gated.js';
 import { whitepaperView } from '../lib/blog/whitepaper.js';
+import { renderCaseStudies } from '../lib/blog/render-cases.js';
 import assert from 'node:assert/strict';
 
 const X = '<img src=x onerror=alert(1)>';
@@ -37,4 +38,10 @@ assert(!gated.includes('class="ds-btn ds-btn-accent gt-download"'), 'no download
 const wp = whitepaperView({ title: 't', whitepaper: { gateSlug: '../evil"', fileUrl: 'javascript:1', keyStats: [{ value: X, label: X }] }, image: null }, 'https://x.test', { html: '', headings: [], minutes: 3 });
 assert(!wp.top.includes('javascript:') && !wp.top.includes('evil'), 'whitepaper drops bad gate and file');
 assert(!wp.before.includes('<img'), 'whitepaper stats escape');
+// case studies listing
+const cs = renderCaseStudies([{ title: X, slug: 's', excerpt: X, publishedAt: '2026-11-01T00:00:00Z', image: { url: 'javascript:1', alt: X },
+  cs: { clientName: X, logo: 'javascript:1', industry: X, companySize: X, region: X, useCase: X, keyResultValue: X, keyResultLabel: X } }], 'https://x.test');
+assert(!cs.includes('<img src=x'), 'case studies escape');
+assert(!cs.includes('javascript:'), 'case studies drop unsafe image urls');
+assert(renderCaseStudies([], 'https://x.test').includes('No case studies have been published yet'), 'empty state');
 console.log('all blog template safety checks passed');

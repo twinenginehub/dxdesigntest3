@@ -28,6 +28,10 @@
     {
       "source": "/resources/:slug",
       "destination": "/api/blog/post?slug=:slug&kind=resource"
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/api/blog/index?view=case-studies"
     }
   ],
   "headers": [
