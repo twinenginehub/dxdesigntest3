@@ -1,30 +1,109 @@
 {
   "outputDirectory": ".",
   "rewrites": [
-    { "source": "/survey", "destination": "/survey.html" },
-    { "source": "/survey/dashboard", "destination": "/survey-dashboard.html" }
+    {
+      "source": "/survey",
+      "destination": "/survey.html"
+    },
+    {
+      "source": "/survey/dashboard",
+      "destination": "/survey-dashboard.html"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/api/blog/post?slug=:slug"
+    }
   ],
   "headers": [
-    { "source": "/survey", "headers": [
-      { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive, nosnippet" },
-      { "key": "Referrer-Policy", "value": "no-referrer" } ] },
-    { "source": "/survey.html", "headers": [
-      { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive, nosnippet" },
-      { "key": "Referrer-Policy", "value": "no-referrer" } ] },
-    { "source": "/survey/dashboard", "headers": [
-      { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive, nosnippet" },
-      { "key": "Cache-Control", "value": "no-store" },
-      { "key": "Referrer-Policy", "value": "no-referrer" },
-      { "key": "X-Frame-Options", "value": "DENY" } ] },
-    { "source": "/survey-dashboard.html", "headers": [
-      { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive, nosnippet" },
-      { "key": "Cache-Control", "value": "no-store" },
-      { "key": "Referrer-Policy", "value": "no-referrer" },
-      { "key": "X-Frame-Options", "value": "DENY" } ] },
-    { "source": "/survey-assets/(.*)", "headers": [
-      { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" } ] },
-    { "source": "/api/(.*)", "headers": [
-      { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" },
-      { "key": "Cache-Control", "value": "no-store" } ] }
+    {
+      "source": "/survey",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        }
+      ]
+    },
+    {
+      "source": "/survey.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        }
+      ]
+    },
+    {
+      "source": "/survey/dashboard",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    },
+    {
+      "source": "/survey-dashboard.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    },
+    {
+      "source": "/survey-assets/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
   ]
 }

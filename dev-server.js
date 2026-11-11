@@ -50,6 +50,9 @@ http.createServer(async (req, res) => {
   let pathname = decodeURIComponent(u.pathname);
   applyHeaders(res, pathname);
 
+  const blog = pathname.match(/^\/blog\/([^/]+)\/?$/);
+  if (blog) { req.url = '/api/blog/post?slug=' + encodeURIComponent(blog[1]); pathname = '/api/blog/post'; }
+
   if (pathname.startsWith('/api/')) {
     const name = pathname.replace(/^\/api\//, '').replace(/\/+$/, '');
     const file = path.join(root, 'api', name + '.js');
