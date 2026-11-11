@@ -16,6 +16,18 @@
     {
       "source": "/blog/:slug",
       "destination": "/api/blog/post?slug=:slug"
+    },
+    {
+      "source": "/franchise-blog",
+      "destination": "/api/blog/index?section=franchise"
+    },
+    {
+      "source": "/franchise-blog/:slug",
+      "destination": "/api/blog/post?slug=:slug&section=franchise"
+    },
+    {
+      "source": "/resources/:slug",
+      "destination": "/api/blog/post?slug=:slug&kind=resource"
     }
   ],
   "headers": [

@@ -96,3 +96,10 @@ body{margin:0;background:#fff;color:var(--text-primary,#052538);font-family:var(
   .bl-card--row .bl-card__media{flex:none;aspect-ratio:16/10}
   .bl-section{padding:var(--space-8,32px) 0}
 }
+
+/* shared button base (the site's .cta sizing lives in each page's own styles, so blog templates carry their own) */
+.ds-btn{font-family:var(--font-display,'Work Sans',sans-serif);font-weight:600;font-size:var(--text-body-sm,.875rem);border-radius:var(--radius-md,5px);display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 22px;min-height:48px;box-sizing:border-box;text-decoration:none;position:relative;isolation:isolate;border:0;cursor:pointer;overflow:hidden}
+.ds-btn-accent::before{z-index:-1}
+.ds-btn-accent:visited{color:#fff}
+.ds-btn-accent:hover{color:var(--doxa-navy,#052538)}
+.ds-btn:focus-visible{outline:3px solid var(--cyan-700,#007099);outline-offset:3px}

@@ -80,3 +80,10 @@ body{margin:0;background:var(--surface-page,#fff);color:var(--text-primary,#0525
 @media (max-width:640px){.post-body{font-size:1.0625rem}.post-body blockquote p{font-size:1.2rem}.post-hero__inner{padding-top:var(--space-8,32px);padding-bottom:var(--space-8,32px)}}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* shared button base (the site's .cta sizing lives in each page's own styles, so blog templates carry their own) */
+.ds-btn{font-family:var(--font-display,'Work Sans',sans-serif);font-weight:600;font-size:var(--text-body-sm,.875rem);border-radius:var(--radius-md,5px);display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 22px;min-height:48px;box-sizing:border-box;text-decoration:none;position:relative;isolation:isolate;border:0;cursor:pointer;overflow:hidden}
+.ds-btn-accent::before{z-index:-1}
+.ds-btn-accent:visited{color:#fff}
+.ds-btn-accent:hover{color:var(--doxa-navy,#052538)}
+.ds-btn:focus-visible{outline:3px solid var(--cyan-700,#007099);outline-offset:3px}

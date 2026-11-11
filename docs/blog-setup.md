@@ -38,3 +38,31 @@ MP3 from your podcast host, which gives a built-in player and clickable chapter 
 Simplecast, Buzzsprout, Transistor, SoundCloud, Captivate or Megaphone only), "Listen on" links, guests, chapters and an optional transcript. The post
 body becomes the show notes. Preview locally at `/blog/sample-podcast-4`. Audio is not stored in Sanity; host files with your podcast provider.
 The page marks the series as "DOXA Podcast" in its structured data (`lib/blog/podcast.js`); rename it there if the show has another name.
+
+## Whitepapers
+Content type **Whitepaper** adds a "Whitepaper details" group: executive summary, page count, PDF (upload or link), optional **gated download page**
+(a Gated download document; the button then goes to its form instead of the file) and up to four **key numbers** shown in a band under the summary.
+The body gets numbered sections. For data, add these body blocks in the Studio: **Chart** (horizontal bars, columns, line or donut; every chart also
+carries a text table for screen readers and search), **Key numbers** (a row of big figures) and **Table** (first row is the header). They work in any post.
+Preview: `/blog/sample-whitepaper-5`.
+
+## Press releases
+Content type **Press** switches to the press layout: "For immediate release" flag, dateline (city + date added to the first paragraph),
+"About DOXA Talent" boilerplate (edit in the Studio or leave empty for the standard text), media contacts, downloads and a print button
+(printing hides the site header and footer). Preview: `/blog/sample-press-6`.
+
+## Franchise Blog (/franchise-blog)
+A separate section with its own Sanity document type, **Franchise post** (audience: Franchisors or Franchisees). Listing at `/franchise-blog`
+(`?audience=franchisees`, `?topic=growth`, `?page=2`), posts at `/franchise-blog/<slug>`. It reuses the post template and the listing styles. Preview: `/franchise-blog`.
+
+## Gated downloads (/resources/<slug>)
+Sanity document type **Gated download**: headline, benefits list, cover, file (upload or link), button and thank-you text. The page shows a form
+(first name, last name, work email, company, job title) and reveals the download after it validates.
+**The form is front end only for now: submissions are not stored or sent anywhere.** Wire it to a database, CRM or email service in
+`lib/blog/gated.js` (look for the comment "Front end only") before launch. The download link is in the page source, so this is a lead-capture
+speed bump, not real access control. Preview: `/resources/sample-guide`.
+
+## Local checks
+`sh scripts/dev-restart-and-check.sh` restarts the dev server and checks every template route. `node scripts/test-blog-templates.mjs` runs the safety tests
+(escaping, URL checks). All sample pages use dummy data and are never served on production.
+After copying `sanity/post.schema.js` into the Studio, register every exported type (see the last line of that file).
