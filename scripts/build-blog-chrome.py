@@ -3,6 +3,9 @@ serverless function at /blog/<slug>) always carry the same chrome. Re-run after 
 import re, json
 s = open('about.html').read()
 nav = re.search(r'<nav class="site-nav".*?</nav>', s, re.S).group(0)
+# about.html marks "Why DOXA" as the current page; blog, case study and resource pages all live under Resources instead.
+nav = nav.replace(' class="nav-current"', '').replace(' aria-current="page"', '')
+nav = nav.replace('<a href="/resources">Resources', '<a href="/resources" class="nav-current" aria-current="page">Resources', 1) if '<a href="/resources">Resources' in nav else nav.replace('<a href="resources">Resources', '<a href="resources" class="nav-current" aria-current="page">Resources', 1)
 foot = re.search(r'<footer .*?</footer>', s, re.S).group(0)
 
 def absolute(h):
