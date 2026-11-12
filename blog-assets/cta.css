@@ -8,3 +8,6 @@
 .cta-final__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-3)}
 .cta-section .btn-md{padding:12px 24px;font-size:.875rem}
 @media (max-width:640px){.cta-section{padding-block:var(--space-12)}.cta-final__actions{flex-direction:column;align-self:stretch}.cta-final__actions .ds-btn{width:100%}}
+/* the global a:hover makes link text transparent; keep button labels solid on hover and focus */
+.cta-final .ds-btn:hover,.cta-final .ds-btn:focus-visible{-webkit-text-fill-color:currentColor;-webkit-background-clip:border-box;background-clip:border-box;text-decoration:none}
+.cta-final .ds-btn-secondary:hover,.cta-final .ds-btn-secondary:focus-visible{color:var(--navy)}
