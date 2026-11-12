@@ -63,6 +63,8 @@ assert(!hub.includes('<img src=x') && !hub.includes('javascript:'), 'resources h
 assert(renderResources([], 'https://x.test').includes('No resources have been published yet'), 'resources empty state');
 assert(hub.includes('data-type="template"'), 'resources cards carry the type filter value');
 assert(hub.includes('id="rs-drawer"') && hub.includes('Apply ('), 'resources hub has the filter drawer with Apply');
+const art = renderResources([{ title: 'An article', slug: 'a/../b', assetType: 'Article', topic: 'Hiring', minutes: 5, summary: 's' }], 'https://x.test');
+assert(art.includes('href="/blog/a%2F..%2Fb"') && art.includes('data-type="article"') && art.includes('5 min read'), 'articles link to /blog/<slug> and carry the article type');
 const rich = renderGated({ title: 't', slug: 's', assetType: X, headline: X, subheadline: X, topic: X, downloadUrl: 'javascript:1', takeaways: [X], previewItems: [X], previewTitle: X,
   steps: [{ title: X, text: X }], benefits: [X], audience: [X], faqs: [{ question: X, answer: X }],
   related: [{ slug: '../evil"', title: 'bad', assetType: 'Guide' }, { slug: 'good-one', title: X, assetType: X }] }, 'https://x.test');

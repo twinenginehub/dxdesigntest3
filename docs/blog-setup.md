@@ -82,12 +82,13 @@ optional pull quote with name, title and company; typically the challenge, the s
 Everything lives in the **Case study details** group in the Studio. The main body text is optional and appears after the sections. Preview: `/blog/sample-case-study-3`.
 
 ## Resources hub (/resources)
-Every **Resource (gated download)** in the Studio appears on `/resources`. Filtering works like the Deel resource hub: a search bar ("Find a resource") and a
+Every **Resource (gated download)** in the Studio appears on `/resources`, together with the blog **articles**. Filtering works like the Deel resource hub: a search bar ("Find a resource") and a
 **Filter** button that opens a slide-in drawer with four collapsible groups (**Resource types**, **Topics**, **Resources for**, **Business size**), a count beside each
 option, "Clear all" and "Apply (N results)". Selections only take effect when you press Apply (Esc or the close button discards them). Active filters show as removable
 chips under the header with "Showing X of Y results" and "Clear all"; "Load more" reveals 12 at a time. The URL keeps the state, e.g.
 `/resources?type=checklist&type=template&topic=Onboarding&q=review`.
-Resource types: Checklist, Course, Guide, Report, Template, Tool, Webinar (a type only appears in the drawer once a resource uses it). Resources for: Finance, Founders,
+**Articles** are `post` documents with content type Article (or none). They show as the "Article" type, link to `/blog/<slug>` (not a download page), use the post's Category as the topic and show a read time. They have no Resources-for or Business-size values, so those filters hide them. Other post types (case study, podcast, whitepaper, press, learning) and franchise posts are not included.
+Resource types: Article, Checklist, Course, Guide, Report, Template, Tool, Webinar (a type only appears in the drawer once a resource uses it). Resources for: Finance, Founders,
 HR, IT managers, Legal, Operations, Talent acquisition, Franchise brands. Business size: Startup, Mid-market, Enterprise. Topics come from each resource's Topic field, so spell
 them the same way every time. Preview: `/resources`.
 
