@@ -1,6 +1,6 @@
 /* Footer on smaller screens (also set inline on the static pages; here so blog, case study and resource pages match): fluid side margin, 2 columns then 1. */
 :root{--container-pad:clamp(24px,2rem + 5vw,125px)}
-@media (max-width:860px){footer > div:first-child{grid-template-columns:1fr 1fr !important}}
+@media (max-width:860px){footer > div:first-child{grid-template-columns:1fr 1fr !important}footer > div:first-child > :first-child{grid-column:1 / -1}}
 @media (max-width:520px){footer > div:first-child{grid-template-columns:1fr !important}}
 
 /* DOXA site header — copied from industries.html's .site-nav component, plus phone menu.
