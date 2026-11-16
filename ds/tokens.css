@@ -53,6 +53,7 @@
   --shadow-focus: 0 0 0 3px rgba(0,174,239,.35); /* Focus ring on custom checkbox/radio controls. */
   --brand-gradient: linear-gradient(135deg, var(--cyan) 0%, var(--green) 100%); /* Full-strength brand gradient — Card/EventCard top accent bars, gradient CTAs. Was referenced by several components but never defined; added here so those bars actually render. */
   --gradient-soft: linear-gradient(135deg, rgba(0,174,239,.1) 0%, rgba(6,175,114,.1) 100%); /* Soft brand-gradient wash (cyan/green at 10% opacity) — card header tints, subtle section backgrounds over white or photography. Matches production's --DOXA-grad-soft (doxatalentevents.com/curriculum, Executive Briefing card). */
+  --surface-fade: linear-gradient(color-mix(in srgb, var(--cyan) 8%, transparent), var(--white)); /* Soft cyan-to-white vertical fade for a section background — tinted at the top, full white at the bottom, so the section reads as set apart on an otherwise white page. A surface, not a brand gradient: never confuse with --brand-gradient (cyan to green) used on buttons/placeholders/accent text. Used on the About page's Leadership Team section and the shared end-of-page cta-final block (blog, case study, resource pages). */
 }
 :root {
   --space-1: 4px; /* Smallest spacing step — icon/label gaps. */
